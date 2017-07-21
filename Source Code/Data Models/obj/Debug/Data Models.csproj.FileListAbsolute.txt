@@ -1,0 +1,4 @@
+C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Data Models\bin\Debug\Data Models.dll
+C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Data Models\bin\Debug\Data Models.pdb
+C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Data Models\obj\Debug\Data Models.dll
+C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Data Models\obj\Debug\Data Models.pdb
