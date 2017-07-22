@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Data Models\Models.csproj", "{ACA62F68-737A-4BFB-A3B9-2E6C663CCC4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Models", "Data Models\Data Models.csproj", "{ACA62F68-737A-4BFB-A3B9-2E6C663CCC4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Scrapper", "Web Scrapper\Web Scrapper.csproj", "{1A1ABBA5-AC04-4835-AF29-0088D3B8AD7C}"
 EndProject

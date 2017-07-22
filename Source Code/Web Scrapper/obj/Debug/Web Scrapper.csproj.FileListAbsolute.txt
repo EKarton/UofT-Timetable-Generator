@@ -12,3 +12,17 @@ C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Gen
 C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Web Scrapper\bin\Debug\WebDriver.xml
 C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Web Scrapper\bin\Debug\WebDriver.Support.xml
 C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Web Scrapper.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\WebDriver.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\WebDriver.Support.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\WebDriver.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\WebDriver.Support.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.pdb
