@@ -12,8 +12,8 @@ using UoftTimetableGenerator.DataModels;
 namespace UoftTimetableGenerator.WebScrapper
 {
     internal class BuildingDistancesScrapper : IWebScrapper
-    {        
-        private static string GOOGLEAPI_KEY = "AIzaSyCVCnQ3iBa6S4W8gZkTbwO88d7qhKaGIC8";
+    {
+        private static string GOOGLEAPI_KEY = "AIzaSyAna8lO72_VyFrLYjYMTvVgPcvmlU_fCrc"; //"AIzaSyCVCnQ3iBa6S4W8gZkTbwO88d7qhKaGIC8";
 
         public static TimeSpan ParseTimespan(string time)
         {
@@ -76,6 +76,7 @@ namespace UoftTimetableGenerator.WebScrapper
                                                     building2.Address.Replace(' ', '+').Replace(",", "").Replace("\'", ""), 
                                                     GOOGLEAPI_KEY);
             */
+            
             string url = string.Format(@"https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins={0}&destinations={1}&mode=walking",
                                                    building1.Address.Replace(' ', '+').Replace(",", "").Replace("\'", ""),
                                                    building2.Address.Replace(' ', '+').Replace(",", "").Replace("\'", ""));
@@ -127,7 +128,8 @@ namespace UoftTimetableGenerator.WebScrapper
         {
             BuildingsList buildingList = JsonConvert.DeserializeObject<BuildingsList>(File.ReadAllText(FileLocations.BUILDINGSLIST_FILENAME));
 
-            for (int i = 44; i < buildingList.Buildings.Length; i++)
+            /*
+            for (int i = 127; i < buildingList.Buildings.Length; i++)
             {
                 List<BuildingDistances> distances = new List<BuildingDistances>();
                 for (int j = i + 1; j < buildingList.Buildings.Length; j++)
@@ -149,6 +151,28 @@ namespace UoftTimetableGenerator.WebScrapper
                 File.WriteAllText(filePath, JsonConvert.SerializeObject(buildingDistList, Formatting.Indented));
                 //Console.ReadKey();
             }
+            */
+            int count = 0;
+            for (int i = 0; i < buildingList.Buildings.Length; i++)
+            {
+                string path = FileLocations.BUILDINGDISTANCES_FOLDER + "\\" + buildingList.Buildings[i].Code.Trim() + ".json";
+                if (File.Exists(path) == false)
+                    Console.WriteLine(buildingList.Buildings[i].Name + " | " + buildingList.Buildings[i].Code);
+                count++;
+            }
+            Console.WriteLine("Buildings: " + buildingList.Buildings.Length + " == " + count);
+            Console.WriteLine(Directory.GetFiles(FileLocations.BUILDINGDISTANCES_FOLDER).Length);
+
+            bool duplicatedCodes = false;
+            for (int i = 0; i < buildingList.Buildings.Length; i++)
+                for (int j = i + 1; j < buildingList.Buildings.Length; j++)
+                    if (buildingList.Buildings[i].Code.Trim() == buildingList.Buildings[j].Code.Trim())
+                    {
+                        Console.WriteLine(buildingList.Buildings[i].Name + " and " + buildingList.Buildings[j].Name);
+                        duplicatedCodes = true;
+                    }
+            Console.WriteLine(duplicatedCodes);
+            Console.ReadKey();
         }
     }
 }

@@ -1,0 +1,4540 @@
+{
+  "Distances": [
+    {
+      "Buildings": [
+        " BI",
+        " CB"
+      ],
+      "WalkingTime": "00:01:00",
+      "WalkingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 73.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BC"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FE"
+      ],
+      "WalkingTime": "00:23:00",
+      "WalkingDistance": {
+        "Kilometers": 1.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " NB"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SB"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BR"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BW"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LB"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " UB"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " NL"
+      ],
+      "WalkingTime": "00:04:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CG"
+      ],
+      "WalkingTime": "00:07:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CF"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CR"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ST"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CE"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " -"
+      ],
+      "WalkingTime": "00:17:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " -"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LH"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CN"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BN"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BL"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CX"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CZ"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ZC"
+      ],
+      "WalkingTime": "00:02:00",
+      "WalkingDistance": {
+        "Kilometers": 0.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " OG"
+      ],
+      "WalkingTime": "00:02:00",
+      "WalkingDistance": {
+        "Kilometers": 0.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CX"
+      ],
+      "WalkingTime": "00:06:00",
+      "WalkingDistance": {
+        "Kilometers": 0.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CH"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CU"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PT"
+      ],
+      "WalkingTime": "00:07:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " DA"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " DN"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MF"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PR"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ER"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ES"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EJ"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ED"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EL"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EH"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EM"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EA"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " AD"
+      ],
+      "WalkingTime": "00:22:00",
+      "WalkingDistance": {
+        "Kilometers": 1.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EX"
+      ],
+      "WalkingTime": "00:07:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SK"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FC"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LW"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FH"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LG"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FI"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FS"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FG"
+      ],
+      "WalkingTime": "00:04:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BH"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GA"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GB"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GI"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LA"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SM"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GH"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GO"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GC"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GD"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GU"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " HH"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " HA"
+      ],
+      "WalkingTime": "00:05:00",
+      "WalkingDistance": {
+        "Kilometers": 0.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " HS"
+      ],
+      "WalkingTime": "00:05:00",
+      "WalkingDistance": {
+        "Kilometers": 0.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " HU"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CA"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " IN"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " IS"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BT"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " KL"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " DR"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " JH"
+      ],
+      "WalkingTime": "00:21:00",
+      "WalkingDistance": {
+        "Kilometers": 1.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RL"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " KX"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " KP"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " KS"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LM"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MB"
+      ],
+      "WalkingTime": "00:05:00",
+      "WalkingDistance": {
+        "Kilometers": 0.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WR"
+      ],
+      "WalkingTime": "00:30:00",
+      "WalkingDistance": {
+        "Kilometers": 2.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PB"
+      ],
+      "WalkingTime": "00:03:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LI"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " LC"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SO"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GM"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MM"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MG"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MN"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " M2"
+      ],
+      "WalkingTime": "00:03:00",
+      "WalkingDistance": {
+        "Kilometers": 0.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MA"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GE"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RM"
+      ],
+      "WalkingTime": "00:06:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MZ"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MP"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MR"
+      ],
+      "WalkingTime": "00:05:00",
+      "WalkingDistance": {
+        "Kilometers": 0.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MC"
+      ],
+      "WalkingTime": "00:07:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MS"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MH"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MO"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MU"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MK"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " MU"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " AH"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " NR"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " VI"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " NF"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " OH"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " OA"
+      ],
+      "WalkingTime": "00:06:00",
+      "WalkingDistance": {
+        "Kilometers": 0.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " OI"
+      ],
+      "WalkingTime": "00:19:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PH"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PI"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ME"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " XQ"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " ML"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PL"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RW"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RG"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RU"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RS"
+      ],
+      "WalkingTime": "00:04:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RT"
+      ],
+      "WalkingTime": "00:17:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RJ"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SR"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SF"
+      ],
+      "WalkingTime": "00:07:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CS"
+      ],
+      "WalkingTime": "00:19:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " GS"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SS"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SI"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SD"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " TR"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " TT"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SA"
+      ],
+      "WalkingTime": "00:22:00",
+      "WalkingDistance": {
+        "Kilometers": 1.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " XG"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " IA"
+      ],
+      "WalkingTime": "00:22:00",
+      "WalkingDistance": {
+        "Kilometers": 1.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " FA"
+      ],
+      "WalkingTime": "00:22:00",
+      "WalkingDistance": {
+        "Kilometers": 1.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CD"
+      ],
+      "WalkingTime": "00:28:00",
+      "WalkingDistance": {
+        "Kilometers": 2.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " BS"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " IR"
+      ],
+      "WalkingTime": "00:19:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " CO"
+      ],
+      "WalkingTime": "00:17:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " PG"
+      ],
+      "WalkingTime": "00:11:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SG"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WA"
+      ],
+      "WalkingTime": "00:19:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " HI"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SN"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " EP"
+      ],
+      "WalkingTime": "00:04:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SV"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SU"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " SC"
+      ],
+      "WalkingTime": "00:19:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " TF"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " DC"
+      ],
+      "WalkingTime": "00:04:00",
+      "WalkingDistance": {
+        "Kilometers": 0.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " RB"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " TH"
+      ],
+      "WalkingTime": "00:09:00",
+      "WalkingDistance": {
+        "Kilometers": 0.7,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " TC"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " KT"
+      ],
+      "WalkingTime": "00:24:00",
+      "WalkingDistance": {
+        "Kilometers": 1.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " UC"
+      ],
+      "WalkingTime": "00:10:00",
+      "WalkingDistance": {
+        "Kilometers": 0.8,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " UP"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " VA"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " VP"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.3,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " VC"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WB"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WS"
+      ],
+      "WalkingTime": "00:18:00",
+      "WalkingDistance": {
+        "Kilometers": 1.4,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " JP"
+      ],
+      "WalkingTime": "00:08:00",
+      "WalkingDistance": {
+        "Kilometers": 0.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WE"
+      ],
+      "WalkingTime": "00:15:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WT"
+      ],
+      "WalkingTime": "00:14:00",
+      "WalkingDistance": {
+        "Kilometers": 1.1,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WI"
+      ],
+      "WalkingTime": "00:16:00",
+      "WalkingDistance": {
+        "Kilometers": 1.2,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WN"
+      ],
+      "WalkingTime": "00:12:00",
+      "WalkingDistance": {
+        "Kilometers": 0.9,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WW"
+      ],
+      "WalkingTime": "00:20:00",
+      "WalkingDistance": {
+        "Kilometers": 1.5,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WO"
+      ],
+      "WalkingTime": "00:21:00",
+      "WalkingDistance": {
+        "Kilometers": 1.6,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    },
+    {
+      "Buildings": [
+        " BI",
+        " WY"
+      ],
+      "WalkingTime": "00:13:00",
+      "WalkingDistance": {
+        "Kilometers": 1.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "CyclingTime": "00:00:00",
+      "CyclingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      },
+      "DrivingTime": "00:00:00",
+      "DrivingDistance": {
+        "Kilometers": 0.0,
+        "Meters": 0.0,
+        "Centimeters": 0.0,
+        "Millimeters": 0.0
+      }
+    }
+  ]
+}

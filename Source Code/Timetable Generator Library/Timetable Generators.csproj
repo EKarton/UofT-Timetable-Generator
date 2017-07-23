@@ -50,13 +50,31 @@
     <Compile Include="Bruteforce Algorithm\BruteforceGenerator.cs" />
     <Compile Include="Genetic Algorithm\FitnessCalculator.cs" />
     <Compile Include="Genetic Algorithm\GAGenerator.cs" />
-    <Compile Include="Genetic Algorithm\ITimetableGenerator.cs" />
+    <Compile Include="ITimetableGenerator.cs" />
     <Compile Include="Experiments\AlgorithmRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Sample Input\CSC207H1-F.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample Input\CSC236H1-F.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample Input\FOR200H1-F.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample Input\MAT224H1-F.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample Input\MAT237Y1-Y.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample Input\STA247H1-F.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data Models\Data Models.csproj">

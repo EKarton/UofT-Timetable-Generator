@@ -9,7 +9,7 @@ namespace UoftTimetableGenerator.Generator
 {
     public partial class GAGenerator : ITimetableGenerator
     {
-        private class FitnessCalculator
+        internal class FitnessCalculator
         {
             private static List<TimetableSession[]> requiredSessions = null;
 

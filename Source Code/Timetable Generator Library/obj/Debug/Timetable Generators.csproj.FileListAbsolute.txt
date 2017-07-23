@@ -18,3 +18,9 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetabl
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Debug\Timetable Generators.csprojResolveAssemblyReference.cache
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Debug\Timetable Generator Library.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Debug\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\CSC207H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\CSC236H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\FOR200H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\MAT224H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\MAT237Y1-Y.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\STA247H1-F.json

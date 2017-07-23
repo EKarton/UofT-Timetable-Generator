@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.Generator
     public partial class GAGenerator : ITimetableGenerator
     {
         private List<TimetableSession[]> requiredSessions = new List<TimetableSession[]>();
-        private static Random random = new Random();
+        private Random random = new Random();
         private const double MUTATION_RATE = 0.001;
         private const double CROSSOVER_RATE = 0.70;
 
@@ -30,7 +30,9 @@ namespace UoftTimetableGenerator.Generator
         private void EvolvePopulation(List<int[]> population)
         {
             int bestTable = GetBestTable(population);
+            int[] temp = population[0];
             population[0] = population[bestTable];
+            population[bestTable] = temp;
 
             // Perform crossovers
             for (int i = 1; i < population.Count; i++)
@@ -38,9 +40,17 @@ namespace UoftTimetableGenerator.Generator
                 int parent1Index = PerformTournamentSelection(population);
                 int parent2Index = PerformTournamentSelection(population);
 
+                /*
+                Tuple<int[], int[]> children = PerformSinglePointCrossover(population[parent1Index], population[parent2Index]);
+                if (children != null)
+                {
+                    population[parent1Index] = children.Item1;
+                    population[parent2Index] = children.Item2;
+                }
+                */
                 int[] child = PerformOldCrossover(population[parent1Index], population[parent2Index]);
                 if (child != null)
-                    population[parent1Index] = child;
+                    population[i] = child;
             }
 
             // Perform mutations
@@ -203,12 +213,56 @@ namespace UoftTimetableGenerator.Generator
             return table;
         }
 
-        public void PrintTable(int[] table)
+        public string GetTableString(int[] table)
         {
+            string output = "";
             for (int i = 0; i < table.Length; i++)
-                Console.Write(table[i]);
-            Console.Write(" | -> " + FitnessCalculator.GetFitnessValue(table, requiredSessions));
-            Console.WriteLine("");
+                output += table[i];
+            output += " | -> " + FitnessCalculator.GetFitnessValue(table, requiredSessions);
+            return output;
+        }
+
+        private bool IsContains(List<int[]> population, int[] randomTable)
+        {
+            foreach (int[] table in population)
+            {
+                if (table.Length != randomTable.Length)
+                    continue;
+
+                bool isFound = true;
+                for (int i = 0; i < randomTable.Length; i++)
+                    if (randomTable[i] != table[i])
+                    {
+                        isFound = false;
+                        break;
+                    }
+
+                if (isFound == true)
+                    return true;
+            }
+            return false;
+        }
+
+        public int[] GetFitnessScoresPerGeneration()
+        {
+            // Generate an initial population
+            List<int[]> population = new List<int[]>();
+            for (int i = 0; i < 20; i++)
+                population.Add(GenerateRandomTable());
+
+            int[] avgFitness = new int[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                EvolvePopulation(population);
+
+                int total = 0;
+                foreach (int[] table in population)
+                    total += FitnessCalculator.GetFitnessValue(table, requiredSessions);
+                int avg = total / population.Count;
+                avgFitness[i] = avg;
+            }
+            return avgFitness;
         }
 
         public List<Timetable> GetTimetables(string[] filters)
@@ -219,7 +273,37 @@ namespace UoftTimetableGenerator.Generator
                 population.Add(GenerateRandomTable());
 
             for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine("\nGeneration " + i);
                 EvolvePopulation(population);
+
+                List<int[]> popCopy = new List<int[]>(population);
+
+                // Sort population by score
+                popCopy.Sort(delegate (int[] table1, int[] table2) {
+                    int fit1 = FitnessCalculator.GetFitnessValue(table1, requiredSessions);
+                    int fit2 = FitnessCalculator.GetFitnessValue(table2, requiredSessions);
+
+                    if (fit1 < fit2)
+                        return 1;
+                    else if (fit1 > fit2)
+                        return -1;
+                    else
+                        return 0;
+                });
+
+                foreach (int[] table in popCopy)
+                    Console.WriteLine(GetTableString(table));
+
+                Console.WriteLine("Best Table: " + GetTableString(popCopy[GetBestTable(popCopy)]));
+
+                int total = 0;
+                foreach (int[] table in popCopy)
+                    total += FitnessCalculator.GetFitnessValue(table, requiredSessions);
+                Console.WriteLine("Average score: " + (total / population.Count));
+                Console.WriteLine("Median score: " + FitnessCalculator.GetFitnessValue(population[population.Count / 2], requiredSessions));
+                Console.ReadKey();
+            }
 
             return new List<Timetable>();
         }
