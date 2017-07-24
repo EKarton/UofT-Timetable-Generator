@@ -1,0 +1,48 @@
+{
+  "CourseName": "APM236H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2118"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "UC 161"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "UC 161"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

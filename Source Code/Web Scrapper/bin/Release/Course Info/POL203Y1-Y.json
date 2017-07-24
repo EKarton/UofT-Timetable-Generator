@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL203Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Hurl, R.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "MP 103",
+          "WinterLocation": "MP 103"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

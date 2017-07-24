@@ -1,0 +1,61 @@
+{
+  "CourseName": "HMB320H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Morshead, C.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "FG 103"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ]
+}

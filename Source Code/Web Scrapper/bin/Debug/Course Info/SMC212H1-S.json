@@ -1,0 +1,48 @@
+{
+  "CourseName": "SMC212H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Andree, U.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "TF 102"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 306"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 306"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

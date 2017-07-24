@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL332H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Barnett, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.3,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 142"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.3,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 142"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

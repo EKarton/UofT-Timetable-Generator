@@ -1,0 +1,21 @@
+{
+  "CourseName": "CRI429H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wortley, N.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "WW 121"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

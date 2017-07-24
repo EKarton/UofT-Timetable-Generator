@@ -1,0 +1,74 @@
+{
+  "CourseName": "PHY207H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC9901",
+      "Instructor": "Harlow, J.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT9901",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT9902",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT9903",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT9904",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

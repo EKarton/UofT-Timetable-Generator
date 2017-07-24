@@ -1,0 +1,21 @@
+{
+  "CourseName": "SOC313H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Tatham, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1160"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

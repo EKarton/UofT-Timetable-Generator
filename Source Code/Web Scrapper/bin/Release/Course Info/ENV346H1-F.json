@@ -1,0 +1,62 @@
+{
+  "CourseName": "ENV346H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Sinclair, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "MC 102",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "MC 102",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2001",
+      "Instructor": "Sinclair, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "MC 102",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "MC 102",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "BA 2179",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

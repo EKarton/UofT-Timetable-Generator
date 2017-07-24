@@ -1,0 +1,21 @@
+{
+  "CourseName": "DRM485Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Boye, S.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "KS 330",
+          "WinterLocation": "KS 330"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

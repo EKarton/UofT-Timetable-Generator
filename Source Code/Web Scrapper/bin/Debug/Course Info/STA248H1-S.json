@@ -1,0 +1,28 @@
+{
+  "CourseName": "STA248H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Huynh Wong, K.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "MC 102"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "MC 102"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

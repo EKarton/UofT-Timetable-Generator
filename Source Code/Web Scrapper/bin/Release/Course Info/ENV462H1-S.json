@@ -1,0 +1,48 @@
+{
+  "CourseName": "ENV462H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Yatchew, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SF 2202"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1071"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1071"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

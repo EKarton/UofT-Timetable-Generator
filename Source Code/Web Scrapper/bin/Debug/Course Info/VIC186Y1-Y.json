@@ -1,0 +1,21 @@
+{
+  "CourseName": "VIC186Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Keith, A.\r\nRupp, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "VC 304",
+          "WinterLocation": "VC 304"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

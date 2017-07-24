@@ -1,0 +1,21 @@
+{
+  "CourseName": "VIC262H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": "NF 007",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

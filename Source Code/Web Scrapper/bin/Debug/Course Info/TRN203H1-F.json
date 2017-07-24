@@ -1,0 +1,61 @@
+{
+  "CourseName": "TRN203H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Duncan, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "GI ---",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "LA 341",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "LA 341",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "LA 341",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

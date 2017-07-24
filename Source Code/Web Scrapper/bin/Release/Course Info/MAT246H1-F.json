@@ -1,0 +1,95 @@
+{
+  "CourseName": "MAT246H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SF 1101",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SF 1101",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SF 1101",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Homayouni-Boroojeni, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "MS 4279",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "MS 2173",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "MS 2173",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "MUS212H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Hemmasi, F.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "NF 003"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

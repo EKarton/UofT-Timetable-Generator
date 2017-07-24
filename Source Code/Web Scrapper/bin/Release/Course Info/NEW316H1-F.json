@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW316H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Garcia-Dominguez, B.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "WI 523",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY493H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Duncan, K.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": "SS 1088",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

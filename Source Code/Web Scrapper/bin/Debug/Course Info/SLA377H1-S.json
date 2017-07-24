@@ -1,0 +1,21 @@
+{
+  "CourseName": "SLA377H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Ramizi, E.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 306"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

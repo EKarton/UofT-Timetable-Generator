@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL360H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kingsbury, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "UC 161",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

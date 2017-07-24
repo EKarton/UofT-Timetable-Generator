@@ -1,0 +1,28 @@
+{
+  "CourseName": "CSB340H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Berleth, T.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "LM 161",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "LM 161",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

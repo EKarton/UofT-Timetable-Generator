@@ -1,0 +1,48 @@
+{
+  "CourseName": "ACT473H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "BF 315"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2116"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2116"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

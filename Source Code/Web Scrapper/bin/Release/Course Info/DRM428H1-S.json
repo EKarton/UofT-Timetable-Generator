@@ -1,0 +1,21 @@
+{
+  "CourseName": "DRM428H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Sears, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "UP 100"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

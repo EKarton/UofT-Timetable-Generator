@@ -1,0 +1,34 @@
+{
+  "CourseName": "WDW102Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Socknat, T.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": "WW 119",
+          "WinterLocation": "WW 119"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Socknat, T.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "WW 120",
+          "WinterLocation": "WW 120"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

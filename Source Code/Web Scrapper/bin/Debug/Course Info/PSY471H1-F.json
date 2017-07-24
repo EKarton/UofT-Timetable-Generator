@@ -1,0 +1,34 @@
+{
+  "CourseName": "PSY471H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Finn, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "SS 2101",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Pratt, J.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "UC B203",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,42 @@
+{
+  "CourseName": "PHC230H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Chalikian, T.\r\nMacgregor, R.\r\nWu, X.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "PB B150"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "PB B150"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "PB B150"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "PB B150"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "GGR273H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Boyes, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1073"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

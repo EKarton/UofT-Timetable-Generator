@@ -1,0 +1,47 @@
+{
+  "CourseName": "RSM433H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 35"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 35"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 20"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

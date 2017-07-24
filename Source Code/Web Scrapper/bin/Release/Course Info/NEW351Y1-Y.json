@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW351Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wasike, A.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "WE 52",
+          "WinterLocation": "WE 52"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

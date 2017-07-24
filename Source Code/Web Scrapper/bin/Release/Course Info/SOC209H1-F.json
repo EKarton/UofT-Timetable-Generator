@@ -1,0 +1,21 @@
+{
+  "CourseName": "SOC209H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Green, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "RW 110",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

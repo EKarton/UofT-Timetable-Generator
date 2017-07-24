@@ -1,0 +1,28 @@
+{
+  "CourseName": "CSC454H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "GB 303",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": "GB 303",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

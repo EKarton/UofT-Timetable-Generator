@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY260H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Corbit, L.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2117"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,28 @@
+{
+  "CourseName": "EEB362H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Mahler, D.\r\nMcLennan, D.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "RW 110",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "RW 110",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

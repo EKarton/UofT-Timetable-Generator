@@ -1,0 +1,28 @@
+{
+  "CourseName": "MAT448H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Milman, P.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "BA 6183",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "BA 6183",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

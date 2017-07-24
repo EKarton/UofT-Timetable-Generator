@@ -1,0 +1,28 @@
+{
+  "CourseName": "CIN320H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Bell, C.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "IN 312",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "IN 312",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "TRN421Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "SEDRA, M.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "TC 22",
+          "WinterLocation": "TC 22"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

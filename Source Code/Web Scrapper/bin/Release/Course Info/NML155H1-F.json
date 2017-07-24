@@ -1,0 +1,28 @@
+{
+  "CourseName": "NML155H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Nizri, Y.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "UC 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "UC 244",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

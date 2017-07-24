@@ -1,0 +1,21 @@
+{
+  "CourseName": "SLA230H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ambros, V.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "RL 3023",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

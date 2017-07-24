@@ -1,0 +1,21 @@
+{
+  "CourseName": "EAS241H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2105"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

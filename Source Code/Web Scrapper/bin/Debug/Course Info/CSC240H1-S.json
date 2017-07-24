@@ -1,0 +1,35 @@
+{
+  "CourseName": "CSC240H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ellen, F.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1170"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1170"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1170"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

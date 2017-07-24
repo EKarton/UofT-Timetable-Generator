@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL492H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Schatz, E.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "LA 213"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

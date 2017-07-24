@@ -1,0 +1,35 @@
+{
+  "CourseName": "BCH374Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Brown, G.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

@@ -1,0 +1,115 @@
+{
+  "CourseName": "CSC148H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Horton, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Liu, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "BA 1160",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

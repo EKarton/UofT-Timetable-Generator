@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW443H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.3,
+          "EndTime": 20.3,
+          "FallLocation": null,
+          "WinterLocation": "OI 3310"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

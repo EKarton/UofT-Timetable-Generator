@@ -1,0 +1,21 @@
+{
+  "CourseName": "ANT372H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Krmpotich, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "UC A101"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

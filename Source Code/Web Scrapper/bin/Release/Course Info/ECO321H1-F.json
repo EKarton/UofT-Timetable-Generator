@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO321H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Hamilton, G.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "GB 303",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "GB 303",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

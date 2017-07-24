@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW115H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Whissell, P.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 54G"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

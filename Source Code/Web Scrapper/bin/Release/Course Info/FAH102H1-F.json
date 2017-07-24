@@ -1,0 +1,152 @@
+{
+  "CourseName": "FAH102H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Anderson, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "MS 3154",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5103",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "BF 323",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5104",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "BF 323",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5203",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": "BF 323",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5204",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": "BF 323",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

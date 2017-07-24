@@ -1,0 +1,21 @@
+{
+  "CourseName": "MUN101H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wong, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 8.0,
+          "EndTime": 10.0,
+          "FallLocation": "BL 114",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

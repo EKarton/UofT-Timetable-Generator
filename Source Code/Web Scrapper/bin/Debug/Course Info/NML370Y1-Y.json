@@ -1,0 +1,28 @@
+{
+  "CourseName": "NML370Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "AP 120",
+          "WinterLocation": "AP 120"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "AP 120",
+          "WinterLocation": "AP 120"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

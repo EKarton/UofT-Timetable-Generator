@@ -1,0 +1,28 @@
+{
+  "CourseName": "CLA362H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Murray, S.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "LI 220"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "LI 220"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

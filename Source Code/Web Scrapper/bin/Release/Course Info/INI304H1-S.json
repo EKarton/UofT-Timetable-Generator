@@ -1,0 +1,21 @@
+{
+  "CourseName": "INI304H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Riendeau, R.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "IN 312"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

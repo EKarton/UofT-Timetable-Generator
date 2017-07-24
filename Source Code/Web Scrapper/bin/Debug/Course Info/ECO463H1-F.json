@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO463H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Malinova, E.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "RW 143",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "SS 1074",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

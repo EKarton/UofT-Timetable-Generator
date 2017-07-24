@@ -1,0 +1,99 @@
+{
+  "CourseName": "BCH299Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gilbert, P.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Houry, W.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "Lee, W.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0401",
+      "Instructor": "McQuibban, A.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0501",
+      "Instructor": "Moraes, T.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0601",
+      "Instructor": "Schuurmans, C.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0701",
+      "Instructor": "Wyatt, H.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

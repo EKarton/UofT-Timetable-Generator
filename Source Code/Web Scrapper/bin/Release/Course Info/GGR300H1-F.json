@@ -1,0 +1,21 @@
+{
+  "CourseName": "GGR300H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ruddick, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 161",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

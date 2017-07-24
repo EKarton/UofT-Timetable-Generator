@@ -1,0 +1,21 @@
+{
+  "CourseName": "RSM325H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.3,
+          "EndTime": 20.3,
+          "FallLocation": null,
+          "WinterLocation": "WO 30"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

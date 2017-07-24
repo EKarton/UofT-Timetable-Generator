@@ -1,0 +1,35 @@
+{
+  "CourseName": "PCL302H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Arnot, M.\r\nGrant, D.\r\nMitchell, J.\r\nSalmena, L.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "FG 103",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "FG 103",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "FG 103",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

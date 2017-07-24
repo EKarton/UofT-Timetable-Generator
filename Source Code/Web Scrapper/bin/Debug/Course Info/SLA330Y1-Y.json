@@ -1,0 +1,21 @@
+{
+  "CourseName": "SLA330Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Schallert, J.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "AH 304",
+          "WinterLocation": "AH 304"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

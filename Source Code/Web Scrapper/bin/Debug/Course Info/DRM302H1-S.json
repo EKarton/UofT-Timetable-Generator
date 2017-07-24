@@ -1,0 +1,21 @@
+{
+  "CourseName": "DRM302H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Cherniak, L.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "UP 100"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

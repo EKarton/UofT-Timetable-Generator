@@ -1,0 +1,178 @@
+{
+  "CourseName": "GGR252H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC2501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 2158"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 2158"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1086"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1084"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1069"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0302",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1088"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1086"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1086"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0601",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1084"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1088"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 19.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1084"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 19.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1088"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1084"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

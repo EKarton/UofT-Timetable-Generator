@@ -1,0 +1,21 @@
+{
+  "CourseName": "CRI225H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "WB 116",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,35 @@
+{
+  "CourseName": "CSC302H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Zaleski, M.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

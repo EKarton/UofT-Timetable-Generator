@@ -1,0 +1,35 @@
+{
+  "CourseName": "SLA320Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "AH 402",
+          "WinterLocation": "AH 402"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "AH 402",
+          "WinterLocation": "AH 402"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "AH 402",
+          "WinterLocation": "AH 402"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,47 @@
+{
+  "CourseName": "RSM423H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Smieliauskas, W.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "WW 126",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Barrette, C.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "WO 25",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Smieliauskas, W.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "WW 126",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

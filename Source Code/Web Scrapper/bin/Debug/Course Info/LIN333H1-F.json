@@ -1,0 +1,21 @@
+{
+  "CourseName": "LIN333H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Bejar, S.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 18.0,
+          "FallLocation": "GB 220",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,62 @@
+{
+  "CourseName": "CSC401H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 100"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "MB 128"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 100"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2001",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 100"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "MB 128"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 100"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

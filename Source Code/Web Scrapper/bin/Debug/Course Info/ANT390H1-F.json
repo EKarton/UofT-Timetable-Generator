@@ -1,0 +1,21 @@
+{
+  "CourseName": "ANT390H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "GB 303",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

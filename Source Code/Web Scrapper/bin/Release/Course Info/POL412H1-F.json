@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL412H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Zarnett, D.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "RL 14081",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

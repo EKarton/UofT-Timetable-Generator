@@ -1,0 +1,28 @@
+{
+  "CourseName": "SLA105Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "AH 105",
+          "WinterLocation": "AH 105"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "AH 105",
+          "WinterLocation": "AH 105"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

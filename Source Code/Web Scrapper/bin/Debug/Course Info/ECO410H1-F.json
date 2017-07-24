@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO410H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Murdock, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 158",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 158",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

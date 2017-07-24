@@ -1,0 +1,21 @@
+{
+  "CourseName": "PHL295H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Stump, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "SF 1105"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

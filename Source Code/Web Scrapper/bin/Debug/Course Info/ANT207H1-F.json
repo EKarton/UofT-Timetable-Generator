@@ -1,0 +1,126 @@
+{
+  "CourseName": "ANT207H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Li, T.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "HS 610",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "SK 114",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "SK 114",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "SK 348",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "SK 348",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "SK 348",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0601",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SK 346",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0701",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "SK 346",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SK 348",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

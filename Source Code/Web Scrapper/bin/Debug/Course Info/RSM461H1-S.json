@@ -1,0 +1,34 @@
+{
+  "CourseName": "RSM461H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "RT 142"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "RT 142"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

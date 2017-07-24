@@ -1,0 +1,68 @@
+{
+  "CourseName": "CSC318H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 119"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 119"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

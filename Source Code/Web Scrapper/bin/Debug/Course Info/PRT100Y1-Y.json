@@ -1,0 +1,48 @@
+{
+  "CourseName": "PRT100Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "de Almeida Graca, L.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "EM 302",
+          "WinterLocation": "EM 302"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "de Almeida Graca, L.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "VC 212",
+          "WinterLocation": "VC 212"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "de Almeida Graca, L.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "VC 211",
+          "WinterLocation": "VC 211"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

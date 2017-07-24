@@ -1,0 +1,28 @@
+{
+  "CourseName": "VIC171Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Baigrie, B.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "NF 009",
+          "WinterLocation": "NF 009"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "NF 009",
+          "WinterLocation": "NF 009"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

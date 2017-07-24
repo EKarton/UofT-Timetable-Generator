@@ -1,0 +1,21 @@
+{
+  "CourseName": "EAS256H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "SS 2110",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

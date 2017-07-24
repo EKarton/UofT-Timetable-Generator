@@ -1,0 +1,28 @@
+{
+  "CourseName": "EAS200Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "VC 115",
+          "WinterLocation": "VC 115"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "VC 115",
+          "WinterLocation": "VC 115"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

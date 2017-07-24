@@ -1,0 +1,21 @@
+{
+  "CourseName": "ESS361H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "ES 2119",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

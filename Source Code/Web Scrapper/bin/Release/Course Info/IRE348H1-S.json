@@ -1,0 +1,21 @@
+{
+  "CourseName": "IRE348H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Mock, E.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "WW 126"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

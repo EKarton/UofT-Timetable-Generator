@@ -1,0 +1,28 @@
+{
+  "CourseName": "HIS347H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Loeb, L.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "NF 113",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "NF 113",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

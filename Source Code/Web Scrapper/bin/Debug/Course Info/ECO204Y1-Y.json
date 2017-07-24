@@ -1,0 +1,128 @@
+{
+  "CourseName": "ECO204Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Hussain, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "MS 2172",
+          "WinterLocation": "MS 2172"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "MS 2158",
+          "WinterLocation": "MS 2158"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Hussain, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "BA 1170",
+          "WinterLocation": "BA 1170"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "MS 2158",
+          "WinterLocation": "MS 2158"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "Hussain, S.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "MS 2170",
+          "WinterLocation": "SF 1101"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "NF 003",
+          "WinterLocation": "NF 003"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0401",
+      "Instructor": "Hussain, S.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "MS 2170",
+          "WinterLocation": "MS 2170"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "NF 003",
+          "WinterLocation": "NF 003"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0501",
+      "Instructor": "Foltin, P.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "OI 2212",
+          "WinterLocation": "OI 2212"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "BR 200",
+          "WinterLocation": "BR 200"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Foltin, P.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "MS 2172",
+          "WinterLocation": "MS 2172"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "BR 200",
+          "WinterLocation": "BR 200"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

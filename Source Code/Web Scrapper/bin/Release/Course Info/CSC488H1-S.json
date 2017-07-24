@@ -1,0 +1,35 @@
+{
+  "CourseName": "CSC488H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Baumgartner, G.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 244"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

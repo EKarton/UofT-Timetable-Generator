@@ -1,0 +1,74 @@
+{
+  "CourseName": "HMB203H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Papaconstantinou, M.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1073"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 51A"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 54"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0103",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 54D"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0104",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 52"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

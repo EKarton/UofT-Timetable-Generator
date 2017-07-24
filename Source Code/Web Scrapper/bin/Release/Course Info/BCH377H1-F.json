@@ -1,0 +1,28 @@
+{
+  "CourseName": "BCH377H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Khan-Trottier, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": "contact DEPT",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "contact DEPT",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

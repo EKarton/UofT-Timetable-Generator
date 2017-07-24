@@ -1,0 +1,35 @@
+{
+  "CourseName": "FOR423H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Krigstin, S.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1073"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 158"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

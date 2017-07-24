@@ -1,0 +1,28 @@
+{
+  "CourseName": "CSB426H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Lovejoy, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "RW 143",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "RW 143",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,28 @@
+{
+  "CourseName": "LAT451H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gunderson, E.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "LI 205",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "LI 205",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

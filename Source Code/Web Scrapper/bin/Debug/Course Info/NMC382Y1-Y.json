@@ -1,0 +1,21 @@
+{
+  "CourseName": "NMC382Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Leprohon, R.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "BF 215",
+          "WinterLocation": "BF 215"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

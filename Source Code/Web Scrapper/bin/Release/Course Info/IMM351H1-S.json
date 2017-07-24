@@ -1,0 +1,28 @@
+{
+  "CourseName": "IMM351H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Clemenza, L.\r\nMallevaey, T.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "ES 1050"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 4279"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

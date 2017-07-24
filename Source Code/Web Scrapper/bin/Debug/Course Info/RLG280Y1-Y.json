@@ -1,0 +1,81 @@
+{
+  "CourseName": "RLG280Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Dhand, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "NF 003",
+          "WinterLocation": "NF 003"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "NF 003",
+          "WinterLocation": "NF 003"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "FE 135",
+          "WinterLocation": "FE 135"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "FE 139",
+          "WinterLocation": "FE 139"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0103",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "OI 2214",
+          "WinterLocation": "OI 2214"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0104",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "TF 101",
+          "WinterLocation": "TF 101"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

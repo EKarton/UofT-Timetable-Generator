@@ -1,0 +1,21 @@
+{
+  "CourseName": "ESS464H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "Contact DEPT"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

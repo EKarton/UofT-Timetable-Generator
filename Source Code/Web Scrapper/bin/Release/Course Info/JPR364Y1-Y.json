@@ -1,0 +1,21 @@
+{
+  "CourseName": "JPR364Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Marshall, R.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 179",
+          "WinterLocation": "UC 179"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

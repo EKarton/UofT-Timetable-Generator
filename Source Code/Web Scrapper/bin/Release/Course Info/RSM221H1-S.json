@@ -1,0 +1,73 @@
+{
+  "CourseName": "RSM221H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 20"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 25"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 25"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "WW 120"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "WO 30"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

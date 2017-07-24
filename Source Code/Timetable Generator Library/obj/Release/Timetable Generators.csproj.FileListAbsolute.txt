@@ -1,0 +1,16 @@
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\CSC207H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\CSC236H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\FOR200H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\MAT224H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\MAT237Y1-Y.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Sample Input\STA247H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Timetable Generator Library.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Timetable Generator Library.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Release\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Release\Timetable Generators.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Release\Timetable Generator Library.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\obj\Release\Timetable Generator Library.pdb

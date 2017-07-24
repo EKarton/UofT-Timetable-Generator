@@ -1,0 +1,68 @@
+{
+  "CourseName": "CHM317H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wheeler, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1071"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1071"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "Stone, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 6"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "Stone, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 6"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0301",
+      "Instructor": "Stone, D.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 6"
+        }
+      ]
+    }
+  ]
+}

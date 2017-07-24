@@ -1,0 +1,35 @@
+{
+  "CourseName": "ESS331H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "ES 1062",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "ES 1062",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 18.0,
+          "FallLocation": "ES 1062",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

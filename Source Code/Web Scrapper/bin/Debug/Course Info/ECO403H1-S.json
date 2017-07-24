@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO403H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Blouin, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 5270"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 5270"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

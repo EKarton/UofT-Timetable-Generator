@@ -1,0 +1,21 @@
+{
+  "CourseName": "UNI103Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "UC 87",
+          "WinterLocation": "UC 87"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

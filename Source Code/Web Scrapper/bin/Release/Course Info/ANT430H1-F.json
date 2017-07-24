@@ -1,0 +1,21 @@
+{
+  "CourseName": "ANT430H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Lehman, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "AP 124",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

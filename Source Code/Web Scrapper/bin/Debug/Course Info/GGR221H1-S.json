@@ -1,0 +1,48 @@
+{
+  "CourseName": "GGR221H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2118"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1087"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2108"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

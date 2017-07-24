@@ -1,0 +1,74 @@
+{
+  "CourseName": "BIO251H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 103"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ]
+}

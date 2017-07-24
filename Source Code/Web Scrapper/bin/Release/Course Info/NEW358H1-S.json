@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW358H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wasike, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2106"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

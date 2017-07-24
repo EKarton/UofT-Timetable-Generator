@@ -1,0 +1,21 @@
+{
+  "CourseName": "ANT480H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Sammons, E.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "IN 209",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

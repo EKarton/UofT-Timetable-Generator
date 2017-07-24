@@ -1,0 +1,42 @@
+{
+  "CourseName": "ENV237H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wunch, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 118"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 118"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 125"
+        }
+      ]
+    }
+  ]
+}

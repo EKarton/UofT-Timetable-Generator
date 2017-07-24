@@ -1,0 +1,21 @@
+{
+  "CourseName": "MIJ485H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gray-Owen, S.\r\nOstrowski, M.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "PB 255"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

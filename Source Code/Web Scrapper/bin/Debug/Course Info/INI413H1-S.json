@@ -1,0 +1,21 @@
+{
+  "CourseName": "INI413H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Messenger, C.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "IN 312"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

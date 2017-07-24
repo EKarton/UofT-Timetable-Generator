@@ -1,0 +1,21 @@
+{
+  "CourseName": "VIC173Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Berkovitz, J.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "VC 304",
+          "WinterLocation": "VC 304"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

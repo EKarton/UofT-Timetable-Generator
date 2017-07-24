@@ -1,0 +1,21 @@
+{
+  "CourseName": "SOC265H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "La Touche, R.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "LM 162",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

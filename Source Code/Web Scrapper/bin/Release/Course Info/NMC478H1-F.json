@@ -1,0 +1,21 @@
+{
+  "CourseName": "NMC478H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Reilly, J.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": "BF 315",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,35 @@
+{
+  "CourseName": "PHC421H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Chalikian, T.\r\nMacgregor, R.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "PB 450"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "PB 450"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "PB 450"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

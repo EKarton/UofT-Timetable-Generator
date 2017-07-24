@@ -1,0 +1,35 @@
+{
+  "CourseName": "MAT454H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Bierstone, E.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 6183"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 6183"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 6183"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

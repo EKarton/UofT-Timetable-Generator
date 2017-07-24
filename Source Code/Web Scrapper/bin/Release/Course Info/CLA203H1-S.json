@@ -1,0 +1,21 @@
+{
+  "CourseName": "CLA203H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Durand, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "BR 200"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

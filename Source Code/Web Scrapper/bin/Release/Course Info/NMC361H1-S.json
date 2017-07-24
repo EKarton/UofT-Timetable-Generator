@@ -1,0 +1,28 @@
+{
+  "CourseName": "NMC361H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Harrison, T.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "BF 415"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "BF 415"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

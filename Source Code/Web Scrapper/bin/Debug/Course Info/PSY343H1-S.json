@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY343H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1088"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

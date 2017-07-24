@@ -1,0 +1,21 @@
+{
+  "CourseName": "INS360Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Key, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "KP 113",
+          "WinterLocation": "KP 113"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

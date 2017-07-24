@@ -1,0 +1,55 @@
+{
+  "CourseName": "BIO255H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Desveaux, D.\r\nHarris, T.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "CH ---",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CH ---",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "MS 2158",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

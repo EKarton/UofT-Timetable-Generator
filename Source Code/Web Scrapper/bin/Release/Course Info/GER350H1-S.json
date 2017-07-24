@@ -1,0 +1,21 @@
+{
+  "CourseName": "GER350H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Soldovieri, S.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 107"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

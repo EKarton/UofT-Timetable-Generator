@@ -1,0 +1,21 @@
+{
+  "CourseName": "CIN320H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Zambenedetti, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "RL 3025"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

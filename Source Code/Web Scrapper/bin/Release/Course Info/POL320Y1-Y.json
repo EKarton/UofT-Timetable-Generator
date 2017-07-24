@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL320Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kingston, R.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "AH 100",
+          "WinterLocation": "AH 100"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

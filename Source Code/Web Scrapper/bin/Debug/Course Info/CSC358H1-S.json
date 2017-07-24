@@ -1,0 +1,48 @@
+{
+  "CourseName": "CSC358H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Marbach, P.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 221"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "GB 221"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Marbach, P.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1190"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1190"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

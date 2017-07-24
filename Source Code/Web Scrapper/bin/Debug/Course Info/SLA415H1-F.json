@@ -1,0 +1,21 @@
+{
+  "CourseName": "SLA415H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Smolyarova, T.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": "AH 105",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

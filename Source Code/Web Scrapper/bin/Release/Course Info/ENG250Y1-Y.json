@@ -1,0 +1,126 @@
+{
+  "CourseName": "ENG250Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ackerman, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "SS 2118",
+          "WinterLocation": "SS 2118"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "WE 76",
+          "WinterLocation": "WE 76"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "WE 75",
+          "WinterLocation": "WE 75"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0103",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 53",
+          "WinterLocation": "UC 53"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0104",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "RL 14081",
+          "WinterLocation": "RL 14081"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "WE 76",
+          "WinterLocation": "WE 76"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "WE 75",
+          "WinterLocation": "WE 75"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0203",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "UC 53",
+          "WinterLocation": "UC 53"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0204",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "RL 14081",
+          "WinterLocation": "RL 14081"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

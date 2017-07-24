@@ -1,0 +1,21 @@
+{
+  "CourseName": "EAS308H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Feng, L.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "BA 2185",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

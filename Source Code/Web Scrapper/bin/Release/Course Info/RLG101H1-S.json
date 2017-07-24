@@ -1,0 +1,61 @@
+{
+  "CourseName": "RLG101H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Perley, D.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1073"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1084"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "BF 323"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1078"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

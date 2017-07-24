@@ -1,0 +1,21 @@
+{
+  "CourseName": "NFS386H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gurfinkel, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "MP 203",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,94 @@
+{
+  "CourseName": "HIS250Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Smith, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "BL 205",
+          "WinterLocation": "BL 205"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "BL 205",
+          "WinterLocation": "BL 205"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "SS 2101",
+          "WinterLocation": "SS 2101"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SS 2101",
+          "WinterLocation": "SS 2101"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "UC 69",
+          "WinterLocation": "UC 69"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "SS 2123",
+          "WinterLocation": "SS 2123"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "SS 1078",
+          "WinterLocation": "SS 2123"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

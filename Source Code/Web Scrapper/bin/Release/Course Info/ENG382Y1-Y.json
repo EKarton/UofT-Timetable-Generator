@@ -1,0 +1,28 @@
+{
+  "CourseName": "ENG382Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Morgenstern, N.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 15.0,
+          "FallLocation": "LA 248",
+          "WinterLocation": "LA 248"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "LA 248",
+          "WinterLocation": "LA 248"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,28 @@
+{
+  "CourseName": "EAS461H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "UC 261",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "UC 261",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

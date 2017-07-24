@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY326H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Dolderman, D.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 244",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

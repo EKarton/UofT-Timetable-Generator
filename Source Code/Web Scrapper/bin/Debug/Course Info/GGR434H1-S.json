@@ -1,0 +1,21 @@
+{
+  "CourseName": "GGR434H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Poland, B.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "SK 218"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

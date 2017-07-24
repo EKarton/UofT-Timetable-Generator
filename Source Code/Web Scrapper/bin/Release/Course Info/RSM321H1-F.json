@@ -1,0 +1,68 @@
+{
+  "CourseName": "RSM321H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Richardson, G.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "WO 35",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2117",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "McDonald, J.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "WO 35",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2117",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "McDonald, J.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "WO 35",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2117",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

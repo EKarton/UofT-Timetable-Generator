@@ -1,0 +1,28 @@
+{
+  "CourseName": "APM461H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Nabutovsky, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 6183"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 6183"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

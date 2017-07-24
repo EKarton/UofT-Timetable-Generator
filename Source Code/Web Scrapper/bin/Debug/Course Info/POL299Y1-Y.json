@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL299Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ong, L.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

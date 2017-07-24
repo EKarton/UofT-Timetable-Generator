@@ -1,0 +1,81 @@
+{
+  "CourseName": "EEB267H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "McLennan, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 110"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 110"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    }
+  ]
+}

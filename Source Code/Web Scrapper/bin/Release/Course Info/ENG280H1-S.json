@@ -1,0 +1,28 @@
+{
+  "CourseName": "ENG280H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Henderson, G.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1069"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1069"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

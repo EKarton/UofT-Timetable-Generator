@@ -1,0 +1,68 @@
+{
+  "CourseName": "CSC320H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kutulakos, K.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2501",
+      "Instructor": "Kutulakos, K.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Kutulakos, K.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 130"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

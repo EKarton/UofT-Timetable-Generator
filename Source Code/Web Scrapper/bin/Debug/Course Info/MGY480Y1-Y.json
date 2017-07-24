@@ -1,0 +1,21 @@
+{
+  "CourseName": "MGY480Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Meneghini, M.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

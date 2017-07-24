@@ -1,0 +1,28 @@
+{
+  "CourseName": "CIN332Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "IN 222",
+          "WinterLocation": "IN 222"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "IN 222",
+          "WinterLocation": "IN 222"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

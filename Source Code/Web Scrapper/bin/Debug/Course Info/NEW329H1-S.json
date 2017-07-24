@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW329H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Trotz, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2105"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

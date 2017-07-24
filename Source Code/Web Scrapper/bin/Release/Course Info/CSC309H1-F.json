@@ -1,0 +1,89 @@
+{
+  "CourseName": "CSC309H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Chinaei, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Chinaei, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2001",
+      "Instructor": "Chinaei, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "GB 244",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

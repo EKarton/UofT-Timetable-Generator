@@ -1,0 +1,28 @@
+{
+  "CourseName": "CHM328H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Schofield, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 123"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 123"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

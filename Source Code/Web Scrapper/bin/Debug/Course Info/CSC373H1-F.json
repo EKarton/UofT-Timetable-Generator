@@ -1,0 +1,62 @@
+{
+  "CourseName": "CSC373H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "LM 161",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "LM 161",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "LM 161",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "WI 1016",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "BA 1190",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "BA 1190",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

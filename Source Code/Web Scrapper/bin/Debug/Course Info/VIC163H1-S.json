@@ -1,0 +1,28 @@
+{
+  "CourseName": "VIC163H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Urbancic, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "NF 009"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "NF 009"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

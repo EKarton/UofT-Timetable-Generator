@@ -1,0 +1,34 @@
+{
+  "CourseName": "ECO331H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gazzale, R.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "HA 403"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Gazzale, R.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "HA 403"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

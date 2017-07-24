@@ -1,0 +1,146 @@
+{
+  "CourseName": "HIS102Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Chin, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": "SS 2117"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "PB B150",
+          "WinterLocation": "SS 2117"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "BL 312",
+          "WinterLocation": "BL 312"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "UC 55",
+          "WinterLocation": "UC 55"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "BL 312",
+          "WinterLocation": "BL 312"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "UC 55",
+          "WinterLocation": "UC 55"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "BL 312",
+          "WinterLocation": "BL 312"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "UC 55",
+          "WinterLocation": "UC 55"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5302",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "BL 312",
+          "WinterLocation": "BL 312"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "BL 312",
+          "WinterLocation": "BL 312"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5402",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 19.0,
+          "FallLocation": "UC 55",
+          "WinterLocation": "UC 55"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

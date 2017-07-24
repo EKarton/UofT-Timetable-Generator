@@ -1,0 +1,62 @@
+{
+  "CourseName": "CHM249H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Yudin, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 158"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 158"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 158"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 8.3,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 113"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 8.3,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 113"
+        }
+      ]
+    }
+  ]
+}

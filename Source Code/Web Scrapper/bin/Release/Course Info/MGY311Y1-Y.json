@@ -1,0 +1,35 @@
+{
+  "CourseName": "MGY311Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Caudy, A.\r\nClaycomb, J.\r\nCollins, R.\r\nFunnell, B.\r\nWilde, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "MS 2172",
+          "WinterLocation": "MS 2172"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "MS 2172",
+          "WinterLocation": "MS 2172"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "MS 2172",
+          "WinterLocation": "MS 2172"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

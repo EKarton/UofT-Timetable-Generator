@@ -1,0 +1,21 @@
+{
+  "CourseName": "HST310H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 18.0,
+          "FallLocation": null,
+          "WinterLocation": "UC A101"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

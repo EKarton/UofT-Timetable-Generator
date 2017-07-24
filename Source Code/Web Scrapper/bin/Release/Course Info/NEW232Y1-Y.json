@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW232Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Shiu, H.\r\nToneatto, A.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": "MB 128"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

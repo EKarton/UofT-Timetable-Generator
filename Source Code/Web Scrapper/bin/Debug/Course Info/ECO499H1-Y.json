@@ -1,0 +1,21 @@
+{
+  "CourseName": "ECO499H1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Gazzale, R.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": "SK 348",
+          "WinterLocation": "SK 348"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

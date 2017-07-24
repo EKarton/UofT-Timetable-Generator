@@ -1,0 +1,28 @@
+{
+  "CourseName": "ACT466H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Badescu, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "WI 1017"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 140"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

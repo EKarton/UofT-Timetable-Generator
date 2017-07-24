@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW150Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Levin, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "WI 523",
+          "WinterLocation": "WI 523"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

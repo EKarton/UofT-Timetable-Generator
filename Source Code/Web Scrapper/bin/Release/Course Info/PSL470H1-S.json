@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSL470H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Caniggia, I.\r\nWittnich, C.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 2170"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,54 @@
+{
+  "CourseName": "ECO202Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "McKeown, R.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 17.0,
+          "FallLocation": "SS 2102",
+          "WinterLocation": "SS 2102"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Steinberg, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": "MB 128"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "MB 128",
+          "WinterLocation": "MB 128"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "McKeown, R.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "SS 2102",
+          "WinterLocation": "SS 2102"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,34 @@
+{
+  "CourseName": "NEW120Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Newton, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": "WI 524",
+          "WinterLocation": "WI 524"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2000",
+      "Instructor": "Newton, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": "WI 524",
+          "WinterLocation": "WI 524"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

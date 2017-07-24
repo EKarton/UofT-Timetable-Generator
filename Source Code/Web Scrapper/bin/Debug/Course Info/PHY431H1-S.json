@@ -1,0 +1,35 @@
+{
+  "CourseName": "PHY431H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Zilman, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 408"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 408"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 408"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

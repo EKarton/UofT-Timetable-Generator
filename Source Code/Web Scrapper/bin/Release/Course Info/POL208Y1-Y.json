@@ -1,0 +1,47 @@
+{
+  "CourseName": "POL208Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Campbell-Verduyn, M.\r\nGunitskiy, V.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "ES 1050",
+          "WinterLocation": "ES 1050"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC2001",
+      "Instructor": "Campbell-Verduyn, M.\r\nGunitskiy, V.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "ES 1050",
+          "WinterLocation": "ES 1050"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Gunitskiy, V.\r\nJurgensen, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "HS 610",
+          "WinterLocation": "HS 610"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "RSM491H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Bourque, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 5150"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

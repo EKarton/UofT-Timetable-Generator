@@ -1,0 +1,21 @@
+{
+  "CourseName": "NMC469Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Mason, R.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "RO 603",
+          "WinterLocation": "RO 603"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

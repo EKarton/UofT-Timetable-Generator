@@ -1,0 +1,21 @@
+{
+  "CourseName": "ECO326H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Peski, M.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1087"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

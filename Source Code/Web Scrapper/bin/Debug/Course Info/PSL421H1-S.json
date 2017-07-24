@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSL421H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Caniggia, I.\r\nMatthews, S.\r\nMcNamara, P.\r\nRosenblum, N.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 4279"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

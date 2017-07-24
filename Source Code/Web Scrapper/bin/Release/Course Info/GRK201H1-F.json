@@ -1,0 +1,35 @@
+{
+  "CourseName": "GRK201H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Burgess, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

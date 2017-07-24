@@ -1,0 +1,35 @@
+{
+  "CourseName": "AST221H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "AB 107",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "AB 107",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "AB 107",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

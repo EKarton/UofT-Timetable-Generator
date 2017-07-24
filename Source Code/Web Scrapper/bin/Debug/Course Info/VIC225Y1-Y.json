@@ -1,0 +1,74 @@
+{
+  "CourseName": "VIC225Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Bartlett, K.\r\nChazan, M.\r\nKalmar, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "VC 215",
+          "WinterLocation": "VC 215"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "NF 004",
+          "WinterLocation": "NF 004"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "NF 004",
+          "WinterLocation": "NF 004"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "NF 004",
+          "WinterLocation": "NF 004"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "NF 004",
+          "WinterLocation": "NF 004"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

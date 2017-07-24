@@ -1,0 +1,142 @@
+{
+  "CourseName": "LAT101H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Davis, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Ekman, E.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "Cushing, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0401",
+      "Instructor": "Fabiano, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0501",
+      "Instructor": "Bennardo, L.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "LI 220",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Easton, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "NF 119",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "NF 119",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

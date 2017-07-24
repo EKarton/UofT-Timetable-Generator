@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHY428H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Bailey, D.\r\nMarjoribanks, R.\r\nMorris, S.\r\nOrr, R.\r\nWalker, K.\r\nYang, L.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 251"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 251"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

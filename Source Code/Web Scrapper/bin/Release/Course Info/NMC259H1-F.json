@@ -1,0 +1,28 @@
+{
+  "CourseName": "NMC259H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "RW 143",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "RW 143",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

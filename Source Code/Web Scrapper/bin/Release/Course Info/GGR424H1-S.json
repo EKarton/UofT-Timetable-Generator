@@ -1,0 +1,21 @@
+{
+  "CourseName": "GGR424H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kramer, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 2139"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

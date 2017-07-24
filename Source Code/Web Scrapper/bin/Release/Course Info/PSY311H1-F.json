@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY311H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kil, H.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 1072",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

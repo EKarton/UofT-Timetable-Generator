@@ -1,0 +1,21 @@
+{
+  "CourseName": "HST350Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "UC 256",
+          "WinterLocation": "UC 256"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

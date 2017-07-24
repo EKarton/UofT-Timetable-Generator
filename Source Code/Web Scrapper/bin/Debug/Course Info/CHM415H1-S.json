@@ -1,0 +1,28 @@
+{
+  "CourseName": "CHM415H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Murphy, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 157"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "LM 157"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

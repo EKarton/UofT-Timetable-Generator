@@ -1,0 +1,48 @@
+{
+  "CourseName": "EEB386H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 140"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "RW 13"
+        }
+      ]
+    }
+  ]
+}

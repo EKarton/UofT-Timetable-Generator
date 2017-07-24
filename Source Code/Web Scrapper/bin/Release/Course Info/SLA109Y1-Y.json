@@ -1,0 +1,21 @@
+{
+  "CourseName": "SLA109Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Kramer, C.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "UC B203",
+          "WinterLocation": "UC B203"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

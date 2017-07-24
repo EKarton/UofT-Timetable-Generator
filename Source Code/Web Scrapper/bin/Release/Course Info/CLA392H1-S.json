@@ -1,0 +1,21 @@
+{
+  "CourseName": "CLA392H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Bing, P.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "LI 220"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "MGY315H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Boone, C.\r\nBrill, J.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 17.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 3379"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

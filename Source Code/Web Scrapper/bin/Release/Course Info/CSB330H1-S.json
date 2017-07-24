@@ -1,0 +1,28 @@
+{
+  "CourseName": "CSB330H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Goring, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.3,
+          "EndTime": 11.3,
+          "FallLocation": null,
+          "WinterLocation": "RW 143"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.3,
+          "EndTime": 12.3,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

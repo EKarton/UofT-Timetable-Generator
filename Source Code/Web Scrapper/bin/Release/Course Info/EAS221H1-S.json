@@ -1,0 +1,82 @@
+{
+  "CourseName": "EAS221H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Komuro-Lee, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2106"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 10.3,
+          "FallLocation": null,
+          "WinterLocation": "WI 524"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 10.3,
+          "FallLocation": null,
+          "WinterLocation": "WI 524"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 13.3,
+          "FallLocation": null,
+          "WinterLocation": "EM 108"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 13.3,
+          "FallLocation": null,
+          "WinterLocation": "EM 108"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 14.0,
+          "EndTime": 15.3,
+          "FallLocation": null,
+          "WinterLocation": "BL 112"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 15.3,
+          "FallLocation": null,
+          "WinterLocation": "BL 112"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

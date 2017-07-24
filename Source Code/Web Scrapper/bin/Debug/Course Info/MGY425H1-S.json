@@ -1,0 +1,28 @@
+{
+  "CourseName": "MGY425H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Durocher, D.\r\nEgan, S.\r\nPelletier, L.\r\nWrana, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 3278"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": null,
+          "WinterLocation": "MS 3278"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

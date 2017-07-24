@@ -1,0 +1,21 @@
+{
+  "CourseName": "CRI391H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Owusu-Bempah, A.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 5250"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

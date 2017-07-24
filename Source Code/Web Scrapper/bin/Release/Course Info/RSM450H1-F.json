@@ -1,0 +1,21 @@
+{
+  "CourseName": "RSM450H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "House, J.\r\nPaleja, M.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "WO 25",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

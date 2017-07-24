@@ -1,0 +1,35 @@
+{
+  "CourseName": "PSL304H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Brubaker, P.\r\nHorner, R.\r\nMcNamara, P.\r\nTweed, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "MS 4171",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "MS 4171",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "MS 4171",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

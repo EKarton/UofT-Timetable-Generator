@@ -1,0 +1,28 @@
+{
+  "CourseName": "STA288H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ju, W.\r\nWhite, B.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 116"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 11.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "WB 116"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

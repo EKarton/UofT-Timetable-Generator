@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL326Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Jurgensen, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 140",
+          "WinterLocation": "UC 140"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

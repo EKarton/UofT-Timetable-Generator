@@ -1,0 +1,21 @@
+{
+  "CourseName": "ENV322H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Vogt, E.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 1073"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

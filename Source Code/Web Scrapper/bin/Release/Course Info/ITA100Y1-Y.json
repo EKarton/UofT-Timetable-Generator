@@ -1,0 +1,341 @@
+{
+  "CourseName": "ITA100Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Galli, S.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 10.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Pasquarelli Clivio, M.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0301",
+      "Instructor": "Pasquarelli Clivio, M.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 12.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0401",
+      "Instructor": "Gaspari, S.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 13.0,
+          "FallLocation": "CR 103",
+          "WinterLocation": "CR 103"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0501",
+      "Instructor": "Gaspari, S.\r\nPasquarelli Clivio, M.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0502",
+      "Instructor": "Carraro, E.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": "CR 403"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": "CR 403"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": "CR 403"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0601",
+      "Instructor": "Lamanna, B.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0701",
+      "Instructor": "Carraro, E.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 405",
+          "WinterLocation": "CR 405"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5102",
+      "Instructor": "Frasca, P.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5103",
+      "Instructor": "Facchi, F.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 403",
+          "WinterLocation": "CR 403"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "AH 302",
+          "WinterLocation": "AH 302"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5202",
+      "Instructor": "Facchi, F.\r\nTesi, L.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 404",
+          "WinterLocation": "CR 404"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5203",
+      "Instructor": "Arancibia, P.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 405",
+          "WinterLocation": "CR 405"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5204",
+      "Instructor": "Lettieri, M.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "CR 406",
+          "WinterLocation": "CR 406"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5301",
+      "Instructor": "Scontrino, M.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "TF 203",
+          "WinterLocation": "TF 203"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5401",
+      "Instructor": "Martignoni, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "TF 203",
+          "WinterLocation": "TF 203"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

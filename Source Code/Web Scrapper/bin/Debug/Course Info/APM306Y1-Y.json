@@ -1,0 +1,21 @@
+{
+  "CourseName": "APM306Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Derzko, N.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "HA 316",
+          "WinterLocation": "FE 135"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

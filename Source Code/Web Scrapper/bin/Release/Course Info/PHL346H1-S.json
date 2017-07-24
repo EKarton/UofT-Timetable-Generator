@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL346H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Koo, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 13.0,
+          "EndTime": 14.3,
+          "FallLocation": null,
+          "WinterLocation": "UC 85"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.0,
+          "EndTime": 14.3,
+          "FallLocation": null,
+          "WinterLocation": "UC 85"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

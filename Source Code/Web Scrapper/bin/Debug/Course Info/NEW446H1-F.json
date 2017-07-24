@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW446H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Quarter, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.3,
+          "EndTime": 20.3,
+          "FallLocation": "OI 2199",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

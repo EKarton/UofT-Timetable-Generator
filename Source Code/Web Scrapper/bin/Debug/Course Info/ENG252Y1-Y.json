@@ -1,0 +1,100 @@
+{
+  "CourseName": "ENG252Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "SS 1085",
+          "WinterLocation": "SS 1085"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "BL 313",
+          "WinterLocation": "BL 313"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "UC A101",
+          "WinterLocation": "UC A101"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0103",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "UC 256",
+          "WinterLocation": "UC 256"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "UC 163",
+          "WinterLocation": "UC 163"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "UC A101",
+          "WinterLocation": "UC A101"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0203",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 17.0,
+          "FallLocation": "UC 244",
+          "WinterLocation": "UC 244"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

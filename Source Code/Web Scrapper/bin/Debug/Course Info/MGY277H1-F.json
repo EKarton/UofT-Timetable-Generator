@@ -1,0 +1,21 @@
+{
+  "CourseName": "MGY277H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC9901",
+      "Instructor": "Hill, J.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

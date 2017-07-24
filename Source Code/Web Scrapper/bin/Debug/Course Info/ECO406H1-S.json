@@ -1,0 +1,21 @@
+{
+  "CourseName": "ECO406H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Indart, G.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 5250"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

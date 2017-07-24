@@ -1,0 +1,21 @@
+{
+  "CourseName": "NMC377Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Ostapchuk, V.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "BF 323",
+          "WinterLocation": "BF 323"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY307H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Downar, J.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.3,
+          "EndTime": 12.3,
+          "FallLocation": "SS 1074",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

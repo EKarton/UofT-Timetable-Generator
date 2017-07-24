@@ -1,0 +1,48 @@
+{
+  "CourseName": "CSC428H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC2501",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 134"
+        },
+        {
+          "Day": "Monday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 134"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 134"
+        },
+        {
+          "Day": "Monday",
+          "StartTime": 20.0,
+          "EndTime": 21.0,
+          "FallLocation": null,
+          "WinterLocation": "MP 134"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "DRM401H1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Connolly, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "UP 109",
+          "WinterLocation": "UP 109"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

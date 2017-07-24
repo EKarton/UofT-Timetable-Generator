@@ -1,0 +1,28 @@
+{
+  "CourseName": "DRM354Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Thompson, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": "UP 109",
+          "WinterLocation": "UP 109"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": "UP 109",
+          "WinterLocation": "UP 109"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

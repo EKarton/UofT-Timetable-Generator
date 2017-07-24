@@ -1,0 +1,108 @@
+{
+  "CourseName": "CHM238Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "McIntosh, D.\r\nOzin, G.\r\nSong, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "LM 158",
+          "WinterLocation": "LM 158"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "LM 158",
+          "WinterLocation": "LM 158"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 14.0,
+          "FallLocation": "UC 144",
+          "WinterLocation": "WI 523"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "TUT0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 14.0,
+          "EndTime": 15.0,
+          "FallLocation": "BF 215",
+          "WinterLocation": "BF 215"
+        }
+      ]
+    }
+  ],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": "LM 211"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0202",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": "LM 211"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0301",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": "LM 211"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0302",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": "LM 211"
+        }
+      ]
+    }
+  ]
+}

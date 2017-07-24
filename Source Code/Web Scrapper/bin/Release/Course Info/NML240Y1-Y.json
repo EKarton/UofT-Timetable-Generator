@@ -1,0 +1,28 @@
+{
+  "CourseName": "NML240Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Zago, S.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "BF 214",
+          "WinterLocation": "BF 214"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "BF 214",
+          "WinterLocation": "BF 214"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

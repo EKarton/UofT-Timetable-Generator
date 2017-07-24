@@ -1,0 +1,21 @@
+{
+  "CourseName": "JPF455Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "McCarney, P.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.3,
+          "EndTime": 11.3,
+          "FallLocation": "AR 103",
+          "WinterLocation": "AR 103"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "GGR343H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Boland, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2125"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

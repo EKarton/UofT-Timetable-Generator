@@ -1,0 +1,21 @@
+{
+  "CourseName": "EAS410Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Choi, Y.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "OI 4426",
+          "WinterLocation": "OI 5280"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "CRI385H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Watson, W.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "KP 108"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

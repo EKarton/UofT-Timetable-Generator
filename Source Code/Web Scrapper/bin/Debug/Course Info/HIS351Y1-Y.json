@@ -1,0 +1,35 @@
+{
+  "CourseName": "HIS351Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Viola, L.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "SS 1071",
+          "WinterLocation": "SS 1071"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [
+    {
+      "MeetingCode": "TUT5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 18.0,
+          "FallLocation": "SS 2135",
+          "WinterLocation": "SS 2135"
+        }
+      ]
+    }
+  ],
+  "Practicals": []
+}

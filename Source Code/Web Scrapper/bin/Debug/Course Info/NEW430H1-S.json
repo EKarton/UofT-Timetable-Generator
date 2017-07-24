@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW430H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Toneatto, A.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "WE 52"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

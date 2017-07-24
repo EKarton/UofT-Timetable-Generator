@@ -1,0 +1,49 @@
+{
+  "CourseName": "BCH428H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Ensminger, A.\r\nParkinson, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.3,
+          "EndTime": 11.0,
+          "FallLocation": "MS 3278",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.3,
+          "EndTime": 11.0,
+          "FallLocation": "MS 3278",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.3,
+          "EndTime": 11.0,
+          "FallLocation": "contact DEPT",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.3,
+          "EndTime": 11.0,
+          "FallLocation": "contact DEPT",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ]
+}

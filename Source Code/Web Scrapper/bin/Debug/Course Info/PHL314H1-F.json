@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL314H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Stang, N.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.3,
+          "EndTime": 14.0,
+          "FallLocation": "BA 1230",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 12.3,
+          "EndTime": 14.0,
+          "FallLocation": "BA 1230",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

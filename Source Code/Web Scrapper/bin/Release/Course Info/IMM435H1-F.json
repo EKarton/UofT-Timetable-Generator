@@ -1,0 +1,21 @@
+{
+  "CourseName": "IMM435H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Dimitriou, I.\r\nEhrhardt, R.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 16.0,
+          "FallLocation": "MS 2381",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

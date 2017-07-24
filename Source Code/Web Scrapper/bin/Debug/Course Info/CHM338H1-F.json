@@ -1,0 +1,55 @@
+{
+  "CourseName": "CHM338H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Stephan, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "LM 157",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 16.0,
+          "FallLocation": "LM 157",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 8.3,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "McIntosh, D.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 8.3,
+          "EndTime": 13.0,
+          "FallLocation": "LM 211",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ]
+}

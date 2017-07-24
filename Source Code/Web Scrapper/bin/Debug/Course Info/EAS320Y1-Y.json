@@ -1,0 +1,28 @@
+{
+  "CourseName": "EAS320Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Komuro-Lee, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 15.0,
+          "EndTime": 17.3,
+          "FallLocation": "SS 2108",
+          "WinterLocation": "SS 2108"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.0,
+          "EndTime": 17.3,
+          "FallLocation": "SS 2108",
+          "WinterLocation": "SS 2108"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

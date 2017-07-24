@@ -1,0 +1,172 @@
+{
+  "CourseName": "BIO120H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Barrett, S.\r\nThomson, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "CH ---",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 10.0,
+          "EndTime": 11.0,
+          "FallLocation": "CH ---",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Barrett, S.\r\nThomson, J.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 18.0,
+          "EndTime": 20.0,
+          "FallLocation": "ES 1050",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": [
+    {
+      "MeetingCode": "PRA0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0201",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0202",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0301",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0302",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 13.3,
+          "EndTime": 16.3,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0401",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA0402",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "PRA5102",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 18.0,
+          "EndTime": 21.0,
+          "FallLocation": "—",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ]
+}

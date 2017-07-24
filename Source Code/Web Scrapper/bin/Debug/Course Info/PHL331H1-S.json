@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL331H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Murray, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 12.0,
+          "EndTime": 13.3,
+          "FallLocation": null,
+          "WinterLocation": "AB 114"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 12.0,
+          "EndTime": 13.3,
+          "FallLocation": null,
+          "WinterLocation": "AB 114"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

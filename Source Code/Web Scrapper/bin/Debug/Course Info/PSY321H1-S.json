@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSY321H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Sharples, A.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "SS 2110"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

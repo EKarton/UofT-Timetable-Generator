@@ -1,0 +1,34 @@
+{
+  "CourseName": "VIC493H1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wells, I.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "VC 211",
+          "WinterLocation": "VC 211"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0102",
+      "Instructor": "Istrate, E.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 18.0,
+          "FallLocation": "NF 235",
+          "WinterLocation": "NF 235"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

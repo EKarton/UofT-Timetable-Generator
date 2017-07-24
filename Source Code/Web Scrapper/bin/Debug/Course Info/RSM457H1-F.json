@@ -1,0 +1,21 @@
+{
+  "CourseName": "RSM457H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Tsai, I.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "RT 142",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

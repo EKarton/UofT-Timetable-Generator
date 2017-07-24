@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL340H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Davies, J.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 16.0,
+          "EndTime": 17.3,
+          "FallLocation": null,
+          "WinterLocation": "UC 87"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 17.3,
+          "FallLocation": null,
+          "WinterLocation": "UC 87"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

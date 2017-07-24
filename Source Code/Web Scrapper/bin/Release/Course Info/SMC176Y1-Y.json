@@ -1,0 +1,28 @@
+{
+  "CourseName": "SMC176Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "CR 107",
+          "WinterLocation": "CR 107"
+        },
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "CR 107",
+          "WinterLocation": "CR 107"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

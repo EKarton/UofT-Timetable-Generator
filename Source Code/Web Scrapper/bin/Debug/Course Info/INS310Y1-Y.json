@@ -1,0 +1,21 @@
+{
+  "CourseName": "INS310Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "McKay, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": "Contact DEPT",
+          "WinterLocation": "Contact DEPT"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

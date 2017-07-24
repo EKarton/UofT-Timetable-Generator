@@ -1,0 +1,21 @@
+{
+  "CourseName": "CRI370H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Taylor, K.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "BA 1130"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

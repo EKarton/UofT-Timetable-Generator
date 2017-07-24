@@ -1,0 +1,15 @@
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Web Scrapper.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\WebDriver.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\WebDriver.Support.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\WebDriver.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\WebDriver.Support.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Release\Web Scrapper.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Release\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Release\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Release\Selenium\Web drivers\chromedriver.exe

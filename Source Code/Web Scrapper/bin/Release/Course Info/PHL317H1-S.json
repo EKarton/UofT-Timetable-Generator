@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL317H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Thomson, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.3,
+          "FallLocation": null,
+          "WinterLocation": "FG 139"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.3,
+          "FallLocation": null,
+          "WinterLocation": "FG 139"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

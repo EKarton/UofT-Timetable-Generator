@@ -1,0 +1,28 @@
+{
+  "CourseName": "EST100H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "AH 103",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "AH 103",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

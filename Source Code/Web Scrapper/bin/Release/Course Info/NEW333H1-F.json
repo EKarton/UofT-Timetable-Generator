@@ -1,0 +1,21 @@
+{
+  "CourseName": "NEW333H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Vervaeke, J.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 13.0,
+          "FallLocation": "UC 161",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

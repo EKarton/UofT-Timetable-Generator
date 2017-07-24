@@ -1,0 +1,28 @@
+{
+  "CourseName": "SLA108Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "AH 306",
+          "WinterLocation": "AH 306"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": "AH 306",
+          "WinterLocation": "AH 306"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

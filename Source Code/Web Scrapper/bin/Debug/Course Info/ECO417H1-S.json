@@ -1,0 +1,21 @@
+{
+  "CourseName": "ECO417H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Freitas, K.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "OI 2198"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

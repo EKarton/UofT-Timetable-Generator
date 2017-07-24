@@ -1,0 +1,48 @@
+{
+  "CourseName": "PHL408H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Kingwell, M.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "TC 24"
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Stang, N.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 19.0,
+          "FallLocation": null,
+          "WinterLocation": "RL 3023"
+        },
+        {
+          "Day": "Tuesday",
+          "StartTime": 17.0,
+          "EndTime": 18.3,
+          "FallLocation": null,
+          "WinterLocation": "OI 11204"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 17.0,
+          "EndTime": 18.3,
+          "FallLocation": null,
+          "WinterLocation": "OI 11204"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

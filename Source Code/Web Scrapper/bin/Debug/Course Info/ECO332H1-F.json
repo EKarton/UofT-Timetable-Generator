@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO332H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Siow, A.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "BL 205",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 11.0,
+          "FallLocation": "SS 1073",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

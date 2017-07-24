@@ -1,0 +1,21 @@
+{
+  "CourseName": "ETH401H1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Dubber, M.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": "LA 211",
+          "WinterLocation": "LA 211"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

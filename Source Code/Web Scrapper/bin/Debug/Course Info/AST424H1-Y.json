@@ -1,0 +1,21 @@
+{
+  "CourseName": "AST424H1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 15.0,
+          "EndTime": 17.0,
+          "FallLocation": "ES B149",
+          "WinterLocation": "ES B149"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

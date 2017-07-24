@@ -1,0 +1,21 @@
+{
+  "CourseName": "PSL444Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Eubanks, J.\r\nMills, L.\r\nMonnier, P.\r\nVelumian, A.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.3,
+          "EndTime": 19.3,
+          "FallLocation": "MS 3278",
+          "WinterLocation": "MS 3278"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

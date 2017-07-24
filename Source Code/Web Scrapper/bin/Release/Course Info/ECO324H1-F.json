@@ -1,0 +1,28 @@
+{
+  "CourseName": "ECO324H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Freitas, K.",
+      "Times": [
+        {
+          "Day": "Thursday",
+          "StartTime": 14.0,
+          "EndTime": 16.0,
+          "FallLocation": "VC 115",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 10.0,
+          "EndTime": 12.0,
+          "FallLocation": "VC 115",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

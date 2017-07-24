@@ -1,0 +1,34 @@
+{
+  "CourseName": "JGA305H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC2501",
+      "Instructor": "Bank, C.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": "ES 1067",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "Bank, C.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 17.0,
+          "EndTime": 20.0,
+          "FallLocation": "ES 1067",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

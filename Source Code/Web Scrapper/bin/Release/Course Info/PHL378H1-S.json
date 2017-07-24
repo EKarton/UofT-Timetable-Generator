@@ -1,0 +1,21 @@
+{
+  "CourseName": "PHL378H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Wald, B.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 12.0,
+          "EndTime": 15.0,
+          "FallLocation": null,
+          "WinterLocation": "AH 107"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

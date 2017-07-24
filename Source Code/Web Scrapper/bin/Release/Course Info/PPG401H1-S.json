@@ -1,0 +1,21 @@
+{
+  "CourseName": "PPG401H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Cappe, M.\r\nRae, B.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 9.3,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "CG 361"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

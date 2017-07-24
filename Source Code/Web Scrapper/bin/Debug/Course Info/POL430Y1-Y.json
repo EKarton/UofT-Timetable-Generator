@@ -1,0 +1,21 @@
+{
+  "CourseName": "POL430Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Orwin, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 16.0,
+          "EndTime": 19.0,
+          "FallLocation": "TF 202",
+          "WinterLocation": "TF 202"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

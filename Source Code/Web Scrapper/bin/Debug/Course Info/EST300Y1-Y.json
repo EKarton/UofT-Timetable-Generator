@@ -1,0 +1,28 @@
+{
+  "CourseName": "EST300Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC5101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "AH 103",
+          "WinterLocation": "AH 103"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 19.0,
+          "EndTime": 21.0,
+          "FallLocation": "AH 103",
+          "WinterLocation": "AH 103"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

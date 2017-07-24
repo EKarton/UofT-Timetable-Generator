@@ -1,0 +1,21 @@
+{
+  "CourseName": "TRN135Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Braunstein, M.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 15.3,
+          "EndTime": 17.3,
+          "FallLocation": "LA 340",
+          "WinterLocation": "LA 340"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

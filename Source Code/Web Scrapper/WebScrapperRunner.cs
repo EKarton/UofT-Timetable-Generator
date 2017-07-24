@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.WebScrapper
     {
         static void Main(string[] args)
         {
-            IWebScrapper webScrapper = new BuildingDistancesScrapper();
+            IWebScrapper webScrapper = new CourseInfoScrapper();
             webScrapper.Run();
         }
     }

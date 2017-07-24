@@ -1,0 +1,21 @@
+{
+  "CourseName": "MGY250H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC9901",
+      "Instructor": "Hill, J.",
+      "Times": [
+        {
+          "Day": "",
+          "StartTime": 0.0,
+          "EndTime": 0.0,
+          "FallLocation": null,
+          "WinterLocation": "—"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

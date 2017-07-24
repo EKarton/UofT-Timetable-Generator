@@ -1,0 +1,48 @@
+{
+  "CourseName": "PHY424H1-F",
+  "Term": "F",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Julian, S.\r\nKim, Y.\r\nNetterfield, C.\r\nWei, J.\r\nWunch, D.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "MP 251",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Friday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "MP 251",
+          "WinterLocation": null
+        }
+      ]
+    },
+    {
+      "MeetingCode": "LEC0201",
+      "Instructor": "Bailey, D.",
+      "Times": [
+        {
+          "Day": "Monday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "MP 251",
+          "WinterLocation": null
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": "MP 251",
+          "WinterLocation": null
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

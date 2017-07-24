@@ -1,0 +1,21 @@
+{
+  "CourseName": "CSB499Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Buck, L.",
+      "Times": [
+        {
+          "Day": "Friday",
+          "StartTime": 16.0,
+          "EndTime": 17.3,
+          "FallLocation": "RW 142",
+          "WinterLocation": "RW 142"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

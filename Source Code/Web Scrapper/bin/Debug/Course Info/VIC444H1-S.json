@@ -1,0 +1,21 @@
+{
+  "CourseName": "VIC444H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Sutton, C.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 9.0,
+          "EndTime": 12.0,
+          "FallLocation": null,
+          "WinterLocation": "VC 211"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

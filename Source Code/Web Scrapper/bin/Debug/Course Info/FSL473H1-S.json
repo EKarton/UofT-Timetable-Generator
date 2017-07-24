@@ -1,0 +1,21 @@
+{
+  "CourseName": "FSL473H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Sacre, S.",
+      "Times": [
+        {
+          "Day": "Wednesday",
+          "StartTime": 11.0,
+          "EndTime": 14.0,
+          "FallLocation": null,
+          "WinterLocation": "CR 404"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

@@ -1,0 +1,21 @@
+{
+  "CourseName": "HUN100Y1-Y",
+  "Term": "Y",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Tomory, E.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 13.0,
+          "EndTime": 16.0,
+          "FallLocation": "AH 204",
+          "WinterLocation": "AH 204"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

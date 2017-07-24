@@ -1,0 +1,21 @@
+{
+  "CourseName": "CSB474H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "—",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 12.0,
+          "EndTime": 16.0,
+          "FallLocation": null,
+          "WinterLocation": "ES 4076"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}

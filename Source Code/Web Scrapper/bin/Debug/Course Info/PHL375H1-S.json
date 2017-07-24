@@ -1,0 +1,28 @@
+{
+  "CourseName": "PHL375H1-S",
+  "Term": "S",
+  "Lectures": [
+    {
+      "MeetingCode": "LEC0101",
+      "Instructor": "Stump, J.",
+      "Times": [
+        {
+          "Day": "Tuesday",
+          "StartTime": 15.0,
+          "EndTime": 16.3,
+          "FallLocation": null,
+          "WinterLocation": "AH 107"
+        },
+        {
+          "Day": "Thursday",
+          "StartTime": 15.0,
+          "EndTime": 16.3,
+          "FallLocation": null,
+          "WinterLocation": "AH 107"
+        }
+      ]
+    }
+  ],
+  "Tutorials": [],
+  "Practicals": []
+}
