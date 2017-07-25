@@ -63,7 +63,7 @@ namespace Timetable_Generator_Library
             for (int i = 0; i < NUM_TRIALS; i++)
             {
                 GAGenerator gen = new GAGenerator(sessions);
-                int[] avgFits = gen.GetFitnessScoresPerGeneration();
+                int[] avgFits = gen.GetAvgScoresPerGeneration();
 
                 for (int j = 0; j < 100; j++)
                     avgScores[j] += avgFits[j];

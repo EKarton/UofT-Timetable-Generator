@@ -21,7 +21,7 @@ namespace UoftTimetableGenerator.Generator
 
                 if (IsTableValid(createdTable))
                 {
-                    score += 10000;
+                    score += 1000;
                     score += (100 - GetEmptySpacesBetweenClasses(createdTable));
                 }
                 return score;

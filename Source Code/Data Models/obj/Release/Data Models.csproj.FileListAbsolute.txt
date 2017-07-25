@@ -2,3 +2,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Mod
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\bin\Release\Data Models.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Release\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Release\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Release\Data Models.csprojResolveAssemblyReference.cache

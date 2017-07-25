@@ -4,6 +4,5 @@ C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Gen
 C:\Users\KartonoE\Desktop\UofT Timetable Generator Project V3\Uoft Timetable Generator\Data Models\obj\Debug\Data Models.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\bin\Debug\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\bin\Debug\Data Models.pdb
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Debug\Data Models.csprojResolveAssemblyReference.cache
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Debug\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Debug\Data Models.pdb

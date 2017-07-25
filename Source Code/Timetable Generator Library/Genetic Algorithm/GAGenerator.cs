@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using UoftTimetableGenerator.DataModels;
 
@@ -9,58 +10,98 @@ namespace UoftTimetableGenerator.Generator
 {
     public partial class GAGenerator : ITimetableGenerator
     {
+        private static Random random = new Random();
+        private double mutationRate = 0.1;
+        private double crossoverRate = 0.9;
+        private int populationSize = 16;
+        private int numGenerations = 100;
+        private string crossoverType = "Old Crossover";
+
         private List<TimetableSession[]> requiredSessions = new List<TimetableSession[]>();
-        private Random random = new Random();
-        private const double MUTATION_RATE = 0.001;
-        private const double CROSSOVER_RATE = 0.70;
+        private List<int[]> population = new List<int[]>();
+        private int[] fitnessScores = null;
 
         public GAGenerator(List<TimetableSession[]> requiredSessions)
         {
             this.requiredSessions = requiredSessions;
         }
 
-        private int[] MakeCopyOfTable(int[] table)
+        public double MutationRate
         {
-            int[] newTable = new int[table.Length];
-            for (int i = 0; i < table.Length; i++)
-                newTable[i] = table[i];
-            return newTable;
+            get { return mutationRate; }
+            set { mutationRate = value; }
         }
 
-        private void EvolvePopulation(List<int[]> population)
+        public double CrossoverRate
         {
-            int bestTable = GetBestTable(population);
+            get { return crossoverRate; }
+            set { crossoverRate = value; }
+        }
+
+        public int PopulationSize
+        {
+            get { return populationSize; }
+            set { populationSize = value; }
+        }
+
+        public int NumGenerations
+        {
+            get { return numGenerations; }
+            set { numGenerations = value; }
+        }
+
+        public string CrossoverType
+        {
+            get { return crossoverType; }
+            set { crossoverType = value; }
+        }
+
+        private void EvolvePopulation()
+        {
+            // Compute the fitness scores for each table
+            for (int i = 0; i < population.Count; i++)
+                fitnessScores[i] = FitnessCalculator.GetFitnessValue(population[i], requiredSessions);
+
+            // Store the best one
+            int bestTable = GetBestTable(0, population.Count);
             int[] temp = population[0];
+            int tempScore = fitnessScores[0];
             population[0] = population[bestTable];
+            fitnessScores[0] = fitnessScores[bestTable];
             population[bestTable] = temp;
+            fitnessScores[bestTable] = tempScore;
+
+            List<int[]> newGeneration = new List<int[]>();
 
             // Perform crossovers
-            for (int i = 1; i < population.Count; i++)
+            for (int i = 0; i < population.Count; i++)
             {
-                int parent1Index = PerformTournamentSelection(population);
-                int parent2Index = PerformTournamentSelection(population);
+                int parent1Index = PerformTournamentSelection();
+                int parent2Index = PerformTournamentSelection();
 
-                /*
-                Tuple<int[], int[]> children = PerformSinglePointCrossover(population[parent1Index], population[parent2Index]);
-                if (children != null)
-                {
-                    population[parent1Index] = children.Item1;
-                    population[parent2Index] = children.Item2;
-                }
-                */
                 int[] child = PerformOldCrossover(population[parent1Index], population[parent2Index]);
                 if (child != null)
-                    population[i] = child;
+                {
+                    PerformMutation(child);
+                    newGeneration.Add(child);
+                }
+                else
+                {
+                    if (fitnessScores[parent1Index] > fitnessScores[parent2Index])
+                        newGeneration.Add(population[parent1Index]);
+                    else
+                        newGeneration.Add(population[parent2Index]);
+                }
             }
 
-            // Perform mutations
-            for (int i = 1; i < population.Count; i++)
-                PerformMutation(population[i]);
+            // Replace the old generation
+            for (int i = 0; i < population.Count; i++)
+                population[i] = newGeneration[i];
         }
 
         private Tuple<int[], int[]> PerformSinglePointCrossover(int[] parent1, int[] parent2)
         {
-            if (random.Next(0, 101) > CROSSOVER_RATE)
+            if (random.NextDouble() > crossoverRate)
                 return null;
 
             int[] child1 = new int[parent1.Length];
@@ -84,7 +125,7 @@ namespace UoftTimetableGenerator.Generator
 
         private Tuple<int[], int[]> PerformDoublePointCrossover(int[] parent1, int[] parent2)
         {
-            if (random.Next(0, 101) > CROSSOVER_RATE)
+            if (random.NextDouble() > crossoverRate)
                 return null;
 
             int[] child1 = new int[parent1.Length];
@@ -118,7 +159,7 @@ namespace UoftTimetableGenerator.Generator
 
         private Tuple<int[], int[]> PerformUniformCrossover(int[] parent1, int[] parent2)
         {
-            if (random.Next(0, 101) > CROSSOVER_RATE)
+            if (random.NextDouble() > crossoverRate)
                 return null;
 
             int[] child1 = new int[parent1.Length];
@@ -142,6 +183,9 @@ namespace UoftTimetableGenerator.Generator
 
         private int[] PerformOldCrossover(int[] parent1, int[] parent2)
         {
+            if (random.NextDouble() > crossoverRate)
+                return null;
+
             int[] child = new int[requiredSessions.Count];
 
             int randIndex = random.Next(0, requiredSessions.Count);
@@ -158,7 +202,7 @@ namespace UoftTimetableGenerator.Generator
         {
             for (int i = 0; i < requiredSessions.Count; i++)
             {
-                if (random.Next(0, 101) <= MUTATION_RATE)
+                if (random.NextDouble() <= mutationRate)
                 {
                     int randSession = random.Next(0, requiredSessions[i].Length);
                     table[i] = randSession;
@@ -166,33 +210,23 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
-        private int PerformTournamentSelection(List<int[]> population)
+        private int PerformTournamentSelection()
         {
             int index1 = random.Next(0, population.Count);
             int index2 = random.Next(0, population.Count);
-            List<int[]> subPopulation = new List<int[]>();
-
             if (index1 < index2)
-            {
-                for (int i = index1; i <= index2; i++)
-                    subPopulation.Add(population[i]);
-            }
+                return GetBestTable(index1, index2 + 1);
             else
-            {
-                for (int i = index2; i <= index1; i++)
-                    subPopulation.Add(population[i]);
-            }
-
-            return GetBestTable(subPopulation);
+                return GetBestTable(index2, index1 + 1);
         }
 
-        private int GetBestTable(List<int[]> population)
+        private int GetBestTable(int leftIndex, int rightIndex)
         {
             int bestTable = -1;
             int bestRank = -1;
-            for (int i = 0; i < population.Count; i++)
+            for (int i = leftIndex; i < rightIndex ; i++)
             {
-                int curRank = FitnessCalculator.GetFitnessValue(population[i], requiredSessions);
+                int curRank = fitnessScores[i];
                 if (curRank > bestRank)
                 {
                     bestRank = curRank;
@@ -213,97 +247,72 @@ namespace UoftTimetableGenerator.Generator
             return table;
         }
 
-        public string GetTableString(int[] table)
+        public int[] GetMaxScoresPerGeneration()
         {
-            string output = "";
-            for (int i = 0; i < table.Length; i++)
-                output += table[i];
-            output += " | -> " + FitnessCalculator.GetFitnessValue(table, requiredSessions);
-            return output;
-        }
+            fitnessScores = new int[populationSize];
+            population.Clear();
 
-        private bool IsContains(List<int[]> population, int[] randomTable)
-        {
-            foreach (int[] table in population)
+            // Generate an initial population randomly
+            for (int i = 0; i < populationSize; i++)
             {
-                if (table.Length != randomTable.Length)
-                    continue;
-
-                bool isFound = true;
-                for (int i = 0; i < randomTable.Length; i++)
-                    if (randomTable[i] != table[i])
-                    {
-                        isFound = false;
-                        break;
-                    }
-
-                if (isFound == true)
-                    return true;
+                int[] randomTable = GenerateRandomTable();
+                population.Add(randomTable);
             }
-            return false;
+
+            // Compute average fit scores per generation
+            int[] maxScores = new int[numGenerations];
+            for (int i = 0; i < numGenerations; i++)
+            {
+                EvolvePopulation();
+                int bestTableIndex = GetBestTable(0, population.Count);
+                int maxScore = fitnessScores[bestTableIndex];
+                maxScores[i] = maxScore;
+            }
+            return maxScores;
         }
 
-        public int[] GetFitnessScoresPerGeneration()
+        public int[] GetAvgScoresPerGeneration()
         {
-            // Generate an initial population
-            List<int[]> population = new List<int[]>();
-            for (int i = 0; i < 20; i++)
-                population.Add(GenerateRandomTable());
+            fitnessScores = new int[populationSize];
+            population = new List<int[]>();
 
-            int[] avgFitness = new int[100];
-
-            for (int i = 0; i < 100; i++)
+            // Generate an initial population randomly
+            for (int i = 0; i < populationSize; i++)
             {
-                EvolvePopulation(population);
+                int[] randomTable = GenerateRandomTable();
+                population.Add(randomTable);
+            }
 
-                int total = 0;
+            // Compute average fit scores per generation
+            int[] avgScores = new int[numGenerations];
+            for (int i = 0; i < numGenerations; i++)
+            {
+                EvolvePopulation();
+
+                // Compute the fit scores
+                int totalScore = 0;
                 foreach (int[] table in population)
-                    total += FitnessCalculator.GetFitnessValue(table, requiredSessions);
-                int avg = total / population.Count;
-                avgFitness[i] = avg;
+                    totalScore += FitnessCalculator.GetFitnessValue(table, requiredSessions);
+                avgScores[i] = totalScore / population.Count;
             }
-            return avgFitness;
+            return avgScores;
         }
 
         public List<Timetable> GetTimetables(string[] filters)
         {
-            // Generate an initial population
-            List<int[]> population = new List<int[]>();
-            for (int i = 0; i < 20; i++)
-                population.Add(GenerateRandomTable());
+            fitnessScores = new int[populationSize];
+            population = new List<int[]>();
 
-            for (int i = 0; i < 100; i++)
+            // Generate an initial population randomly
+            for (int i = 0; i < populationSize; i++)
             {
-                Console.WriteLine("\nGeneration " + i);
-                EvolvePopulation(population);
-
-                List<int[]> popCopy = new List<int[]>(population);
-
-                // Sort population by score
-                popCopy.Sort(delegate (int[] table1, int[] table2) {
-                    int fit1 = FitnessCalculator.GetFitnessValue(table1, requiredSessions);
-                    int fit2 = FitnessCalculator.GetFitnessValue(table2, requiredSessions);
-
-                    if (fit1 < fit2)
-                        return 1;
-                    else if (fit1 > fit2)
-                        return -1;
-                    else
-                        return 0;
-                });
-
-                foreach (int[] table in popCopy)
-                    Console.WriteLine(GetTableString(table));
-
-                Console.WriteLine("Best Table: " + GetTableString(popCopy[GetBestTable(popCopy)]));
-
-                int total = 0;
-                foreach (int[] table in popCopy)
-                    total += FitnessCalculator.GetFitnessValue(table, requiredSessions);
-                Console.WriteLine("Average score: " + (total / population.Count));
-                Console.WriteLine("Median score: " + FitnessCalculator.GetFitnessValue(population[population.Count / 2], requiredSessions));
-                Console.ReadKey();
+                int[] randomTable = GenerateRandomTable();
+                population.Add(randomTable);
             }
+
+            // Evolve the generations
+            for (int i = 0; i < numGenerations; i++)
+                EvolvePopulation();
 
             return new List<Timetable>();
         }
