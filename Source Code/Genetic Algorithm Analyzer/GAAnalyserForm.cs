@@ -111,9 +111,9 @@ namespace Genetic_Algorithm_Analyzer
             // Set up the data
             chart.Series.Clear();
             chart.Series.Add("Average Scores");
-            chart.Series["Average Scores"].ChartType = SeriesChartType.Spline;
+            chart.Series["Average Scores"].ChartType = SeriesChartType.Line;
             chart.Series.Add("Max Scores");
-            chart.Series["Max Scores"].ChartType = SeriesChartType.Spline;
+            chart.Series["Max Scores"].ChartType = SeriesChartType.Line;
 
             // Add the average / maxscores to the chart by their type
             for (int i = 0; i < numGenerations; i++)

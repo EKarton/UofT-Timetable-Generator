@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timetable Generators", "Tim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetic Algorithm Analyzer", "Genetic Algorithm Analyzer\Genetic Algorithm Analyzer.csproj", "{C9A58A4B-181C-469A-A185-A20ECCBD8316}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Uoft Database", "Uoft Data\Uoft Database.sqlproj", "{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11E70D0-4BB2-4907-B482-CBBEBEB3A17D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
