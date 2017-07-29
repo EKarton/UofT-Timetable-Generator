@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StartupScript>(Blank)</StartupScript>
+    <StartAction>StartNone</StartAction>
+    <TargetConnectionString>Data Source=LAPTOP;Initial Catalog=UoftDatabase;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <TargetDatabase>UoftDatabase</TargetDatabase>
+    <CreateNewDatabase>False</CreateNewDatabase>
+    <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
+  </PropertyGroup>
+</Project>

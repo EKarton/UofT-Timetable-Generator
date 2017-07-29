@@ -1,9 +1,0 @@
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\bin\Debug\Uoft Database.dacpac
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\bin\Debug\Uoft_Data.dll
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\bin\Debug\Uoft_Data.pdb
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\Model.xml
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\refactor.xml
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\postdeploy.sql
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\predeploy.sql
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\Uoft_Data.dll
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Uoft Data\obj\Debug\Uoft_Data.pdb

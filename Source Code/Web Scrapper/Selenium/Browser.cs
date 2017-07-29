@@ -15,6 +15,7 @@ namespace UoftTimetableGenerator.WebScrapper
         private static ChromeOptions browserOptions;
         private static IWebDriver webInstance;
         private static WebDriverWait waitInstance;
+        private const string CHROMEDRIVER_DIRECTORY = @"Selenium\Web drivers";
         private static string downloadsDirectory = "Downloads";
 
         internal static IWebDriver WebInstance { get { return webInstance; } }
@@ -89,7 +90,7 @@ namespace UoftTimetableGenerator.WebScrapper
             browserOptions.AddUserProfilePreference("plugins.always_open_pdf_externally", true);
 
             // Create the new browser
-            webInstance = new ChromeDriver(browserOptions);
+            webInstance = new ChromeDriver(CHROMEDRIVER_DIRECTORY, browserOptions);
 
             // Create a new wait browser
             waitInstance = new WebDriverWait(webInstance, TimeSpan.FromSeconds(10));

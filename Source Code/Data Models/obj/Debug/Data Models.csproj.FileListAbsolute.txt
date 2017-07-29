@@ -6,3 +6,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Mod
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\bin\Debug\Data Models.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Debug\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\obj\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Data Models\bin\Debug\Data Models.dll.config

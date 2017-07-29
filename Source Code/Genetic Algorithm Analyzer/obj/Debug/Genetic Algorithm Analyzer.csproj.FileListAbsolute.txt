@@ -20,3 +20,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Genetic 
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.csproj.GenerateResource.Cache
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Genetic Algorithm Analyzer\bin\Debug\Data Models.dll.config

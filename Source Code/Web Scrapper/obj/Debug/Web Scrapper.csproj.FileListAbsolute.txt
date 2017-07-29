@@ -27,3 +27,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scra
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Selenium\Web drivers\chromedriver.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Data Models.dll.config

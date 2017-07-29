@@ -24,3 +24,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetabl
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\MAT224H1-F.json
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\MAT237Y1-Y.json
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Sample Input\STA247H1-F.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Timetable Generator Library\bin\Debug\Data Models.dll.config

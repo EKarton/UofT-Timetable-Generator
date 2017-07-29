@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,6 +57,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Building.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Course.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Course.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Selenium\Browser.cs" />
     <Compile Include="Building Distances\BuildingDistancesScrapper.cs" />
     <Compile Include="Buildings List\BuildingsListScrapper.cs" />
@@ -65,12 +81,45 @@
     <Compile Include="Course List\CourseListScrapper.cs" />
     <Compile Include="FileLocations.cs" />
     <Compile Include="IWebScrapper.cs" />
+    <Compile Include="Uoft.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uoft.dbml</DependentUpon>
+    </Compile>
     <Compile Include="WebScrapperRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Building.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Building.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Building.dbml.layout">
+      <DependentUpon>Building.dbml</DependentUpon>
+    </None>
+    <None Include="Course.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Course.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Course.dbml.layout">
+      <DependentUpon>Course.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Uoft.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Uoft.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Uoft.dbml.layout">
+      <DependentUpon>Uoft.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data Models\Data Models.csproj">
@@ -82,6 +131,9 @@
     <Content Include="Selenium\Web drivers\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

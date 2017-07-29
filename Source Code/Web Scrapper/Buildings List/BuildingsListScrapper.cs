@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataModels;
+using Web_Scrapper;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
@@ -14,31 +14,29 @@ namespace UoftTimetableGenerator.WebScrapper
     {
         public static class BuildingsPage
         {
-            public static BuildingsList GetBuildingsList()
+            public static void GetBuildingsList()
             {
-                IWebElement buildingsList = Browser.WebInstance.FindElement(By.ClassName("buildinglist"));
-                IReadOnlyList<IWebElement> buildingElements = buildingsList.FindElements(By.TagName("li"));
-
-                List<Building> buildings = new List<Building>();
-
-                foreach (IWebElement building in buildingElements)
+                using (BuildingDataContext db = new BuildingDataContext())
                 {
-                    string[] description = building.FindElement(By.XPath("./dl/dt")).Text.Split('|');
-                    string address = building.FindElement(By.XPath("./dl/dd[1]")).Text.Trim();
-                    string buildingName = description[0].Trim();
-                    string buildingCode = description[1].Trim();
+                    IWebElement buildingsList = Browser.WebInstance.FindElement(By.ClassName("buildinglist"));
+                    IReadOnlyList<IWebElement> buildingElements = buildingsList.FindElements(By.TagName("li"));
 
-                    Building newBuilding = new Building()
+                    foreach (IWebElement building in buildingElements)
                     {
-                        Name = buildingName,
-                        Address = address,
-                        Code = buildingCode
-                    };
+                        string[] description = building.FindElement(By.XPath("./dl/dt")).Text.Split('|');
+                        string address = building.FindElement(By.XPath("./dl/dd[1]")).Text.Trim();
+                        string buildingName = description[0].Trim();
+                        string buildingCode = description[1].Trim();
 
-                    buildings.Add(newBuilding);
+                        Building newBuilding = new Building();
+                        newBuilding.Address = address;
+                        newBuilding.BuildingCode = buildingCode;
+                        newBuilding.BuildingName = buildingName;
+
+                        db.Buildings.InsertOnSubmit(newBuilding);
+                    }
+                    db.SubmitChanges();
                 }
-
-                return new BuildingsList() { Buildings = buildings.ToArray() };
             }
         }
 
@@ -46,8 +44,7 @@ namespace UoftTimetableGenerator.WebScrapper
         {
             Browser.Initialize();
             Browser.WebInstance.Url = "http://map.utoronto.ca/c/buildings";
-            BuildingsList list = BuildingsPage.GetBuildingsList();
-            File.WriteAllText(FileLocations.BUILDINGSLIST_FILENAME, JsonConvert.SerializeObject(list, Formatting.Indented));
+            BuildingsPage.GetBuildingsList();
             Browser.Close();
         }
     }
