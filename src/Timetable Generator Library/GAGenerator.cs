@@ -8,7 +8,7 @@ using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.Generator
 {
-    public partial class GAGenerator
+    public class GAGenerator
     {
         private static Random random = new Random();
         private double mutationRate = 0.1;
@@ -17,13 +17,26 @@ namespace UoftTimetableGenerator.Generator
         private int numGenerations = 100;
         private string crossoverType = "Old Crossover";
 
+        // Represents the number of sections that needs to be in the timetable
         private List<Section[]> requiredSections = new List<Section[]>();
-        private List<int[]> population = new List<int[]>();
-        private double[] fitnessScores = null;
 
-        public GAGenerator(List<Section[]> sections)
+        // Represents the term that requiredSections[i] belong to
+        private List<char> terms = new List<char>();                                                       
+        private List<int[]> population = new List<int[]>();
+        private double[] fitnessScores;
+
+        public GAGenerator(List<Course> courses)
         {
-            requiredSections = sections;
+            // Populating requiredSections[] and its associated terms[]
+            foreach (Course course in courses)
+            {
+                char term = course.Term[0];
+                foreach (Activity activity in course.Activities)
+                {
+                    requiredSections.Add(activity.Sections.ToArray());
+                    terms.Add(term);
+                }
+            }
         }
 
         public double MutationRate
@@ -58,10 +71,6 @@ namespace UoftTimetableGenerator.Generator
 
         private void EvolvePopulation()
         {
-            // Compute the fitness scores for each table
-            for (int i = 0; i < population.Count; i++)
-                fitnessScores[i] = GetFitnessScore(population[i]);
-
             // Store the best one
             int bestTable = GetBestTable(0, population.Count);
             int[] temp = population[0];
@@ -97,6 +106,10 @@ namespace UoftTimetableGenerator.Generator
             // Replace the old generation
             for (int i = 0; i < population.Count; i++)
                 population[i] = newGeneration[i];
+
+            // Compute the fitness scores for each table
+            for (int i = 0; i < population.Count; i++)
+                fitnessScores[i] = GetFitnessScore(population[i]);
         }
 
         private Tuple<int[], int[]> PerformSinglePointCrossover(int[] parent1, int[] parent2)
@@ -252,17 +265,18 @@ namespace UoftTimetableGenerator.Generator
             double score = 0;
 
             // Check if it can be added
-            Timetable newTable = new Timetable();
+            YearlyTimetable newTable = new YearlyTimetable();
             for (int i = 0; i < table.Length; i++)
             {
-                Section activity = requiredSections[i][table[i]];
-                bool success = newTable.AddSection(activity);
+                Section section = requiredSections[i][table[i]];
+                char term = terms[i];
+                bool success = newTable.AddSection(section, term);
                 if (success == false)
                     return 0;
             }
 
             score += 1000;
-            score += (100 - newTable.TotalSpacesBetweenClasses);
+            score += (100 - newTable.TotalTimeBetweenClasses);
             return score;
         }
 
@@ -277,6 +291,10 @@ namespace UoftTimetableGenerator.Generator
                 int[] randomTable = GenerateRandomTable();
                 population.Add(randomTable);
             }
+
+            // Compute the fitness scores for each table
+            for (int i = 0; i < population.Count; i++)
+                fitnessScores[i] = GetFitnessScore(population[i]);
 
             // Compute average fit scores per generation
             double[] maxScores = new double[numGenerations];
@@ -302,6 +320,10 @@ namespace UoftTimetableGenerator.Generator
                 population.Add(randomTable);
             }
 
+            // Compute the fitness scores for each table
+            for (int i = 0; i < population.Count; i++)
+                fitnessScores[i] = GetFitnessScore(population[i]);
+
             // Compute average fit scores per generation
             double[] avgScores = new double[numGenerations];
             for (int i = 0; i < numGenerations; i++)
@@ -317,7 +339,7 @@ namespace UoftTimetableGenerator.Generator
             return avgScores;
         }
 
-        public List<Timetable> GetTimetables(string[] filters)
+        public List<YearlyTimetable> GetTimetables()
         {
             fitnessScores = new double[populationSize];
             population = new List<int[]>();
@@ -329,12 +351,33 @@ namespace UoftTimetableGenerator.Generator
                 population.Add(randomTable);
             }
 
+            // Compute the fitness scores for each table
+            for (int i = 0; i < population.Count; i++)
+                fitnessScores[i] = GetFitnessScore(population[i]);
+
             // Evolve the generations
             for (int i = 0; i < numGenerations; i++)
                 EvolvePopulation();
 
-            // Return the associated timetables
-            return new List<Timetable>();
+            // Getting timetables that has every single required activity
+            List<YearlyTimetable> timetables = new List<YearlyTimetable>();
+            for (int i = 0; i < population.Count; i++)
+            {
+                int[] table = population[i];
+                if (fitnessScores[i] > 0)
+                {
+                    YearlyTimetable timetable = new YearlyTimetable();
+                    for (int j = 0; j < table.Length; j++)
+                    {
+                        Section section = requiredSections[j][table[j]];
+                        char term = terms[j];
+                        timetable.AddSection(section, term);
+                    }
+                    timetables.Add(timetable);
+                }
+            }
+
+            return timetables;
         }
     }
 }

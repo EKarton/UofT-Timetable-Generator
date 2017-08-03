@@ -17,7 +17,7 @@ namespace Genetic_Algorithm_Analyzer
 {
     public partial class GAAnalyzerForm : Form
     {
-        private List<Section[]> requiredSections = new List<Section[]>();
+        private List<Course> courses = new List<Course>();
 
         public GAAnalyzerForm()
         {
@@ -33,11 +33,7 @@ namespace Genetic_Algorithm_Analyzer
 
         private void LoadData()
         {
-            List<Course> courses = UoftDatabaseService.GetCourses(new string[] { "MAT137Y1-Y", });//"COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
-
-            foreach (Course course in courses)
-                foreach (Activity activity in course.Activities)
-                    requiredSections.Add(activity.Sections.ToArray());
+            courses = UoftDatabaseService.GetCourses(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
         }
 
         private void UpdateStats()
@@ -56,7 +52,7 @@ namespace Genetic_Algorithm_Analyzer
             for (int i = 0; i < numTrials; i++)
             {
                 // Make generator with params
-                GAGenerator generator = new GAGenerator(requiredSections)
+                GAGenerator generator = new GAGenerator(courses)
                 {
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,
@@ -82,6 +78,7 @@ namespace Genetic_Algorithm_Analyzer
 
             // Set up the data
             chart.Series.Clear();
+            chart.ChartAreas[0].AxisY.Minimum = 0;
             chart.Series.Add("Average Scores");
             chart.Series["Average Scores"].ChartType = SeriesChartType.Line;
             chart.Series.Add("Max Scores");

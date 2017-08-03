@@ -13,3 +13,8 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Data Models\b
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Data Models\bin\Debug\Data Models.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Data Models\obj\Debug\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Data Models\obj\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\bin\Debug\Data Models.dll.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\bin\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\bin\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\obj\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\obj\Debug\Data Models.pdb

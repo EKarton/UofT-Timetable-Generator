@@ -38,11 +38,11 @@ namespace UoftTimetableGenerator.DataModels
             // Add these activities based on their type (if its empty remove it)
             Activities = new List<Activity>();
             if (oldLectures.Count > 0)
-                Activities.Add(new Activity(oldLectures, "Lecture"));
+                Activities.Add(new Activity(oldLectures, "Lecture", this));
             if (oldTutorials.Count > 0)
-                Activities.Add(new Activity(oldTutorials, "Tutorials"));
+                Activities.Add(new Activity(oldTutorials, "Tutorials", this));
             if (oldPracticals.Count > 0)
-                Activities.Add(new Activity(oldPracticals, "Practicals"));
+                Activities.Add(new Activity(oldPracticals, "Practicals", this));
         }
 
         public string CourseCode { get; set; }

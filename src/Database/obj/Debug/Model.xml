@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Uoft_Data.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\EMILIO K\DOCUMENTS\GITHUB\UOFT-TIMETABLE-GENERATOR\SOURCE\DATABASE\OBJ\DEBUG\UOFT_DATA.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\EMILIO K\DOCUMENTS\GITHUB\UOFT-TIMETABLE-GENERATOR\SRC\DATABASE\OBJ\DEBUG\UOFT_DATA.DLL" />
 			<Metadata Name="AssemblyName" Value="Uoft_Data" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Database\obj\Debug\Uoft_Data.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Database\obj\Debug\Uoft_Data.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

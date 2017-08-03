@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Web_API.Controllers
+namespace UoftTimetableGenerator.WebAPI
 {
     [Produces("application/json")]
-    [Route("api/Courses")]
+    [Route("api/courses")]
     public class CoursesController : Controller
     {
         // GET: api/courses

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UoftTimetableGenerator.DataModels;
+using UoftTimetableGenerator.Generator;
+using UoftTimetableGenerator.WebAPI.Models;
 
-namespace Web_API.Controllers
+namespace UoftTimetableGenerator.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     public class TimetablesController : Controller
@@ -24,25 +26,56 @@ namespace Web_API.Controllers
             {
                 Course courseObj = UoftDatabaseService.GetCourse(code);
                 if (courseObj == null)
-                    return BadRequest();
+                    return NotFound();
                 courseObjs.Add(courseObj);
             }
 
-            List<Section[]> requiredSections = new List<Section[]>();
-            foreach (Course c in courseObjs)
-                foreach (Activity a in c.Activities)
-                    requiredSections.Add(a.Sections.ToArray());
+            // Generate the timetables
+            GAGenerator generator = new GAGenerator(courseObjs)
+            {
+                NumGenerations = 100,
+                PopulationSize = 16,
+                MutationRate = 0.01,
+                CrossoverRate = 0.9,
+                CrossoverType = "Uniform Crossover"
+            };
 
+            List<YearlyTimetable> timetables = generator.GetTimetables();
 
+            // Convert the timetables to mini timetables (which will be presented to the user)
+            List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();
+            foreach (YearlyTimetable t in timetables)
+                miniTimetables.Add(new SimplifiedYearlyTimetable(t));
 
-            return Ok();
+            return Ok(miniTimetables);
         }
 
         // POST api/timetables
         [HttpPost]
         public IActionResult GetTimetables([FromBody] Course[] courses)
         {
-            return Ok();
+            // Max 12 courses (a full yr course counts as 1 course)
+            if (courses.Length > 12)
+                return BadRequest();
+
+            // Generate the timetables
+            GAGenerator generator = new GAGenerator(courses.ToList())
+            {
+                NumGenerations = 100,
+                PopulationSize = 16,
+                MutationRate = 0.01,
+                CrossoverRate = 0.9,
+                CrossoverType = "Uniform Crossover"
+            };
+
+            List<YearlyTimetable> timetables = generator.GetTimetables();
+
+            // Convert the timetables to mini timetables (which will be presented to the user)
+            List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();
+            foreach (YearlyTimetable t in timetables)
+                miniTimetables.Add(new SimplifiedYearlyTimetable(t));
+
+            return Created("api/timetables", miniTimetables);
         }
     }
 }

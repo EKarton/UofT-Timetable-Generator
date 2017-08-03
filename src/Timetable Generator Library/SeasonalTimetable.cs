@@ -4,24 +4,25 @@ using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.Generator
 {
-    public class Timetable
+    public class SeasonalTimetable
     {
+        private List<Section> sections = new List<Section>();
         private Session session = null;
         private string color = "Black";
-        private Timetable leftTree = null;
-        private Timetable rightTree = null;
-        private Timetable parent = null;
+        private SeasonalTimetable leftTree = null;
+        private SeasonalTimetable rightTree = null;
+        private SeasonalTimetable parent = null;
 
-        public Timetable() {  }
+        public SeasonalTimetable() {  }
 
-        private Timetable(Session session)
+        private SeasonalTimetable(Session session)
         {
             this.session = session;
-            leftTree = new Timetable();
-            rightTree = new Timetable();
+            leftTree = new SeasonalTimetable();
+            rightTree = new SeasonalTimetable();
         }
 
-        private Timetable Sibling
+        private SeasonalTimetable Sibling
         {
             get
             {
@@ -36,6 +37,11 @@ namespace UoftTimetableGenerator.Generator
         public bool IsEmpty
         {
             get { return session == null; }
+        }
+
+        public List<Section> Sections
+        {
+            get { return sections; }
         }
 
         public bool IsLeaf()
@@ -96,7 +102,7 @@ namespace UoftTimetableGenerator.Generator
             return true;
         }
 
-        public List<Session> GetSessions()
+        private List<Session> GetSessions()
         {
             if (IsEmpty)
                 return new List<Session>();
@@ -113,16 +119,16 @@ namespace UoftTimetableGenerator.Generator
             return sortedSessions;
         }
 
-        public Timetable MakeCopyOfTimetable()
+        public SeasonalTimetable MakeCopyOfTimetable()
         {
             if (IsEmpty)
-                return new Timetable();
+                return new SeasonalTimetable();
 
-            Timetable newTree = new Timetable(session);
+            SeasonalTimetable newTree = new SeasonalTimetable(session);
             newTree.color = color;
 
-            Timetable leftSubtree_Copy = leftTree.MakeCopyOfTimetable();
-            Timetable rightSubtree_Copy = rightTree.MakeCopyOfTimetable();
+            SeasonalTimetable leftSubtree_Copy = leftTree.MakeCopyOfTimetable();
+            SeasonalTimetable rightSubtree_Copy = rightTree.MakeCopyOfTimetable();
 
             newTree.leftTree = leftSubtree_Copy;
             leftSubtree_Copy.parent = newTree;
@@ -131,7 +137,7 @@ namespace UoftTimetableGenerator.Generator
             return newTree;
         }
 
-        public bool IsEqualTo(Timetable otherTable)
+        public bool IsEqualTo(SeasonalTimetable otherTable)
         {
             if (session != otherTable.session)
                 return false;
@@ -177,6 +183,8 @@ namespace UoftTimetableGenerator.Generator
 
             foreach (Session session in section.Sessions)
                 AddSession(session);
+
+            sections.Add(section);
             return true;
         }
 
@@ -187,8 +195,8 @@ namespace UoftTimetableGenerator.Generator
             {
                 this.session = session;
                 color = "Black";
-                leftTree = new Timetable();
-                rightTree = new Timetable();
+                leftTree = new SeasonalTimetable();
+                rightTree = new SeasonalTimetable();
                 return true;
             }
 
@@ -197,7 +205,7 @@ namespace UoftTimetableGenerator.Generator
             {
                 if (leftTree.IsEmpty)
                 {
-                    leftTree = new Timetable(session);
+                    leftTree = new SeasonalTimetable(session);
                     leftTree.parent = this;
                     leftTree.color = "Red";
                     RebalanceTree(leftTree);
@@ -212,7 +220,7 @@ namespace UoftTimetableGenerator.Generator
             {
                 if (rightTree.IsEmpty)
                 {
-                    rightTree = new Timetable(session);
+                    rightTree = new SeasonalTimetable(session);
                     rightTree.parent = this;
                     rightTree.color = "Red";
                     RebalanceTree(rightTree);
@@ -224,7 +232,7 @@ namespace UoftTimetableGenerator.Generator
             return false;
         }
 
-        private void RebalanceTree(Timetable addedSession)
+        private void RebalanceTree(SeasonalTimetable addedSession)
         {
             // Case 1
             if (color == "Black")
@@ -257,14 +265,14 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
-        private void PerformInsertionReordering1(Timetable newNode)
+        private void PerformInsertionReordering1(SeasonalTimetable newNode)
         {
-            Timetable k = newNode;
-            Timetable p = this;
-            Timetable g = parent;
-            Timetable s = Sibling;
+            SeasonalTimetable k = newNode;
+            SeasonalTimetable p = this;
+            SeasonalTimetable g = parent;
+            SeasonalTimetable s = Sibling;
 
-            Timetable newG = new Timetable(g.session);
+            SeasonalTimetable newG = new SeasonalTimetable(g.session);
             newG.color = "Red";
             newG.leftTree = p.rightTree;
             p.rightTree.parent = newG;
@@ -278,14 +286,14 @@ namespace UoftTimetableGenerator.Generator
             newG.parent = g;
         }
 
-        private void PerformInsertionReordering2(Timetable newNode)
+        private void PerformInsertionReordering2(SeasonalTimetable newNode)
         {
-            Timetable k = newNode;
-            Timetable p = this;
-            Timetable g = parent;
-            Timetable s = Sibling;
+            SeasonalTimetable k = newNode;
+            SeasonalTimetable p = this;
+            SeasonalTimetable g = parent;
+            SeasonalTimetable s = Sibling;
 
-            Timetable newG = new Timetable(g.session);
+            SeasonalTimetable newG = new SeasonalTimetable(g.session);
             newG.color = "Red";
             newG.rightTree = s;
             s.parent = newG;
@@ -293,14 +301,14 @@ namespace UoftTimetableGenerator.Generator
             g.session = k.session;
         }
 
-        private void PerformInsertionReordering3(Timetable newNode)
+        private void PerformInsertionReordering3(SeasonalTimetable newNode)
         {
-            Timetable k = newNode;
-            Timetable p = this;
-            Timetable g = parent;
-            Timetable s = Sibling;
+            SeasonalTimetable k = newNode;
+            SeasonalTimetable p = this;
+            SeasonalTimetable g = parent;
+            SeasonalTimetable s = Sibling;
 
-            Timetable newG = new Timetable(g.session);
+            SeasonalTimetable newG = new SeasonalTimetable(g.session);
             newG.color = "Red";
             newG.leftTree = s;
             s.parent = newG;
@@ -314,14 +322,14 @@ namespace UoftTimetableGenerator.Generator
             k.parent = g;
         }
 
-        private void PerformInsertionReordering4(Timetable newNode)
+        private void PerformInsertionReordering4(SeasonalTimetable newNode)
         {
-            Timetable k = newNode;
-            Timetable p = this;
-            Timetable g = parent;
-            Timetable s = Sibling;
+            SeasonalTimetable k = newNode;
+            SeasonalTimetable p = this;
+            SeasonalTimetable g = parent;
+            SeasonalTimetable s = Sibling;
 
-            Timetable newG = new Timetable(g.session);
+            SeasonalTimetable newG = new SeasonalTimetable(g.session);
             newG.color = "Red";
             newG.leftTree = s;
             s.parent = newG;
@@ -335,12 +343,12 @@ namespace UoftTimetableGenerator.Generator
             k.parent = g;
         }
 
-        private void PerformInsertionRecoloring(Timetable newNode)
+        private void PerformInsertionRecoloring(SeasonalTimetable newNode)
         {
-            Timetable k = newNode;
-            Timetable p = this;
-            Timetable g = parent;
-            Timetable s = Sibling;
+            SeasonalTimetable k = newNode;
+            SeasonalTimetable p = this;
+            SeasonalTimetable g = parent;
+            SeasonalTimetable s = Sibling;
 
             g.color = "Red";
             p.color = "Black";
@@ -372,12 +380,34 @@ namespace UoftTimetableGenerator.Generator
         {
             get
             {
-                double space = 0;
-                List<Session> orderedSessions = GetSessions();
-                for (int i = 0; i < orderedSessions.Count - 1; i++)
-                    space += (orderedSessions[i].EndTime - orderedSessions[i + 1].StartTime);
+                if (IsEmpty)
+                    return 0;
 
-                return space;
+                if (leftTree.IsEmpty && rightTree.IsEmpty)
+                    return 0;
+
+                // Getting the wasted time from the left and right trees
+                double totalWastedTime = 0;
+                totalWastedTime += leftTree.TotalSpacesBetweenClasses;
+                totalWastedTime += rightTree.TotalSpacesBetweenClasses;
+
+                // Getting the time wasted in left trees
+                if (!leftTree.IsEmpty)
+                {
+                    // If the previous session occured on the same day as this session
+                    if (leftTree.session.GetEndTime_WeekdayIndex() == session.GetEndTime_WeekdayIndex())
+                        totalWastedTime += session.StartTime - leftTree.session.EndTime;
+                }
+
+                // Getting the time wasted in the right trees
+                if (!rightTree.IsEmpty)
+                {
+                    // If the next session occurs on the same day as this session
+                    if (rightTree.session.GetStartTime_WeekdayIndex() == session.GetEndTime_WeekdayIndex())
+                        totalWastedTime += rightTree.session.StartTime - session.EndTime;
+                }
+
+                return totalWastedTime;
             }
         }
 

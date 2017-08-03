@@ -32,3 +32,20 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Genetic Algor
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Genetic Algorithm Analyzer\bin\Debug\Timetable Generator Library.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Genetic Algorithm Analyzer\bin\Debug\Timetable Generator Library.dll.config
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Genetic Algorithm Analyzer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Genetic Algorithm Analyzer.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Genetic Algorithm Analyzer.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Genetic Algorithm Analyzer.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Timetable Generator Library.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Data Models.dll.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Timetable Generator Library.dll.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic_Algorithm_Analyzer.GAAnalyzerForm.resources
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic_Algorithm_Analyzer.Properties.Resources.resources
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.csproj.GenerateResource.Cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.pdb

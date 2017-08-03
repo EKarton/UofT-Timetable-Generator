@@ -59,7 +59,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="RedBlackTree.cs" />
-    <Compile Include="Timetable.cs" />
+    <Compile Include="SeasonalTimetable.cs" />
+    <Compile Include="YearlyTimetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

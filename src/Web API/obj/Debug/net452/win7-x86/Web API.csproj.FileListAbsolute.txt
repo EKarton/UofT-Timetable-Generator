@@ -133,3 +133,9 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Web API\bin\D
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Web API\bin\Debug\net452\win7-x86\NuGet.Frameworks.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Web API\obj\Debug\net452\win7-x86\Web API.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source\Web API\obj\Debug\net452\win7-x86\Web API.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net452\win7-x86\Web API.deps.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net452\win7-x86\Web API.runtimeconfig.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net452\win7-x86\Web API.runtimeconfig.dev.json
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net452\win7-x86\Web API.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net452\win7-x86\Web API.csproj.Web API.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net452\win7-x86\Web API.AssemblyInfo.cs

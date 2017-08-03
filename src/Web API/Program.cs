@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Web_API
+namespace UoftTimetableGenerator.WebAPI
 {
     public class Program
     {

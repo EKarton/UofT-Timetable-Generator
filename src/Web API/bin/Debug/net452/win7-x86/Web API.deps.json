@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.5.2/win7-x86",
-    "signature": "a22e2c770ac69523a63a7e2a23870c176cb3aa50"
+    "signature": "0fe9b533a63616faed0181f05396c7f116193858"
   },
   "compilationOptions": {
     "defines": [
@@ -23,7 +23,7 @@
     ".NETFramework,Version=v4.5.2": {
       "web api/1.0.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
+          "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
           "Microsoft.AspNetCore": "1.1.2",
           "Microsoft.AspNetCore.Mvc": "1.1.3",
           "Microsoft.AspNetCore.StaticFiles": "1.1.2",
@@ -388,52 +388,58 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "microsoft.applicationinsights/2.2.0": {
+      "microsoft.applicationinsights/2.4.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
+        },
         "compile": {
           "lib/net45/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "microsoft.applicationinsights.agent.intercept/2.0.6": {
+      "microsoft.applicationinsights.agent.intercept/2.4.0": {
         "compile": {
           "lib/net45/Microsoft.AI.Agent.Intercept.dll": {}
         }
       },
-      "microsoft.applicationinsights.aspnetcore/2.0.0": {
+      "microsoft.applicationinsights.aspnetcore/2.1.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
-          "Microsoft.ApplicationInsights.DependencyCollector": "2.2.0",
-          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.2.0",
-          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.2.0",
+          "Microsoft.ApplicationInsights": "2.4.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.4.1",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.4.1",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.4.0",
           "Microsoft.AspNetCore.Hosting": "1.1.2",
           "Microsoft.Extensions.Configuration": "1.1.2",
           "Microsoft.Extensions.Configuration.Json": "1.1.2",
           "Microsoft.Extensions.DiagnosticAdapter": "1.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2"
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "System.Net.Http": "4.3.1",
+          "System.Text.Encodings.Web": "4.3.1"
         },
         "compile": {
           "lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll": {}
         }
       },
-      "microsoft.applicationinsights.dependencycollector/2.2.0": {
+      "microsoft.applicationinsights.dependencycollector/2.4.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
-          "Microsoft.ApplicationInsights.Agent.Intercept": "2.0.6"
+          "Microsoft.ApplicationInsights": "2.4.0",
+          "Microsoft.ApplicationInsights.Agent.Intercept": "2.4.0",
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "compile": {
           "lib/net45/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
-      "microsoft.applicationinsights.perfcountercollector/2.2.0": {
+      "microsoft.applicationinsights.perfcountercollector/2.4.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0"
+          "Microsoft.ApplicationInsights": "2.4.0"
         },
         "compile": {
           "lib/net45/Microsoft.AI.PerfCounterCollector.dll": {}
         }
       },
-      "microsoft.applicationinsights.windowsserver.telemetrychannel/2.2.0": {
+      "microsoft.applicationinsights.windowsserver.telemetrychannel/2.4.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0"
+          "Microsoft.ApplicationInsights": "2.4.0"
         },
         "compile": {
           "lib/net45/Microsoft.AI.ServerTelemetryChannel.dll": {}
@@ -530,7 +536,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
           "Microsoft.Extensions.Options": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Metadata": "1.4.1"
         },
         "compile": {
@@ -559,7 +565,7 @@
           "Microsoft.Extensions.Options": "1.1.2",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Metadata": "1.4.1"
         },
         "compile": {
@@ -728,7 +734,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "System.Buffers": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "compile": {
           "lib/net451/Microsoft.AspNetCore.Mvc.Core.dll": {}
@@ -1011,7 +1017,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "compile": {
           "lib/net451/Microsoft.EntityFrameworkCore.Relational.dll": {}
@@ -1160,7 +1166,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
           "System.Collections.Concurrent": "4.3.0",
           "System.ComponentModel": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Emit": "4.0.1",
           "System.Reflection.Emit.Lightweight": "4.0.1",
           "System.Reflection.Extensions": "4.3.0",
@@ -1438,7 +1444,7 @@
           "System.IO.Compression": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
-          "System.Net.Http": "4.3.0",
+          "System.Net.Http": "4.3.1",
           "System.Net.Primitives": "4.3.0",
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
@@ -1516,9 +1522,9 @@
       },
       "system.diagnostics.contracts/4.3.0": {},
       "system.diagnostics.debug/4.3.0": {},
-      "system.diagnostics.diagnosticsource/4.3.1": {
+      "system.diagnostics.diagnosticsource/4.4.0": {
         "compile": {
-          "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll": {}
+          "lib/net45/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "system.diagnostics.tools/4.3.0": {},
@@ -1534,7 +1540,7 @@
       "system.linq/4.3.0": {},
       "system.linq.expressions/4.3.0": {},
       "system.linq.queryable/4.0.1": {},
-      "system.net.http/4.3.0": {},
+      "system.net.http/4.3.1": {},
       "system.net.primitives/4.3.0": {},
       "system.numerics.vectors/4.3.0": {
         "compile": {
@@ -1605,7 +1611,7 @@
     ".NETFramework,Version=v4.5.2/win7-x86": {
       "web api/1.0.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
+          "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
           "Microsoft.AspNetCore": "1.1.2",
           "Microsoft.AspNetCore.Mvc": "1.1.3",
           "Microsoft.AspNetCore.StaticFiles": "1.1.2",
@@ -1628,52 +1634,58 @@
           "runtimes/win7-x86/native/libuv.dll": {}
         }
       },
-      "microsoft.applicationinsights/2.2.0": {
+      "microsoft.applicationinsights/2.4.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
+        },
         "runtime": {
           "lib/net45/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "microsoft.applicationinsights.agent.intercept/2.0.6": {
+      "microsoft.applicationinsights.agent.intercept/2.4.0": {
         "runtime": {
           "lib/net45/Microsoft.AI.Agent.Intercept.dll": {}
         }
       },
-      "microsoft.applicationinsights.aspnetcore/2.0.0": {
+      "microsoft.applicationinsights.aspnetcore/2.1.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
-          "Microsoft.ApplicationInsights.DependencyCollector": "2.2.0",
-          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.2.0",
-          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.2.0",
+          "Microsoft.ApplicationInsights": "2.4.0",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.4.1",
+          "Microsoft.ApplicationInsights.PerfCounterCollector": "2.4.1",
+          "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel": "2.4.0",
           "Microsoft.AspNetCore.Hosting": "1.1.2",
           "Microsoft.Extensions.Configuration": "1.1.2",
           "Microsoft.Extensions.Configuration.Json": "1.1.2",
           "Microsoft.Extensions.DiagnosticAdapter": "1.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2"
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "System.Net.Http": "4.3.1",
+          "System.Text.Encodings.Web": "4.3.1"
         },
         "runtime": {
           "lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll": {}
         }
       },
-      "microsoft.applicationinsights.dependencycollector/2.2.0": {
+      "microsoft.applicationinsights.dependencycollector/2.4.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
-          "Microsoft.ApplicationInsights.Agent.Intercept": "2.0.6"
+          "Microsoft.ApplicationInsights": "2.4.0",
+          "Microsoft.ApplicationInsights.Agent.Intercept": "2.4.0",
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "runtime": {
           "lib/net45/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
-      "microsoft.applicationinsights.perfcountercollector/2.2.0": {
+      "microsoft.applicationinsights.perfcountercollector/2.4.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0"
+          "Microsoft.ApplicationInsights": "2.4.0"
         },
         "runtime": {
           "lib/net45/Microsoft.AI.PerfCounterCollector.dll": {}
         }
       },
-      "microsoft.applicationinsights.windowsserver.telemetrychannel/2.2.0": {
+      "microsoft.applicationinsights.windowsserver.telemetrychannel/2.4.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0"
+          "Microsoft.ApplicationInsights": "2.4.0"
         },
         "runtime": {
           "lib/net45/Microsoft.AI.ServerTelemetryChannel.dll": {}
@@ -1770,7 +1782,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
           "Microsoft.Extensions.Options": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Metadata": "1.4.1"
         },
         "runtime": {
@@ -1799,7 +1811,7 @@
           "Microsoft.Extensions.Options": "1.1.2",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Metadata": "1.4.1"
         },
         "runtime": {
@@ -1968,7 +1980,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "System.Buffers": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "runtime": {
           "lib/net451/Microsoft.AspNetCore.Mvc.Core.dll": {}
@@ -2251,7 +2263,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "System.Diagnostics.DiagnosticSource": "4.4.0"
         },
         "runtime": {
           "lib/net451/Microsoft.EntityFrameworkCore.Relational.dll": {}
@@ -2400,7 +2412,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
           "System.Collections.Concurrent": "4.3.0",
           "System.ComponentModel": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
           "System.Reflection.Emit": "4.0.1",
           "System.Reflection.Emit.Lightweight": "4.0.1",
           "System.Reflection.Extensions": "4.3.0",
@@ -2678,7 +2690,7 @@
           "System.IO.Compression": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
-          "System.Net.Http": "4.3.0",
+          "System.Net.Http": "4.3.1",
           "System.Net.Primitives": "4.3.0",
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
@@ -2756,9 +2768,9 @@
       },
       "system.diagnostics.contracts/4.3.0": {},
       "system.diagnostics.debug/4.3.0": {},
-      "system.diagnostics.diagnosticsource/4.3.1": {
+      "system.diagnostics.diagnosticsource/4.4.0": {
         "runtime": {
-          "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll": {}
+          "lib/net45/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "system.diagnostics.tools/4.3.0": {},
@@ -2774,7 +2786,7 @@
       "system.linq/4.3.0": {},
       "system.linq.expressions/4.3.0": {},
       "system.linq.queryable/4.0.1": {},
-      "system.net.http/4.3.0": {},
+      "system.net.http/4.3.1": {},
       "system.net.primitives/4.3.0": {},
       "system.numerics.vectors/4.3.0": {
         "runtime": {
@@ -2856,47 +2868,47 @@
       "path": "libuv/1.9.1",
       "hashPath": "libuv.1.9.1.nupkg.sha512"
     },
-    "microsoft.applicationinsights/2.2.0": {
+    "microsoft.applicationinsights/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+JJ6qygUKQY2YnRfr0GlgdbKAhUqZhwd9zija0aKdDVQK60lQtnsBKzFY8/kMg0SH2MRXtmLkHG53oiNDQsLJQ==",
-      "path": "microsoft.applicationinsights/2.2.0",
-      "hashPath": "microsoft.applicationinsights.2.2.0.nupkg.sha512"
+      "sha512": "sha512-4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==",
+      "path": "microsoft.applicationinsights/2.4.0",
+      "hashPath": "microsoft.applicationinsights.2.4.0.nupkg.sha512"
     },
-    "microsoft.applicationinsights.agent.intercept/2.0.6": {
+    "microsoft.applicationinsights.agent.intercept/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t7deiucaoNwI/gPaSY6SjMBd7yNb58IpSNH6jNc92giflBdpKdGoxbRflA6wtshnpk/rMkuMufBTB+WOQwBRcg==",
-      "path": "microsoft.applicationinsights.agent.intercept/2.0.6",
-      "hashPath": "microsoft.applicationinsights.agent.intercept.2.0.6.nupkg.sha512"
+      "sha512": "sha512-WuK9x24Yt3a3wUVsgFTp0Ef3q2ne0dPSflLRysRnpao70R1+oUil6wW/6tK2PeiwL2giiH+Enli1S+yXmSStqQ==",
+      "path": "microsoft.applicationinsights.agent.intercept/2.4.0",
+      "hashPath": "microsoft.applicationinsights.agent.intercept.2.4.0.nupkg.sha512"
     },
-    "microsoft.applicationinsights.aspnetcore/2.0.0": {
+    "microsoft.applicationinsights.aspnetcore/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LcbwEaO9oA063w5yzxLgkxZkFIF9VCYxG98E2XZ2Ua/Uj2I3WMhyRp/gE7HI9sUapYRT3WCyJ/LYXT69WYrKow==",
-      "path": "microsoft.applicationinsights.aspnetcore/2.0.0",
-      "hashPath": "microsoft.applicationinsights.aspnetcore.2.0.0.nupkg.sha512"
+      "sha512": "sha512-kiGmzl9Cav34dF7AHVMoJxdJJQEeLB8KZGNwX1LjImG9iem5hGk4DkHpW7/m9Nh3DrL8IKSL3mqQo+IPqWfMRQ==",
+      "path": "microsoft.applicationinsights.aspnetcore/2.1.1",
+      "hashPath": "microsoft.applicationinsights.aspnetcore.2.1.1.nupkg.sha512"
     },
-    "microsoft.applicationinsights.dependencycollector/2.2.0": {
+    "microsoft.applicationinsights.dependencycollector/2.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0V0oKQLB5m02zPYS9jbEC6qePZHnm2rQoR5gNOTDQ9TI3SdVGbXlvaqxvxpi4UqlFHSeXMbClsLZ8eNhY/Ua+g==",
-      "path": "microsoft.applicationinsights.dependencycollector/2.2.0",
-      "hashPath": "microsoft.applicationinsights.dependencycollector.2.2.0.nupkg.sha512"
+      "sha512": "sha512-RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==",
+      "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
+      "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
     },
-    "microsoft.applicationinsights.perfcountercollector/2.2.0": {
+    "microsoft.applicationinsights.perfcountercollector/2.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kdJ9KAaaIKhDIk/SWwYrwtMw48WNOqKdi9zcpjZbbDHOITOvhfKoh/ZA/1iewlJVlMMRMmhTuP7WidQwqilhjw==",
-      "path": "microsoft.applicationinsights.perfcountercollector/2.2.0",
-      "hashPath": "microsoft.applicationinsights.perfcountercollector.2.2.0.nupkg.sha512"
+      "sha512": "sha512-6sHD2UTpUdKtrzbCPPYUxWZqv4LDEX6ZyjEv1EoiZmK09nvvOlMmEfUMMNyWMy2hx0wSqGOKiDtUew9f2yJWKg==",
+      "path": "microsoft.applicationinsights.perfcountercollector/2.4.1",
+      "hashPath": "microsoft.applicationinsights.perfcountercollector.2.4.1.nupkg.sha512"
     },
-    "microsoft.applicationinsights.windowsserver.telemetrychannel/2.2.0": {
+    "microsoft.applicationinsights.windowsserver.telemetrychannel/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PeOgoB990hkAisiHAIFDNc7SknArx+z9Mc0tVnE4iDdfDCrboqQhL5dyFVwtH8ef/EJu2iJLKIgkPDusdAh00w==",
-      "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.2.0",
-      "hashPath": "microsoft.applicationinsights.windowsserver.telemetrychannel.2.2.0.nupkg.sha512"
+      "sha512": "sha512-D0fIC9ySNORFJhbz8n1U2VfERYF8DBDCodbAVBTrdUJyBKbpUQrs/LkMt5fEVvIlxQjqj1ygWgGgF38pvDmoQw==",
+      "path": "microsoft.applicationinsights.windowsserver.telemetrychannel/2.4.0",
+      "hashPath": "microsoft.applicationinsights.windowsserver.telemetrychannel.2.4.0.nupkg.sha512"
     },
     "microsoft.aspnetcore/1.1.2": {
       "type": "package",
@@ -3654,12 +3666,12 @@
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
     },
-    "system.diagnostics.diagnosticsource/4.3.1": {
+    "system.diagnostics.diagnosticsource/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-j72A3mwamUXPgDIU1TWyzea7yqz59+iO2cmXuyzvcfuszWGq9JRbWify1k33lLQophaXOIyhPkEevfP0k4M3wg==",
-      "path": "system.diagnostics.diagnosticsource/4.3.1",
-      "hashPath": "system.diagnostics.diagnosticsource.4.3.1.nupkg.sha512"
+      "sha512": "sha512-2SMt95w+TKf2fth4mSlqn1AVNSmFDQkdTVmUe6D/oP1atzVU0vxTb+iDP+IHNQB1qSbYkWNoPN55SaMsGUe68A==",
+      "path": "system.diagnostics.diagnosticsource/4.4.0",
+      "hashPath": "system.diagnostics.diagnosticsource.4.4.0.nupkg.sha512"
     },
     "system.diagnostics.tools/4.3.0": {
       "type": "package",
@@ -3724,12 +3736,12 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
-    "system.net.http/4.3.0": {
+    "system.net.http/4.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
-      "path": "system.net.http/4.3.0",
-      "hashPath": "system.net.http.4.3.0.nupkg.sha512"
+      "sha512": "sha512-UrTyRczM3ZvNk6oetBuwlu67MFKKRva+r7bw4JDVZ6Y2IukyZ24td5ppsieu/4yZlogVAIuZul9GIQ3hoiz0yA==",
+      "path": "system.net.http/4.3.1",
+      "hashPath": "system.net.http.4.3.1.nupkg.sha512"
     },
     "system.net.primitives/4.3.0": {
       "type": "package",
