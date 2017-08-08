@@ -1,0 +1,36 @@
+﻿<div id="searchUoftCourses">
+	<!-- The header -->
+	<header><h1>Uoft Timetable Generator</h1></header>
+	
+	<!-- The search box -->
+	<div>
+		<input type="text" name="queryTxtbox" data-ng-model="query" ng-change="changeCourseResults()"/>
+		<div>
+			<div ng-repeat="course in courseResults"
+				 ng-click="selectCourse(course)">
+			{{course.code + " | " + course.term}}
+			</div>
+		</div>
+	</div>
+
+	<!-- The fall courses selected -->
+	<div>
+		<table border="1">
+			<tr><td>Fall</td></tr>
+			<tr ng-repeat="course in fallCourses track by $index">
+				<td>{{course}}</td>
+			</tr>
+		</table>
+		<table border="1">
+			<tr><td>Winter</td></tr>
+			<tr ng-repeat="course in winterCourses track by $index">
+				<td>{{course}}</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- The generate timetables button -->
+	<div>
+		<button ng-click="makeTimetables()">Generate timetables</button>
+	</div>
+</div>

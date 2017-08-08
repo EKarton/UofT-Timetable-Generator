@@ -18,3 +18,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\bin\
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\bin\Debug\Data Models.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\obj\Debug\Data Models.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\obj\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Data Models\obj\Debug\Data Models.csprojResolveAssemblyReference.cache

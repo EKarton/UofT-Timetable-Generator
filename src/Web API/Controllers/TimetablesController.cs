@@ -6,23 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 using UoftTimetableGenerator.DataModels;
 using UoftTimetableGenerator.Generator;
 using UoftTimetableGenerator.WebAPI.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace UoftTimetableGenerator.WebAPI.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowSpecificOrigin")]
+    [Produces("application/json")]
     public class TimetablesController : Controller
     {
-        // GET api/timetables?courses=mat137,csc148
-        [HttpGet]
-        public IActionResult GetUoftTimetables(string courses)
+        // PUT api/timetables
+        [HttpPut]
+        [Route("GetUoftTimetables")]
+        public IActionResult GetUoftTimetables([FromBody] string[] courseCodes)
         {
             // Each course code has a length of 10; max 10 courses to put in timetable
-            if (courses.Length > 100)
+            if (courseCodes.Length > 100)
                 return BadRequest();
 
             // Get the courses from the database
             List<Course> courseObjs = new List<Course>();
-            foreach (string code in courses.Split(','))
+            foreach (string code in courseCodes)
             {
                 Course courseObj = UoftDatabaseService.GetCourse(code);
                 if (courseObj == null)
@@ -47,11 +51,12 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             foreach (YearlyTimetable t in timetables)
                 miniTimetables.Add(new SimplifiedYearlyTimetable(t));
 
-            return Ok(miniTimetables);
+            return Created("api/timetables/getuofttimetables", miniTimetables);
         }
 
-        // POST api/timetables
-        [HttpPost]
+        // PUT api/timetables
+        [HttpPut]
+        [Route("GetTimetables")]
         public IActionResult GetTimetables([FromBody] Course[] courses)
         {
             // Max 12 courses (a full yr course counts as 1 course)
@@ -75,7 +80,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             foreach (YearlyTimetable t in timetables)
                 miniTimetables.Add(new SimplifiedYearlyTimetable(t));
 
-            return Created("api/timetables", miniTimetables);
+            return Created("api/timetables/gettimetables", miniTimetables);
         }
     }
 }

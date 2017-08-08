@@ -29,6 +29,15 @@ namespace UoftTimetableGenerator.WebAPI
         {
             // Add framework services.
             services.AddMvc();
+
+            // Add the CORs for a specific domain
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("http://localhost:53688")
+                                                    .AllowAnyMethod()
+                                                    .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +56,9 @@ namespace UoftTimetableGenerator.WebAPI
             }
 
             app.UseStaticFiles();
+
+            // Use cors for a specific domain
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseMvc(routes =>
             {
