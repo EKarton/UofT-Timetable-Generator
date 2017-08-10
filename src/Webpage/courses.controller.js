@@ -2,7 +2,7 @@
 
 (function(){
 	var app = angular.module("timetableApp");
-	app.controller("CoursesController", function($scope, $location, Generator){
+    app.controller("CoursesController", function ($scope, $location, Generator) {
 
 		// Courses which were found by the query in textbox
 		$scope.courseResults = [];

@@ -20,23 +20,13 @@
 					{code: "MAT237Y1-Y", term: "Y"}
 				];
 			}
-		};
+		};  
 
-		this.wasd = "";
 		this.generateUoftTimetables = function(courseCodes){
+            var url = "http://localhost:53235/api/timetables/getuofttimetables";
+            var data = JSON.stringify(["MAT137Y1-Y", "CSC148H1-F", "ENV100H1-F", "COG250Y1-Y"]);
 
-			var request = {
-				method: "PUT",
-				url: "http://localhost:53235/api/timetables/getuofttimetables",
-				data: JSON.stringify(["MAT137Y1-Y", "CSC148H1-F"])
-			};
-
-			return $http(request).then(function(response){
-
-			}, function(response){
-				console.log("ERROR");
-				console.log(JSON.stringify(response));
-			});
-		};
+            return $http.put(url, data);
+        };
 	});
 }());
