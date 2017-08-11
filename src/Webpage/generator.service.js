@@ -1,7 +1,7 @@
 ﻿"use strict";
 (function(){
 	var timetableGenerator = angular.module("timetableApp");
-	timetableGenerator.service("Generator", function($http) {	
+	timetableGenerator.service("Generator", function($http, $q) {	
 
 		this.uoftFallCourseCodes = [];
 		this.uoftWinterCourseCodes = [];
