@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="timetableApp" ng-controller="appController">
 <head>
     <meta charset="utf-8" />
     <title>Uoft Timetable Generator</title>
+    <link rel="stylesheet" ng-href="{{css}}">
 </head>
 <body>
-	<div ng-app="timetableApp">
+	<div>
 		<div ng-view></div>
 	</div>
 
@@ -14,10 +15,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
     <!-- Load js scripts -->
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="courses.controller.js"></script>
-    <script type="text/javascript" src="timetables.controller.js"></script>
-    <script type="text/javascript" src="timetable-preview.directive.js"></script>
-    <script type="text/javascript" src="generator.service.js"> </script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers/courses.controller.js"></script>
+    <script type="text/javascript" src="app/controllers/timetables.controller.js"></script>
+    <script type="text/javascript" src="app/directives/timetable-preview.directive.js"></script>
+    <script type="text/javascript" src="app/directives/timetable.directive.js"></script>
+    <script type="text/javascript" src="app/services/generator.service.js"> </script>
 </body>
 </html>

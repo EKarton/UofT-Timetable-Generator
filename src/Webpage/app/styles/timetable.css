@@ -1,0 +1,51 @@
+﻿#miniTimetablesPanel {
+    /* Show the vertical scrollbar when it is too big */
+    overflow-y: auto;
+}
+
+#overlayPanel {
+    /* Set the initial width and height to be horizontal line */
+    width: 100%;
+    height: 0%;
+
+    /* Make it stay in place relative to the browser window */
+    position: fixed;
+    /* Make it stay on top of all the other elements */
+    z-index: 1;
+    /* Place it in the top left corner */
+    left: 0;
+    top: 0;
+
+    /* Remove any overflow (i.e, elements coming out of the panel because the panel is too small)*/
+    overflow-y: auto;
+
+    /* Set the background color */
+    background-color: rgba(0, 0, 0, 0.63);
+
+    /* If the width / height changes, make it change for 2 seconds */
+    -webkit-transition-property: width, height; /* For safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: width, height;
+    transition-duration: 0.5s;
+}
+
+#overlayPanel .contentsPanel {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: green;
+    /*transition-duration: 0.3s;*/
+}
+
+#overlayPanel .closeButton {
+    /* Make it stay relative to the parent */
+    position: absolute;
+
+    /* Place it correctly */
+    right: 50px;
+    top: 50px;
+    /* Make the font big */
+    font-size: 20px;
+}
