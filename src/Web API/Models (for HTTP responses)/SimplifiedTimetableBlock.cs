@@ -16,8 +16,10 @@ namespace UoftTimetableGenerator.WebAPI.Models
             SectionCode = session.Section.SectionCode;
             Instructors = session.Section.Instructors.ToArray();
 
-            StartTime = session.StartTime;
-            EndTime = session.EndTime;
+            StartTime = session.StartTime % 100;
+            EndTime = session.EndTime % 100;
+            StartDay = (int) session.StartTime / 100;
+            EndDay = (int) session.EndTime / 100;
 
             switch(term)
             {
@@ -42,6 +44,8 @@ namespace UoftTimetableGenerator.WebAPI.Models
         public string[] Instructors { get; set; }
         public double StartTime { get; set; }
         public double EndTime { get; set; }
+        public int StartDay { get; set; }
+        public int EndDay { get; set; }
         public string BuildingCode { get; set; }
         public string RoomNumber { get; set; }
     }

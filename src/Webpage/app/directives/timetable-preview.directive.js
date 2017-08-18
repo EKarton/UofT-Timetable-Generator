@@ -6,155 +6,112 @@
     var app = angular.module("timetableApp");
     app.directive("timetablePreview", function () {
 
-        var days = ["", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var timeToStartDay = 9.00;
-        var timeToEndDay = 23.00;
+        var TimetableBlock = function (x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        };
 
-        var namespace = "http://www.w3.org/2000/svg";
-        var svgElement = null;
-
-        function addTitle(title) {
-            var gElement = document.createElementNS(namespace, "g");
-            var textElement = document.createElementNS(namespace, "text");
-
-            // Set the text to the title and horizontally align it to the middle
-            textElement.textContent = title;
-            textElement.setAttribute("text-anchor", "middle");
-
-            // Set the middle x coordinate and the bottom y coordinate
-            textElement.setAttribute("x", svgElement.clientWidth / 2);
-            textElement.setAttribute("y", 20);
-
-            // Add the new text element
-            gElement.append(textElement);
-            svgElement.append(gElement);
+        var Gridline = function (x1, y1, x2, y2) {
+            this.x1 = x1;
+            this.y1 = y1;
+            this.x2 = x2;
+            this.y2 = y2;
         }
 
-        function addGridlines(dx, dy) {
-            var widthInterval = (svgElement.clientWidth - dx) / 7;     
-            var heightInterval = (svgElement.clientHeight - dy) / (timeToEndDay - timeToStartDay + 1);
-
-            // Creating a container that will hold all the grid lines
-            var linesContainer = document.createElementNS(namespace, "g");
-
-            // Making the horizontal lines
-            var numHorizontalLines = timeToEndDay - timeToStartDay + 1;
-            for (var i = 0; i <= numHorizontalLines; i++)
-            {
-                var line = document.createElementNS(namespace, "line");
-                line.setAttribute("x1", dx);
-                line.setAttribute("y1", dy + (i * heightInterval));
-                line.setAttribute("x2", dx + svgElement.clientWidth);
-                line.setAttribute("y2", dy + (i * heightInterval));
-
-                line.setAttribute("style", "stroke:#c5c8cc; stroke-width:1");
-                linesContainer.append(line);
-            }
-
-            // Making the vertical lines
-            for (var curDay = 0; curDay < days.length; curDay++)
-            {
-                var line = document.createElementNS(namespace, "line");
-                line.setAttribute("x1", dx + (curDay) * widthInterval);
-                line.setAttribute("y1", dy);
-                line.setAttribute("x2", dx + (curDay) * widthInterval);
-                line.setAttribute("y2", svgElement.clientHeight);
-
-                line.setAttribute("style", "stroke:#c5c8cc; stroke-width:1");
-                linesContainer.append(line);
-            }
-
-            // Adding the container to the svg element
-            svgElement.append(linesContainer);
+        var Title = function (title, x, y) {
+            this.title = title;
+            this.x = x;
+            this.y = y;
         }
 
-        function addBlock(block, dx, dy, color) {
-            var widthInterval = (svgElement.clientWidth - dx) / 7;
-            var heightInterval = (svgElement.clientHeight - dy) / (timeToEndDay - timeToStartDay + 1);
-            var startTime = block.startTime % 100;
-            var endTime = block.endTime % 100;
-            var startDay = parseInt(block.startTime / 100);
-            var endDay = parseInt(block.endTime / 100);
+        var controller = function ($scope) {
+            $scope.days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            $scope.earliestTime = 9.00;
+            $scope.latestTime = 23.00;
 
-            for (var i = startDay; i <= endDay; i++)
-            {
-                var rectElement = document.createElementNS(namespace, "rect");
-                rectElement.setAttribute("fill", color);
-                if (startDay === endDay)
-                {
-                    var rectX = dx + (widthInterval * i);
-                    var rectY = dy + (heightInterval * (startTime - timeToStartDay));
-                    var rectWidth = widthInterval;
-                    var rectHeight = (endTime - startTime) * heightInterval;
-                    rectElement.setAttribute("x", rectX);
-                    rectElement.setAttribute("y", rectY);
-                    rectElement.setAttribute("width", rectWidth);
-                    rectElement.setAttribute("height", rectHeight);
-                }
+            $scope.headerHeight = 10;
+            $scope.svgWidth = null;
+            $scope.svgHeight = null;
+        };
 
-                else if (i === startDay)
-                {
-                    var rectX = dx + (widthInterval * i);
-                    var rectY = dy + (heightInterval * (startTime - timeToStartDay));
-                    var rectWidth = widthInterval;
-                    var rectHeight = (timeToEndDay - startTime) / heightInterval;
-                    rectElement.setAttribute("x", rectX);
-                    rectElement.setAttribute("y", rectY);
-                    rectElement.setAttribute("width", rectWidth);
-                    rectElement.setAttribute("height", rectHeight);
-                }
-                else if (i === endDay)
-                {
-                    var rectX = dx + (widthInterval * i);
-                    var rectY = dy + (heightInterval * (startTime - timeToStartDay));
-                    var rectWidth = widthInterval;
-                    var rectHeight = (timeToEndDay - startTime) / heightInterval;
+        var link = function (scope, element, attributes) {
+            var columnWidth = null;
+            var dataRowHeight = 10;
 
-                    if (startDay == endDay)
-                        rectHeight = (endTime - startTime) * heightInterval;
+            function createBlocks(blocks, colorScheme) {
+                scope.timetableBlocks = [];
 
-                    rectElement.setAttribute("x", rectX);
-                    rectElement.setAttribute("y", rectY);
-                    rectElement.setAttribute("width", rectWidth);
-                    rectElement.setAttribute("height", rectHeight);
+                for (var i = 0; i < blocks.length; i++) {
+                    var x = (columnWidth * (blocks[i].startDay));
+                    var y = scope.headerHeight + (dataRowHeight * (blocks[i].startTime - scope.earliestTime));
+                    var width = columnWidth;
+                    var height = (blocks[i].endTime - blocks[i].startTime) * dataRowHeight;
+                    var color = colorScheme[blocks[i].courseCode + "|" + blocks[i].activityType];
+                    scope.timetableBlocks.push(new TimetableBlock(x, y, width, height, color));
                 }
-                else
-                {                    
-                    rectElement.setAttribute("y", dy);
-                    rectElement.setAttribute("x", dx + (widthInterval * i));
-                    rectElement.setAttribute("width", widthInterval);
-                    rectElement.setAttribute("height", height);
-                }
-                svgElement.append(rectElement);
             }
-        }
 
-        function createTimetable(scope, element, attributes) {
+            function createGridlines() {
+                scope.gridLines = [];
+
+                // Making horizontal lines
+                var numHorizontalLines = scope.latestTime - scope.earliestTime;
+                for (var i = 0; i <= numHorizontalLines; i++) {
+                    var x1 = 0;
+                    var y1 = scope.headerHeight + (i * dataRowHeight);
+                    var x2 = scope.svgWidth;
+                    var y2 = y1;
+                    scope.gridLines.push(new Gridline(x1, y1, x2, y2));
+                }
+
+                // Making the vertical lines
+                for (var i = 0; i <= scope.days.length; i++) {
+                    var x1 = i * columnWidth;
+                    var y1 = scope.headerHeight;
+                    var x2 = x1;
+                    var y2 = scope.svgHeight;
+                    scope.gridLines.push(new Gridline(x1, y1, x2, y2));
+                }
+            }
+
+            function setSize() {
+                var svgElement = element.find("svg")[0];
+
+                // Get the width of parent
+                scope.svgWidth = svgElement.getBoundingClientRect().width;
+                columnWidth = scope.svgWidth / scope.days.length;
+
+                // Compute the height
+                scope.svgHeight = dataRowHeight * (scope.latestTime - scope.earliestTime) + scope.headerHeight;
+
+                // Set the width and height
+                svgElement.setAttribute("viewBox", "0, 0, " + scope.svgWidth + ", " + scope.svgHeight);
+                svgElement.setAttribute("preserveAspectRatio", "xMaxYMin slice");
+            }
 
             // Each time the data's value is changed, it updates the graph
             scope.$watchCollection("[blocks,  colorscheme, charttitle]", function (newValues, oldValues) {
                 var blocks = newValues[0];
                 var colorScheme = newValues[1];
-                var title = newValues[2];
-                svgElement = element.find("svg")[0];
+                scope.chartTitle = newValues[2];
 
-                // Add a title
-                addTitle(title);
+                console.log("Timetable previre: ", blocks);
 
-                // Add the grid lines
-                addGridlines(0, 22);
-
-                // Add the blocks
-                for (var i = 0; i < blocks.length; i++)
-                    addBlock(blocks[i], 0, 22, colorScheme[blocks[i].courseCode + "|" + blocks[i].activityType]);
+                setSize();
+                createGridlines();
+                createBlocks(blocks, colorScheme);
             });
-        }
+        };
 
         return {
             restrict: "E",
             scope: {  blocks: "=", colorscheme: "=", charttitle: "@charttitle" },
             templateUrl: "./app/templates/timetable-preview.template.html",
-            link: createTimetable
+            controller: controller,
+            link: link
         };
     });
 }());

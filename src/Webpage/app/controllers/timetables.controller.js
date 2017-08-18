@@ -6,12 +6,11 @@
         $scope.timetables = "";
         $scope.sectionColors = [];
         $scope.selectedTimetable = null;
-        $scope.selectedTerm = null;
 
         var generateRandomColor = function () {
-            var red = Math.floor(Math.random() * 255);
-            var green = Math.floor(Math.random() * 255);
-            var blue = Math.floor(Math.random() * 255);
+            var red = Math.floor(Math.random() * (255 - 100) + 100);
+            var green = Math.floor(Math.random() * (255 - 100) + 100);
+            var blue = Math.floor(Math.random() * (255 - 100) + 100);
             return "rgb(" + red + ", " + green + ", " + blue + ")";
         };
 
@@ -70,8 +69,11 @@
             var element = document.getElementById("overlayPanel");
             element.style.height = "100%";
 
-            $scope.selectedTimetable = timetable;
-            $scope.selectedTerm = term;
+            // Select which timetable
+            if (term == "Fall")
+                $scope.selectedTimetable = timetable.fallTimetableBlocks;
+            else if (term == "Winter")
+                $scope.selectedTimetable = timetable.winterTimetableBlocks;
         };
 
         $scope.closeTimetableViewer = function () {
@@ -85,7 +87,6 @@
             element.style.height = "0";
 
             $scope.selectedTimetable = null;
-            $scope.selectedTerm = null;
         }
 	});
 }());
