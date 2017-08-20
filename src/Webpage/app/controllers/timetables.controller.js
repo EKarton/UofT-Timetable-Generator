@@ -7,6 +7,8 @@
         $scope.sectionColors = [];
         $scope.selectedTimetable = null;
 
+        $scope.isSideMenuOpened = false;
+
         var generateRandomColor = function () {
             var red = Math.floor(Math.random() * (255 - 100) + 100);
             var green = Math.floor(Math.random() * (255 - 100) + 100);
@@ -87,6 +89,24 @@
             element.style.height = "0";
 
             $scope.selectedTimetable = null;
-        }
+        };
+
+        $scope.toggleSideMenu = function () {
+            // When we want to close it
+            if ($scope.isSideMenuOpened)
+            {
+                var element = document.getElementById("sideMenuPanel");
+                element.style.maxWidth = "0%";
+                $scope.isSideMenuOpened = false;
+            }
+
+            // When we want to open it
+            else if ($scope.isSideMenuOpened === false)
+            {
+                var element = document.getElementById("sideMenuPanel");
+                element.style.maxWidth  = "100%";
+                $scope.isSideMenuOpened = true;
+            }
+        };
 	});
 }());

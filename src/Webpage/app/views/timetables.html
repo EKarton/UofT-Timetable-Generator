@@ -1,11 +1,32 @@
 ﻿<div>
-	<header>Timetables</header>
-	<div id="miniTimetablesPanel">
-        <div ng-repeat="timetable in timetables track by $index">
-            <timetable-preview blocks="timetable.fallTimetableBlocks" colorScheme="sectionColors" chartTitle="Fall" ng-click="openTimetableViewer(timetable, 'Fall')"></timetable-preview>
-            <timetable-preview blocks="timetable.winterTimetableBlocks" colorScheme="sectionColors" chartTitle="Winter" ng-click="openTimetableViewer(timetable, 'Winter')"></timetable-preview>
+	<div id="miniTimetablesViewer">
+
+        <!-- The top header -->
+        <div id="headerPanel">
+            <span id="toggleSideMenuBttn" ng-click="toggleSideMenu()">
+                <img src="../../images/menu.png" width="20" height="20"/>
+            </span>
+            <span id="header">UofT Timetable Generator</span>
+        </div>
+
+        <!-- The timetables; fall and winter timetables grouped together -->
+        <div class="miniTimetablesGroup" ng-repeat="timetable in timetables track by $index">
+            <div>{{"Timetable #" + $index}}</div>
+            <div class="miniTimetables">
+                <timetable-preview blocks="timetable.fallTimetableBlocks" colorScheme="sectionColors" chartTitle="Fall" ng-click="openTimetableViewer(timetable, 'Fall')"></timetable-preview>
+                <timetable-preview blocks="timetable.winterTimetableBlocks" colorScheme="sectionColors" chartTitle="Winter" ng-click="openTimetableViewer(timetable, 'Winter')"></timetable-preview>
+            </div>
         </div>        
+
+        <div>
+            <button id="regenerateTimetablesBttn" ng-click="regenerateTimetables()">Regenerate more timetables</button>
+        </div>
 	</div>
+
+    <!-- The side menu panel -->
+    <div id="sideMenuPanel">
+
+    </div>
 
     <!-- The overlay (where the timetable viewer will be placed) -->
     <div id="overlayPanel">        

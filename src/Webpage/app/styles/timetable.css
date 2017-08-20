@@ -1,6 +1,68 @@
-﻿#miniTimetablesPanel {
+﻿body {
+    /* Flush it with the browser (no margins) */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#miniTimetablesViewer {
     /* Show the vertical scrollbar when it is too big */
     overflow-y: auto;
+
+    /* Align the child elements in the middle*/
+    text-align: center;
+}
+
+#headerPanel {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#toggleSideMenuBttn{
+    width: 20%;
+    float: left;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#header {
+    width: 80%;
+    margin-right: calc(20% + 20px);
+    font-size: 1.5em;
+}
+
+.miniTimetablesGroup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.miniTimetables{
+    display: inline-block;
+}
+
+#regenerateTimetablesBttn{
+    width: 60%;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#sideMenuPanel{
+    width: 20px;
+    background-color: red;
 }
 
 #overlayPanel {
