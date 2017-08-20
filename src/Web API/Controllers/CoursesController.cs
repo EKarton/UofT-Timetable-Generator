@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
+using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.WebAPI
 {
@@ -15,9 +16,13 @@ namespace UoftTimetableGenerator.WebAPI
     {
         // GET: api/courses
         [HttpGet]
-        public IActionResult GetUoftCourses()
+        public IActionResult GetUoftCourses([FromQuery] string query)
         {
-            return Ok();
+            if (query == null)
+                return BadRequest();
+
+            List<Course> courses = UoftDatabaseService.GetCourses(query, UoftDatabaseService.CourseQueryType.CourseCode);
+            return Ok(courses);
         }
     }
 }

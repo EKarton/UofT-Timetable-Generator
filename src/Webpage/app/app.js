@@ -6,7 +6,8 @@
         $routeProvider
         .when("/", {
             templateUrl: "app/views/courses.html",
-            controller: "CoursesController"
+            controller: "CoursesController",
+            css: "app/styles/homepage.css"
         })
         .when("/timetables", {
             templateUrl: "app/views/timetables.html",

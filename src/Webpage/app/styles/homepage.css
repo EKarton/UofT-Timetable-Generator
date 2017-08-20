@@ -1,0 +1,134 @@
+﻿body {
+}
+
+#header h1, h2{
+    text-align: center;
+}
+
+#header h2{
+    margin-bottom: 10px;
+}
+
+#header h1{
+    margin-top: 0px;
+}
+
+#searchArea {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    text-align: center;
+}
+
+#searchBox {
+    width: 60%;
+
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+#searchResults {
+    position: relative;
+    width: 100%;
+
+    /* We add these margins because the <ul> element will be placed to the very left of this element */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#searchResults ul {
+    /* Make the dropdown menu overlay on top of the other elements */
+    position: absolute;
+    top: 100%;
+    width: 60%;
+    left: 0px;
+
+    /* Set the size of the results box */
+    max-height: 50vh; /* Make the max height 50% of the view port */
+    margin-top: 0px;
+    padding: 0px;
+
+    /* Enforce the max height and display scroll bars if needed */
+    overflow: auto;
+
+    /* Remove any bullet points */
+    list-style-type: none;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: white;
+}
+
+#searchResults .description{
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 70%;
+}
+
+#searchResults .campus{
+    position: relative;
+    float: right;
+    text-align: right;
+    width: 30%;
+}
+
+#selectedCoursesTable {
+    table-layout: fixed;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    text-align: center;
+}
+
+#selectedCoursesTable td{
+    vertical-align: top;
+}
+
+#selectedCoursesTable h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.selectedCoursePanel {
+    margin-top: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.selectedCoursePanel:hover {
+    background-color: gray;
+}
+
+.deleteCourseBttn {
+    vertical-align: middle;
+    margin-top: 10px;
+    display: inline-block;
+    margin: auto;
+}
+
+.selectedCourse {
+    text-align: left;
+    margin-top: 10px;
+    display: inline-block;
+    margin: auto;
+}
+
+#makeTimetablesBttn {
+    /* Move the button to the right */
+    float: right;
+
+    /* Make the button centerish with the search box*/
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    /* Make the button bigger */
+    width: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    border: 1px, solid, black;
+}

@@ -28,7 +28,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             List<Course> courseObjs = new List<Course>();
             foreach (string code in courseCodes)
             {
-                Course courseObj = UoftDatabaseService.GetCourse(code);
+                Course courseObj = UoftDatabaseService.GetCourseDetails(code);
                 if (courseObj == null)
                     return NotFound();
                 courseObjs.Add(courseObj);

@@ -8,6 +8,10 @@ namespace UoftTimetableGenerator.DataModels
 {
     public class Course
     {
+        public Course()
+        {
+        }
+
         // A constructor used to convert DataContext.Course to DataModels.Course
         internal Course(DataContext.Course oldCourse)
         {

@@ -155,3 +155,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debu
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net461\win7-x86\Timetable Generator Library.dll.config
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.csproj.CoreCompileInputs.cache

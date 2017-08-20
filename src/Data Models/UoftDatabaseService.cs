@@ -10,6 +10,11 @@ namespace UoftTimetableGenerator.DataModels
 {
     public static class UoftDatabaseService
     {
+        public enum CourseQueryType
+        {
+            CourseCode
+        }
+
         public static Building GetBuilding(string buildingCode)
         {
             using (UoftDataContext db = new UoftDataContext())
@@ -25,7 +30,34 @@ namespace UoftTimetableGenerator.DataModels
             }
         }
 
-        public static Course GetCourse(string courseCode)
+        public static List<Course> GetCourses(string query, CourseQueryType type)
+        {
+            query = query.ToLower();
+            List<Course> courses = new List<Course>();
+
+            if (type == CourseQueryType.CourseCode && query.Length >= 3)
+            {
+                using (UoftDataContext db = new UoftDataContext())
+                {
+                    List<DataContext.Course> dbCourses = db.Courses.ToList();
+                    foreach (DataContext.Course c in dbCourses)
+                        if (c.Code.ToLower().Contains(query))
+                        {
+                            Course newCourse = new Course()
+                            {
+                                CourseCode = c.Code,
+                                Activities = null,
+                                Term = c.Term.ToString(),
+                                Title = ""
+                            };
+                            courses.Add(newCourse);
+                        }
+                }
+            }
+            return courses;
+        }
+
+        public static Course GetCourseDetails(string courseCode)
         {
             using (UoftDataContext db = new UoftDataContext())
             {
@@ -41,11 +73,11 @@ namespace UoftTimetableGenerator.DataModels
             }
         }
 
-        public static List<Course> GetCourses(string[] courseCodes)
+        public static List<Course> GetCourseDetails(string[] courseCodes)
         {
             List<Course> courses = new List<Course>();
             for (int i = 0; i < courseCodes.Length; i++)
-                courses.Add(GetCourse(courseCodes[i]));
+                courses.Add(GetCourseDetails(courseCodes[i]));
             return courses;
         }
     }

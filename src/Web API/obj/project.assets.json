@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
       "Libuv/1.9.1": {
@@ -2038,6 +2038,10 @@
           "lib/net46/System.Net.Http.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net46/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -2267,6 +2271,14 @@
           "lib/net461/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/osx/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -2326,6 +2338,10 @@
           "lib/net461/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -2523,12 +2539,24 @@
         }
       },
       "Data Models/1.0.0": {
-        "type": "project"
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Data Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data Models.dll": {}
+        }
       },
       "Timetable Schedulers/1.0.0": {
         "type": "project",
         "dependencies": {
           "Data Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Timetable Schedulers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Timetable Schedulers.dll": {}
         }
       }
     },
@@ -4955,12 +4983,24 @@
         }
       },
       "Data Models/1.0.0": {
-        "type": "project"
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Data Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data Models.dll": {}
+        }
       },
       "Timetable Schedulers/1.0.0": {
         "type": "project",
         "dependencies": {
           "Data Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Timetable Schedulers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Timetable Schedulers.dll": {}
         }
       }
     }
@@ -9904,15 +9944,27 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\Web API.csproj",
       "projectName": "Web API",
       "projectPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\Web API.csproj",
+      "packagesPath": "C:\\Users\\Emilio K\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Emilio K\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "net461"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net461": {
           "projectReferences": {
