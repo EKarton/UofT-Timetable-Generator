@@ -1,10 +1,9 @@
 ﻿<div>
 	<div id="miniTimetablesViewer">
-
         <!-- The top header -->
         <div id="headerPanel">
-            <span id="toggleSideMenuBttn" ng-click="toggleSideMenu()">
-                <img src="../../images/menu.png" width="20" height="20"/>
+            <span class="headerSides">
+                <img src="../../images/menu.png" width="20" height="20" ng-click="toggleSideMenu()"/>
             </span>
             <span id="header">UofT Timetable Generator</span>
         </div>
@@ -25,7 +24,20 @@
 
     <!-- The side menu panel -->
     <div id="sideMenuPanel">
-
+        <div class="menuItem">
+            <span class="closeSideMenuBttn" ng-click="closeSideMenu()">X</span>
+            <h3>Courses</h3>
+            <div class="section" ng-repeat="(courseActivity, color) in sectionColors">
+                <span class="sectionColor" ng-style="{'background-color': color}"></span>
+                <span class="sectionLabel">{{courseActivity.split("|")[0] + ": " + courseActivity.split("|")[1]}}</span>
+            </div>
+        </div>
+        <div class="menuItem">
+            <h3>Activities</h3>
+        </div>
+        <div class="menuItem">
+            <h3>Outside courses</h3>
+        </div>
     </div>
 
     <!-- The overlay (where the timetable viewer will be placed) -->

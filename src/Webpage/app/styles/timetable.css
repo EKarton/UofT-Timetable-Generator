@@ -12,6 +12,12 @@
 
     /* Align the child elements in the middle*/
     text-align: center;
+
+        /* Add animation each time the side panel  is toggled */
+    transition-property: margin-left;
+    transition-duration: 0.5s;
+    -webkit-transition-property: margin-left;  /* For safari */
+    -webkit-transition-duration: 0.5s; /* For safari */
 }
 
 #headerPanel {
@@ -22,10 +28,10 @@
     background-color: rgb(243, 243, 243);
 }
 
-#toggleSideMenuBttn{
-    width: 20%;
+.headerSides {
     float: left;
     text-align: left;
+    width: 20%;
     margin-left: 20px;
 }
 
@@ -60,9 +66,68 @@
     border-color: black;
 }
 
-#sideMenuPanel{
+#sideMenuPanel {
+    /* Make it stay on the page relative to the browser */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+
+    /* Make it on top of all the other elements on the page */
+    z-index: 1;
+
+    /* Prevent any elements inside the side panel to escape */
+    overflow-x: hidden;
+
+    /* Make it initially hidden (set width to auto if you want it initially opened)*/
+    width: 0;
+
+    /* Add animation each time the width of the side panel changes */
+    transition-property: max-width;
+    transition-duration: 0.5s;
+    -webkit-transition-property: max-width;  /* For safari */
+    -webkit-transition-duration: 0.5s; /* For safari */
+
+    /* Set asthetics */
+    background-color: rgb(217, 217, 217);
+}
+
+.closeSideMenuBttn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menuItem {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.section{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sectionColor {
+    /* Center it in the middle */
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Set the size */
     width: 20px;
-    background-color: red;
+    height: 20px;
+
+    /* Add asthetics*/
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.sectionLabel {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #overlayPanel {

@@ -4,7 +4,7 @@
 	var app = angular.module("timetableApp");
 	app.controller("TimetablesController", function($scope, $location, Generator){
         $scope.timetables = "";
-        $scope.sectionColors = [];
+        $scope.sectionColors = {};
         $scope.selectedTimetable = null;
 
         $scope.isSideMenuOpened = false;
@@ -17,19 +17,15 @@
         };
 
         var generateColorScheme = function () {
-            var dict = [];
-
-            // If there are no timetables, return
-            if ($scope.timetables.length == 0)
-                return dict;
+            $scope.sectionColors = {};
 
             // For the fall timetable
             var fallBlocks = $scope.timetables[0].fallTimetableBlocks;
             for (var i = 0; i < fallBlocks.length; i++)
             {
                 var key = fallBlocks[i].courseCode + "|" + fallBlocks[i].activityType;
-                if (dict[key] == undefined)
-                    dict[key] = generateRandomColor();
+                if ($scope.sectionColors[key] == undefined)
+                    $scope.sectionColors[key] = generateRandomColor();
             }
 
             // For the winter timetable
@@ -37,11 +33,9 @@
             for (var i = 0; i < winterBlocks.length; i++)
             {
                 var key = winterBlocks[i].courseCode + "|" + winterBlocks[i].activityType;
-                if (dict[key] == undefined)
-                    dict[key] = generateRandomColor();
+                if ($scope.sectionColors[key] == undefined)
+                    $scope.sectionColors[key] = generateRandomColor();
             }
-
-            return dict;
         };
 
         // This will initiate and return a http promise. This promise does not contain any data, 
@@ -53,7 +47,8 @@
                 // When the $http finally gets the data
                 console.log("Got data");
                 $scope.timetables = response.data;
-                $scope.sectionColors = generateColorScheme();
+                generateColorScheme();
+                console.log($scope.sectionColors);
             }, function (response) {
 
                 // When the $http gets an error
@@ -92,21 +87,27 @@
         };
 
         $scope.toggleSideMenu = function () {
-            // When we want to close it
             if ($scope.isSideMenuOpened)
-            {
-                var element = document.getElementById("sideMenuPanel");
-                element.style.maxWidth = "0%";
-                $scope.isSideMenuOpened = false;
-            }
+                $scope.closeSideMenu();
 
-            // When we want to open it
             else if ($scope.isSideMenuOpened === false)
-            {
-                var element = document.getElementById("sideMenuPanel");
-                element.style.maxWidth  = "100%";
-                $scope.isSideMenuOpened = true;
-            }
+                $scope.openSideMenu();
+        };
+
+        $scope.closeSideMenu = function () {
+            var element = document.getElementById("sideMenuPanel");
+            element.style.width = "0";
+            document.getElementById("miniTimetablesViewer").style.marginLeft = "0";
+            $scope.isSideMenuOpened = false;
+        };
+
+        $scope.openSideMenu = function () {
+            var sideMenuPanel = document.getElementById("sideMenuPanel");
+            sideMenuPanel.style.width = "auto";
+
+            var mainPanel = document.getElementById("miniTimetablesViewer");
+            mainPanel.style.marginLeft = sideMenuPanel.getBoundingClientRect().width.toString() + "px";
+            $scope.isSideMenuOpened = true;
         };
 	});
 }());
