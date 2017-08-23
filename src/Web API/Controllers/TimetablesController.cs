@@ -48,8 +48,8 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
 
             // Convert the timetables to mini timetables (which will be presented to the user)
             List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();
-            foreach (YearlyTimetable t in timetables)
-                miniTimetables.Add(new SimplifiedYearlyTimetable(t));
+            for (int i = 0; i < timetables.Count; i++)
+                miniTimetables.Add(new SimplifiedYearlyTimetable(timetables[i], "Timetable #" + (i + 1)));                
 
             return Created("api/timetables/getuofttimetables", miniTimetables);
         }
@@ -77,8 +77,8 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
 
             // Convert the timetables to mini timetables (which will be presented to the user)
             List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();
-            foreach (YearlyTimetable t in timetables)
-                miniTimetables.Add(new SimplifiedYearlyTimetable(t));
+            for (int i = 0; i < timetables.Count; i++)
+                miniTimetables.Add(new SimplifiedYearlyTimetable(timetables[i], "Timetable #" + (i + 1)));
 
             return Created("api/timetables/gettimetables", miniTimetables);
         }

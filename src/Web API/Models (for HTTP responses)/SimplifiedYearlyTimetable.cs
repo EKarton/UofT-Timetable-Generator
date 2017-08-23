@@ -9,8 +9,10 @@ namespace UoftTimetableGenerator.WebAPI.Models
 {
     internal class SimplifiedYearlyTimetable
     {
-        public SimplifiedYearlyTimetable(YearlyTimetable existingTimetable)
+        public SimplifiedYearlyTimetable(YearlyTimetable existingTimetable, string name)
         {
+            Name = name;
+
             // Populating fall-timetable blocks
             foreach (Section section in existingTimetable.GetFallSections())
                 foreach (Session session in section.Sessions)
@@ -30,6 +32,7 @@ namespace UoftTimetableGenerator.WebAPI.Models
                 }
         }
 
+        public string Name { get; set; }
         public List<SimplifiedTimetableBlock> FallTimetableBlocks = new List<SimplifiedTimetableBlock>();
         public List<SimplifiedTimetableBlock> WinterTimetableBlocks = new List<SimplifiedTimetableBlock>();
     }

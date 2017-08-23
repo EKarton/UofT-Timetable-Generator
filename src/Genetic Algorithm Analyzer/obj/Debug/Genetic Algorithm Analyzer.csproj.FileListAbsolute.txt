@@ -49,3 +49,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorith
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.csproj.GenerateResource.Cache
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Genetic Algorithm Analyzer\obj\Debug\Genetic Algorithm Analyzer.csproj.CoreCompileInputs.cache

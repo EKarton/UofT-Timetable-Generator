@@ -33,7 +33,7 @@ namespace Genetic_Algorithm_Analyzer
 
         private void LoadData()
         {
-            courses = UoftDatabaseService.GetCourses(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
+            courses = UoftDatabaseService.GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
         }
 
         private void UpdateStats()

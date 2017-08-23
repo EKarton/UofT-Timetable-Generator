@@ -5,7 +5,9 @@
 	app.controller("TimetablesController", function($scope, $location, Generator){
         $scope.timetables = "";
         $scope.sectionColors = {};
-        $scope.selectedTimetable = null;
+        $scope.selectedYearlyTimetable = null;
+        $scope.selectedTerm = "";
+        $scope.selectedTimetableBlocks = null;
 
         $scope.isSideMenuOpened = false;
 
@@ -38,25 +40,27 @@
             }
         };
 
-        // This will initiate and return a http promise. This promise does not contain any data, 
-        // but it will (eventually) after it completes its http request. It does this because if
-        // we wait for the http request to be complete, the browser will also wait (which is bad).
-        Generator.generateUoftTimetables()
-            .then(function (response) {
+        $scope.generateTimetables = function () {
+            // This will initiate and return a http promise. This promise does not contain any data, 
+            // but it will (eventually) after it completes its http request. It does this because if
+            // we wait for the http request to be complete, the browser will also wait (which is bad).
+            Generator.generateUoftTimetables()
+                .then(function (response) {
 
-                // When the $http finally gets the data
-                console.log("Got data");
-                $scope.timetables = response.data;
-                generateColorScheme();
-                console.log($scope.sectionColors);
-            }, function (response) {
+                    // When the $http finally gets the data
+                    console.log("Got data");
+                    $scope.timetables = response.data;
+                    generateColorScheme();
+                    console.log($scope.sectionColors);
+                }, function (response) {
 
-                // When the $http gets an error
-                $scope.timetables = "ERROR";
-            }
-        );
+                    // When the $http gets an error
+                    $scope.timetables = "ERROR";
+                }
+            );
+        };
 
-        $scope.openTimetableViewer = function (timetable, term) {
+        $scope.openTimetableViewer = function (yearlyTimetable, term) {
 
             // Remove the vertical scroll bar for the mini timetables panel
             var miniTablesPanel = document.getElementsByTagName("body")[0];
@@ -66,11 +70,14 @@
             var element = document.getElementById("overlayPanel");
             element.style.height = "100%";
 
+            $scope.selectedYearlyTimetable = yearlyTimetable;
+            $scope.selectedTerm = term;
+
             // Select which timetable
             if (term == "Fall")
-                $scope.selectedTimetable = timetable.fallTimetableBlocks;
+                $scope.selectedTimetableBlocks = yearlyTimetable.fallTimetableBlocks;
             else if (term == "Winter")
-                $scope.selectedTimetable = timetable.winterTimetableBlocks;
+                $scope.selectedTimetableBlocks = yearlyTimetable.winterTimetableBlocks;
         };
 
         $scope.closeTimetableViewer = function () {
@@ -83,7 +90,16 @@
             var element = document.getElementById("overlayPanel");
             element.style.height = "0";
 
-            $scope.selectedTimetable = null;
+            $scope.selectedTimetable = [];
+        };
+
+        $scope.changeTermInTimetableViewer = function (term) {
+            // Select which timetable
+            if (term == "Fall")
+                $scope.selectedTimetableBlocks = $scope.selectedYearlyTimetable.fallTimetableBlocks;
+            else if (term == "Winter")
+                $scope.selectedTimetableBlocks = $scope.selectedYearlyTimetable.winterTimetableBlocks;
+            $scope.selectedTerm = term;
         };
 
         $scope.toggleSideMenu = function () {
@@ -109,5 +125,7 @@
             mainPanel.style.marginLeft = sideMenuPanel.getBoundingClientRect().width.toString() + "px";
             $scope.isSideMenuOpened = true;
         };
+
+        $scope.generateTimetables();
 	});
 }());

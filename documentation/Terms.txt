@@ -1,0 +1,10 @@
+Definitons:
+Course: 
+A course is a course identified by its course code.
+Activities: 
+The activities involved in a single course. This can mean lectures, tutorials, and practicals.
+The activities of a course are manditory to attend. You cannot, for instance, go to lectures but not attend tutorials
+Section:
+You can pick which section of a single activity you can attend.
+For instance, in a Lecture activity, there can be Hoell's lecture section, Diane's lecture sections, etc.
+You can pick to go 
