@@ -2,20 +2,36 @@
 	<div id="miniTimetablesViewer">
         <!-- The top header -->
         <div id="headerPanel">
-            <span class="headerSides">
+            <span class="headerSides clickable">
                 <img src="../../images/menu.png" width="20" height="20" ng-click="toggleSideMenu()"/>
             </span>
             <span id="header">UofT Timetable Generator</span>
         </div>
 
-        <!-- The timetables; fall and winter timetables grouped together -->
-        <div class="miniTimetablesGroup" ng-repeat="timetable in timetables">
-            <div>{{timetable.name}}</div>
-            <div class="miniTimetables">
-                <timetable-preview blocks="timetable.fallTimetableBlocks" colorScheme="sectionColors" chartTitle="Fall" ng-click="openTimetableViewer(timetable, 'Fall')"></timetable-preview>
-                <timetable-preview blocks="timetable.winterTimetableBlocks" colorScheme="sectionColors" chartTitle="Winter" ng-click="openTimetableViewer(timetable, 'Winter')"></timetable-preview>
+        <!-- The body -->
+        <div id="bodyPanel">
+
+            <!-- The mid header section -->
+            <div id="midHeaderPanel">
+                <span id="preferencesBttn" class="mid-header-panel-bttn  hoverable clickable">Preferences</span>
+                <span id="restrictionsBttn" class="mid-header-panel-bttn hoverable clickable">Restrictions</span>
+                <div id="preferencesPanel">
+                    
+                </div>
+                <div id="restrictionsPanel">
+
+                </div>
             </div>
-        </div>        
+
+            <!-- The timetables; fall and winter timetables grouped together -->
+            <div class="miniTimetablesGroup" ng-repeat="timetable in timetables">
+                <div>{{timetable.name}}</div>
+                <div class="miniTimetables">
+                    <timetable-preview blocks="timetable.fallTimetableBlocks" colorScheme="sectionColors" chartTitle="Fall" ng-click="openTimetableViewer(timetable, 'Fall')"></timetable-preview>
+                    <timetable-preview blocks="timetable.winterTimetableBlocks" colorScheme="sectionColors" chartTitle="Winter" ng-click="openTimetableViewer(timetable, 'Winter')"></timetable-preview>
+                </div>
+            </div>
+        </div>   
 
         <div>
             <button id="regenerateTimetablesBttn" ng-click="generateTimetables()">Regenerate more timetables</button>
@@ -38,25 +54,35 @@
         <div class="menuItem">
             <h3>Outside courses</h3>
         </div>
+        <div class="menuItem">
+            <h3>Bookmarks</h3>
+            <div class="section hoverable clickable" ng-repeat="timetable in timetables" ng-if="timetable.isBookmarked">
+                <span class="bookmarkedTimetable" ng-click="openTimetableViewer(timetable, 'Fall')">{{timetable.name}}</span>
+            </div>
+        </div>
     </div>
 
     <!-- The overlay (where the timetable viewer will be placed) -->
     <div id="overlayPanel">        
         <div class="contentsPanel">
             <div id="timetableViewerHeaderPanel">
-                <a class="closeButton" ng-click="closeTimetableViewer()">X</a>
+                <a class="closeButton hoverable clickable" ng-click="closeTimetableViewer()">X</a>
                 <h2 id="timetableViewerTitle">{{selectedYearlyTimetable.name}}</h2>
-                <span class="leftViewerBttn" ng-if="selectedTerm != 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
-                <span class="leftViewerBttn selected" ng-if="selectedTerm === 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
-                <span class="leftViewerBttn" ng-if="selectedTerm != 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
-                <span class="leftViewerBttn selected" ng-if="selectedTerm === 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
-                <span class="rightViewerBttn">Bookmark</span>
-                <span class="rightViewerBttn">Edit</span>
+                <span class="viewerBttn  leftViewerBttn hoverable clickable" ng-if="selectedTerm != 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
+                <span class="viewerBttn leftViewerBttn selected" ng-if="selectedTerm === 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
+                <span class="viewerBttn leftViewerBttn hoverable clickable" ng-if="selectedTerm != 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
+                <span class="viewerBttn leftViewerBttn selected" ng-if="selectedTerm === 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
+                <span id="bookmarkBttn" class="viewerBttn hoverable clickable" ng-click="selectedYearlyTimetable.isBookmarked = !selectedYearlyTimetable.isBookmarked">
+                    <img ng-if="selectedYearlyTimetable.isBookmarked" src="../../images/bookmark-black-shape.png" height="18"/>
+                    <img ng-if="!selectedYearlyTimetable.isBookmarked" src="../../images/bookmark-white.png" height="18" />
+                </span>
+                <span  id="printBttn" class="viewerBttn hoverable clickable" ng-click="printTimetable(selectedYearlyTimetable)">
+                    <img src="../../images/print.png" height="18" />
+                </span>
             </div>
             <div id="timetableViewerBody">
                 <timetable blocks="selectedTimetableBlocks" colorScheme="sectionColors"></timetable>
             </div>
-            <!--<timetable blocks="selectedTimetable" term="Winter" colorScheme="sectionColors"></timetable>-->
         </div>
     </div>
 </div>

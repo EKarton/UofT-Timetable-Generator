@@ -2,7 +2,15 @@
 
 (function(){
 	var app = angular.module("timetableApp");
-	app.controller("TimetablesController", function($scope, $location, Generator){
+    app.controller("TimetablesController", function ($scope, $location, Generator) {
+
+        var Timetable = function (fallSessions, winterSessions, name) {
+            this.fallTimetableBlocks = fallSessions;
+            this.winterTimetableBlocks = winterSessions;
+            this.name = name;
+            this.isBookmarked = false;
+        };
+
         $scope.timetables = "";
         $scope.sectionColors = {};
         $scope.selectedYearlyTimetable = null;
@@ -49,7 +57,16 @@
 
                     // When the $http finally gets the data
                     console.log("Got data");
-                    $scope.timetables = response.data;
+
+                    // Parse the raw data
+                    $scope.timetables = [];
+                    var rawTimetables = response.data;
+                    for (var i = 0; i < rawTimetables.length; i++){
+                        var rawT = rawTimetables[i];
+                        var parsedT = new Timetable(rawT.fallTimetableBlocks, rawT.winterTimetableBlocks, rawT.name);
+                        $scope.timetables.push(parsedT);
+                    }
+
                     generateColorScheme();
                     console.log($scope.sectionColors);
                 }, function (response) {
@@ -100,6 +117,10 @@
             else if (term == "Winter")
                 $scope.selectedTimetableBlocks = $scope.selectedYearlyTimetable.winterTimetableBlocks;
             $scope.selectedTerm = term;
+        };
+
+        $scope.printTimetable = function (timetable) {
+            window.print();
         };
 
         $scope.toggleSideMenu = function () {
