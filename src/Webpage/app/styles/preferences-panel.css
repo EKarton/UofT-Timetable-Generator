@@ -1,0 +1,57 @@
+﻿preferences-panel {
+    text-align: left;
+}
+
+preferences-panel input[type="range"]{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+preferences-panel .preference {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+}
+
+preferences-panel .option {
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    border-radius: 4px;
+    border-style: solid;
+    border-color: gray;
+
+    display: inline-block;
+}
+
+preferences-panel .value{
+    padding: 5px 5px 5px 5px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+}
+
+preferences-panel .selected {
+    cursor: default;
+
+    border-color: black;
+    background-color: rgb(173, 255, 188);
+}
+
+preferences-panel .cancel-bttn{
+
+}
+
+preferences-panel .apply-bttn{
+
+}

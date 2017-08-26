@@ -98,7 +98,7 @@
                 var colorScheme = newValues[1];
                 scope.chartTitle = newValues[2];
 
-                console.log("Timetable previre: ", blocks);
+                //console.log("Timetable previre: ", blocks);
 
                 setSize();
                 createGridlines();

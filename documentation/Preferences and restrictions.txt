@@ -1,0 +1,14 @@
+// Restrictions:
+I need to...
+- Prevent classes from starting at x:00 AM
+- Prevent classes from ending at x:00am/pm
+- Prevent walking for more than x minutes in back to back classes
+
+// Preferences
+I would like to have...
+- Morning / afternoon / evening classes
+- Minimum / maximum amount of walking distance
+- Least / maximum amount of days for classes
+- Least / maximum amount of time between classes
+- Add a lunch period for x minutes per day
+- Good professors (unavailable)

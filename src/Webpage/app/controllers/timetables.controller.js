@@ -21,6 +21,14 @@
         $scope.isPreferencesPanelOpened = false;
         $scope.isRestrictionsPanelOpened = false;
 
+        $scope.initPref = {
+            classType: "min",
+            walkDistance: "min",
+            numDaysInClass: "min",
+            timeBetweenClasses: "min",
+            lunchPeriod: 60
+        };
+
         var generateRandomColor = function () {
             var red = Math.floor(Math.random() * (255 - 100) + 100);
             var green = Math.floor(Math.random() * (255 - 100) + 100);
@@ -157,6 +165,11 @@
             var mainPanel = document.getElementById("miniTimetablesViewer");
             mainPanel.style.marginLeft = sideMenuPanel.getBoundingClientRect().width.toString() + "px";
             $scope.isSideMenuOpened = true;
+        };
+
+        $scope.updatePreferences = function (preferences) {
+            alert("Hi");
+
         };
 
         $scope.generateTimetables();

@@ -17,6 +17,8 @@
                             ng-click="togglePreferencesPanel()">Preferences</span>
                 <span id="restrictionsBttn" class="mid-header-panel-bttn hoverable clickable"
                             ng-click="toggleRestrictionsPanel()">Restrictions</span>
+
+                <!--
                 <div id="preferencesPanel" ng-if="isPreferencesPanelOpened">
                     <span>
                         Get the least amount of time between classes
@@ -53,6 +55,10 @@
                         </span>
                     </div>
                 </div>
+                    -->
+                <preferences-panel ng-if="isPreferencesPanelOpened" initial-preference="initPref" 
+                                                    on-update="updatePreferences(preferences)"
+                                                    on-cancel="togglePreferencesPanel()"></preferences-panel>
             </div>
 
             <!-- The timetables; fall and winter timetables grouped together -->

@@ -145,12 +145,12 @@
 
                 // Compute the height
                 scope.svgHeight = scope.dataRowHeight * (scope.latestTime - scope.earliestTime) + scope.headerHeight;
-                console.log("Theoethical", scope.svgWidth, scope.svgHeight, scope.headerHeight, scope.dataRowHeight);
+                //console.log("Theoethical", scope.svgWidth, scope.svgHeight, scope.headerHeight, scope.dataRowHeight);
 
                 // Set the width and height
                 svgElement.setAttribute("viewBox", "0, 0, " + scope.svgWidth + ", " + scope.svgHeight);
                 svgElement.setAttribute("preserveAspectRatio", "xMaxYMin slice");
-                console.log("Actual", svgElement.getBoundingClientRect().width, svgElement.getBoundingClientRect().height, scope.headerHeight);
+                //console.log("Actual", svgElement.getBoundingClientRect().width, svgElement.getBoundingClientRect().height, scope.headerHeight);
             };
 
             scope.$watchCollection("[blocks, colorscheme]", function (newValues, oldValues) {
