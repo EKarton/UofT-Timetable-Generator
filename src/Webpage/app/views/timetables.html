@@ -13,13 +13,45 @@
 
             <!-- The mid header section -->
             <div id="midHeaderPanel">
-                <span id="preferencesBttn" class="mid-header-panel-bttn  hoverable clickable">Preferences</span>
-                <span id="restrictionsBttn" class="mid-header-panel-bttn hoverable clickable">Restrictions</span>
-                <div id="preferencesPanel">
+                <span id="preferencesBttn" class="mid-header-panel-bttn  hoverable clickable" 
+                            ng-click="togglePreferencesPanel()">Preferences</span>
+                <span id="restrictionsBttn" class="mid-header-panel-bttn hoverable clickable"
+                            ng-click="toggleRestrictionsPanel()">Restrictions</span>
+                <div id="preferencesPanel" ng-if="isPreferencesPanelOpened">
+                    <span>
+                        Get the least amount of time between classes
+                        <input type="range" min="0" max="100" />
+                    </span>
+                    <span>
+                        Get the least amount of time between classes
+                        <input type="range" min="0" max="100" />
+                    </span>
                     
+                    <input type="range" min="0" max="100" />
+                    <input type="range" min="0" max="100" />
                 </div>
-                <div id="restrictionsPanel">
-
+                <div id="restrictionsPanel" ng-if="isRestrictionsPanelOpened">
+                    <div class="property">
+                        <span>Max. walk time in back-to-back classes</span>
+                        <span>
+                            <input type="range" min="0" max="20" value="10" ng-model="maxWalkingTime"/>
+                            <span>{{maxWalkingTime + " minutes"}}</span>
+                        </span>
+                    </div>
+                    <div class="property">
+                        <span>Earliest class time</span>
+                        <span>
+                            <input type="range" min="7" max="22" value="9" ng-model="earliestClassTime" />
+                            <span>{{earliestClassTime + ":00"}}</span>
+                        </span>
+                    </div>
+                    <div class="property">
+                        <span>Latest class time</span>
+                        <span>
+                            <input type="range" min="7" max="22" value="18" ng-model="latestClassTime" />
+                            <span>{{latestClassTime + ":00"}}</span>
+                        </span>
+                    </div>
                 </div>
             </div>
 

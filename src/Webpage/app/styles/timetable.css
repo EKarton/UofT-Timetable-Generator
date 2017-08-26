@@ -274,3 +274,21 @@
 #timetableViewerBody{
     padding: 10px;
 }
+
+#restrictionsPanel{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px 20px 20px 20px;
+}
+
+#restrictionsPanel .property * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#restrictionsPanel input{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

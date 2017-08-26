@@ -18,6 +18,8 @@
         $scope.selectedTimetableBlocks = null;
 
         $scope.isSideMenuOpened = false;
+        $scope.isPreferencesPanelOpened = false;
+        $scope.isRestrictionsPanelOpened = false;
 
         var generateRandomColor = function () {
             var red = Math.floor(Math.random() * (255 - 100) + 100);
@@ -75,6 +77,16 @@
                     $scope.timetables = "ERROR";
                 }
             );
+        };
+
+        $scope.togglePreferencesPanel = function () {
+            $scope.isPreferencesPanelOpened = !$scope.isPreferencesPanelOpened;
+            $scope.isRestrictionsPanelOpened = false;
+        };
+
+        $scope.toggleRestrictionsPanel = function () {
+            $scope.isRestrictionsPanelOpened = !$scope.isRestrictionsPanelOpened;
+            $scope.isPreferencesPanelOpened = false;
         };
 
         $scope.openTimetableViewer = function (yearlyTimetable, term) {
