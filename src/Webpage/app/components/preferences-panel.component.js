@@ -5,20 +5,25 @@
     app.component("preferencesPanel", {
         templateUrl: "./app/templates/preferences-panel.template.html",
         bindings: {
-            initialPreference: "<",
-            onUpdate: "&",
-            onCancel: "&"
+            initialPreferences: "<",   // One way binding
+            onUpdate: "&",              // Function binding; this component can use this function
+            onCancel: "&"                 // Function binding; this component can use this function
         },
         controllerAs: "vm",         // This is needed to prevent confusion in the parent's scope vs this scope when accessing variables in html
         controller: function () {
 
             // Set the UI initial preference values
-            this.classType = this.initialPreference.classType;
-            this.walkDistance = this.initialPreference.walkDistance;
-            this.numDaysInClass = this.initialPreference.numDaysInClass;
-            this.timeBetweenClasses = this.initialPreference.timeBetweenClasses;
-            this.lunchPeriod = this.initialPreference.lunchPeriod;
+            this.classType = this.initialPreferences.classType;
+            this.walkDistance = this.initialPreferences.walkDistance;
+            this.numDaysInClass = this.initialPreferences.numDaysInClass;
+            this.timeBetweenClasses = this.initialPreferences.timeBetweenClasses;
+            this.lunchPeriod = this.initialPreferences.lunchPeriod;
 
+            /**
+            * Called when one of the buttons for the ClassType property is clicked
+            * If the newClassType is the same as the previous class type, it will set the current class type to null
+            * @param {String} newClassType The new class type
+            */
             this.changeClassType = function (newClassType) {
                 if (this.classType === newClassType)
                     this.classType = null;
@@ -26,6 +31,11 @@
                     this.classType = newClassType;
             };
 
+            /**
+            * Called when one of the buttons for the WalkDistance property is clicked
+            * If the newWalkDistance is the same as the previous class type, it will set the current class type to null
+            * @param {String} newWalkDistance The new walk distance
+            */
             this.changeWalkDistance = function (newWalkDistance) {
                 if (this.walkDistance === newWalkDistance)
                     this.walkDistance = null;

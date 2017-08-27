@@ -1,0 +1,17 @@
+﻿restrictions-panel {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px 20px 20px 20px;
+}
+
+restrictions-panel .property * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+restrictions-panel input {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

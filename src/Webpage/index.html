@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Uoft Timetable Generator</title>
+
+    <!-- Load the components' style sheets -->
     <link rel="stylesheet" href="app/styles/preferences-panel.css"/>
+    <link rel="stylesheet" href="app/styles/restrictions-panel.css"/>
+
+    <!-- Load the stylesheets that are used in per page -->
     <link rel="stylesheet" ng-href="{{css}}">
 </head>
 <body>
-	<div>
-		<div ng-view></div>
-	</div>
+	<div ng-view></div>
 
     <!-- Load Angular JS scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -17,11 +20,20 @@
 
     <!-- Load js scripts -->
     <script type="text/javascript" src="app/app.js"></script>
+
+    <!-- Load the controllers -->
     <script type="text/javascript" src="app/controllers/courses.controller.js"></script>
     <script type="text/javascript" src="app/controllers/timetables.controller.js"></script>
+
+    <!-- Load the directives -->
     <script type="text/javascript" src="app/directives/timetable-preview.directive.js"></script>
     <script type="text/javascript" src="app/directives/timetable.directive.js"></script>
+
+    <!-- Load the components -->
     <script type="text/javascript" src="app/components/preferences-panel.component.js"></script>
+    <script type="text/javascript" src="app/components/restrictions-panel.component.js"></script>
+
+    <!-- Load the services -->
     <script type="text/javascript" src="app/services/generator.service.js"> </script>
 </body>
 </html>

@@ -29,6 +29,12 @@
             lunchPeriod: 60
         };
 
+        $scope.initRes = {
+            earliestClass: 7,
+            latestClass: 23,
+            walkDurationInBackToBackClasses: 10
+        };
+
         var generateRandomColor = function () {
             var red = Math.floor(Math.random() * (255 - 100) + 100);
             var green = Math.floor(Math.random() * (255 - 100) + 100);
@@ -168,8 +174,11 @@
         };
 
         $scope.updatePreferences = function (preferences) {
-            alert("Hi");
+            alert("Preferences updated");
+        };
 
+        $scope.updateRestrictions = function (restrictions) {
+            alert("Restrictions updated");
         };
 
         $scope.generateTimetables();
