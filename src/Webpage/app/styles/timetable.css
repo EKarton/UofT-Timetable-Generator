@@ -68,6 +68,13 @@
     display: inline-block;
 }
 
+#midHeaderContent {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
 #restrictionsBttn{
     margin-right: 50px;
 }
@@ -123,15 +130,9 @@
     background-color: rgb(217, 217, 217);
 }
 
-.closeSideMenuBttn{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
 .menuItem {
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .menuItem h3{

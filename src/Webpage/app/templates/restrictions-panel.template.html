@@ -1,37 +1,44 @@
 ﻿<div>
+    <table>
+        <tbody>
+            <!-- Max walk time in back to back classes -->
+            <tr>
+                <td>
+                    <span>Max. walk time in <br/>back-to-back classes</span>
+                </td>
+                <td>
+                    <input type="range" min="0" max="20" value="vm.walkDurationInBackToBackClasses" ng-model="vm.walkDurationInBackToBackClasses" />
+                    <span>{{vm.walkDurationInBackToBackClasses + " minutes"}}</span>
+                </td>
+            </tr>
+
+            <!-- Earliest class time -->
+            <tr>
+                <td>
+                    <span>Earliest class time</span>
+                </td>
+                <td>
+                    <input type="range" min="7" max="22" value="vm.earliestClass"
+                           ng-model="vm.earliestClass" />
+                    <span>{{vm.earliestClass + ":00"}}</span>
+                </td>
+            </tr>
+
+            <!-- Latest class time -->
+            <tr>
+                <td>
+                    <span>Latest class time</span>
+                </td>
+                <td>
+                    <input type="range" min="7" max="22" value="vm.latestClass" ng-model="vm.latestClass" />
+                    <span>{{vm.latestClass + ":00"}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <div>
-        <!-- Max walk time in back to back classes -->
-        <div class="property">
-            <span>Max. walk time in back-to-back classes</span>
-            <span>
-                <input type="range" min="0" max="20" value="vm.walkDurationInBackToBackClasses" ng-model="vm.walkDurationInBackToBackClasses" />
-                <span>{{vm.walkDurationInBackToBackClasses + " minutes"}}</span>
-            </span>
-        </div>
-
-        <!-- Earliest class time -->
-        <div class="property">
-            <span>Earliest class time</span>
-            <span>
-                <input type="range" min="7" max="22" value="vm.earliestClass"
-                       ng-model="vm.earliestClass" />
-                <span>{{vm.earliestClass + ":00"}}</span>
-            </span>
-        </div>
-
-        <!-- Latest class time -->
-        <div class="property">
-            <span>Latest class time</span>
-            <span>
-                <input type="range" min="7" max="22" value="vm.latestClass" ng-model="vm.latestClass" />
-                <span>{{vm.latestClass + ":00"}}</span>
-            </span>
-        </div>
-    </div>
 
     <!-- Apply / cancel button -->
-    <div>
-        <button class="cancelBttn" ng-click="vm.cancel()">Cancel</button>
-        <button class="applyBttn" ng-click="vm.apply()">Apply</button>
-    </div>
+    <button class="cancelBttn" ng-click="vm.cancel()">Cancel</button>
+    <button class="applyBttn" ng-click="vm.apply()">Apply</button>
 </div>

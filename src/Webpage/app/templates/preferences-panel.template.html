@@ -1,90 +1,86 @@
 ﻿<div>
     <!-- The available preferences -->
-    <div>
-        <table>
-            <tbody>
-                <!-- Morning / afternoon / evening classes -->
-                <tr class="preference">
-                    <td>
-                        <span class="label">Class type</span>
-                    </td>
-                    <td>
-                        <span class="option"
-                              ng-class="{'selected' : vm.classType === 'morning', 'hoverable clickable': vm.classType != 'morning'}"
-                              ng-click="vm.changeClassType('morning')">Morning</span>
-                        <span class="option"
-                              ng-class="{'selected' : vm.classType === 'afternoon', 'hoverable clickable': vm.classType != 'afternoon'}"
-                              ng-click="vm.changeClassType('afternoon')">Afternoon</span>
-                        <span class="option"
-                              ng-class="{'selected' : vm.classType === 'evening', 'hoverable clickable': vm.classType != 'evening'}"
-                              ng-click="vm.changeClassType('evening')">Evening</span>
-                    </td>
-                </tr>
+    <table>
+        <tbody>
+            <!-- Morning / afternoon / evening classes -->
+            <tr class="preference">
+                <td>
+                    <span class="label">Class type</span>
+                </td>
+                <td>
+                    <span class="option"
+                            ng-class="{'selected' : vm.classType === 'morning', 'hoverable clickable': vm.classType != 'morning'}"
+                            ng-click="vm.changeClassType('morning')">Morning</span>
+                    <span class="option"
+                            ng-class="{'selected' : vm.classType === 'afternoon', 'hoverable clickable': vm.classType != 'afternoon'}"
+                            ng-click="vm.changeClassType('afternoon')">Afternoon</span>
+                    <span class="option"
+                            ng-class="{'selected' : vm.classType === 'evening', 'hoverable clickable': vm.classType != 'evening'}"
+                            ng-click="vm.changeClassType('evening')">Evening</span>
+                </td>
+            </tr>
 
-                <!-- Minimum / maximum amount of walking distance -->
-                <tr class="preference">
-                    <td>
-                        <span class="label">Walking distance</span>
-                    </td>
-                    <td>
-                        <span class="option"
-                              ng-class="{'selected' : vm.walkDistance === 'min', 'hoverable clickable': vm.walkDistance != 'min'}"
-                              ng-click="vm.changeWalkDistance('min')">Minimum</span>
-                        <span class="option"
-                              ng-class="{'selected' : vm.walkDistance === 'max', 'hoverable clickable': vm.walkDistance != 'max'}"
-                              ng-click="vm.changeWalkDistance('max')">Maximum</span>
-                    </td>
-                </tr>
+            <!-- Minimum / maximum amount of walking distance -->
+            <tr class="preference">
+                <td>
+                    <span class="label">Walking distance</span>
+                </td>
+                <td>
+                    <span class="option"
+                            ng-class="{'selected' : vm.walkDistance === 'min', 'hoverable clickable': vm.walkDistance != 'min'}"
+                            ng-click="vm.changeWalkDistance('min')">Minimum</span>
+                    <span class="option"
+                            ng-class="{'selected' : vm.walkDistance === 'max', 'hoverable clickable': vm.walkDistance != 'max'}"
+                            ng-click="vm.changeWalkDistance('max')">Maximum</span>
+                </td>
+            </tr>
 
-                <!-- Least / most amount of days with classes -->
-                <tr class="preference">
-                    <td>
-                        <span class="label">Days spent in classes</span>
-                    </td>
-                    <td>
-                        <span class="option"
-                              ng-class="{'selected' : vm.numDaysInClass === 'min', 'hoverable clickable': vm.numDaysInClass != 'min'}"
-                              ng-click="vm.changeNumDaysInClass('min')">Minimum</span>
-                        <span class="option"
-                              ng-class="{'selected' : vm.numDaysInClass === 'max', 'hoverable clickable': vm.numDaysInClass != 'max'}"
-                              ng-click="vm.changeNumDaysInClass('max')">Maximum</span>
-                    </td>
-                </tr>
+            <!-- Least / most amount of days with classes -->
+            <tr class="preference">
+                <td>
+                    <span class="label">Days spent in classes</span>
+                </td>
+                <td>
+                    <span class="option"
+                            ng-class="{'selected' : vm.numDaysInClass === 'min', 'hoverable clickable': vm.numDaysInClass != 'min'}"
+                            ng-click="vm.changeNumDaysInClass('min')">Minimum</span>
+                    <span class="option"
+                            ng-class="{'selected' : vm.numDaysInClass === 'max', 'hoverable clickable': vm.numDaysInClass != 'max'}"
+                            ng-click="vm.changeNumDaysInClass('max')">Maximum</span>
+                </td>
+            </tr>
 
-                <!-- Least / most amount of time in between classes -->
-                <tr>
-                    <td>
-                        <span class="label">Time between classes</span>
-                    </td>
-                    <td>
-                        <span class="option"
-                              ng-class="{'selected' : vm.timeBetweenClasses === 'min', 'hoverable clickable': vm.timeBetweenClasses != 'min'}"
-                              ng-click="vm.changeTimeBetweenClasses('min')">Minimum</span>
-                        <span class="option"
-                              ng-class="{'selected' : vm.timeBetweenClasses === 'max', 'hoverable clickable': vm.timeBetweenClasses != 'max'}"
-                              ng-click="vm.changeTimeBetweenClasses('max')">Maximum</span>
-                    </td>
-                </tr>
+            <!-- Least / most amount of time in between classes -->
+            <tr>
+                <td>
+                    <span class="label">Time between classes</span>
+                </td>
+                <td>
+                    <span class="option"
+                            ng-class="{'selected' : vm.timeBetweenClasses === 'min', 'hoverable clickable': vm.timeBetweenClasses != 'min'}"
+                            ng-click="vm.changeTimeBetweenClasses('min')">Minimum</span>
+                    <span class="option"
+                            ng-class="{'selected' : vm.timeBetweenClasses === 'max', 'hoverable clickable': vm.timeBetweenClasses != 'max'}"
+                            ng-click="vm.changeTimeBetweenClasses('max')">Maximum</span>
+                </td>
+            </tr>
 
-                <!-- Lunch period -->
-                <tr>
-                    <td>
-                        <span class="label">Lunch duration</span>
-                    </td>
-                    <td>
-                        <span class="value">
-                            {{vm.lunchPeriod}} minutes per day
-                        </span>
-                        <input type="range" min="0" max="120" value="60" ng-model="lunchPeriod" ng-change="vm.lunchPeriod = lunchPeriod" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <!-- Lunch period -->
+            <tr>
+                <td>
+                    <span class="label">Lunch duration</span>
+                </td>
+                <td>                        
+                    <input type="range" min="0" max="120" value="60" ng-model="vm.lunchPeriod"/>
+                    <span class="value">
+                        {{vm.lunchPeriod}} minutes per day
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- The Apply / cancel button -->
-    <div>
         <button class="cancel-bttn" ng-click="vm.cancel()">Cancel</button>
         <button class="apply-bttn" ng-click="vm.apply()">Apply</button>
-    </div>
 </div>

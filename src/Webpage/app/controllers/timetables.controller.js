@@ -11,6 +11,12 @@
             this.isBookmarked = false;
         };
 
+        $scope.OverlayContent = {
+            TimetableViewer: 1,
+            RestrictionsPanel: 2,
+            PreferencesPanel: 3
+        };
+
         $scope.timetables = "";
         $scope.sectionColors = {};
         $scope.selectedYearlyTimetable = null;
@@ -20,6 +26,7 @@
         $scope.isSideMenuOpened = false;
         $scope.isPreferencesPanelOpened = false;
         $scope.isRestrictionsPanelOpened = false;
+        $scope.overlayContent = $scope.OverlayContent.TimetableViewer;
 
         $scope.initPref = {
             classType: "min",
@@ -103,16 +110,20 @@
             $scope.isPreferencesPanelOpened = false;
         };
 
+        $scope.openPreferencesPanel = function () {
+            $scope.showOverlayPanel();
+            $scope.overlayContent = $scope.OverlayContent.PreferencesPanel;
+        };
+
+        $scope.openRestrictionsPanel = function () {
+            $scope.showOverlayPanel();
+            $scope.overlayContent = $scope.OverlayContent.RestrictionsPanel;
+        };
+
         $scope.openTimetableViewer = function (yearlyTimetable, term) {
-
-            // Remove the vertical scroll bar for the mini timetables panel
-            var miniTablesPanel = document.getElementsByTagName("body")[0];
-            miniTablesPanel.style.overflow = "hidden";
-
-            // Expand the overlay panel
-            var element = document.getElementById("overlayPanel");
-            element.style.height = "100%";
-
+            $scope.showOverlayPanel();
+            $scope.overlayContent = $scope.OverlayContent.TimetableViewer;
+            console.log($scope.overlayContent);
             $scope.selectedYearlyTimetable = yearlyTimetable;
             $scope.selectedTerm = term;
 
@@ -124,15 +135,7 @@
         };
 
         $scope.closeTimetableViewer = function () {
-
-            // Show the vertical scroll bar for the mini timetables panel if needed
-            var miniTablesPanel = document.getElementsByTagName("body")[0];
-            miniTablesPanel.style.overflow = "auto";
-
-            // Hide the overlay panel
-            var element = document.getElementById("overlayPanel");
-            element.style.height = "0";
-
+            $scope.hideOverlayPanel();
             $scope.selectedTimetable = [];
         };
 
@@ -147,6 +150,26 @@
 
         $scope.printTimetable = function (timetable) {
             window.print();
+        };
+
+        $scope.showOverlayPanel = function () {
+            // Remove the vertical scroll bar for the mini timetables panel
+            var miniTablesPanel = document.getElementsByTagName("body")[0];
+            miniTablesPanel.style.overflow = "hidden";
+
+            // Expand the overlay panel
+            var element = document.getElementById("overlayPanel");
+            element.style.height = "100%";
+        };
+
+        $scope.hideOverlayPanel = function () {
+            // Show the vertical scroll bar for the mini timetables panel if needed
+            var miniTablesPanel = document.getElementsByTagName("body")[0];
+            miniTablesPanel.style.overflow = "auto";
+
+            // Hide the overlay panel
+            var element = document.getElementById("overlayPanel");
+            element.style.height = "0";
         };
 
         $scope.toggleSideMenu = function () {

@@ -3,6 +3,8 @@
 	var timetableGenerator = angular.module("timetableApp");
     timetableGenerator.service("Generator", function ($http, $q) {	
 
+        this.restrictions = null;
+        this.preferences = null;
         this.courseCodes = [];
 
         this.getCourses = function (query) {
@@ -12,7 +14,6 @@
 
 		this.generateUoftTimetables = function(){
             var url = "http://localhost:53235/api/timetables/getuofttimetables";
-
             return $http.put(url, this.courseCodes);
         };
 	});
