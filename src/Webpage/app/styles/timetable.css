@@ -14,6 +14,12 @@
     cursor: pointer;
 }
 
+.selected {
+    border-bottom-width: 1px;
+    border-bottom-color: blue;
+    border-bottom-style: solid;
+}
+
 #miniTimetablesViewer {
     /* Show the vertical scrollbar when it is too big */
     overflow-y: auto;
@@ -64,14 +70,15 @@
 
 .mid-header-panel-bttn {
     padding: 5px 5px 5px 5px;
-    border-radius: 4px;
+    border-radius: 0px;
     display: inline-block;
 }
 
-#midHeaderContent {
+.midHeaderContent {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     display: table;
 }
 
@@ -230,48 +237,4 @@
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 4px;
-}
-
-#timetableViewerHeaderPanel {
-    width: 100%;
-    padding-top: 1px;
-    padding-bottom: 10px;
-}
-
-#timetableViewerTitle{
-    padding-top: 10px;
-    text-align: center;
-}
-
-.viewerBttn {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.leftViewerBttn {
-    margin-left: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#printBttn {
-    float: right;
-    margin-right: 10px;
-}
-
-#bookmarkBttn {
-    float: right;
-    margin-right: 20px;
-}
-
-#timetableViewerHeaderPanel .selected {
-    border-bottom-width: 1px;
-    border-bottom-color: blue;
-    border-bottom-style: solid;
-}
-
-#timetableViewerBody{
-    padding: 10px;
 }

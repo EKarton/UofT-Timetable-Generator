@@ -145,7 +145,8 @@
             for (var i = 0; i < $scope.selectedCourses.length; i++)
                 courseCodes.push($scope.selectedCourses[i].code);
 
-            Generator.courseCodes = courseCodes;
+            //Generator.courseCodes = courseCodes;
+            Generator.generateTimetables(courseCodes);
 
 			$location.path("timetables");
         };

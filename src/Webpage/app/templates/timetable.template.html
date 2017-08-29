@@ -9,7 +9,7 @@
         <text ng-repeat="headerLabel in headerLabels"
               ng-attr-x="{{headerLabel.x}}"
               ng-attr-y="{{headerLabel.y}}"
-              font-size="10px"
+              font-size="15px"
               text-anchor="middle"
               stroke="black"
               stroke-width="0.5">
@@ -26,7 +26,7 @@
         <text ng-repeat="timeLabel in timeLabels"
                   ng-attr-x="{{timeLabel.x}}"
                   ng-attr-y="{{timeLabel.y}}"
-                  font-size="10px"
+                  font-size="15px"
                   text-anchor="end"
                   stroke="black"
                   stroke-width="0.5">
@@ -57,8 +57,8 @@
         <g ng-repeat="timetableBlock in timetableBlocks">
             <text ng-repeat="content in timetableBlock.content track by $index"
                   ng-attr-x="{{timetableBlock.x + (timetableBlock.width / 2)}}"
-                  ng-attr-y="{{timetableBlock.y + 2 + (($index + 1) * 10)}}"
-                  font-size="10px"
+                  ng-attr-y="{{timetableBlock.y + 2 + (($index + 1) * 15)}}"
+                  font-size="15px"
                   text-anchor="middle"
                   stroke="black"
                   stroke-width="0.5">

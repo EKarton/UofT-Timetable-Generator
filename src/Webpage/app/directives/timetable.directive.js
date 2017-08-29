@@ -34,12 +34,11 @@
             $scope.svgWidth = null;
             $scope.svgHeight = null;
             $scope.headerHeight = 20;
-            $scope.timesColumnWidth = 30;
-            $scope.dataRowHeight = 50;
+            $scope.timesColumnWidth = 40;
+            $scope.dataRowHeight = 70;
 
             $scope.getRowHeight = function(){
-                console.log($scope.blocks);
-                return 50;
+                return 70;
             };
         }
 
@@ -156,6 +155,8 @@
             scope.$watchCollection("[blocks, colorscheme]", function (newValues, oldValues) {
                 var blocks = newValues[0];
                 var colorScheme = newValues[1];
+
+                console.log("Updating timetable", blocks, colorScheme);
 
                 if (blocks == null || colorScheme == null)
                     return;

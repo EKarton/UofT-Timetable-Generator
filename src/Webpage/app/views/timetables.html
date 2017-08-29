@@ -14,32 +14,42 @@
             <!-- The mid header section -->
             <div id="midHeaderPanel">
                 <div>                   
-                    <span id="preferencesBttn" class="mid-header-panel-bttn  hoverable clickable"
+                    <span id="preferencesBttn" class="mid-header-panel-bttn"
+                          ng-class="{'selected hoverable clickable': isPreferencesPanelOpened, 'hoverable clickable': !isPreferencesPanelOpened}"
                           ng-click="togglePreferencesPanel()">Preferences</span>
-                    <span id="restrictionsBttn" class="mid-header-panel-bttn hoverable clickable"
+                    <span id="restrictionsBttn" class="mid-header-panel-bttn"
+                          ng-class="{'selected hoverable clickable': isRestrictionsPanelOpened, 'hoverable clickable': !isRestrictionsPanelOpened}" 
                           ng-click="toggleRestrictionsPanel()">Restrictions</span>
                 </div>
-                <div id="midHeaderContent">
-                    <restrictions-panel ng-show="isRestrictionsPanelOpened" initial-restrictions="initRes"
-                                        on-update="updateRestrictions(restrictions)"
-                                        on-cancel="toggleRestrictionsPanel()"></restrictions-panel>
-
-
-                    <preferences-panel ng-show="isPreferencesPanelOpened" initial-preferences="initPref"
-                                       on-update="updatePreferences(preferences)"
-                                       on-cancel="togglePreferencesPanel()"></preferences-panel>
+                    <div class="midHeaderContent" ng-show="isRestrictionsPanelOpened" >
+                        <restrictions-panel initial-restrictions="data.restrictions"
+                                            on-update="updateRestrictions(restrictions)"
+                                            on-cancel="toggleRestrictionsPanel()"></restrictions-panel>
+                    </div>
+                    <div class="midHeaderContent" ng-show="isPreferencesPanelOpened">
+                        <preferences-panel initial-preferences="data.preferences"
+                                           on-update="updatePreferences(preferences)"
+                                           on-cancel="togglePreferencesPanel()"></preferences-panel>
+                    </div>
                 </div>
             </div>
 
             <!-- The timetables; fall and winter timetables grouped together -->
-            <div class="miniTimetablesGroup" ng-repeat="timetable in timetables">
+            <div class="miniTimetablesGroup" ng-repeat="timetable in data.timetables">
                 <div>{{timetable.name}}</div>
                 <div class="miniTimetables">
-                    <timetable-preview blocks="timetable.fallTimetableBlocks" colorScheme="sectionColors" chartTitle="Fall" ng-click="openTimetableViewer(timetable, 'Fall')"></timetable-preview>
-                    <timetable-preview blocks="timetable.winterTimetableBlocks" colorScheme="sectionColors" chartTitle="Winter" ng-click="openTimetableViewer(timetable, 'Winter')"></timetable-preview>
+                    <timetable-preview blocks="timetable.fallTimetableBlocks" 
+                                       colorScheme="data.sectionColors" 
+                                       chartTitle="Fall" 
+                                       ng-click="openTimetableViewer(timetable, 'Fall')">
+                    </timetable-preview>
+                    <timetable-preview blocks="timetable.winterTimetableBlocks" 
+                                       colorScheme="data.sectionColors" 
+                                       chartTitle="Winter" 
+                                       ng-click="openTimetableViewer(timetable, 'Winter')">
+                    </timetable-preview>
                 </div>
             </div>
-        </div>   
 
         <div>
             <button id="regenerateTimetablesBttn" ng-click="generateTimetables()">Regenerate more timetables</button>
@@ -50,7 +60,7 @@
     <div id="sideMenuPanel">
         <div class="menuItem">
             <h3>Courses</h3>
-            <div class="section" ng-repeat="(courseActivity, color) in sectionColors">
+            <div class="section" ng-repeat="(courseActivity, color) in data.sectionColors">
                 <span class="sectionColor" ng-style="{'background-color': color}"></span>
                 <span class="sectionLabel">{{courseActivity.split("|")[0] + ": " + courseActivity.split("|")[1]}}</span>
             </div>
@@ -63,7 +73,7 @@
         </div>
         <div class="menuItem">
             <h3>Bookmarks</h3>
-            <div class="section hoverable clickable" ng-repeat="timetable in timetables" ng-if="timetable.isBookmarked">
+            <div class="section hoverable clickable" ng-repeat="timetable in data.bookmarkedTimetables">
                 <span class="bookmarkedTimetable" ng-click="openTimetableViewer(timetable, 'Fall')">{{timetable.name}}</span>
             </div>
         </div>
@@ -73,41 +83,18 @@
     <div id="overlayPanel">        
         <div class="contentsPanel">
 
-            <!-- The restrictions panel -->
-            <restrictions-panel ng-show="overlayContent === OverlayContent.RestrictionsPanel" 
-                                initial-restrictions="initRes"
-                                on-update="updateRestrictions(restrictions)"
-                                on-cancel="toggleRestrictionsPanel()">
-            </restrictions-panel>
+            <!-- Close button -->
+            <span class="closeButton hoverable clickable" ng-click="hideOverlayPanel()">X</span>
 
-            <!-- The preferences panel -->
-            <preferences-panel ng-show="overlayContent === OverlayContent.PreferencesPanel" 
-                               initial-preferences="initPref"
-                               on-update="updatePreferences(preferences)"
-                               on-cancel="togglePreferencesPanel()">
-            </preferences-panel>
-
-            <!-- The timetables viewer -->
-            <div id="timetablesViewer" ng-show="overlayContent === OverlayContent.TimetableViewer">
-                <div id="timetableViewerHeaderPanel">
-                    <a class="closeButton hoverable clickable" ng-click="hideOverlayPanel()">X</a>
-                    <h2 id="timetableViewerTitle">{{selectedYearlyTimetable.name}}</h2>
-                    <span class="viewerBttn  leftViewerBttn hoverable clickable" ng-if="selectedTerm != 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
-                    <span class="viewerBttn leftViewerBttn selected" ng-if="selectedTerm === 'Fall'" ng-click="changeTermInTimetableViewer('Fall')">Fall</span>
-                    <span class="viewerBttn leftViewerBttn hoverable clickable" ng-if="selectedTerm != 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
-                    <span class="viewerBttn leftViewerBttn selected" ng-if="selectedTerm === 'Winter'" ng-click="changeTermInTimetableViewer('Winter')">Winter</span>
-                    <span id="bookmarkBttn" class="viewerBttn hoverable clickable" ng-click="selectedYearlyTimetable.isBookmarked = !selectedYearlyTimetable.isBookmarked">
-                        <img ng-if="selectedYearlyTimetable.isBookmarked" src="../../images/bookmark-black-shape.png" height="18" />
-                        <img ng-if="!selectedYearlyTimetable.isBookmarked" src="../../images/bookmark-white.png" height="18" />
-                    </span>
-                    <span id="printBttn" class="viewerBttn hoverable clickable" ng-click="printTimetable(selectedYearlyTimetable)">
-                        <img src="../../images/print.png" height="18" />
-                    </span>
-                </div>
-                <div id="timetableViewerBody">
-                    <timetable blocks="selectedTimetableBlocks" colorScheme="sectionColors"></timetable>
-                </div>
-            </div>
+            <!-- The timetable viewer panel -->
+            <timetable-viewer ng-show="overlayContent === OverlayContent.TimetableViewer"
+                              yearly-timetable="selectedYearlyTimetable"
+                              term="selectedTerm"
+                              section-colors="data.sectionColors"
+                              is-bookmarked="data.isBookmarked(selectedYearlyTimetable)"
+                              on-add-bookmark="data.addBookmark(yearlyTimetable)"
+                              on-remove-bookmark="data.removeBookmark(yearlyTimetable)">
+            </timetable-viewer>
         </div>
     </div>
 </div>
