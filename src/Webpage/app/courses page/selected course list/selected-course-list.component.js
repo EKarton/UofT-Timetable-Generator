@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module("timetableApp");
     app.component("selectedCourseList", {
-        templateUrl: "./app/components/selected-course-list.component.html",
+        templateUrl: "app/courses page/selected course list/selected-course-list.component.html",
         bindings: {
             selectedCourses: "<",
             onRemoveCourse: "&"

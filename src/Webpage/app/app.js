@@ -5,14 +5,14 @@
     app.config(function ($routeProvider, $compileProvider){
         $routeProvider
             .when("/", {
-                templateUrl: "app/views/courses.html",
+                templateUrl: "app/courses page/courses.html",
                 controller: "CoursesController",
-                css: "app/styles/homepage.css"
+                css: "app/courses page/courses.css"
             })
             .when("/timetables", {
-                templateUrl: "app/views/timetables.html",
+                templateUrl: "app/timetables page/timetables.html",
                 controller: "TimetablesController",
-                css: "app/styles/timetable.css"
+                css: "app/timetables page/timetable.css"
             })
             .otherwise({ redirectTo: "/" });
 

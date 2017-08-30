@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module("timetableApp");
     app.component("preferencesPanel", {
-        templateUrl: "./app/components/preferences-panel.component.html",
+        templateUrl: "app/timetables page/preferences/preferences-panel.component.html",
         bindings: {
             initialPreferences: "<",   // One way binding
             onUpdate: "&",              // Function binding; this component can use this function

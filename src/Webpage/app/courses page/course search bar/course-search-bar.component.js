@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module("timetableApp");
     app.component("courseSearchBar", {
-        templateUrl: "./app/components/course-search-bar.component.html",
+        templateUrl: "app/courses page/course search bar/course-search-bar.component.html",
         bindings: {
             onSelectCourse: "&"
         },

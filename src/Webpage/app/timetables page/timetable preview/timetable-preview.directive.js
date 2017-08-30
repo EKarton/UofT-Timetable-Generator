@@ -109,7 +109,7 @@
         return {
             restrict: "E",
             scope: {  blocks: "=", colorscheme: "=", charttitle: "@charttitle" },
-            templateUrl: "./app/directives/timetable-preview.directive.html",
+            templateUrl: "app/timetables page/timetable preview/timetable-preview.directive.html",
             controller: controller,
             link: link
         };

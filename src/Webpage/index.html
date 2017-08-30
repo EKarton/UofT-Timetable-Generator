@@ -5,15 +5,17 @@
     <title>Uoft Timetable Generator</title>
 
     <!-- Load the components' style sheets -->
-    <link rel="stylesheet" href="app/styles/preferences-panel.css"/>
-    <link rel="stylesheet" href="app/styles/restrictions-panel.css"/>
-    <link rel="stylesheet" href="app/styles/timetable-viewer.css"/>
-    <link rel="stylesheet" href="app/styles/selected-course-list.component.css"/>
-    <link rel="stylesheet" href="app/styles/course-search-bar.component.css"/>
+    <link rel="stylesheet" href="app/courses page/courses.css"/>
+    <link rel="stylesheet" href="app/courses page/course search bar/course-search-bar.component.css"/>
+    <link rel="stylesheet" href="app/courses page/selected course list/selected-course-list.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/timetable.css"/>
+    <link rel="stylesheet" href="app/timetables page/preferences/preferences-panel.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/restrictions/restrictions-panel.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/timetable viewer/timetable-viewer.component.css"/>
 
     <!-- Load the stylesheets that are used in per page -->
     <link rel="stylesheet" ng-href="{{css}}">
-    <link rel="stylesheet" href="app/styles/common.css"/>
+    <link rel="stylesheet" href="app/common/common.css"/>
 </head>
 <body>
 	<div ng-view></div>
@@ -26,19 +28,19 @@
     <script type="text/javascript" src="app/app.js"></script>
 
     <!-- Load the controllers -->
-    <script type="text/javascript" src="app/controllers/courses.controller.js"></script>
-    <script type="text/javascript" src="app/controllers/timetables.controller.js"></script>
+    <script type="text/javascript" src="app/courses page/courses.controller.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetables.controller.js"></script>
 
     <!-- Load the directives -->
-    <script type="text/javascript" src="app/directives/timetable-preview.directive.js"></script>
-    <script type="text/javascript" src="app/directives/timetable.directive.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetable preview/timetable-preview.directive.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetable/timetable.directive.js"></script>
 
     <!-- Load the components -->
-    <script type="text/javascript" src="app/components/preferences-panel.component.js"></script>
-    <script type="text/javascript" src="app/components/restrictions-panel.component.js"></script>
-    <script type="text/javascript" src="app/components/timetable-viewer.component.js"></script>
-    <script type="text/javascript" src="app/components/course-search-bar.component.js"></script>
-    <script type="text/javascript" src="app/components/selected-course-list.component.js"></script>
+    <script type="text/javascript" src="app/courses page/course search bar/course-search-bar.component.js"></script>
+    <script type="text/javascript" src="app/courses page/selected course list/selected-course-list.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/preferences/preferences-panel.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/restrictions/restrictions-panel.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetable viewer/timetable-viewer.component.js"></script>
 
     <!-- Load the services -->
     <script type="text/javascript" src="app/services/timetable-generator.service.js"> </script>
