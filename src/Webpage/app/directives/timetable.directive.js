@@ -174,7 +174,7 @@
         return {
             restrict: "E",
             scope: { blocks: "=", colorscheme: "=" },
-            templateUrl: "./app/templates/timetable.template.html",
+            templateUrl: "./app/directives/timetable.directive.html",
             controller: constants,
             link: createTimetableElements
         };

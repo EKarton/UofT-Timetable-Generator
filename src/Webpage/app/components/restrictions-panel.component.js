@@ -3,7 +3,7 @@
 (function () {
     var app = angular.module("timetableApp");
     app.component("restrictionsPanel", {
-        templateUrl: "./app/templates/restrictions-panel.template.html",
+        templateUrl: "./app/components/restrictions-panel.component.html",
         bindings: {
             initialRestrictions: "<",       // One way binding
             onUpdate: "&",                    // Function binding

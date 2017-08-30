@@ -2,7 +2,7 @@
 
 (function(){
 	var app = angular.module("timetableApp");
-    app.controller("TimetablesController", function ($scope, $location, Generator) {
+    app.controller("TimetablesController", function ($scope, $location, TimetableGenerator) {
 
         $scope.OverlayContent = {
             TimetableViewer: 1,
@@ -10,7 +10,7 @@
             PreferencesPanel: 3
         };
 
-        $scope.data = Generator.generatedTimetables;
+        $scope.data = TimetableGenerator.generatedTimetables;
         $scope.selectedYearlyTimetable = null;
         $scope.selectedTerm = "";
         $scope.selectedTimetableBlocks = null;

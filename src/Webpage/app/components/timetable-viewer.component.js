@@ -3,7 +3,7 @@
 (function(){
     var app = angular.module("timetableApp");
     app.component("timetableViewer", {
-        templateUrl: "./app/templates/timetable-viewer.template.html",
+        templateUrl: "./app/components/timetable-viewer.component.html",
         bindings: {
             yearlyTimetable: "<",
             term: "<",
