@@ -44,14 +44,17 @@ namespace UoftTimetableGenerator.Generator
             get { return sections; }
         }
 
-        public bool IsLeaf()
+        public bool IsLeaf
         {
-            if (leftTree != null && rightTree != null)
+            get
             {
-                if (leftTree.IsEmpty && rightTree.IsEmpty && session != null)
-                    return true;
+                if (leftTree != null && rightTree != null)
+                {
+                    if (leftTree.IsEmpty && rightTree.IsEmpty && session != null)
+                        return true;
+                }
+                return false;
             }
-            return false;
         }
 
         private bool Contains(Session session)
@@ -142,7 +145,7 @@ namespace UoftTimetableGenerator.Generator
             if (session != otherTable.session)
                 return false;
 
-            if (IsLeaf() && otherTable.IsLeaf())
+            if (IsLeaf && otherTable.IsLeaf)
                 return true;
 
             if (leftTree != null && otherTable.leftTree != null)
@@ -362,40 +365,40 @@ namespace UoftTimetableGenerator.Generator
                 g.parent.RebalanceTree(g);
         }
 
-        public double HoursOfClass
+        public double TimeInClass
         {
             get
             {
                 if (IsEmpty)
                     return 0;
 
-                double hrsOfClass = session.EndTime - session.StartTime;
-                hrsOfClass += leftTree.HoursOfClass;
-                hrsOfClass += rightTree.HoursOfClass;
+                double hrsOfClass = session.GetEndTime_Time() - session.GetStartTime_Time();
+                hrsOfClass += leftTree.TimeInClass;
+                hrsOfClass += rightTree.TimeInClass;
                 return hrsOfClass;
             }
         }
 
-        public double TotalSpacesBetweenClasses
+        public double TotalTimeBetweenClasses
         {
             get
             {
                 if (IsEmpty)
                     return 0;
 
-                if (leftTree.IsEmpty && rightTree.IsEmpty)
+                if (IsLeaf)
                     return 0;
 
                 // Getting the wasted time from the left and right trees
                 double totalWastedTime = 0;
-                totalWastedTime += leftTree.TotalSpacesBetweenClasses;
-                totalWastedTime += rightTree.TotalSpacesBetweenClasses;
+                totalWastedTime += leftTree.TotalTimeBetweenClasses;
+                totalWastedTime += rightTree.TotalTimeBetweenClasses;
 
                 // Getting the time wasted in left trees
                 if (!leftTree.IsEmpty)
                 {
                     // If the previous session occured on the same day as this session
-                    if (leftTree.session.GetEndTime_WeekdayIndex() == session.GetEndTime_WeekdayIndex())
+                    if (leftTree.session.GetEndTime_WeekdayIndex() == session.GetStartTime_WeekdayIndex())
                         totalWastedTime += session.StartTime - leftTree.session.EndTime;
                 }
 
@@ -411,20 +414,60 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
-        public int EarliestClasstime
+        public double EarliestClasstime
         {
             get
             {
-                throw new NotImplementedException();
+                // If it is empty
+                if (IsEmpty)
+                    return -1;
+
+                // If it is the leaf
+                if (IsLeaf)
+                    return session.GetStartTime_Time();
+
+                // Recurse to the next sessions
+                double curStartTime = session.GetStartTime_Time();
+                if (!leftTree.IsEmpty)
+                    curStartTime = Math.Min(curStartTime, leftTree.EarliestClasstime);
+                if (!rightTree.IsEmpty)
+                    curStartTime = Math.Min(curStartTime, rightTree.EarliestClasstime);
+
+                return curStartTime;
             }
         }
 
-        public int LatestClasstime
+        public double LatestClasstime
         {
             get
             {
-                throw new NotImplementedException();
+                // If it is empty
+                if (IsEmpty)
+                    return -1;
+
+                // If it is the leaf
+                if (IsLeaf)
+                    return session.GetEndTime_Time();
+
+                // Recurse to the next sessions
+                double curEndTime = session.GetEndTime_Time();
+                if (!leftTree.IsEmpty)
+                    curEndTime = Math.Max(curEndTime, leftTree.LatestClasstime);
+                if (!rightTree.IsEmpty)
+                    curEndTime = Math.Max(curEndTime, rightTree.LatestClasstime);
+
+                return curEndTime;
             }
+        }
+
+        public List<double> WalkDurationInBackToBackClasses
+        {
+            get { return new List<double>(); }
+        }
+
+        public double TotalWalkDuration
+        {
+            get { return 0; }
         }
 
         public int AverageWalkingDistance

@@ -35,6 +35,16 @@
         public double StartTime { get; set; }
         public double EndTime { get; set; }
 
+        public double GetStartTime_Time()
+        {
+            return StartTime % 100;
+        }
+
+        public double GetEndTime_Time()
+        {
+            return EndTime % 100;
+        }
+
         public int GetStartTime_WeekdayIndex()
         {
             return ((int) StartTime) / 100;

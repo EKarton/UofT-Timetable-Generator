@@ -54,17 +54,38 @@ namespace UoftTimetableGenerator.Generator
 
         public double TotalTimeBetweenClasses
         {
-            get { return fallTimetable.TotalSpacesBetweenClasses + winterTimetable.TotalSpacesBetweenClasses; }
+            get { return fallTimetable.TotalTimeBetweenClasses + winterTimetable.TotalTimeBetweenClasses; }
         }
 
         public double EarliestClassTime
         {
-            get { return fallTimetable.EarliestClasstime + winterTimetable.EarliestClasstime; }
+            get { return Math.Min(fallTimetable.EarliestClasstime, winterTimetable.EarliestClasstime); }
         }
 
         public double LatestClassTime
         {
-            get { return fallTimetable.LatestClasstime + winterTimetable.LatestClasstime; }
+            get { return Math.Max(fallTimetable.LatestClasstime, winterTimetable.LatestClasstime); }
+        }
+
+        public double TimeInClass
+        {
+            get { return fallTimetable.TimeInClass + winterTimetable.TimeInClass; }
+        }
+
+        public double TotalWalkDuration
+        {
+            get { return fallTimetable.TotalWalkDuration + winterTimetable.TotalWalkDuration; }
+        }
+
+        public List<double> WalkDurationInBackToBackClasses
+        {
+            get
+            {
+                List<double> walkDurations = new List<double>();
+                walkDurations.AddRange(fallTimetable.WalkDurationInBackToBackClasses);
+                walkDurations.AddRange(winterTimetable.WalkDurationInBackToBackClasses);
+                return walkDurations;
+            }
         }
     }
 }

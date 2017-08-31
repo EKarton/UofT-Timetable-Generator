@@ -18,16 +18,21 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
         // PUT api/timetables
         [HttpPut]
         [Route("GetUoftTimetables")]
-        public IActionResult GetUoftTimetables([FromBody] string[] courseCodes)
+        public IActionResult GetUoftTimetables([FromBody] TimetableRequest request)
         {
             // Each course code has a length of 10; max 10 courses to put in timetable
-            if (courseCodes.Length > 100)
+            if (request.Courses == null || request.Courses.Length > 100)
+                return BadRequest();
+
+            // Check if the preferences / restrictions are set
+            if (request.Preferences == null || request.Restrictions == null)
                 return BadRequest();
 
             // Get the courses from the database
             List<Course> courseObjs = new List<Course>();
-            foreach (string code in courseCodes)
+            foreach (Course course in request.Courses)
             {
+                string code = course.CourseCode;
                 Course courseObj = UoftDatabaseService.GetCourseDetails(code);
                 if (courseObj == null)
                     return NotFound();
@@ -35,7 +40,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             }
 
             // Generate the timetables
-            GAGenerator generator = new GAGenerator(courseObjs)
+            GAGenerator generator = new GAGenerator(courseObjs, request.Preferences, request.Restrictions)
             {
                 NumGenerations = 100,
                 PopulationSize = 16,
@@ -52,35 +57,6 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
                 miniTimetables.Add(new SimplifiedYearlyTimetable(timetables[i], "Timetable #" + (i + 1)));                
 
             return Created("api/timetables/getuofttimetables", miniTimetables);
-        }
-
-        // PUT api/timetables
-        [HttpPut]
-        [Route("GetTimetables")]
-        public IActionResult GetTimetables([FromBody] Course[] courses)
-        {
-            // Max 12 courses (a full yr course counts as 1 course)
-            if (courses.Length > 12)
-                return BadRequest();
-
-            // Generate the timetables
-            GAGenerator generator = new GAGenerator(courses.ToList())
-            {
-                NumGenerations = 100,
-                PopulationSize = 16,
-                MutationRate = 0.01,
-                CrossoverRate = 0.9,
-                CrossoverType = "Uniform Crossover"
-            };
-
-            List<YearlyTimetable> timetables = generator.GetTimetables();
-
-            // Convert the timetables to mini timetables (which will be presented to the user)
-            List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();
-            for (int i = 0; i < timetables.Count; i++)
-                miniTimetables.Add(new SimplifiedYearlyTimetable(timetables[i], "Timetable #" + (i + 1)));
-
-            return Created("api/timetables/gettimetables", miniTimetables);
         }
     }
 }

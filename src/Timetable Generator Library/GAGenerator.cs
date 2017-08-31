@@ -17,6 +17,10 @@ namespace UoftTimetableGenerator.Generator
         private int numGenerations = 100;
         private string crossoverType = "Old Crossover";
 
+        // The preferences / restrictions (makes up the fitness model)
+        private Preferences preferences;
+        private Restrictions restrictions;
+
         // Represents the number of sections that needs to be in the timetable
         private List<Section[]> requiredSections = new List<Section[]>();
 
@@ -25,8 +29,11 @@ namespace UoftTimetableGenerator.Generator
         private List<int[]> population = new List<int[]>();
         private double[] fitnessScores;
 
-        public GAGenerator(List<Course> courses)
+        public GAGenerator(List<Course> courses, Preferences preferences, Restrictions restrictions)
         {
+            this.preferences = preferences;
+            this.restrictions = restrictions;
+
             // Populating requiredSections[] and its associated terms[]
             foreach (Course course in courses)
             {
@@ -275,8 +282,57 @@ namespace UoftTimetableGenerator.Generator
                     return 0;
             }
 
+            // Check if it meets the restrictions
+            if (restrictions.EarliestClass != null && newTable.EarliestClassTime < restrictions.EarliestClass)
+                return 0;
+            if (restrictions.LatestClass != null && newTable.LatestClassTime > restrictions.LatestClass)
+                return 0;
+            if (restrictions.WalkDurationInBackToBackClasses != null)
+            {
+                foreach (double dur in newTable.WalkDurationInBackToBackClasses)
+                    if (dur > restrictions.WalkDurationInBackToBackClasses)
+                        return 0;
+            }
+
             score += 1000;
-            score += (100 - newTable.TotalTimeBetweenClasses);
+
+            // Get scores associated by their preferences
+            switch(preferences.ClassType)
+            {
+                case Preferences.Day.Undefined:
+                    break;
+                case Preferences.Day.Morning: // (12am - 12pm)
+                    if (0 < newTable.EarliestClassTime && newTable.LatestClassTime < 12)
+                        score += 100;
+                    break;
+                case Preferences.Day.Afternoon: // (12pm - 5pm)
+                    if (12 <= newTable.EarliestClassTime && newTable.LatestClassTime < 17)
+                        score += 100;
+                    break;
+                case Preferences.Day.Evening: // (5pm - 8pm)
+                    if (17 <= newTable.EarliestClassTime && newTable.LatestClassTime < 20)
+                        score += 100;
+                    break;
+                case Preferences.Day.Night: // (9pm - 12pm)
+                    if (20 <= newTable.EarliestClassTime && newTable.LatestClassTime <= 24)
+                        score += 100;
+                    break;
+                default:
+                    throw new Exception("Class type not handled before!");
+            }
+            switch(preferences.TimeBetweenClasses)
+            {
+                case Preferences.Quantity.Undefined:
+                    break;
+                case Preferences.Quantity.Minimum:
+                    score -= newTable.TotalTimeBetweenClasses;
+                    break;
+                case Preferences.Quantity.Maximum:
+                    score += newTable.TotalTimeBetweenClasses;
+                    break;
+                default:
+                    throw new Exception("Time between class is not handled before!");
+            }
             return score;
         }
 

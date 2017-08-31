@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UoftTimetableGenerator.DataModels
+namespace UoftTimetableGenerator.Generator
 {
     public class RedBlackTree
     {
