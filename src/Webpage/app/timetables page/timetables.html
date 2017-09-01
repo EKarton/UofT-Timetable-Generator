@@ -52,7 +52,7 @@
             </div>
 
         <div>
-            <button id="regenerateTimetablesBttn" ng-click="generateTimetables()">Regenerate more timetables</button>
+            <button id="regenerateTimetablesBttn" ng-click="regenerateTimetables()">Regenerate more timetables</button>
         </div>
 	</div>
 
@@ -87,8 +87,7 @@
             <span class="closeButton hoverable clickable" ng-click="hideOverlayPanel()">X</span>
 
             <!-- The timetable viewer panel -->
-            <timetable-viewer ng-show="overlayContent === OverlayContent.TimetableViewer"
-                              yearly-timetable="selectedYearlyTimetable"
+            <timetable-viewer yearly-timetable="selectedYearlyTimetable"
                               term="selectedTerm"
                               section-colors="data.sectionColors"
                               is-bookmarked="data.isBookmarked(selectedYearlyTimetable)"

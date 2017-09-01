@@ -9,7 +9,7 @@ namespace UoftTimetableGenerator.WebAPI.Models
 {
     public class TimetableRequest
     {
-        public Course[] Courses { get; set; }
+        public string[] CourseCodes { get; set; }
         public Preferences Preferences { get; set; }
         public Restrictions Restrictions { get; set; }
     }

@@ -20,8 +20,11 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
         [Route("GetUoftTimetables")]
         public IActionResult GetUoftTimetables([FromBody] TimetableRequest request)
         {
+            if (request == null)
+                return BadRequest();
+
             // Each course code has a length of 10; max 10 courses to put in timetable
-            if (request.Courses == null || request.Courses.Length > 100)
+            if (request.CourseCodes == null || request.CourseCodes.Length > 100)
                 return BadRequest();
 
             // Check if the preferences / restrictions are set
@@ -30,9 +33,8 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
 
             // Get the courses from the database
             List<Course> courseObjs = new List<Course>();
-            foreach (Course course in request.Courses)
+            foreach (string code in request.CourseCodes)
             {
-                string code = course.CourseCode;
                 Course courseObj = UoftDatabaseService.GetCourseDetails(code);
                 if (courseObj == null)
                     return NotFound();

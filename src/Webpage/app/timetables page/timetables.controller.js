@@ -4,13 +4,8 @@
 	var app = angular.module("timetableApp");
     app.controller("TimetablesController", function ($scope, $location, TimetableGenerator) {
 
-        $scope.OverlayContent = {
-            TimetableViewer: 1,
-            RestrictionsPanel: 2,
-            PreferencesPanel: 3
-        };
-
         $scope.data = TimetableGenerator.generatedTimetables;
+
         $scope.selectedYearlyTimetable = null;
         $scope.selectedTerm = "";
         $scope.selectedTimetableBlocks = null;
@@ -18,7 +13,6 @@
         $scope.isSideMenuOpened = false;
         $scope.isPreferencesPanelOpened = false;
         $scope.isRestrictionsPanelOpened = false;
-        $scope.overlayContent = $scope.OverlayContent.TimetableViewer;
 
         $scope.togglePreferencesPanel = function () {
             $scope.isPreferencesPanelOpened = !$scope.isPreferencesPanelOpened;
@@ -30,19 +24,8 @@
             $scope.isPreferencesPanelOpened = false;
         };
 
-        $scope.openPreferencesPanel = function () {
-            $scope.showOverlayPanel();
-            $scope.overlayContent = $scope.OverlayContent.PreferencesPanel;
-        };
-
-        $scope.openRestrictionsPanel = function () {
-            $scope.showOverlayPanel();
-            $scope.overlayContent = $scope.OverlayContent.RestrictionsPanel;
-        };
-
         $scope.openTimetableViewer = function (yearlyTimetable, term) {
             $scope.showOverlayPanel();
-            $scope.overlayContent = $scope.OverlayContent.TimetableViewer;
             $scope.selectedYearlyTimetable = yearlyTimetable;
             $scope.selectedTerm = term;
         };
@@ -92,11 +75,27 @@
         };
 
         $scope.updatePreferences = function (preferences) {
-            alert("Preferences updated");
+            // If it is different, update
+            if ($scope.data.preferences != preferences)
+                TimetableGenerator.generateTimetables($scope.data.courseCodes, preferences, $scope.data.restrictions);
+
+            $scope.togglePreferencesPanel();
         };
 
         $scope.updateRestrictions = function (restrictions) {
-            alert("Restrictions updated");
+            // If it is different, update
+            if ($scope.data.restrictions != restrictions)
+                TimetableGenerator.generateTimetables($scope.data.courseCodes, $scope.data.preferences, restrictions);
+
+            $scope.toggleRestrictionsPanel();
+        };
+
+        $scope.regenerateTimetables = function () {
+            TimetableGenerator.generateTimetables(
+                $scope.data.courseCodes,
+                $scope.data.preferences,
+                $scope.data.restrictions
+            );
         };
 	});
 }());

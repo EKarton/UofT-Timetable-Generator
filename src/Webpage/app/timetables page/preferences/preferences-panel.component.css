@@ -49,9 +49,9 @@ preferences-panel .selected {
 }
 
 preferences-panel .cancel-bttn{
-
+    float: right;
 }
 
 preferences-panel .apply-bttn{
-
+    float: right;
 }

@@ -1,8 +1,6 @@
 ﻿restrictions-panel {
     text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 20px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 restrictions-panel table{
@@ -16,4 +14,12 @@ restrictions-panel input {
     margin-bottom: 10px;
 
     vertical-align: middle;
+}
+
+restrictions-panel .applyBttn{
+    float: right;
+}
+
+restrictions-panel .cancelBttn {
+    float: right;
 }

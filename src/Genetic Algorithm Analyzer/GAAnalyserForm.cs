@@ -52,7 +52,7 @@ namespace Genetic_Algorithm_Analyzer
             for (int i = 0; i < numTrials; i++)
             {
                 // Make generator with params
-                GAGenerator generator = new GAGenerator(courses)
+                GAGenerator generator = new GAGenerator(courses, null, null)
                 {
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,

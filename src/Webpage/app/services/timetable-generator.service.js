@@ -91,34 +91,38 @@
             console.log("Updated color scheme", this.sectionColors);
         };
 
+        // Default preferences / restrictions
         var defaultRestrictions = {
             earliestClass: 7,
             latestClass: 23,
             walkDurationInBackToBackClasses: 10
         };
         var defaultPreferences = {
-            classType: "min",
-            walkDistance: "min",
-            numDaysInClass: "min",
-            timeBetweenClasses: "min",
-            lunchPeriod: 60
+            classType: "undefined",
+            walkDistance: "undefined",
+            numDaysInClass: "undefined",
+            timeBetweenClasses: "undefined",
+            lunchPeriod: null
         };
+
         this.generatedTimetables = new Data([], [], defaultRestrictions, defaultPreferences);
 
-        var handleErrorInTimetablesRequest = function (promise) {
-            this.data = null;
-        };
+        this.generateTimetables = function (courseCodes, preferences, restrictions) {
 
-        this.getCourses = function (query) {
-            var url = "http://localhost:53235/api/courses?query=" + query;
-            return $http.get(url);
-        };  
+            // Create the timetable request
+            var request = {
+                courseCodes: courseCodes,
+                preferences: preferences,
+                restrictions: restrictions
+            };
+            if (preferences === undefined)
+                request.preferences = defaultPreferences;
+            if (restrictions === undefined)
+                request.restrictions = defaultRestrictions;
 
-        this.generateTimetables = function (courseCodes) {
             var obj = this;
-
             var url = "http://localhost:53235/api/timetables/getuofttimetables";
-            $http.put(url, courseCodes).then(
+            $http.put(url, request).then(
                 function (response) {
                     // Parse the timetables
                     var newTimetables = [];
@@ -132,6 +136,7 @@
                     // Update the generated timetables singleton obj
                     obj.generatedTimetables.courseCodes = courseCodes;
                     obj.generatedTimetables.timetables = newTimetables;
+                    obj.generatedTimetables.bookmarkedTimetables = [];
                     obj.generatedTimetables.generateNewColorScheme();
                 },
                 function (response) {

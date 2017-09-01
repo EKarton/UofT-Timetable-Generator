@@ -4,7 +4,14 @@
 	var app = angular.module("timetableApp");
     app.controller("CoursesController", function ($scope, $location, TimetableGenerator) {
 
-        $scope.selectedCourses = [];
+        $scope.selectedCourses = (function () {
+            // See if it is saved as session storage
+            var savedEntry = JSON.parse(sessionStorage.getItem("selectedCourses"));
+            if (savedEntry === undefined || savedEntry === null)
+                return [];
+            else
+                return savedEntry;
+        }());
 
         $scope.isCourseNotSelected = function (course) {
             return !$scope.isCourseSelected(course);
@@ -40,6 +47,9 @@
         };
 
         $scope.makeTimetables = function () {
+            // Save the selected courses in session storage
+            sessionStorage.setItem("selectedCourses", JSON.stringify($scope.selectedCourses));
+
             // Grab only the course codes
             var courseCodes = [];
             for (var i = 0; i < $scope.selectedCourses.length; i++)

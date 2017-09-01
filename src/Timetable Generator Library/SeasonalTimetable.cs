@@ -26,11 +26,12 @@ namespace UoftTimetableGenerator.Generator
         {
             get
             {
-                if (parent.rightTree.session != session)
+                if (parent != null && parent.rightTree != null && parent.rightTree.session != null && parent.rightTree.session != session)
                     return parent.rightTree;
-                else if (parent.leftTree.session != session)
+                else if (parent != null && parent.leftTree != null && parent.leftTree.session != null && parent.leftTree.session != session)
                     return parent.leftTree;
-                return null;
+                else
+                    return null;
             }
         }
 
@@ -242,7 +243,7 @@ namespace UoftTimetableGenerator.Generator
                 return;
 
             // Case 2
-            else if (color == "Red")
+            else if (color == "Red" && Sibling != null)
             {
                 // Case 2A:
                 if (Sibling.IsEmpty || Sibling.color == "Black")
