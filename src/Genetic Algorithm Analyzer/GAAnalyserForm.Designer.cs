@@ -1,4 +1,4 @@
-﻿namespace Genetic_Algorithm_Analyzer
+﻿namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
 {
     partial class GAAnalyzerForm
     {
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.scoresChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.mutationRateTxtbox = new System.Windows.Forms.TextBox();
@@ -43,24 +49,39 @@
             this.crossoverMethodBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.runBttn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.performanceChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.diversityChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresChart)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceChart)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diversityChart)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart
+            // scoresChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart.Legends.Add(legend5);
-            this.chart.Location = new System.Drawing.Point(12, 88);
-            this.chart.Name = "chart";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart.Series.Add(series5);
-            this.chart.Size = new System.Drawing.Size(1078, 651);
-            this.chart.TabIndex = 0;
-            this.chart.Text = "chart1";
+            this.scoresChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.scoresChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.scoresChart.Legends.Add(legend1);
+            this.scoresChart.Location = new System.Drawing.Point(6, 6);
+            this.scoresChart.Name = "scoresChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.scoresChart.Series.Add(series1);
+            this.scoresChart.Size = new System.Drawing.Size(1064, 620);
+            this.scoresChart.TabIndex = 0;
+            this.scoresChart.Text = "chart1";
             // 
             // label1
             // 
@@ -162,12 +183,97 @@
             this.runBttn.UseVisualStyleBackColor = true;
             this.runBttn.Click += new System.EventHandler(this.runBttn_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 75);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1084, 665);
+            this.tabControl1.TabIndex = 12;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.scoresChart);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1076, 632);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Scores";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.performanceChart);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1076, 632);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Performance";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // performanceChart
+            // 
+            this.performanceChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.performanceChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.performanceChart.Legends.Add(legend2);
+            this.performanceChart.Location = new System.Drawing.Point(0, 0);
+            this.performanceChart.Name = "performanceChart";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.performanceChart.Series.Add(series2);
+            this.performanceChart.Size = new System.Drawing.Size(1080, 632);
+            this.performanceChart.TabIndex = 0;
+            this.performanceChart.Text = "chart1";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.diversityChart);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1076, 632);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Diversity";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // diversityChart
+            // 
+            this.diversityChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.Name = "ChartArea1";
+            this.diversityChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.diversityChart.Legends.Add(legend3);
+            this.diversityChart.Location = new System.Drawing.Point(3, 3);
+            this.diversityChart.Name = "diversityChart";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.diversityChart.Series.Add(series3);
+            this.diversityChart.Size = new System.Drawing.Size(1070, 626);
+            this.diversityChart.TabIndex = 0;
+            this.diversityChart.Text = "chart1";
+            // 
             // GAAnalyzerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1102, 756);
+            this.ClientSize = new System.Drawing.Size(1108, 752);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.runBttn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.crossoverMethodBox);
@@ -179,11 +285,17 @@
             this.Controls.Add(this.mutationRateTxtbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GAAnalyzerForm";
             this.Text = "Genetic Algorithm Analyzer";
             this.Load += new System.EventHandler(this.GAAnalyzerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresChart)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.performanceChart)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.diversityChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +303,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart scoresChart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox mutationRateTxtbox;
@@ -203,6 +315,12 @@
         private System.Windows.Forms.ComboBox crossoverMethodBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button runBttn;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart performanceChart;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart diversityChart;
     }
 }
 

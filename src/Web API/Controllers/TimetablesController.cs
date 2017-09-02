@@ -46,8 +46,8 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             {
                 NumGenerations = 100,
                 PopulationSize = 16,
-                MutationRate = 0.01,
-                CrossoverRate = 0.9,
+                MutationRate = 0.1,
+                CrossoverRate = 0.6,
                 CrossoverType = "Uniform Crossover"
             };
 

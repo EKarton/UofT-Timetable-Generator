@@ -13,11 +13,27 @@ using System.Windows.Forms.DataVisualization.Charting;
 using UoftTimetableGenerator.DataModels;
 using UoftTimetableGenerator.Generator;
 
-namespace Genetic_Algorithm_Analyzer
+namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
 {
     public partial class GAAnalyzerForm : Form
     {
         private List<Course> courses = new List<Course>();
+
+        private Preferences preferences = new Preferences()
+        {
+            ClassType = Preferences.Day.Undefined,
+            WalkingDistance = Preferences.Quantity.Undefined,
+            NumDaysInClass = Preferences.Quantity.Undefined,
+            TimeBetweenClasses = Preferences.Quantity.Undefined,
+            LunchPeriod = 0
+        };
+
+        private Restrictions restrictions = new Restrictions()
+        {
+            EarliestClass = null,
+            LatestClass = null,
+            WalkDurationInBackToBackClasses = 20
+        };
 
         public GAAnalyzerForm()
         {
@@ -46,13 +62,14 @@ namespace Genetic_Algorithm_Analyzer
             string crossoverType = crossoverMethodBox.Text;
 
             // Get average scores per generation for over 30 trials
-            int numTrials = 30;
-            double[] avgScores = new double[numGenerations];
-            double[] maxScores = new double[numGenerations];
-            for (int i = 0; i < numTrials; i++)
+            int numTrials = 100;
+            StatsPerGeneration[][] fullStats = new StatsPerGeneration[numTrials][];
+
+            /*
+            Parallel.For(0, numTrials, delegate (int i) 
             {
                 // Make generator with params
-                GAGenerator generator = new GAGenerator(courses, null, null)
+                GAGenerator generator = new GAGenerator(courses, preferences, restrictions)
                 {
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,
@@ -61,38 +78,72 @@ namespace Genetic_Algorithm_Analyzer
                     CrossoverType = crossoverType
                 };
 
-                // Run the generator and get scores
-                double[] curAvgScores = generator.GetAvgScoresPerGeneration();
-                double[] curMaxScores = generator.GetMaxScoresPerGeneration();
-                for (int j = 0; j < numGenerations; j++)
+                // Run the generator and get stats
+                StatsPerGeneration[] curStats = generator.GenerateTimetablesWithStats();
+                fullStats[i] = curStats;
+            });
+            */
+
+            for (int i = 0; i < numTrials; i++)
+            {
+                // Make generator with params
+                GAGenerator generator = new GAGenerator(courses, preferences, restrictions)
                 {
-                    avgScores[j] += curAvgScores[j];
-                    maxScores[j] += curMaxScores[j];
-                }
+                    MutationRate = mutationRate,
+                    CrossoverRate = crossoverRate,
+                    NumGenerations = numGenerations,
+                    PopulationSize = populationSize,
+                    CrossoverType = crossoverType
+                };
+
+                // Run the generator and get stats
+                StatsPerGeneration[] curStats = generator.GenerateTimetablesWithStats();
+                fullStats[i] = curStats;
             }
+
+            // Compute the average over the x trials
+            StatsPerGeneration[] avgStats = new StatsPerGeneration[numGenerations];
             for (int i = 0; i < numGenerations; i++)
             {
-                avgScores[i] /= numTrials;
-                maxScores[i] /= numTrials;
+                StatsPerGeneration sum = fullStats[0][i];
+                for (int j = 1; j < numTrials; j++)
+                    sum += fullStats[j][i];
+
+                avgStats[i] = sum / numTrials;
             }
 
             // Set up the data
-            chart.Series.Clear();
-            chart.ChartAreas[0].AxisY.Minimum = 0;
-            chart.Series.Add("Average Scores");
-            chart.Series["Average Scores"].ChartType = SeriesChartType.Line;
-            chart.Series.Add("Max Scores");
-            chart.Series["Max Scores"].ChartType = SeriesChartType.Line;
+            scoresChart.Series.Clear();
+            scoresChart.ChartAreas[0].AxisY.Minimum = 0;
+            scoresChart.Series.Add("Average Scores");
+            scoresChart.Series["Average Scores"].ChartType = SeriesChartType.Spline;
+            scoresChart.Series.Add("Max Scores");
+            scoresChart.Series["Max Scores"].ChartType = SeriesChartType.Spline;
 
             // Add the average / maxscores to the chart by their type
             for (int i = 0; i < numGenerations; i++)
             {
-                int generation = i;
-                double avgScore = avgScores[i];
-                double maxScore = maxScores[i];
-                chart.Series["Average Scores"].Points.Add(new DataPoint(generation, avgScore));
-                chart.Series["Max Scores"].Points.Add(new DataPoint(generation, maxScore));
+                scoresChart.Series["Average Scores"].Points.Add(new DataPoint(i, avgStats[i].AverageScores));
+                scoresChart.Series["Max Scores"].Points.Add(new DataPoint(i, avgStats[i].MaxScores));
             }
+
+            // Add performance data
+            performanceChart.Series.Clear();
+            performanceChart.ChartAreas[0].AxisY.Minimum = 0;
+            performanceChart.Series.Add("Time ellapsed (ms)");
+            performanceChart.Series["Time ellapsed (ms)"].ChartType = SeriesChartType.Spline;
+
+            for (int i = 0; i < numGenerations; i++)
+                performanceChart.Series["Time ellapsed (ms)"].Points.Add(new DataPoint(i, avgStats[i].Runtime));
+
+            // Add diversity data
+            diversityChart.Series.Clear();
+            diversityChart.ChartAreas[0].AxisY.Minimum = 0;
+            diversityChart.Series.Add("Diversity (%)");
+            diversityChart.Series["Diversity (%)"].ChartType = SeriesChartType.Spline;
+
+            for (int i = 0; i < numGenerations; i++)
+                diversityChart.Series["Diversity (%)"].Points.Add(new DataPoint(i, avgStats[i].PopulationDiversity * 100));
         }
 
         private void runBttn_Click(object sender, EventArgs e)
