@@ -11,23 +11,24 @@
         controllerAs: "vm",
         controller: function (CourseSearch) {
 
-            this.oldQuery = "";
+            // The course results in the dropdown menu
             this.courseResults = [];
 
+            /**
+             * Called when one-way binding value (s) is changed
+             * @param {changeObj} changeObj - A change object (refer to the Angular JS 1.5 documentation)
+             */
             this.$onChanges = function (changeObj) {
                 if (changeObj.selectedCourses != undefined)
                     this.selectedCourses = changeObj.selectedCourses.currentValue;
             };
 
+            /**
+             * Updates the course results after specifying a course code
+             * It will not add courses that has been selected already
+             * @param {string} newQuery - A complete / incomplete UofT course code
+             */
             this.updateCourseResults = function (newQuery) {
-                // Avoid making an http request if the user enters the same department code
-                if (this.oldQuery === newQuery)
-                    return;
-
-                // Check if the new department code is >= 3 chars long
-                if (newQuery.length != 3)
-                    return;
-
                 var obj = this;
                 CourseSearch.getUoftCourses(newQuery,
                     function (courseResults) {                        
@@ -49,8 +50,6 @@
                             if (!isSelectedCourse)
                                 obj.courseResults.push(courseResults[i]);
                         }
-                        
-                        obj.oldQuery = newQuery;
                     },
                     function (promise) {
                         alert("Unable to get course data from the server");
@@ -58,17 +57,23 @@
                 );
             };
 
+            /**
+             * Selects a course
+             * @param {Course} selectedCourse - A course selected from the dropdown menu
+             */
             this.selectCourse = function (selectedCourse) {
                 this.s = selectedCourse;
                 this.onSelectCourse({ course: this.s });
 
                 // Remove any course results that has been selected already
-                for (var i = 0; i < this.courseResults.length; i++) 
-                    for (var j = 0; j < this.selectedCourses.length; j++)
+                for (var i = 0; i < this.courseResults.length; i++) {
+                    for (var j = 0; j < this.selectedCourses.length; j++) {
                         if (this.courseResults[i].code === this.selectedCourses[j].code) {
                             this.courseResults.splice(i, 1);
                             i -= 1;
-                        }               
+                        }
+                    }
+                }
             };
         }
     });

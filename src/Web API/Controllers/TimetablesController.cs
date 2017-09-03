@@ -10,12 +10,20 @@ using Microsoft.AspNetCore.Cors;
 
 namespace UoftTimetableGenerator.WebAPI.Controllers
 {
+    /// <summary>
+    /// A class that generates timetables through HTTP requests
+    /// </summary>
     [Route("api/[controller]")]
     [EnableCors("AllowSpecificOrigin")]
     [Produces("application/json")]
     public class TimetablesController : Controller
     {
-        // PUT api/timetables
+        /// <summary>
+        /// Generates timetables from UofT courses
+        /// Http request: PUT api/timetables/getuofttimetables
+        /// </summary>
+        /// <param name="request">The request to which timetables to generate</param>
+        /// <returns>The generated timetables</returns>
         [HttpPut]
         [Route("GetUoftTimetables")]
         public IActionResult GetUoftTimetables([FromBody] TimetableRequest request)

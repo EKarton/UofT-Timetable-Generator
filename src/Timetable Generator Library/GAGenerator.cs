@@ -9,6 +9,9 @@ using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.Generator
 {
+    /// <summary>
+    /// A class used to generate UofT timetables with a genetic algorithm
+    /// </summary>
     public class GAGenerator: ITimetableGenerator
     {
         private static Random random = new Random();
@@ -35,6 +38,12 @@ namespace UoftTimetableGenerator.Generator
         // Cached SeasonalTimetable
         private Dictionary<string, YearlyTimetable> cachedTimetables = new Dictionary<string, YearlyTimetable>();
 
+        /// <summary>
+        /// Constructs the GAGenerator object
+        /// </summary>
+        /// <param name="courses">A list of courses</param>
+        /// <param name="preferences">The preferences</param>
+        /// <param name="restrictions">The restrictions</param>
         public GAGenerator(List<Course> courses, Preferences preferences, Restrictions restrictions)
         {
             this.preferences = preferences;
@@ -59,36 +68,58 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get / set the mutation rate of the genetic algorithm
+        /// </summary>
         public double MutationRate
         {
             get { return mutationRate; }
             set { mutationRate = value; }
         }
 
+        /// <summary>
+        /// Get / set the crossover rate of the genetic algorithm
+        /// </summary>
         public double CrossoverRate
         {
             get { return crossoverRate; }
             set { crossoverRate = value; }
         }
 
+        /// <summary>
+        /// Get / set the population size of the genetic algorithm
+        /// </summary>
         public int PopulationSize
         {
             get { return populationSize; }
             set { populationSize = value; }
         }
 
+        /// <summary>
+        /// Get / set the number of generations  for the genetic algorithm
+        /// </summary>
         public int NumGenerations
         {
             get { return numGenerations; }
             set { numGenerations = value; }
         }
 
+        /// <summary>
+        /// Get / set the crossover type
+        /// </summary>
         public string CrossoverType
         {
             get { return crossoverType; }
             set { crossoverType = value; }
         }
 
+        /// <summary>
+        /// Serialize a table into a string
+        /// This is done by having each digit in the table[] padded to the left with x amount of zeros,
+        /// where 'x' is the max number of sections available in requiredSections[]
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         private string SerializeTable(int[] table)
         {
             string serializedTable = "";
@@ -97,6 +128,9 @@ namespace UoftTimetableGenerator.Generator
             return serializedTable;
         }
 
+        /// <summary>
+        /// Perform one evolution in the population
+        /// </summary>
         private void EvolvePopulation()
         {
             // Store the best one
@@ -172,6 +206,15 @@ namespace UoftTimetableGenerator.Generator
                 fitnessScores[i] = GetFitnessScore(population[i]);
         }
 
+        /// <summary>
+        /// Perform a single point crossover with two parents
+        /// </summary>
+        /// <param name="parent1">The gene to the first parent (table)</param>
+        /// <param name="parent2">The gene to the second parent (table)</param>
+        /// <returns>
+        /// Two valid children, each represented with a gene. 
+        /// If the parents cannot reproduce, then it will return null
+        /// </returns>
         private Tuple<int[], int[]> PerformSinglePointCrossover(int[] parent1, int[] parent2)
         {
             if (random.NextDouble() > crossoverRate)
@@ -196,6 +239,15 @@ namespace UoftTimetableGenerator.Generator
             return new Tuple<int[], int[]>(child1, child2);
         }
 
+        /// <summary>
+        /// Perform a double point crossover with two parents
+        /// </summary>
+        /// <param name="parent1">The gene to the first parent (table)</param>
+        /// <param name="parent2">The gene to the second parent (table)</param>
+        /// <returns>
+        /// Two valid children, each represented with a gene. 
+        /// If the parents cannot reproduce, then it will return null
+        /// </returns>
         private Tuple<int[], int[]> PerformDoublePointCrossover(int[] parent1, int[] parent2)
         {
             if (random.NextDouble() > crossoverRate)
@@ -230,6 +282,15 @@ namespace UoftTimetableGenerator.Generator
             return new Tuple<int[], int[]>(child1, child2);
         }
 
+        /// <summary>
+        /// Perform a uniform crossover with two parents
+        /// </summary>
+        /// <param name="parent1">The gene to the first parent (table)</param>
+        /// <param name="parent2">The gene to the second parent (table)</param>
+        /// <returns>
+        /// Two valid children, each represented with a gene. 
+        /// If the parents cannot reproduce, then it will return null
+        /// </returns>
         private Tuple<int[], int[]> PerformUniformCrossover(int[] parent1, int[] parent2)
         {
             if (random.NextDouble() > crossoverRate)
@@ -254,6 +315,15 @@ namespace UoftTimetableGenerator.Generator
             return new Tuple<int[], int[]>(child1, child2);
         }
 
+        /// <summary>
+        /// Perform the standard crossover with two parents
+        /// </summary>
+        /// <param name="parent1">The gene to the first parent (table)</param>
+        /// <param name="parent2">The gene to the second parent (table)</param>
+        /// <returns>
+        /// A child, represented with a gene. 
+        /// If the parents cannot reproduce, then it will return null
+        /// </returns>
         private int[] PerformOldCrossover(int[] parent1, int[] parent2)
         {
             if (random.NextDouble() > crossoverRate)
@@ -271,6 +341,10 @@ namespace UoftTimetableGenerator.Generator
             return child;
         }
 
+        /// <summary>
+        /// Performs random mutation on a table
+        /// </summary>
+        /// <param name="table">The gene to a table</param>
         private void PerformMutation(int[] table)
         {
             for (int i = 0; i < requiredSections.Count; i++)
@@ -283,6 +357,10 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Perform a tournament selection on the current population[]
+        /// </summary>
+        /// <returns>The index to a table in population[]</returns>
         private int PerformTournamentSelection()
         {
             int index1 = random.Next(0, population.Count);
@@ -293,6 +371,13 @@ namespace UoftTimetableGenerator.Generator
                 return GetBestTable(index2, index1 + 1);
         }
 
+        /// <summary>
+        /// Get the best table in a range of tables in population[] 
+        /// based on their fitness scores, stored in fitnessScores[]
+        /// </summary>
+        /// <param name="leftIndex">The left range in population[]</param>
+        /// <param name="rightIndex">The right range in population[]</param>
+        /// <returns>The index to the best table in population[]</returns>
         private int GetBestTable(int leftIndex, int rightIndex)
         {
             int bestTable = -1;
@@ -309,6 +394,10 @@ namespace UoftTimetableGenerator.Generator
             return bestTable;
         }
 
+        /// <summary>
+        /// Generates a random table
+        /// </summary>
+        /// <returns>A random table</returns>
         private int[] GenerateRandomTable()
         {
             int[] table = new int[requiredSections.Count];
@@ -320,6 +409,11 @@ namespace UoftTimetableGenerator.Generator
             return table;
         }
 
+        /// <summary>
+        /// Gets a timetable by either creating one or seeing if it already exists in the cache
+        /// </summary>
+        /// <param name="table">A gene to the table</param>
+        /// <returns>An obj representation of a table</returns>
         private YearlyTimetable GetTimetable(int[] table)
         {
             // Check if it already exists
@@ -342,6 +436,11 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get the fitness score of a table
+        /// </summary>
+        /// <param name="table">The gene of a table</param>
+        /// <returns>The fitness score of the table</returns>
         public double GetFitnessScore(int[] table)
         { 
             YearlyTimetable timetable = GetTimetable(table);
@@ -404,6 +503,10 @@ namespace UoftTimetableGenerator.Generator
             return score;
         }
 
+        /// <summary>
+        /// Run the algorithm and get the stats per generation
+        /// </summary>
+        /// <returns>The stats per generation</returns>
         public StatsPerGeneration[] GenerateTimetablesWithStats()
         {
             fitnessScores = new double[populationSize];
@@ -470,6 +573,10 @@ namespace UoftTimetableGenerator.Generator
             return stats;
         }
 
+        /// <summary>
+        /// Generate the timetables
+        /// </summary>
+        /// <returns>A list of timetables generated</returns>
         public List<YearlyTimetable> GetTimetables()
         {
             fitnessScores = new double[populationSize];

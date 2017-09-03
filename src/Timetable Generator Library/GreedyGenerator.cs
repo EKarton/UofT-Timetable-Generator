@@ -7,6 +7,9 @@ using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.Generator
 {
+    /// <summary>
+    /// A class that generates timetables using the Greedy algorithm
+    /// </summary>
     public class GreedyGenerator : ITimetableGenerator
     {
         private List<Section[]> requiredSections = new List<Section[]>();

@@ -31,6 +31,12 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         public double MaxScores { get; set; }
 
+        /// <summary>
+        /// Add two stats together
+        /// </summary>
+        /// <param name="stats1">Stats 1</param>
+        /// <param name="stats2">Stats 2</param>
+        /// <returns>The sum of the two stats</returns>
         public static StatsPerGeneration operator +(StatsPerGeneration stats1, StatsPerGeneration stats2)
         {
             return new StatsPerGeneration()
@@ -42,6 +48,12 @@ namespace UoftTimetableGenerator.Generator
             };
         }
 
+        /// <summary>
+        /// Divide stats'properties by a value
+        /// </summary>
+        /// <param name="stats1">A stats obj</param>
+        /// <param name="value">A value</param>
+        /// <returns>The result of dividing the stats by a value</returns>
         public static StatsPerGeneration operator /(StatsPerGeneration stats1, int value)
         {
             return new StatsPerGeneration()

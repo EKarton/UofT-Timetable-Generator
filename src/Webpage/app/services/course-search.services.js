@@ -5,13 +5,13 @@
     app.service("CourseSearch", function ($http) {
 
         /**
-        * A class used to represent a course
-        * @constructor
-        * @param {String} code The course code
-        * @param {String} term The term, either "Fall", "Winter", or "Year"
-        * @param {String} description A brief description of the course
-        * @param {String} campus Which campus the course is being taught at.
-        */
+         * A class used to represent a course
+         * @constructor
+         * @param {String} code - The course code
+         * @param {String} term - The term, either "Fall", "Winter", or "Year"
+         * @param {String} description - A brief description of the course
+         * @param {String} campus - Which campus the course is being taught at.
+         */
         var Course = function (code, term, description, campus) {
             this.code = code;
             this.term = term;
@@ -19,8 +19,28 @@
             this.campus = campus;
         };
 
+        // Course results and the query for that course result, cached, from calling th getUoftCourses()
+        var cachedCourseResults = [];
+        var oldQuery = "";
 
+        /**
+         * Get uoft courses, given the course code
+         * Pre-condition: the given course code must be at least 3 chars in length.
+         * If not, it will not get the course results
+         * @param {string} query - Complete / incomplete UofT course codes
+         * @param {method(courseResults)} onSuccess - The callback that recieves UofT course results
+         * @param {method(promise)} onFail - The callback that handles when it is uable to get course results
+         */
         this.getUoftCourses = function (query, onSuccess, onError) {
+
+            // Avoid making an http request if the user enters the same department code
+            if (this.oldQuery === query)
+                return cachedCourseResults;
+
+            // Check if the new department code is >= 3 chars long
+            if (query.length != 3)
+                return;
+
             var obj = this;
             var url = "http://localhost:53235/api/courses?query=" + query;
 
@@ -43,6 +63,9 @@
                         var campus = "St. George";
                         obj.courseResults.push(new Course(code, term, description, campus));
                     }
+
+                    // Cache the course results
+                    obj.cachedCourseResults = obj.courseResults;
 
                     onSuccess(obj.courseResults);
                 },

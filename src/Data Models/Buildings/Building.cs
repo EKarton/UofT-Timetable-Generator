@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace UoftTimetableGenerator.DataModels
 {
+    /// <summary>
+    /// A class used to hold information about a building
+    /// </summary>
     public class Building
     {
-        // Constructor used to convert the building in datacontext to the building in datamodels
+        /// <summary>
+        /// Constructor used to convert the building in datacontext to the building in datamodels
+        /// </summary>
+        /// <param name="oldBuilding">Raw data from the database</param>
         internal Building(DataContext.Building oldBuilding)
         {
             BuildingName = oldBuilding.BuildingName;
@@ -18,10 +24,29 @@ namespace UoftTimetableGenerator.DataModels
             Longitude = oldBuilding.Longitude.GetValueOrDefault(0);
         }
 
+        /// <summary>
+        /// Get / set the building name
+        /// </summary>
         public string BuildingName { get; set; }
+
+        /// <summary>
+        /// Get / set the building code
+        /// </summary>
         public string BuildingCode { get; set; }
+
+        /// <summary>
+        /// Get / set the address
+        /// </summary>
         public string Address { get; set; }
+
+        /// <summary>
+        /// Get / set the latitude
+        /// </summary>
         public double Latitude { get; set; }
+
+        /// <summary>
+        /// Get / set the longitude
+        /// </summary>
         public double Longitude { get; set; }
     }
 }

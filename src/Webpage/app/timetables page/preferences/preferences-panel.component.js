@@ -20,9 +20,31 @@
             this.lunchPeriod = this.initialPreferences.lunchPeriod;
 
             /**
-            * Called when one of the buttons for the ClassType property is clicked
-            * If the newClassType is the same as the previous class type, it will set the current class type to null
-            * @param {String} newClassType The new class type
+            * Called when one-way binding value (s) is changed
+            * @param {changeObj} changeObj - A change object (refer to the Angular JS 1.5 documentation)
+            */
+            this.$onChanges = function (changeObj) {
+                if (changeObj.classType != undefined)
+                    this.classType = changeObj.classType.currentValue;
+
+                if (changeObj.walkDistance != undefined)
+                    this.walkDistance = changeObj.walkDistance.currentValue;
+
+                if (changeObj.numDaysInClass != undefined)
+                    this.numDaysInClass = changeObj.numDaysInClass.currentValue;
+
+                if (changeObj.timeBetweenClasses != undefined)
+                    this.timeBetweenClasses = changeObj.timeBetweenClasses.currentValue;
+
+                if (changeObj.lunchPeriod != undefined)
+                    this.lunchPeriod = changeObj.lunchPeriod.currentValue;
+            };
+
+            /**
+            * Changes the preferences' class type property
+            * If the newClassType is the same as the current preferences' class type property,
+             * it will set the preferences' class type property to null
+            * @param {String} newClassType - The new class type setting
             */
             this.changeClassType = function (newClassType) {
                 if (this.classType === newClassType)
@@ -32,9 +54,10 @@
             };
 
             /**
-            * Called when one of the buttons for the WalkDistance property is clicked
-            * If the newWalkDistance is the same as the previous class type, it will set the current class type to null
-            * @param {String} newWalkDistance The new walk distance
+            * Change the preferences' total walk distance property
+            * If the newWalkDistance is the same as the current preferences' walk distance property,
+             * it will set the preferences' walk distance property to null
+            * @param {String} newWalkDistance - The new walk distance setting
             */
             this.changeWalkDistance = function (newWalkDistance) {
                 if (this.walkDistance === newWalkDistance)
@@ -43,6 +66,12 @@
                     this.walkDistance = newWalkDistance;
             };
 
+            /**
+            * Change the preferences' number of days in class property
+            * If the newNumDaysInClass is the same as the current preferences' number of days in class
+             * property, it will set the preferences' number of days in class property to null
+            * @param {String} newNumDaysInClass - The new number of days in class setting
+            */
             this.changeNumDaysInClass = function (newNumDaysInClass) {
                 if (this.numDaysInClass === newNumDaysInClass)
                     this.numDaysInClass = null;
@@ -50,6 +79,12 @@
                     this.numDaysInClass = newNumDaysInClass;
             };
 
+            /**
+             * Change the preferences' time between classes property
+             * If the newTimeBetweenClasses is the same as the current preferneces' time between classes
+             * property, it will set the preferences' time between classes property to null
+             * @param {int} newTimeBetweenClasses - The time (minutes) between classes
+             */
             this.changeTimeBetweenClasses = function (newTimeBetweenClasses) {
                 if (this.timeBetweenClasses === newTimeBetweenClasses)
                     this.timeBetweenClasses = null;
@@ -57,6 +92,9 @@
                     this.timeBetweenClasses = newTimeBetweenClasses;
             };
 
+            /**
+             * Called when the apply button is clicked
+             */
             this.apply = function () {
                 console.log("Apply clicked");
                 console.log("New settings", this.classType, this.walkDistance, this.daysWithClass, this.timeBetweenClasses, this.lunchPeriod);
@@ -72,6 +110,9 @@
                 this.onUpdate({ preferences: newPreferences })
             };
 
+            /**
+             * Called when the cancel button is clicked
+             */
             this.cancel = function () {
                 this.onCancel();
             };

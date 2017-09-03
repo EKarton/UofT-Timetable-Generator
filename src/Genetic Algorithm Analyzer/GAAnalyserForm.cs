@@ -15,10 +15,14 @@ using UoftTimetableGenerator.Generator;
 
 namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
 {
+    /// <summary>
+    /// A class that handles interactions with the UI
+    /// </summary>
     public partial class GAAnalyzerForm : Form
     {
         private List<Course> courses = new List<Course>();
 
+        // Default preferences
         private Preferences preferences = new Preferences()
         {
             ClassType = Preferences.Day.Undefined,
@@ -28,6 +32,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
             LunchPeriod = 0
         };
 
+        // Default restrictions
         private Restrictions restrictions = new Restrictions()
         {
             EarliestClass = null,
@@ -35,23 +40,37 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
             WalkDurationInBackToBackClasses = 20
         };
 
+        /// <summary>
+        /// Constructs a new window for the GA analyzer
+        /// </summary>
         public GAAnalyzerForm()
         {
             InitializeComponent();
             crossoverMethodBox.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Handles when the window is loaded and displayed
+        /// </summary>
+        /// <param name="sender">The window</param>
+        /// <param name="e">Arguements passed to this event handler</param>
         private void GAAnalyzerForm_Load(object sender, EventArgs e)
         {
             LoadData();
             UpdateStats();
         }
 
+        /// <summary>
+        /// Get data from the database
+        /// </summary>
         private void LoadData()
         {
             courses = UoftDatabaseService.GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
         }
 
+        /// <summary>
+        /// Update the statistical data in the charts
+        /// </summary>
         private void UpdateStats()
         {
             // Get the parameters
@@ -146,6 +165,11 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
                 diversityChart.Series["Diversity (%)"].Points.Add(new DataPoint(i, avgStats[i].PopulationDiversity * 100));
         }
 
+        /// <summary>
+        /// Handles when the run button is clicked
+        /// </summary>
+        /// <param name="sender">The button that called this function</param>
+        /// <param name="e">The parameters to this event handler</param>
         private void runBttn_Click(object sender, EventArgs e)
         {
             UpdateStats();

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace UoftTimetableGenerator.Generator
 {
+    /// <summary>
+    /// A class (temp!)
+    /// </summary>
     public class RedBlackTree
     {
         public int Num { get; set; }

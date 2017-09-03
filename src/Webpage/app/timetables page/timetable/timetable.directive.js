@@ -4,6 +4,15 @@
     var app = angular.module("timetableApp");
     app.directive("timetable", function ($window) {
 
+        /**
+         * A class used to contain graphic and content information about a rect. block in the timetable
+         * @param {int} x - The x coordinate of the top-left corner of this block
+         * @param {int} y - The y coordinate of the top-left corner of this block
+         * @param {int} width - The width of the block
+         * @param {int} height - The height of the block
+         * @param {string} color - The CSS color of this block
+         * @param {string[]} content -The content in the block
+         */
         var TimetableBlock = function (x, y, width, height, color, content) {
             this.x = x;
             this.y = y;
@@ -13,6 +22,13 @@
             this.content = content;
         };
 
+        /**
+         * A class used to represent a grid line in the timetable
+         * @param {int} x1 - The x coordinate of the first point
+         * @param {int} y1 - The y coordinate of the first point
+         * @param {int} x2 -The x coordinate of the second point
+         * @param {int} y2 - The y coordinate of the second point
+         */
         var GridLine = function (x1, y1, x2, y2) {
             this.x1 = x1;
             this.y1 = y1;
@@ -20,31 +36,64 @@
             this.y2 = y2;
         };
 
+        /**
+         * A class used to represent a label in the timetable
+         * @param {string} label - The text of this label
+         * @param {int} x - The x coordinate of this label
+         * @param {int} y - The y coordinate of this label
+         */
         var Label = function (x, y, label) {
             this.x = x;
             this.y = y;
             this.label = label;
         }
 
+        /**
+         * Stores all the important properties / variables / constants for this timetable directive
+         * @param {any} $scope - The $scope of this directive
+         * @param {any} $element - The element of this directive
+         */
         var constants = function ($scope, $element) {
             $scope.days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             $scope.earliestTime = 9.00;
             $scope.latestTime = 23.00;
 
+            // The width/height of the SVG element
             $scope.svgWidth = null;
             $scope.svgHeight = null;
+
+            // The height of the labels that show the days of the week
             $scope.headerHeight = 20;
+
+            // The width of the column containing the time labels in the timetable
             $scope.timesColumnWidth = 40;
+
+            // The height of each row in the timetable
             $scope.dataRowHeight = 70;
 
+            /**
+             * Returns the height for each row in the timetable
+             */
             $scope.getRowHeight = function(){
                 return 70;
             };
         }
 
+        /**
+         * Creates all the SVG elements used to render the timetable
+         * @param {any} scope - The scope of this directive
+         * @param {any} element - The elements in this directive
+         * @param {any} attributes - The attributes attached to this directive
+         */
         var createTimetableElements = function (scope, element, attributes) {
+
+            // The width for each column representing the days of the week
             var columnWidth = null;
 
+            /**
+             * Create the labels that show the days of the week in the timetable,
+             * and saves them in scope.headerLabels[]
+             */
             function createHeaderLabels() {
                 scope.headerLabels = [];
 
@@ -56,6 +105,11 @@
                 }
             }
 
+            /**
+             * Returns a string list of all the content in a timetable block
+             * @param {SimplifiedTimetableBlock} block -The block
+             * @return {string[]} The content in the timetable block
+             */
             function getTimetableBlocksContent(block) {
                 // Get the instructors to a string
                 var instructors = "";
@@ -87,6 +141,11 @@
                 return content;
             }
 
+            /**
+             * Creates and populates the scope.timetableBlocks for the timetable blocks in this timetable
+             * @param {SimplifiedTimetableBlock} blocks - The blocks in the current timetable
+             * @param {any} colorScheme - The color scheme for the timetable blocks
+             */
             function createTimetableBlocks(blocks, colorScheme){
                 scope.timetableBlocks = [];
 
@@ -101,6 +160,10 @@
                 }
             }
 
+            /**
+             * Creates vertical and horizontal grid lines and saves them in
+             * scope.gridLines[] for the timetable directive
+             */
             function createGridLines() {
                 scope.gridLines = [];
 
@@ -124,6 +187,10 @@
                 }
             }
 
+            /**
+             * Creates the labels that show the times for each row in the timetable,
+             * and saves them in scope.timeLabels
+             */
             function createTimeLabels() {
                 scope.timeLabels = [];
 
@@ -135,6 +202,9 @@
                 }
             }
 
+            /**
+             * Set the size of the SVG element
+             */
             function setSize() {
                 var svgElement = element.find("svg")[0];
 
@@ -152,6 +222,7 @@
                 //console.log("Actual", svgElement.getBoundingClientRect().width, svgElement.getBoundingClientRect().height, scope.headerHeight);
             };
 
+            // Each time the data's value is changed, it updates the graph
             scope.$watchCollection("[blocks, colorscheme]", function (newValues, oldValues) {
                 var blocks = newValues[0];
                 var colorScheme = newValues[1];

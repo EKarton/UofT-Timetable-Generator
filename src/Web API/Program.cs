@@ -10,6 +10,10 @@ namespace UoftTimetableGenerator.WebAPI
 {
     public class Program
     {
+        /// <summary>
+        /// Starts the web api
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()

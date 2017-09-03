@@ -18,6 +18,21 @@
             this.walkDurationInBackToBackClasses = this.initialRestrictions.walkDurationInBackToBackClasses;
 
             /**
+             * Called when the value of any one-way binding(s) has been changed
+             * @param {changeObj} changeObj - The changed one-way binding values (refer to Angular JS 1.5 doc)
+             */
+            this.$onChanges = function (changeObj) {
+                if (changeObj.earliestClass != undefined)
+                    this.earliestClass = changeObj.earliestClass.currentValue;
+
+                if (changedObj.latestClass != undefined)
+                    this.latestClass = changedObj.latestClass.currentValue;
+
+                if (changedObj.walkDurationInBackToBackClasses != undefined)
+                    this.walkDurationInBackToBackClasses = changedObj.walkDurationInBackToBackClasses.currentValue;
+            };
+
+            /**
             * Called when the Apply button is clicked
             */
             this.apply = function () {

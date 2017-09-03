@@ -4,17 +4,32 @@ using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.Generator
 {
+    /// <summary>
+    /// A class used to hold the sections present in one term
+    /// </summary>
     public class SeasonalTimetable
     {
+        // A list of all sections in this object 
         private List<Section> sections = new List<Section>();
+
+        // The current session stored in this node
         private Session session = null;
+
+        // Red-black-tree properties
         private string color = "Black";
         private SeasonalTimetable leftTree = null;
         private SeasonalTimetable rightTree = null;
         private SeasonalTimetable parent = null;
 
+        /// <summary>
+        /// Constructs an empty seasonal timetable
+        /// </summary>
         public SeasonalTimetable() {  }
 
+        /// <summary>
+        /// Constructs a seasonal timetable-leaf
+        /// </summary>
+        /// <param name="session"></param>
         private SeasonalTimetable(Session session)
         {
             this.session = session;
@@ -22,6 +37,9 @@ namespace UoftTimetableGenerator.Generator
             rightTree = new SeasonalTimetable();
         }
 
+        /// <summary>
+        /// Get the sibling of this red-black-tree
+        /// </summary>
         private SeasonalTimetable Sibling
         {
             get
@@ -35,16 +53,25 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Determines if this red-black-tree is empty or not
+        /// </summary>
         public bool IsEmpty
         {
             get { return session == null; }
         }
 
+        /// <summary>
+        /// Get / set the sections present in this red-black-tree
+        /// </summary>
         public List<Section> Sections
         {
             get { return sections; }
         }
 
+        /// <summary>
+        /// True if this tree is a leaf; else false
+        /// </summary>
         public bool IsLeaf
         {
             get
@@ -58,6 +85,11 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Determines is a session is in this red-black-tree; else false
+        /// </summary>
+        /// <param name="session">A session</param>
+        /// <returns>True if it is in the red-black-tree; else false</returns>
         private bool Contains(Session session)
         {
             if (IsEmpty)
@@ -74,6 +106,11 @@ namespace UoftTimetableGenerator.Generator
                 return false;
         }
 
+        /// <summary>
+        /// Determines if a section is in this seasonal timetable
+        /// </summary>
+        /// <param name="section">A section</param>
+        /// <returns>True if the section is in this seasonal timetable; else false</returns>
         public bool Contains(Section section)
         {
             foreach (Session session in section.Sessions)
@@ -82,6 +119,11 @@ namespace UoftTimetableGenerator.Generator
             return true;
         }
 
+        /// <summary>
+        /// Determines if a session fits in this red-black-tree
+        /// </summary>
+        /// <param name="session">A session</param>
+        /// <returns>True if it fits; else false</returns>
         private bool DoesSessionFit(Session session)
         {
             if (IsEmpty)
@@ -95,6 +137,11 @@ namespace UoftTimetableGenerator.Generator
                 return false;
         }
 
+        /// <summary>
+        /// Determines if a section fits in this timetable
+        /// </summary>
+        /// <param name="section">A section</param>
+        /// <returns>True if it fits; else false</returns>
         public bool DoesSectionFit(Section section)
         {
             foreach (Session session in section.Sessions)
@@ -106,6 +153,10 @@ namespace UoftTimetableGenerator.Generator
             return true;
         }
 
+        /// <summary>
+        /// Get a list of sessions present in this red-black-tree
+        /// </summary>
+        /// <returns>A list of sessions in this tree</returns>
         private List<Session> GetSessions()
         {
             if (IsEmpty)
@@ -123,6 +174,10 @@ namespace UoftTimetableGenerator.Generator
             return sortedSessions;
         }
 
+        /// <summary>
+        /// Make a deep-copy of this timetable
+        /// </summary>
+        /// <returns></returns>
         public SeasonalTimetable MakeCopyOfTimetable()
         {
             if (IsEmpty)
@@ -141,6 +196,11 @@ namespace UoftTimetableGenerator.Generator
             return newTree;
         }
 
+        /// <summary>
+        /// Determine if another timetable is the same as this timetable (by value)
+        /// </summary>
+        /// <param name="otherTable">Another timetable</param>
+        /// <returns>True if it is the same; else false</returns>
         public bool IsEqualTo(SeasonalTimetable otherTable)
         {
             if (session != otherTable.session)
@@ -166,6 +226,10 @@ namespace UoftTimetableGenerator.Generator
             return isLeftTreesEqual && isRightTreesEqual;
         }
 
+        /// <summary>
+        /// Print the current timetable in the console
+        /// </summary>
+        /// <param name="tabs"></param>
         public void Show(string tabs = "")
         {
             if (IsEmpty)
@@ -179,6 +243,11 @@ namespace UoftTimetableGenerator.Generator
             rightTree.Show(tabs + "  ");
         }
 
+        /// <summary>
+        /// Add a section in this timetable if it fits
+        /// </summary>
+        /// <param name="section">A section</param>
+        /// <returns>True if the section fits and has been added to the timetable; else false</returns>
         public bool AddSection(Section section)
         {
             // Check if it can fit
@@ -192,6 +261,11 @@ namespace UoftTimetableGenerator.Generator
             return true;
         }
 
+        /// <summary>
+        /// Add a session to this tree if it fits
+        /// </summary>
+        /// <param name="session">A session</param>
+        /// <returns>True if the session fits and is added to this tree; else false</returns>
         private bool AddSession(Session session)
         {
             // If it is an empty tree
@@ -236,6 +310,10 @@ namespace UoftTimetableGenerator.Generator
             return false;
         }
 
+        /// <summary>
+        /// Rebalance the tree
+        /// </summary>
+        /// <param name="addedSession">The added session</param>
         private void RebalanceTree(SeasonalTimetable addedSession)
         {
             // Case 1
@@ -269,6 +347,10 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Perform insertion reordering 1
+        /// </summary>
+        /// <param name="newNode">A child node in this tree that has the newly added session</param>
         private void PerformInsertionReordering1(SeasonalTimetable newNode)
         {
             SeasonalTimetable k = newNode;
@@ -290,6 +372,10 @@ namespace UoftTimetableGenerator.Generator
             newG.parent = g;
         }
 
+        /// <summary>
+        /// Perform insertion reordering 2
+        /// </summary>
+        /// <param name="newNode">A child node in this tree that has the newly added session</param>
         private void PerformInsertionReordering2(SeasonalTimetable newNode)
         {
             SeasonalTimetable k = newNode;
@@ -305,6 +391,10 @@ namespace UoftTimetableGenerator.Generator
             g.session = k.session;
         }
 
+        /// <summary>
+        /// Perform insertion reordering 3
+        /// </summary>
+        /// <param name="newNode">A child node in this tree that has the newly added session</param>
         private void PerformInsertionReordering3(SeasonalTimetable newNode)
         {
             SeasonalTimetable k = newNode;
@@ -326,6 +416,10 @@ namespace UoftTimetableGenerator.Generator
             k.parent = g;
         }
 
+        /// <summary>
+        /// Perform insertion reordering 4
+        /// </summary>
+        /// <param name="newNode">A child node in this tree that has the newly added session</param>
         private void PerformInsertionReordering4(SeasonalTimetable newNode)
         {
             SeasonalTimetable k = newNode;
@@ -347,6 +441,10 @@ namespace UoftTimetableGenerator.Generator
             k.parent = g;
         }
 
+        /// <summary>
+        /// Perform insertion recoloring
+        /// </summary>
+        /// <param name="newNode">A child node in this tree that has the newly added session</param>
         private void PerformInsertionRecoloring(SeasonalTimetable newNode)
         {
             SeasonalTimetable k = newNode;
@@ -366,6 +464,9 @@ namespace UoftTimetableGenerator.Generator
                 g.parent.RebalanceTree(g);
         }
 
+        /// <summary>
+        /// Get the total amount of time spent in class
+        /// </summary>
         public double TimeInClass
         {
             get
@@ -380,6 +481,9 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get the total amount of time spent in between classes
+        /// </summary>
         public double TotalTimeBetweenClasses
         {
             get
@@ -415,6 +519,9 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get the start time (24-hr time) of the earliest class in this timetable
+        /// </summary>
         public double EarliestClasstime
         {
             get
@@ -438,6 +545,9 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get the time (24-hr time) of the latest class in this timetable
+        /// </summary>
         public double LatestClasstime
         {
             get
@@ -461,16 +571,25 @@ namespace UoftTimetableGenerator.Generator
             }
         }
 
+        /// <summary>
+        /// Get / set the walk duration in each back to back classes
+        /// </summary>
         public List<double> WalkDurationInBackToBackClasses
         {
             get { return new List<double>(); }
         }
 
+        /// <summary>
+        /// Get / set the total walk duration in between classes
+        /// </summary>
         public double TotalWalkDuration
         {
             get { return 0; }
         }
 
+        /// <summary>
+        /// Get the average walk distance in between classes
+        /// </summary>
         public int AverageWalkingDistance
         {
             get
