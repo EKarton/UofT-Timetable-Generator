@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UoftTimetableGenerator.DataContext
+namespace DataContext
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,8 +22,8 @@ namespace UoftTimetableGenerator.DataContext
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UoftDatabase")]
-	internal partial class UoftDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT")]
+	public partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -51,33 +51,36 @@ namespace UoftTimetableGenerator.DataContext
     partial void InsertInstructorToActivity(InstructorToActivity instance);
     partial void UpdateInstructorToActivity(InstructorToActivity instance);
     partial void DeleteInstructorToActivity(InstructorToActivity instance);
+    partial void InsertSection(Section instance);
+    partial void UpdateSection(Section instance);
+    partial void DeleteSection(Section instance);
     #endregion
 		
-		public UoftDataContext() : 
-				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.UoftDatabaseConnectionString, mappingSource)
+		public UofTDataContext() : 
+				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.UofTConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public UoftDataContext(string connection) : 
+		public UofTDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public UoftDataContext(System.Data.IDbConnection connection) : 
+		public UofTDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public UoftDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public UofTDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public UoftDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public UofTDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -138,6 +141,14 @@ namespace UoftTimetableGenerator.DataContext
 				return this.GetTable<InstructorToActivity>();
 			}
 		}
+		
+		public System.Data.Linq.Table<Section> Sections
+		{
+			get
+			{
+				return this.GetTable<Section>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Activity")]
@@ -146,17 +157,13 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _ActivityID;
 		
 		private int _CourseID;
 		
-		private string _ActivityCode;
-		
 		private System.Nullable<char> _ActivityType;
 		
-		private EntitySet<Session> _Sessions;
-		
-		private EntitySet<InstructorToActivity> _InstructorToActivities;
+		private EntitySet<Section> _Sections;
 		
 		private EntityRef<Course> _Course;
 		
@@ -164,40 +171,37 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnActivityIDChanging(int value);
+    partial void OnActivityIDChanged();
     partial void OnCourseIDChanging(int value);
     partial void OnCourseIDChanged();
-    partial void OnActivityCodeChanging(string value);
-    partial void OnActivityCodeChanged();
     partial void OnActivityTypeChanging(System.Nullable<char> value);
     partial void OnActivityTypeChanged();
     #endregion
 		
 		public Activity()
 		{
-			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
-			this._InstructorToActivities = new EntitySet<InstructorToActivity>(new Action<InstructorToActivity>(this.attach_InstructorToActivities), new Action<InstructorToActivity>(this.detach_InstructorToActivities));
+			this._Sections = new EntitySet<Section>(new Action<Section>(this.attach_Sections), new Action<Section>(this.detach_Sections));
 			this._Course = default(EntityRef<Course>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ActivityID
 		{
 			get
 			{
-				return this._Id;
+				return this._ActivityID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._ActivityID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnActivityIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._ActivityID = value;
+					this.SendPropertyChanged("ActivityID");
+					this.OnActivityIDChanged();
 				}
 			}
 		}
@@ -226,26 +230,6 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityCode", DbType="NVarChar(MAX)")]
-		public string ActivityCode
-		{
-			get
-			{
-				return this._ActivityCode;
-			}
-			set
-			{
-				if ((this._ActivityCode != value))
-				{
-					this.OnActivityCodeChanging(value);
-					this.SendPropertyChanging();
-					this._ActivityCode = value;
-					this.SendPropertyChanged("ActivityCode");
-					this.OnActivityCodeChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityType", DbType="Char(1)")]
 		public System.Nullable<char> ActivityType
 		{
@@ -266,33 +250,20 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_Session", Storage="_Sessions", ThisKey="Id", OtherKey="ActivityID")]
-		public EntitySet<Session> Sessions
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_Section", Storage="_Sections", ThisKey="ActivityID", OtherKey="ActivityID")]
+		public EntitySet<Section> Sections
 		{
 			get
 			{
-				return this._Sessions;
+				return this._Sections;
 			}
 			set
 			{
-				this._Sessions.Assign(value);
+				this._Sections.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="Id", OtherKey="ActivityID")]
-		public EntitySet<InstructorToActivity> InstructorToActivities
-		{
-			get
-			{
-				return this._InstructorToActivities;
-			}
-			set
-			{
-				this._InstructorToActivities.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Activity", Storage="_Course", ThisKey="CourseID", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Activity", Storage="_Course", ThisKey="CourseID", OtherKey="CourseID", IsForeignKey=true)]
 		public Course Course
 		{
 			get
@@ -315,7 +286,7 @@ namespace UoftTimetableGenerator.DataContext
 					if ((value != null))
 					{
 						value.Activities.Add(this);
-						this._CourseID = value.Id;
+						this._CourseID = value.CourseID;
 					}
 					else
 					{
@@ -346,25 +317,13 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		private void attach_Sessions(Session entity)
+		private void attach_Sections(Section entity)
 		{
 			this.SendPropertyChanging();
 			entity.Activity = this;
 		}
 		
-		private void detach_Sessions(Session entity)
-		{
-			this.SendPropertyChanging();
-			entity.Activity = null;
-		}
-		
-		private void attach_InstructorToActivities(InstructorToActivity entity)
-		{
-			this.SendPropertyChanging();
-			entity.Activity = this;
-		}
-		
-		private void detach_InstructorToActivities(InstructorToActivity entity)
+		private void detach_Sections(Section entity)
 		{
 			this.SendPropertyChanging();
 			entity.Activity = null;
@@ -377,9 +336,9 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _SessionID;
 		
-		private int _ActivityID;
+		private int _SectionID;
 		
 		private System.Nullable<int> _Fall_BuildingID;
 		
@@ -393,20 +352,20 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private System.Nullable<double> _EndTime;
 		
-		private EntityRef<Activity> _Activity;
-		
 		private EntityRef<Building> _Building;
 		
 		private EntityRef<Building> _Building1;
+		
+		private EntityRef<Section> _Section;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnActivityIDChanging(int value);
-    partial void OnActivityIDChanged();
+    partial void OnSessionIDChanging(int value);
+    partial void OnSessionIDChanged();
+    partial void OnSectionIDChanging(int value);
+    partial void OnSectionIDChanged();
     partial void OnFall_BuildingIDChanging(System.Nullable<int> value);
     partial void OnFall_BuildingIDChanged();
     partial void OnFall_RoomNumberChanging(string value);
@@ -423,52 +382,52 @@ namespace UoftTimetableGenerator.DataContext
 		
 		public Session()
 		{
-			this._Activity = default(EntityRef<Activity>);
 			this._Building = default(EntityRef<Building>);
 			this._Building1 = default(EntityRef<Building>);
+			this._Section = default(EntityRef<Section>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SessionID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SessionID
 		{
 			get
 			{
-				return this._Id;
+				return this._SessionID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._SessionID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnSessionIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._SessionID = value;
+					this.SendPropertyChanged("SessionID");
+					this.OnSessionIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityID", DbType="Int NOT NULL")]
-		public int ActivityID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
 		{
 			get
 			{
-				return this._ActivityID;
+				return this._SectionID;
 			}
 			set
 			{
-				if ((this._ActivityID != value))
+				if ((this._SectionID != value))
 				{
-					if (this._Activity.HasLoadedOrAssignedValue)
+					if (this._Section.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnActivityIDChanging(value);
+					this.OnSectionIDChanging(value);
 					this.SendPropertyChanging();
-					this._ActivityID = value;
-					this.SendPropertyChanged("ActivityID");
-					this.OnActivityIDChanged();
+					this._SectionID = value;
+					this.SendPropertyChanged("SectionID");
+					this.OnSectionIDChanged();
 				}
 			}
 		}
@@ -601,41 +560,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_Session", Storage="_Activity", ThisKey="ActivityID", OtherKey="Id", IsForeignKey=true)]
-		public Activity Activity
-		{
-			get
-			{
-				return this._Activity.Entity;
-			}
-			set
-			{
-				Activity previousValue = this._Activity.Entity;
-				if (((previousValue != value) 
-							|| (this._Activity.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Activity.Entity = null;
-						previousValue.Sessions.Remove(this);
-					}
-					this._Activity.Entity = value;
-					if ((value != null))
-					{
-						value.Sessions.Add(this);
-						this._ActivityID = value.Id;
-					}
-					else
-					{
-						this._ActivityID = default(int);
-					}
-					this.SendPropertyChanged("Activity");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Building", ThisKey="Fall_BuildingID", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Building", ThisKey="Fall_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
 		public Building Building
 		{
 			get
@@ -658,7 +583,7 @@ namespace UoftTimetableGenerator.DataContext
 					if ((value != null))
 					{
 						value.Sessions.Add(this);
-						this._Fall_BuildingID = value.Id;
+						this._Fall_BuildingID = value.BuildingID;
 					}
 					else
 					{
@@ -669,7 +594,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Building1", ThisKey="Winter_BuildingID", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Building1", ThisKey="Winter_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
 		public Building Building1
 		{
 			get
@@ -692,13 +617,47 @@ namespace UoftTimetableGenerator.DataContext
 					if ((value != null))
 					{
 						value.Sessions1.Add(this);
-						this._Winter_BuildingID = value.Id;
+						this._Winter_BuildingID = value.BuildingID;
 					}
 					else
 					{
 						this._Winter_BuildingID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Building1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Session", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
+		public Section Section
+		{
+			get
+			{
+				return this._Section.Entity;
+			}
+			set
+			{
+				Section previousValue = this._Section.Entity;
+				if (((previousValue != value) 
+							|| (this._Section.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Section.Entity = null;
+						previousValue.Sessions.Remove(this);
+					}
+					this._Section.Entity = value;
+					if ((value != null))
+					{
+						value.Sessions.Add(this);
+						this._SectionID = value.SectionID;
+					}
+					else
+					{
+						this._SectionID = default(int);
+					}
+					this.SendPropertyChanged("Section");
 				}
 			}
 		}
@@ -730,7 +689,7 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _BuildingID;
 		
 		private string _BuildingName;
 		
@@ -754,8 +713,8 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnBuildingIDChanging(int value);
+    partial void OnBuildingIDChanged();
     partial void OnBuildingNameChanging(string value);
     partial void OnBuildingNameChanged();
     partial void OnBuildingCodeChanging(string value);
@@ -777,22 +736,22 @@ namespace UoftTimetableGenerator.DataContext
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int BuildingID
 		{
 			get
 			{
-				return this._Id;
+				return this._BuildingID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._BuildingID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnBuildingIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._BuildingID = value;
+					this.SendPropertyChanged("BuildingID");
+					this.OnBuildingIDChanged();
 				}
 			}
 		}
@@ -897,7 +856,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Sessions", ThisKey="Id", OtherKey="Fall_BuildingID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Sessions", ThisKey="BuildingID", OtherKey="Fall_BuildingID")]
 		public EntitySet<Session> Sessions
 		{
 			get
@@ -910,7 +869,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Sessions1", ThisKey="Id", OtherKey="Winter_BuildingID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Sessions1", ThisKey="BuildingID", OtherKey="Winter_BuildingID")]
 		public EntitySet<Session> Sessions1
 		{
 			get
@@ -923,7 +882,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance", Storage="_BuildingDistances", ThisKey="Id", OtherKey="BuildingID1")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance", Storage="_BuildingDistances", ThisKey="BuildingID", OtherKey="BuildingID1")]
 		public EntitySet<BuildingDistance> BuildingDistances
 		{
 			get
@@ -936,7 +895,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance1", Storage="_BuildingDistances1", ThisKey="Id", OtherKey="BuildingID2")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance1", Storage="_BuildingDistances1", ThisKey="BuildingID", OtherKey="BuildingID2")]
 		public EntitySet<BuildingDistance> BuildingDistances1
 		{
 			get
@@ -1024,7 +983,7 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _BuildingDistanceID;
 		
 		private int _BuildingID1;
 		
@@ -1042,9 +1001,9 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private System.Nullable<double> _CyclingDistance;
 		
-		private System.Nullable<double> _VehicleDuration;
+		private System.Nullable<double> _DrivingDuration;
 		
-		private System.Nullable<double> _VehicleDistance;
+		private System.Nullable<double> _DrivingDistance;
 		
 		private EntityRef<Building> _Building;
 		
@@ -1054,8 +1013,8 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnBuildingDistanceIDChanging(int value);
+    partial void OnBuildingDistanceIDChanged();
     partial void OnBuildingID1Changing(int value);
     partial void OnBuildingID1Changed();
     partial void OnBuildingID2Changing(int value);
@@ -1072,10 +1031,10 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnCyclingDurationChanged();
     partial void OnCyclingDistanceChanging(System.Nullable<double> value);
     partial void OnCyclingDistanceChanged();
-    partial void OnVehicleDurationChanging(System.Nullable<double> value);
-    partial void OnVehicleDurationChanged();
-    partial void OnVehicleDistanceChanging(System.Nullable<double> value);
-    partial void OnVehicleDistanceChanged();
+    partial void OnDrivingDurationChanging(System.Nullable<double> value);
+    partial void OnDrivingDurationChanged();
+    partial void OnDrivingDistanceChanging(System.Nullable<double> value);
+    partial void OnDrivingDistanceChanged();
     #endregion
 		
 		public BuildingDistance()
@@ -1085,22 +1044,22 @@ namespace UoftTimetableGenerator.DataContext
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingDistanceID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int BuildingDistanceID
 		{
 			get
 			{
-				return this._Id;
+				return this._BuildingDistanceID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._BuildingDistanceID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnBuildingDistanceIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._BuildingDistanceID = value;
+					this.SendPropertyChanged("BuildingDistanceID");
+					this.OnBuildingDistanceIDChanged();
 				}
 			}
 		}
@@ -1273,47 +1232,47 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VehicleDuration", DbType="Float")]
-		public System.Nullable<double> VehicleDuration
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrivingDuration", DbType="Float")]
+		public System.Nullable<double> DrivingDuration
 		{
 			get
 			{
-				return this._VehicleDuration;
+				return this._DrivingDuration;
 			}
 			set
 			{
-				if ((this._VehicleDuration != value))
+				if ((this._DrivingDuration != value))
 				{
-					this.OnVehicleDurationChanging(value);
+					this.OnDrivingDurationChanging(value);
 					this.SendPropertyChanging();
-					this._VehicleDuration = value;
-					this.SendPropertyChanged("VehicleDuration");
-					this.OnVehicleDurationChanged();
+					this._DrivingDuration = value;
+					this.SendPropertyChanged("DrivingDuration");
+					this.OnDrivingDurationChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VehicleDistance", DbType="Float")]
-		public System.Nullable<double> VehicleDistance
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrivingDistance", DbType="Float")]
+		public System.Nullable<double> DrivingDistance
 		{
 			get
 			{
-				return this._VehicleDistance;
+				return this._DrivingDistance;
 			}
 			set
 			{
-				if ((this._VehicleDistance != value))
+				if ((this._DrivingDistance != value))
 				{
-					this.OnVehicleDistanceChanging(value);
+					this.OnDrivingDistanceChanging(value);
 					this.SendPropertyChanging();
-					this._VehicleDistance = value;
-					this.SendPropertyChanged("VehicleDistance");
-					this.OnVehicleDistanceChanged();
+					this._DrivingDistance = value;
+					this.SendPropertyChanged("DrivingDistance");
+					this.OnDrivingDistanceChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance", Storage="_Building", ThisKey="BuildingID1", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance", Storage="_Building", ThisKey="BuildingID1", OtherKey="BuildingID", IsForeignKey=true)]
 		public Building Building
 		{
 			get
@@ -1336,7 +1295,7 @@ namespace UoftTimetableGenerator.DataContext
 					if ((value != null))
 					{
 						value.BuildingDistances.Add(this);
-						this._BuildingID1 = value.Id;
+						this._BuildingID1 = value.BuildingID;
 					}
 					else
 					{
@@ -1347,7 +1306,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance1", Storage="_Building1", ThisKey="BuildingID2", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance1", Storage="_Building1", ThisKey="BuildingID2", OtherKey="BuildingID", IsForeignKey=true)]
 		public Building Building1
 		{
 			get
@@ -1370,7 +1329,7 @@ namespace UoftTimetableGenerator.DataContext
 					if ((value != null))
 					{
 						value.BuildingDistances1.Add(this);
-						this._BuildingID2 = value.Id;
+						this._BuildingID2 = value.BuildingID;
 					}
 					else
 					{
@@ -1408,13 +1367,17 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _CourseID;
 		
 		private string _Code;
 		
-		private string _Title;
+		private string _Campus;
 		
 		private System.Nullable<char> _Term;
+		
+		private string _Title;
+		
+		private string _Description;
 		
 		private EntitySet<Activity> _Activities;
 		
@@ -1422,14 +1385,18 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnCourseIDChanging(int value);
+    partial void OnCourseIDChanged();
     partial void OnCodeChanging(string value);
     partial void OnCodeChanged();
-    partial void OnTitleChanging(string value);
-    partial void OnTitleChanged();
+    partial void OnCampusChanging(string value);
+    partial void OnCampusChanged();
     partial void OnTermChanging(System.Nullable<char> value);
     partial void OnTermChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
     #endregion
 		
 		public Course()
@@ -1438,22 +1405,22 @@ namespace UoftTimetableGenerator.DataContext
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CourseID
 		{
 			get
 			{
-				return this._Id;
+				return this._CourseID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._CourseID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnCourseIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._CourseID = value;
+					this.SendPropertyChanged("CourseID");
+					this.OnCourseIDChanged();
 				}
 			}
 		}
@@ -1478,22 +1445,22 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
-		public string Title
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Campus", DbType="NVarChar(MAX)")]
+		public string Campus
 		{
 			get
 			{
-				return this._Title;
+				return this._Campus;
 			}
 			set
 			{
-				if ((this._Title != value))
+				if ((this._Campus != value))
 				{
-					this.OnTitleChanging(value);
+					this.OnCampusChanging(value);
 					this.SendPropertyChanging();
-					this._Title = value;
-					this.SendPropertyChanged("Title");
-					this.OnTitleChanged();
+					this._Campus = value;
+					this.SendPropertyChanged("Campus");
+					this.OnCampusChanged();
 				}
 			}
 		}
@@ -1518,7 +1485,47 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Activity", Storage="_Activities", ThisKey="Id", OtherKey="CourseID")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_Activity", Storage="_Activities", ThisKey="CourseID", OtherKey="CourseID")]
 		public EntitySet<Activity> Activities
 		{
 			get
@@ -1570,7 +1577,7 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _InstructorID;
 		
 		private string _Name;
 		
@@ -1582,8 +1589,8 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnInstructorIDChanging(int value);
+    partial void OnInstructorIDChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
     partial void OnRatingChanging(System.Nullable<double> value);
@@ -1596,22 +1603,22 @@ namespace UoftTimetableGenerator.DataContext
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InstructorID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int InstructorID
 		{
 			get
 			{
-				return this._Id;
+				return this._InstructorID;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._InstructorID != value))
 				{
-					this.OnIdChanging(value);
+					this.OnInstructorIDChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._InstructorID = value;
+					this.SendPropertyChanged("InstructorID");
+					this.OnInstructorIDChanged();
 				}
 			}
 		}
@@ -1656,7 +1663,7 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="Id", OtherKey="InstructorID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="InstructorID", OtherKey="InstructorID")]
 		public EntitySet<InstructorToActivity> InstructorToActivities
 		{
 			get
@@ -1712,11 +1719,11 @@ namespace UoftTimetableGenerator.DataContext
 		
 		private int _InstructorID;
 		
-		private int _ActivityID;
-		
-		private EntityRef<Activity> _Activity;
+		private int _SectionID;
 		
 		private EntityRef<Instructor> _Instructor;
+		
+		private EntityRef<Section> _Section;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1726,14 +1733,14 @@ namespace UoftTimetableGenerator.DataContext
     partial void OnIdChanged();
     partial void OnInstructorIDChanging(int value);
     partial void OnInstructorIDChanged();
-    partial void OnActivityIDChanging(int value);
-    partial void OnActivityIDChanged();
+    partial void OnSectionIDChanging(int value);
+    partial void OnSectionIDChanged();
     #endregion
 		
 		public InstructorToActivity()
 		{
-			this._Activity = default(EntityRef<Activity>);
 			this._Instructor = default(EntityRef<Instructor>);
+			this._Section = default(EntityRef<Section>);
 			OnCreated();
 		}
 		
@@ -1781,6 +1788,177 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					if (this._Section.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSectionIDChanging(value);
+					this.SendPropertyChanging();
+					this._SectionID = value;
+					this.SendPropertyChanged("SectionID");
+					this.OnSectionIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_Instructor", ThisKey="InstructorID", OtherKey="InstructorID", IsForeignKey=true)]
+		public Instructor Instructor
+		{
+			get
+			{
+				return this._Instructor.Entity;
+			}
+			set
+			{
+				Instructor previousValue = this._Instructor.Entity;
+				if (((previousValue != value) 
+							|| (this._Instructor.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Instructor.Entity = null;
+						previousValue.InstructorToActivities.Remove(this);
+					}
+					this._Instructor.Entity = value;
+					if ((value != null))
+					{
+						value.InstructorToActivities.Add(this);
+						this._InstructorID = value.InstructorID;
+					}
+					else
+					{
+						this._InstructorID = default(int);
+					}
+					this.SendPropertyChanged("Instructor");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
+		public Section Section
+		{
+			get
+			{
+				return this._Section.Entity;
+			}
+			set
+			{
+				Section previousValue = this._Section.Entity;
+				if (((previousValue != value) 
+							|| (this._Section.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Section.Entity = null;
+						previousValue.InstructorToActivities.Remove(this);
+					}
+					this._Section.Entity = value;
+					if ((value != null))
+					{
+						value.InstructorToActivities.Add(this);
+						this._SectionID = value.SectionID;
+					}
+					else
+					{
+						this._SectionID = default(int);
+					}
+					this.SendPropertyChanged("Section");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Section")]
+	public partial class Section : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SectionID;
+		
+		private int _ActivityID;
+		
+		private string _SectionCode;
+		
+		private EntitySet<Session> _Sessions;
+		
+		private EntitySet<InstructorToActivity> _InstructorToActivities;
+		
+		private EntityRef<Activity> _Activity;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSectionIDChanging(int value);
+    partial void OnSectionIDChanged();
+    partial void OnActivityIDChanging(int value);
+    partial void OnActivityIDChanged();
+    partial void OnSectionCodeChanging(string value);
+    partial void OnSectionCodeChanged();
+    #endregion
+		
+		public Section()
+		{
+			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
+			this._InstructorToActivities = new EntitySet<InstructorToActivity>(new Action<InstructorToActivity>(this.attach_InstructorToActivities), new Action<InstructorToActivity>(this.detach_InstructorToActivities));
+			this._Activity = default(EntityRef<Activity>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					this.OnSectionIDChanging(value);
+					this.SendPropertyChanging();
+					this._SectionID = value;
+					this.SendPropertyChanged("SectionID");
+					this.OnSectionIDChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityID", DbType="Int NOT NULL")]
 		public int ActivityID
 		{
@@ -1805,7 +1983,53 @@ namespace UoftTimetableGenerator.DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_InstructorToActivity", Storage="_Activity", ThisKey="ActivityID", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionCode", DbType="NVarChar(MAX)")]
+		public string SectionCode
+		{
+			get
+			{
+				return this._SectionCode;
+			}
+			set
+			{
+				if ((this._SectionCode != value))
+				{
+					this.OnSectionCodeChanging(value);
+					this.SendPropertyChanging();
+					this._SectionCode = value;
+					this.SendPropertyChanged("SectionCode");
+					this.OnSectionCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Session", Storage="_Sessions", ThisKey="SectionID", OtherKey="SectionID")]
+		public EntitySet<Session> Sessions
+		{
+			get
+			{
+				return this._Sessions;
+			}
+			set
+			{
+				this._Sessions.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="SectionID", OtherKey="SectionID")]
+		public EntitySet<InstructorToActivity> InstructorToActivities
+		{
+			get
+			{
+				return this._InstructorToActivities;
+			}
+			set
+			{
+				this._InstructorToActivities.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Activity_Section", Storage="_Activity", ThisKey="ActivityID", OtherKey="ActivityID", IsForeignKey=true)]
 		public Activity Activity
 		{
 			get
@@ -1822,53 +2046,19 @@ namespace UoftTimetableGenerator.DataContext
 					if ((previousValue != null))
 					{
 						this._Activity.Entity = null;
-						previousValue.InstructorToActivities.Remove(this);
+						previousValue.Sections.Remove(this);
 					}
 					this._Activity.Entity = value;
 					if ((value != null))
 					{
-						value.InstructorToActivities.Add(this);
-						this._ActivityID = value.Id;
+						value.Sections.Add(this);
+						this._ActivityID = value.ActivityID;
 					}
 					else
 					{
 						this._ActivityID = default(int);
 					}
 					this.SendPropertyChanged("Activity");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_Instructor", ThisKey="InstructorID", OtherKey="Id", IsForeignKey=true)]
-		public Instructor Instructor
-		{
-			get
-			{
-				return this._Instructor.Entity;
-			}
-			set
-			{
-				Instructor previousValue = this._Instructor.Entity;
-				if (((previousValue != value) 
-							|| (this._Instructor.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Instructor.Entity = null;
-						previousValue.InstructorToActivities.Remove(this);
-					}
-					this._Instructor.Entity = value;
-					if ((value != null))
-					{
-						value.InstructorToActivities.Add(this);
-						this._InstructorID = value.Id;
-					}
-					else
-					{
-						this._InstructorID = default(int);
-					}
-					this.SendPropertyChanged("Instructor");
 				}
 			}
 		}
@@ -1891,6 +2081,30 @@ namespace UoftTimetableGenerator.DataContext
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Sessions(Session entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = this;
+		}
+		
+		private void detach_Sessions(Session entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = null;
+		}
+		
+		private void attach_InstructorToActivities(InstructorToActivity entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = this;
+		}
+		
+		private void detach_InstructorToActivities(InstructorToActivity entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = null;
 		}
 	}
 }

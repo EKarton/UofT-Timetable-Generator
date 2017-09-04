@@ -1,8 +1,7 @@
 ﻿CREATE TABLE [dbo].[Activity]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1, 1), 
-    [CourseID] INT NOT NULL FOREIGN KEY REFERENCES Course([Id]), 
-    [ActivityCode] NVARCHAR(MAX) NULL, 
+	[ActivityID] INT NOT NULL PRIMARY KEY IDENTITY(1, 1), 
+    [CourseID] INT NOT NULL FOREIGN KEY REFERENCES Course([CourseID]), 
     [ActivityType] CHAR NULL  
 )
 GO

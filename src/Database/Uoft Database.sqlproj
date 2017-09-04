@@ -18,7 +18,7 @@
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetLanguage>CS</TargetLanguage>
+    <TargetLanguage>VB</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
@@ -45,7 +45,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>1</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -62,7 +62,8 @@
   <ItemGroup>
     <Build Include="Tables\Activity.sql" />
     <Build Include="Tables\Building.sql" />
-    <Build Include="Tables\InstructorToActivity.sql" />
+    <Build Include="Tables\InstructorToSection.sql" />
+    <Build Include="Tables\Section.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Uoft Database.refactorlog" />

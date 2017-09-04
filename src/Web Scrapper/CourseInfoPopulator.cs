@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataContext;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
@@ -13,7 +12,7 @@ namespace UoftTimetableGenerator.WebScrapper
     {
         public void InsertCourseInfoToDatabase(bool redoEntireTable)
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 CourseList courseList = JsonConvert.DeserializeObject<CourseList>(File.ReadAllText("Course List.json"));
                 foreach (string courseCode in courseList.CourseNames)

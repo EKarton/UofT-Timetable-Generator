@@ -1,0 +1,7 @@
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\bin\Debug\UofT Database Converter.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\bin\Debug\UofT Database Converter.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\bin\Debug\UofT Database Converter.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\obj\Debug\UofT Database Converter.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\obj\Debug\UofT Database Converter.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\obj\Debug\UofT Database Converter.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\UofT Database Converter\obj\Debug\UofT Database Converter.pdb

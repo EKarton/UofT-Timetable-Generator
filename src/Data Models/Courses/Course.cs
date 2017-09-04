@@ -27,7 +27,15 @@ namespace UoftTimetableGenerator.DataModels
             CourseCode = oldCourse.Code;
             Title = oldCourse.Title;
             Term = oldCourse.Term.ToString();
+            Description = oldCourse.Description;
+            Campus = oldCourse.Campus;
 
+            Activities = new List<Activity>();
+            foreach (DataContext.Activity oldActivity in oldCourse.Activities)
+                Activities.Add(new Activity(oldActivity, this));
+            
+
+            /*
             // Sort the activities based on their type
             List<DataContext.Activity> oldLectures = new List<DataContext.Activity>();
             List<DataContext.Activity> oldTutorials = new List<DataContext.Activity>();
@@ -56,6 +64,7 @@ namespace UoftTimetableGenerator.DataModels
                 Activities.Add(new Activity(oldTutorials, "Tutorials", this));
             if (oldPracticals.Count > 0)
                 Activities.Add(new Activity(oldPracticals, "Practicals", this));
+                */
         }
 
         /// <summary>

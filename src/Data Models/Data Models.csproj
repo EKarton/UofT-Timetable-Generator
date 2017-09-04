@@ -53,10 +53,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Uoft.designer.cs">
+    <Compile Include="UofT.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Uoft.dbml</DependentUpon>
+      <DependentUpon>UofT.dbml</DependentUpon>
     </Compile>
     <Compile Include="UoftDatabaseService.cs" />
   </ItemGroup>
@@ -66,13 +66,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Uoft.dbml">
+    <None Include="UofT.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Uoft.designer.cs</LastGenOutput>
+      <LastGenOutput>UofT.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Uoft.dbml.layout">
-      <DependentUpon>Uoft.dbml</DependentUpon>
+    <None Include="UofT.dbml.layout">
+      <DependentUpon>UofT.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

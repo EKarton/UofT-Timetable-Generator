@@ -115,7 +115,7 @@ namespace UoftTimetableGenerator.WebScrapper
 
         public void UpdateBuildingDistanceInfo()
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 List<BuildingDistance> rows = db.BuildingDistances.ToList();
                 foreach (BuildingDistance row in rows)
@@ -135,8 +135,8 @@ namespace UoftTimetableGenerator.WebScrapper
                     row.CyclingDuration = null;
                     row.TransitDistance = null;
                     row.TransitDuration = null;
-                    row.VehicleDistance = null;
-                    row.VehicleDuration = null;
+                    row.DrivingDistance = null;
+                    row.DrivingDuration = null;
 
                     db.SubmitChanges();
                     Console.WriteLine("Successful! Has updated data for " + building1.BuildingCode + " -> " + building2.BuildingCode);
@@ -146,7 +146,7 @@ namespace UoftTimetableGenerator.WebScrapper
 
         public void InsertBuildingDistancesToDatabase(bool redoEntireTable)
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 List<Building> buildings = db.Buildings.ToList();
                 for (int i = 0; i < buildings.Count; i++)
@@ -190,8 +190,8 @@ namespace UoftTimetableGenerator.WebScrapper
                             CyclingDuration = null,
                             TransitDistance = null,
                             TransitDuration = null,
-                            VehicleDistance = null,
-                            VehicleDuration = null
+                            DrivingDistance = null,
+                            DrivingDuration = null
                         };
 
                         Console.WriteLine("Inserting new data " + building1.BuildingCode + " -> " + building2.BuildingCode);

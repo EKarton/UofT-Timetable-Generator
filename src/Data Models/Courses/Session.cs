@@ -22,14 +22,14 @@
             Section = sectionAttachedTo;
 
             if (oldSession.Building == null)
-                FallBuildingCode = "";
+                FallBuilding = null;
             else
-                FallBuildingCode = oldSession.Building.BuildingCode;
+                FallBuilding = new Building(oldSession.Building);
 
             if (oldSession.Building1 == null)
-                WinterBuildingCode = "";
+                WinterBuilding = null;
             else
-                WinterBuildingCode = oldSession.Building1.BuildingCode;
+                WinterBuilding = new Building(oldSession.Building1);
 
             FallRoomNumber = oldSession.Fall_RoomNumber;
             WinterRoomNumber = oldSession.Winter_RoomNumber;
@@ -45,12 +45,12 @@
         /// <summary>
         /// Get / set the fall building code of this session
         /// </summary>
-        public string FallBuildingCode { get; set; }
+        public Building FallBuilding { get; set; }
 
         /// <summary>
         /// Get / set the winter building code of this session
         /// </summary>
-        public string WinterBuildingCode { get; set; }
+        public Building WinterBuilding { get; set; }
 
         /// <summary>
         /// Get / set the room number in the fall term of this session

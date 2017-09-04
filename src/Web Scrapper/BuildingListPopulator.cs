@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataContext;
 using UoftTimetableGenerator.WebScrapper;
 
 namespace Web_Scrapper
@@ -13,7 +12,7 @@ namespace Web_Scrapper
     {
         public void UpdateBuildingsInfo()
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 db.Buildings.DeleteAllOnSubmit(db.Buildings);
                 db.SubmitChanges();
@@ -26,7 +25,7 @@ namespace Web_Scrapper
             Browser.Initialize();
             Browser.WebInstance.Url = "http://map.utoronto.ca/c/buildings";
 
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 IWebElement buildingsList = Browser.WebInstance.FindElement(By.ClassName("buildinglist"));
                 IReadOnlyList<IWebElement> buildingElements = buildingsList.FindElements(By.TagName("li"));
@@ -38,10 +37,14 @@ namespace Web_Scrapper
                     string buildingName = description[0].Trim();
                     string buildingCode = description[1].Trim();
 
-                    Building newBuilding = new Building();
-                    newBuilding.Address = address;
-                    newBuilding.BuildingCode = buildingCode;
-                    newBuilding.BuildingName = buildingName;
+                    Building newBuilding = new Building
+                    {
+                        Address = address + " Toronto, Canada",
+                        BuildingCode = buildingCode,
+                        BuildingName = buildingName,
+                        Latitude = null,
+                        Longitude = null
+                    };
 
                     db.Buildings.InsertOnSubmit(newBuilding);
                 }

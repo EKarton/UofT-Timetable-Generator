@@ -72,6 +72,11 @@
     <Compile Include="Course List\CourseListPage.cs" />
     <Compile Include="Course List\CourseListScrapper.cs" />
     <Compile Include="IWebScrapper.cs" />
+    <Compile Include="UofT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UofT.dbml</DependentUpon>
+    </Compile>
     <Compile Include="WebScrapperRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -82,12 +87,14 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Data Models\Data Models.csproj">
-      <Project>{ACA62F68-737A-4BFB-A3B9-2E6C663CCC4B}</Project>
-      <Name>Data Models</Name>
-    </ProjectReference>
+    <None Include="UofT.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UofT.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UofT.dbml.layout">
+      <DependentUpon>UofT.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Selenium\Web drivers\chromedriver.exe">

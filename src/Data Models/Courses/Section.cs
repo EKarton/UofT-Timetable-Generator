@@ -18,6 +18,7 @@ namespace UoftTimetableGenerator.DataModels
             Sessions = new List<Session>();
         }
 
+        /*
         /// <summary>
         /// Creates a section based on raw data from the database
         /// </summary>
@@ -30,6 +31,17 @@ namespace UoftTimetableGenerator.DataModels
             Instructors = new List<string>();
             Sessions = new List<Session>();
             foreach (DataContext.Session oldSession in oldActivity.Sessions)
+                Sessions.Add(new Session(oldSession, this));
+        }
+        */
+
+        public Section(DataContext.Section oldSection, Activity activity)
+        {
+            Activity = activity;
+            SectionCode = oldSection.SectionCode;
+            Instructors = new List<string>();
+            Sessions = new List<Session>();
+            foreach (DataContext.Session oldSession in oldSection.Sessions)
                 Sessions.Add(new Session(oldSession, this));
         }
 

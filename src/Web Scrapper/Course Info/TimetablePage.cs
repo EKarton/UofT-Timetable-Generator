@@ -4,14 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataContext;
-using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
     internal static class TimetablePage
     {
-        /*
         private static void WaitForContentToLoad()
         {
             // If the element does not exist, skip it.
@@ -167,10 +164,9 @@ namespace UoftTimetableGenerator.WebScrapper
             courseInfo.Practicals = practicals.ToArray();
             return courseInfo;
         }
-        */
+
         public static List<DataModels.Course> GetCourseInfo(string courseName)
         {
-            /*
             ClearFilters();
             EnterCourseCode(courseName);
             SearchForCourses();
@@ -200,11 +196,8 @@ namespace UoftTimetableGenerator.WebScrapper
                 });
             }
             return coursesInfo;
-            */
-            return null;
         }
 
-        /*
         public static void SearchForCourses()
         {
             Browser.FindClickableElement("id", "searchButton").Click();
@@ -220,6 +213,5 @@ namespace UoftTimetableGenerator.WebScrapper
         {
             Browser.FindElement("id", "btnClear").Click();
         }
-        */
     }
 }
