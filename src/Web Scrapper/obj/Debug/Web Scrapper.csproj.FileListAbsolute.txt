@@ -28,3 +28,19 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scra
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\obj\Debug\Web Scrapper.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Selenium\Web drivers\chromedriver.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\Source Code\Web Scrapper\bin\Debug\Data Models.dll.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Selenium\Web drivers\chromedriver.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Web Scrapper.exe.config
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\WebDriver.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\WebDriver.Support.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\WebDriver.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\WebDriver.Support.xml
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.exe
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.xml

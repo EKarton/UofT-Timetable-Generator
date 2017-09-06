@@ -22,7 +22,7 @@ namespace DataContext
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT 2017")]
 	public partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -48,16 +48,16 @@ namespace DataContext
     partial void InsertInstructor(Instructor instance);
     partial void UpdateInstructor(Instructor instance);
     partial void DeleteInstructor(Instructor instance);
-    partial void InsertInstructorToActivity(InstructorToActivity instance);
-    partial void UpdateInstructorToActivity(InstructorToActivity instance);
-    partial void DeleteInstructorToActivity(InstructorToActivity instance);
+    partial void InsertInstructorToSection(InstructorToSection instance);
+    partial void UpdateInstructorToSection(InstructorToSection instance);
+    partial void DeleteInstructorToSection(InstructorToSection instance);
     partial void InsertSection(Section instance);
     partial void UpdateSection(Section instance);
     partial void DeleteSection(Section instance);
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.UofTConnectionString, mappingSource)
+				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.UofT_2017ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -134,11 +134,11 @@ namespace DataContext
 			}
 		}
 		
-		public System.Data.Linq.Table<InstructorToActivity> InstructorToActivities
+		public System.Data.Linq.Table<InstructorToSection> InstructorToSections
 		{
 			get
 			{
-				return this.GetTable<InstructorToActivity>();
+				return this.GetTable<InstructorToSection>();
 			}
 		}
 		
@@ -1583,7 +1583,7 @@ namespace DataContext
 		
 		private System.Nullable<double> _Rating;
 		
-		private EntitySet<InstructorToActivity> _InstructorToActivities;
+		private EntitySet<InstructorToSection> _InstructorToSections;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1599,7 +1599,7 @@ namespace DataContext
 		
 		public Instructor()
 		{
-			this._InstructorToActivities = new EntitySet<InstructorToActivity>(new Action<InstructorToActivity>(this.attach_InstructorToActivities), new Action<InstructorToActivity>(this.detach_InstructorToActivities));
+			this._InstructorToSections = new EntitySet<InstructorToSection>(new Action<InstructorToSection>(this.attach_InstructorToSections), new Action<InstructorToSection>(this.detach_InstructorToSections));
 			OnCreated();
 		}
 		
@@ -1663,16 +1663,16 @@ namespace DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="InstructorID", OtherKey="InstructorID")]
-		public EntitySet<InstructorToActivity> InstructorToActivities
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToSection", Storage="_InstructorToSections", ThisKey="InstructorID", OtherKey="InstructorID")]
+		public EntitySet<InstructorToSection> InstructorToSections
 		{
 			get
 			{
-				return this._InstructorToActivities;
+				return this._InstructorToSections;
 			}
 			set
 			{
-				this._InstructorToActivities.Assign(value);
+				this._InstructorToSections.Assign(value);
 			}
 		}
 		
@@ -1696,21 +1696,21 @@ namespace DataContext
 			}
 		}
 		
-		private void attach_InstructorToActivities(InstructorToActivity entity)
+		private void attach_InstructorToSections(InstructorToSection entity)
 		{
 			this.SendPropertyChanging();
 			entity.Instructor = this;
 		}
 		
-		private void detach_InstructorToActivities(InstructorToActivity entity)
+		private void detach_InstructorToSections(InstructorToSection entity)
 		{
 			this.SendPropertyChanging();
 			entity.Instructor = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InstructorToActivity")]
-	public partial class InstructorToActivity : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InstructorToSection")]
+	public partial class InstructorToSection : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1737,7 +1737,7 @@ namespace DataContext
     partial void OnSectionIDChanged();
     #endregion
 		
-		public InstructorToActivity()
+		public InstructorToSection()
 		{
 			this._Instructor = default(EntityRef<Instructor>);
 			this._Section = default(EntityRef<Section>);
@@ -1812,7 +1812,7 @@ namespace DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_Instructor", ThisKey="InstructorID", OtherKey="InstructorID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToSection", Storage="_Instructor", ThisKey="InstructorID", OtherKey="InstructorID", IsForeignKey=true)]
 		public Instructor Instructor
 		{
 			get
@@ -1829,12 +1829,12 @@ namespace DataContext
 					if ((previousValue != null))
 					{
 						this._Instructor.Entity = null;
-						previousValue.InstructorToActivities.Remove(this);
+						previousValue.InstructorToSections.Remove(this);
 					}
 					this._Instructor.Entity = value;
 					if ((value != null))
 					{
-						value.InstructorToActivities.Add(this);
+						value.InstructorToSections.Add(this);
 						this._InstructorID = value.InstructorID;
 					}
 					else
@@ -1846,7 +1846,7 @@ namespace DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToSection", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
 		public Section Section
 		{
 			get
@@ -1863,12 +1863,12 @@ namespace DataContext
 					if ((previousValue != null))
 					{
 						this._Section.Entity = null;
-						previousValue.InstructorToActivities.Remove(this);
+						previousValue.InstructorToSections.Remove(this);
 					}
 					this._Section.Entity = value;
 					if ((value != null))
 					{
-						value.InstructorToActivities.Add(this);
+						value.InstructorToSections.Add(this);
 						this._SectionID = value.SectionID;
 					}
 					else
@@ -1915,7 +1915,7 @@ namespace DataContext
 		
 		private EntitySet<Session> _Sessions;
 		
-		private EntitySet<InstructorToActivity> _InstructorToActivities;
+		private EntitySet<InstructorToSection> _InstructorToSections;
 		
 		private EntityRef<Activity> _Activity;
 		
@@ -1934,7 +1934,7 @@ namespace DataContext
 		public Section()
 		{
 			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
-			this._InstructorToActivities = new EntitySet<InstructorToActivity>(new Action<InstructorToActivity>(this.attach_InstructorToActivities), new Action<InstructorToActivity>(this.detach_InstructorToActivities));
+			this._InstructorToSections = new EntitySet<InstructorToSection>(new Action<InstructorToSection>(this.attach_InstructorToSections), new Action<InstructorToSection>(this.detach_InstructorToSections));
 			this._Activity = default(EntityRef<Activity>);
 			OnCreated();
 		}
@@ -2016,16 +2016,16 @@ namespace DataContext
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_InstructorToActivities", ThisKey="SectionID", OtherKey="SectionID")]
-		public EntitySet<InstructorToActivity> InstructorToActivities
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToSection", Storage="_InstructorToSections", ThisKey="SectionID", OtherKey="SectionID")]
+		public EntitySet<InstructorToSection> InstructorToSections
 		{
 			get
 			{
-				return this._InstructorToActivities;
+				return this._InstructorToSections;
 			}
 			set
 			{
-				this._InstructorToActivities.Assign(value);
+				this._InstructorToSections.Assign(value);
 			}
 		}
 		
@@ -2095,13 +2095,13 @@ namespace DataContext
 			entity.Section = null;
 		}
 		
-		private void attach_InstructorToActivities(InstructorToActivity entity)
+		private void attach_InstructorToSections(InstructorToSection entity)
 		{
 			this.SendPropertyChanging();
 			entity.Section = this;
 		}
 		
-		private void detach_InstructorToActivities(InstructorToActivity entity)
+		private void detach_InstructorToSections(InstructorToSection entity)
 		{
 			this.SendPropertyChanging();
 			entity.Section = null;

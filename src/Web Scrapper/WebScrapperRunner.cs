@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using UoftTimetableGenerator.DataModels;
 using Newtonsoft.Json;
 using System.IO;
-using UoftTimetableGenerator.DataContext;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
@@ -239,8 +237,12 @@ namespace UoftTimetableGenerator.WebScrapper
             //PopulateInstructorsList();
             //IWebScrapper b = new BuildingDistancesScrapper();
             //b.Run();
-            BuildingDistancePopulator b = new BuildingDistancePopulator();
-            b.InsertBuildingDistancesToDatabase(false);
+            //BuildingDistancePopulator b = new BuildingDistancePopulator();
+            //b.InsertBuildingDistancesToDatabase(false);
+
+            CourseSchedulePopulator p = new CourseSchedulePopulator();
+            p.CreateCourseSchedules(false);
+
             Console.ReadKey();
         }
     }

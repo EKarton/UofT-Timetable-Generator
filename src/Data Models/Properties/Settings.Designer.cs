@@ -42,5 +42,15 @@ namespace UoftTimetableGenerator.DataModels.Properties {
                 return ((string)(this["UofTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP;Initial Catalog=\"UofT 2017\";Integrated Security=True")]
+        public string UofT_2017ConnectionString {
+            get {
+                return ((string)(this["UofT_2017ConnectionString"]));
+            }
+        }
     }
 }

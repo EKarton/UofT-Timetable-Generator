@@ -3,9 +3,9 @@
   <PropertyGroup>
     <StartupScript>(Blank)</StartupScript>
     <StartAction>StartNone</StartAction>
-    <TargetConnectionString>Data Source=LAPTOP;Initial Catalog=UofT;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
-    <TargetDatabase>UofT</TargetDatabase>
-    <CreateNewDatabase>True</CreateNewDatabase>
+    <TargetConnectionString>Data Source=LAPTOP;Initial Catalog="UofT 2017";Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <TargetDatabase>UofT 2017</TargetDatabase>
+    <CreateNewDatabase>False</CreateNewDatabase>
     <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
   </PropertyGroup>
 </Project>

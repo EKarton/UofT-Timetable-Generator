@@ -5,8 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
-using UoftTimetableGenerator.DataContext;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
@@ -158,8 +156,8 @@ namespace UoftTimetableGenerator.WebScrapper
 
                         // Getting pre-existing buildings
                         var existingData = from row in db.BuildingDistances
-                                           where (row.BuildingID1 == building1.Id && row.BuildingID2 == building2.Id) ||
-                                                       (row.BuildingID1 == building2.Id && row.BuildingID2 == building1.Id)
+                                           where (row.BuildingID1 == building1.BuildingID && row.BuildingID2 == building2.BuildingID) ||
+                                                       (row.BuildingID1 == building2.BuildingID && row.BuildingID2 == building1.BuildingID)
                                            select row;
 
                         // If the user doesnt want to rewrite the existing rows

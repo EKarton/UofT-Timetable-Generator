@@ -29,15 +29,22 @@ namespace UoftTimetableGenerator.WebAPI.Models
             StartDay = (int) session.StartTime / 100;
             EndDay = (int) session.EndTime / 100;
 
+            
             switch(term)
             {
                 case 'F':
-                    BuildingCode = session.FallBuildingCode;
-                    RoomNumber = session.FallRoomNumber;
+                    if (session.FallBuilding != null)
+                    {
+                        BuildingCode = session.FallBuilding.BuildingCode;
+                        RoomNumber = session.FallRoomNumber;
+                    }
                     break;
                 case 'S':
-                    BuildingCode = session.WinterBuildingCode;
-                    RoomNumber = session.WinterRoomNumber;
+                    if (session.WinterBuilding != null)
+                    {
+                        BuildingCode = session.WinterBuilding.BuildingCode;
+                        RoomNumber = session.WinterRoomNumber;
+                    }
                     break;
                 case 'Y':
                     break;

@@ -6,22 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using UoftTimetableGenerator.WebScrapper;
 
-namespace Web_Scrapper
+namespace UoftTimetableGenerator.WebScrapper
 {
     class BuildingListPopulator
     {
-        public void UpdateBuildingsInfo()
-        {
-            using (UofTDataContext db = new UofTDataContext())
-            {
-                db.Buildings.DeleteAllOnSubmit(db.Buildings);
-                db.SubmitChanges();
-            }
-            InsertBuildingsList();
-        }
+        private UofTDataContext db = new UofTDataContext();
 
-        public void InsertBuildingsList()
+        public void RedoBuildingList()
         {
+            db.ExecuteCommand("DELETE FROM BuildingDistances");
+            db.ExecuteCommand("DELETE FROM Building");
+
             Browser.Initialize();
             Browser.WebInstance.Url = "http://map.utoronto.ca/c/buildings";
 

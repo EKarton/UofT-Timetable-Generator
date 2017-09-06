@@ -22,7 +22,7 @@ namespace UoftTimetableGenerator.WebScrapper
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT 2017")]
 	public partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,9 +33,6 @@ namespace UoftTimetableGenerator.WebScrapper
     partial void InsertActivity(Activity instance);
     partial void UpdateActivity(Activity instance);
     partial void DeleteActivity(Activity instance);
-    partial void InsertSession(Session instance);
-    partial void UpdateSession(Session instance);
-    partial void DeleteSession(Session instance);
     partial void InsertBuilding(Building instance);
     partial void UpdateBuilding(Building instance);
     partial void DeleteBuilding(Building instance);
@@ -54,10 +51,13 @@ namespace UoftTimetableGenerator.WebScrapper
     partial void InsertSection(Section instance);
     partial void UpdateSection(Section instance);
     partial void DeleteSection(Section instance);
+    partial void InsertSession(Session instance);
+    partial void UpdateSession(Session instance);
+    partial void DeleteSession(Session instance);
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.UofTConnectionString, mappingSource)
+				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.UofT_2017ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,14 +91,6 @@ namespace UoftTimetableGenerator.WebScrapper
 			get
 			{
 				return this.GetTable<Activity>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Session> Sessions
-		{
-			get
-			{
-				return this.GetTable<Session>();
 			}
 		}
 		
@@ -147,6 +139,14 @@ namespace UoftTimetableGenerator.WebScrapper
 			get
 			{
 				return this.GetTable<Section>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Session> Sessions
+		{
+			get
+			{
+				return this.GetTable<Session>();
 			}
 		}
 	}
@@ -330,359 +330,6 @@ namespace UoftTimetableGenerator.WebScrapper
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Session")]
-	public partial class Session : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SessionID;
-		
-		private int _SectionID;
-		
-		private System.Nullable<int> _Fall_BuildingID;
-		
-		private string _Fall_RoomNumber;
-		
-		private System.Nullable<int> _Winter_BuildingID;
-		
-		private string _Winter_RoomNumber;
-		
-		private System.Nullable<double> _StartTime;
-		
-		private System.Nullable<double> _EndTime;
-		
-		private EntityRef<Building> _Building;
-		
-		private EntityRef<Building> _Building1;
-		
-		private EntityRef<Section> _Section;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSessionIDChanging(int value);
-    partial void OnSessionIDChanged();
-    partial void OnSectionIDChanging(int value);
-    partial void OnSectionIDChanged();
-    partial void OnFall_BuildingIDChanging(System.Nullable<int> value);
-    partial void OnFall_BuildingIDChanged();
-    partial void OnFall_RoomNumberChanging(string value);
-    partial void OnFall_RoomNumberChanged();
-    partial void OnWinter_BuildingIDChanging(System.Nullable<int> value);
-    partial void OnWinter_BuildingIDChanged();
-    partial void OnWinter_RoomNumberChanging(string value);
-    partial void OnWinter_RoomNumberChanged();
-    partial void OnStartTimeChanging(System.Nullable<double> value);
-    partial void OnStartTimeChanged();
-    partial void OnEndTimeChanging(System.Nullable<double> value);
-    partial void OnEndTimeChanged();
-    #endregion
-		
-		public Session()
-		{
-			this._Building = default(EntityRef<Building>);
-			this._Building1 = default(EntityRef<Building>);
-			this._Section = default(EntityRef<Section>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SessionID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int SessionID
-		{
-			get
-			{
-				return this._SessionID;
-			}
-			set
-			{
-				if ((this._SessionID != value))
-				{
-					this.OnSessionIDChanging(value);
-					this.SendPropertyChanging();
-					this._SessionID = value;
-					this.SendPropertyChanged("SessionID");
-					this.OnSessionIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
-		public int SectionID
-		{
-			get
-			{
-				return this._SectionID;
-			}
-			set
-			{
-				if ((this._SectionID != value))
-				{
-					if (this._Section.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnSectionIDChanging(value);
-					this.SendPropertyChanging();
-					this._SectionID = value;
-					this.SendPropertyChanged("SectionID");
-					this.OnSectionIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_BuildingID", DbType="Int")]
-		public System.Nullable<int> Fall_BuildingID
-		{
-			get
-			{
-				return this._Fall_BuildingID;
-			}
-			set
-			{
-				if ((this._Fall_BuildingID != value))
-				{
-					if (this._Building.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnFall_BuildingIDChanging(value);
-					this.SendPropertyChanging();
-					this._Fall_BuildingID = value;
-					this.SendPropertyChanged("Fall_BuildingID");
-					this.OnFall_BuildingIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_RoomNumber", DbType="NVarChar(MAX)")]
-		public string Fall_RoomNumber
-		{
-			get
-			{
-				return this._Fall_RoomNumber;
-			}
-			set
-			{
-				if ((this._Fall_RoomNumber != value))
-				{
-					this.OnFall_RoomNumberChanging(value);
-					this.SendPropertyChanging();
-					this._Fall_RoomNumber = value;
-					this.SendPropertyChanged("Fall_RoomNumber");
-					this.OnFall_RoomNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_BuildingID", DbType="Int")]
-		public System.Nullable<int> Winter_BuildingID
-		{
-			get
-			{
-				return this._Winter_BuildingID;
-			}
-			set
-			{
-				if ((this._Winter_BuildingID != value))
-				{
-					if (this._Building1.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnWinter_BuildingIDChanging(value);
-					this.SendPropertyChanging();
-					this._Winter_BuildingID = value;
-					this.SendPropertyChanged("Winter_BuildingID");
-					this.OnWinter_BuildingIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_RoomNumber", DbType="NVarChar(MAX)")]
-		public string Winter_RoomNumber
-		{
-			get
-			{
-				return this._Winter_RoomNumber;
-			}
-			set
-			{
-				if ((this._Winter_RoomNumber != value))
-				{
-					this.OnWinter_RoomNumberChanging(value);
-					this.SendPropertyChanging();
-					this._Winter_RoomNumber = value;
-					this.SendPropertyChanged("Winter_RoomNumber");
-					this.OnWinter_RoomNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Float")]
-		public System.Nullable<double> StartTime
-		{
-			get
-			{
-				return this._StartTime;
-			}
-			set
-			{
-				if ((this._StartTime != value))
-				{
-					this.OnStartTimeChanging(value);
-					this.SendPropertyChanging();
-					this._StartTime = value;
-					this.SendPropertyChanged("StartTime");
-					this.OnStartTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Float")]
-		public System.Nullable<double> EndTime
-		{
-			get
-			{
-				return this._EndTime;
-			}
-			set
-			{
-				if ((this._EndTime != value))
-				{
-					this.OnEndTimeChanging(value);
-					this.SendPropertyChanging();
-					this._EndTime = value;
-					this.SendPropertyChanged("EndTime");
-					this.OnEndTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Building", ThisKey="Fall_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
-		public Building Building
-		{
-			get
-			{
-				return this._Building.Entity;
-			}
-			set
-			{
-				Building previousValue = this._Building.Entity;
-				if (((previousValue != value) 
-							|| (this._Building.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Building.Entity = null;
-						previousValue.Sessions.Remove(this);
-					}
-					this._Building.Entity = value;
-					if ((value != null))
-					{
-						value.Sessions.Add(this);
-						this._Fall_BuildingID = value.BuildingID;
-					}
-					else
-					{
-						this._Fall_BuildingID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Building");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Building1", ThisKey="Winter_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
-		public Building Building1
-		{
-			get
-			{
-				return this._Building1.Entity;
-			}
-			set
-			{
-				Building previousValue = this._Building1.Entity;
-				if (((previousValue != value) 
-							|| (this._Building1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Building1.Entity = null;
-						previousValue.Sessions1.Remove(this);
-					}
-					this._Building1.Entity = value;
-					if ((value != null))
-					{
-						value.Sessions1.Add(this);
-						this._Winter_BuildingID = value.BuildingID;
-					}
-					else
-					{
-						this._Winter_BuildingID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Building1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Session", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
-		public Section Section
-		{
-			get
-			{
-				return this._Section.Entity;
-			}
-			set
-			{
-				Section previousValue = this._Section.Entity;
-				if (((previousValue != value) 
-							|| (this._Section.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Section.Entity = null;
-						previousValue.Sessions.Remove(this);
-					}
-					this._Section.Entity = value;
-					if ((value != null))
-					{
-						value.Sessions.Add(this);
-						this._SectionID = value.SectionID;
-					}
-					else
-					{
-						this._SectionID = default(int);
-					}
-					this.SendPropertyChanged("Section");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Building")]
 	public partial class Building : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -701,13 +348,13 @@ namespace UoftTimetableGenerator.WebScrapper
 		
 		private System.Nullable<double> _Longitude;
 		
-		private EntitySet<Session> _Sessions;
-		
-		private EntitySet<Session> _Sessions1;
-		
 		private EntitySet<BuildingDistance> _BuildingDistances;
 		
 		private EntitySet<BuildingDistance> _BuildingDistances1;
+		
+		private EntitySet<Session> _Sessions;
+		
+		private EntitySet<Session> _Sessions1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -729,10 +376,10 @@ namespace UoftTimetableGenerator.WebScrapper
 		
 		public Building()
 		{
-			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
-			this._Sessions1 = new EntitySet<Session>(new Action<Session>(this.attach_Sessions1), new Action<Session>(this.detach_Sessions1));
 			this._BuildingDistances = new EntitySet<BuildingDistance>(new Action<BuildingDistance>(this.attach_BuildingDistances), new Action<BuildingDistance>(this.detach_BuildingDistances));
 			this._BuildingDistances1 = new EntitySet<BuildingDistance>(new Action<BuildingDistance>(this.attach_BuildingDistances1), new Action<BuildingDistance>(this.detach_BuildingDistances1));
+			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
+			this._Sessions1 = new EntitySet<Session>(new Action<Session>(this.attach_Sessions1), new Action<Session>(this.detach_Sessions1));
 			OnCreated();
 		}
 		
@@ -856,32 +503,6 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Sessions", ThisKey="BuildingID", OtherKey="Fall_BuildingID")]
-		public EntitySet<Session> Sessions
-		{
-			get
-			{
-				return this._Sessions;
-			}
-			set
-			{
-				this._Sessions.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Sessions1", ThisKey="BuildingID", OtherKey="Winter_BuildingID")]
-		public EntitySet<Session> Sessions1
-		{
-			get
-			{
-				return this._Sessions1;
-			}
-			set
-			{
-				this._Sessions1.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_BuildingDistance", Storage="_BuildingDistances", ThisKey="BuildingID", OtherKey="BuildingID1")]
 		public EntitySet<BuildingDistance> BuildingDistances
 		{
@@ -908,6 +529,32 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Sessions", ThisKey="BuildingID", OtherKey="Fall_BuildingID")]
+		public EntitySet<Session> Sessions
+		{
+			get
+			{
+				return this._Sessions;
+			}
+			set
+			{
+				this._Sessions.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Sessions1", ThisKey="BuildingID", OtherKey="Winter_BuildingID")]
+		public EntitySet<Session> Sessions1
+		{
+			get
+			{
+				return this._Sessions1;
+			}
+			set
+			{
+				this._Sessions1.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -926,30 +573,6 @@ namespace UoftTimetableGenerator.WebScrapper
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Sessions(Session entity)
-		{
-			this.SendPropertyChanging();
-			entity.Building = this;
-		}
-		
-		private void detach_Sessions(Session entity)
-		{
-			this.SendPropertyChanging();
-			entity.Building = null;
-		}
-		
-		private void attach_Sessions1(Session entity)
-		{
-			this.SendPropertyChanging();
-			entity.Building1 = this;
-		}
-		
-		private void detach_Sessions1(Session entity)
-		{
-			this.SendPropertyChanging();
-			entity.Building1 = null;
 		}
 		
 		private void attach_BuildingDistances(BuildingDistance entity)
@@ -971,6 +594,30 @@ namespace UoftTimetableGenerator.WebScrapper
 		}
 		
 		private void detach_BuildingDistances1(BuildingDistance entity)
+		{
+			this.SendPropertyChanging();
+			entity.Building1 = null;
+		}
+		
+		private void attach_Sessions(Session entity)
+		{
+			this.SendPropertyChanging();
+			entity.Building = this;
+		}
+		
+		private void detach_Sessions(Session entity)
+		{
+			this.SendPropertyChanging();
+			entity.Building = null;
+		}
+		
+		private void attach_Sessions1(Session entity)
+		{
+			this.SendPropertyChanging();
+			entity.Building1 = this;
+		}
+		
+		private void detach_Sessions1(Session entity)
 		{
 			this.SendPropertyChanging();
 			entity.Building1 = null;
@@ -1663,7 +1310,7 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_InstructorToSections", ThisKey="InstructorID", OtherKey="InstructorID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToSection", Storage="_InstructorToSections", ThisKey="InstructorID", OtherKey="InstructorID")]
 		public EntitySet<InstructorToSection> InstructorToSections
 		{
 			get
@@ -1812,7 +1459,7 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToActivity", Storage="_Instructor", ThisKey="InstructorID", OtherKey="InstructorID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Instructor_InstructorToSection", Storage="_Instructor", ThisKey="InstructorID", OtherKey="InstructorID", IsForeignKey=true)]
 		public Instructor Instructor
 		{
 			get
@@ -1846,7 +1493,7 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToSection", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
 		public Section Section
 		{
 			get
@@ -1913,9 +1560,9 @@ namespace UoftTimetableGenerator.WebScrapper
 		
 		private string _SectionCode;
 		
-		private EntitySet<Session> _Sessions;
-		
 		private EntitySet<InstructorToSection> _InstructorToSections;
+		
+		private EntitySet<Session> _Sessions;
 		
 		private EntityRef<Activity> _Activity;
 		
@@ -1933,8 +1580,8 @@ namespace UoftTimetableGenerator.WebScrapper
 		
 		public Section()
 		{
-			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
 			this._InstructorToSections = new EntitySet<InstructorToSection>(new Action<InstructorToSection>(this.attach_InstructorToSections), new Action<InstructorToSection>(this.detach_InstructorToSections));
+			this._Sessions = new EntitySet<Session>(new Action<Session>(this.attach_Sessions), new Action<Session>(this.detach_Sessions));
 			this._Activity = default(EntityRef<Activity>);
 			OnCreated();
 		}
@@ -2003,6 +1650,19 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToSection", Storage="_InstructorToSections", ThisKey="SectionID", OtherKey="SectionID")]
+		public EntitySet<InstructorToSection> InstructorToSections
+		{
+			get
+			{
+				return this._InstructorToSections;
+			}
+			set
+			{
+				this._InstructorToSections.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Session", Storage="_Sessions", ThisKey="SectionID", OtherKey="SectionID")]
 		public EntitySet<Session> Sessions
 		{
@@ -2013,19 +1673,6 @@ namespace UoftTimetableGenerator.WebScrapper
 			set
 			{
 				this._Sessions.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_InstructorToActivity", Storage="_InstructorToSections", ThisKey="SectionID", OtherKey="SectionID")]
-		public EntitySet<InstructorToSection> InstructorToSections
-		{
-			get
-			{
-				return this._InstructorToSections;
-			}
-			set
-			{
-				this._InstructorToSections.Assign(value);
 			}
 		}
 		
@@ -2083,6 +1730,18 @@ namespace UoftTimetableGenerator.WebScrapper
 			}
 		}
 		
+		private void attach_InstructorToSections(InstructorToSection entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = this;
+		}
+		
+		private void detach_InstructorToSections(InstructorToSection entity)
+		{
+			this.SendPropertyChanging();
+			entity.Section = null;
+		}
+		
 		private void attach_Sessions(Session entity)
 		{
 			this.SendPropertyChanging();
@@ -2094,17 +1753,358 @@ namespace UoftTimetableGenerator.WebScrapper
 			this.SendPropertyChanging();
 			entity.Section = null;
 		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Session")]
+	public partial class Session : INotifyPropertyChanging, INotifyPropertyChanged
+	{
 		
-		private void attach_InstructorToSections(InstructorToSection entity)
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SessionID;
+		
+		private int _SectionID;
+		
+		private System.Nullable<int> _Fall_BuildingID;
+		
+		private string _Fall_RoomNumber;
+		
+		private System.Nullable<int> _Winter_BuildingID;
+		
+		private string _Winter_RoomNumber;
+		
+		private System.Nullable<double> _StartTime;
+		
+		private System.Nullable<double> _EndTime;
+		
+		private EntityRef<Building> _Building;
+		
+		private EntityRef<Section> _Section;
+		
+		private EntityRef<Building> _Building1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSessionIDChanging(int value);
+    partial void OnSessionIDChanged();
+    partial void OnSectionIDChanging(int value);
+    partial void OnSectionIDChanged();
+    partial void OnFall_BuildingIDChanging(System.Nullable<int> value);
+    partial void OnFall_BuildingIDChanged();
+    partial void OnFall_RoomNumberChanging(string value);
+    partial void OnFall_RoomNumberChanged();
+    partial void OnWinter_BuildingIDChanging(System.Nullable<int> value);
+    partial void OnWinter_BuildingIDChanged();
+    partial void OnWinter_RoomNumberChanging(string value);
+    partial void OnWinter_RoomNumberChanged();
+    partial void OnStartTimeChanging(System.Nullable<double> value);
+    partial void OnStartTimeChanged();
+    partial void OnEndTimeChanging(System.Nullable<double> value);
+    partial void OnEndTimeChanged();
+    #endregion
+		
+		public Session()
 		{
-			this.SendPropertyChanging();
-			entity.Section = this;
+			this._Building = default(EntityRef<Building>);
+			this._Section = default(EntityRef<Section>);
+			this._Building1 = default(EntityRef<Building>);
+			OnCreated();
 		}
 		
-		private void detach_InstructorToSections(InstructorToSection entity)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SessionID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SessionID
 		{
-			this.SendPropertyChanging();
-			entity.Section = null;
+			get
+			{
+				return this._SessionID;
+			}
+			set
+			{
+				if ((this._SessionID != value))
+				{
+					this.OnSessionIDChanging(value);
+					this.SendPropertyChanging();
+					this._SessionID = value;
+					this.SendPropertyChanged("SessionID");
+					this.OnSessionIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					if (this._Section.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSectionIDChanging(value);
+					this.SendPropertyChanging();
+					this._SectionID = value;
+					this.SendPropertyChanged("SectionID");
+					this.OnSectionIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_BuildingID", DbType="Int")]
+		public System.Nullable<int> Fall_BuildingID
+		{
+			get
+			{
+				return this._Fall_BuildingID;
+			}
+			set
+			{
+				if ((this._Fall_BuildingID != value))
+				{
+					if (this._Building.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnFall_BuildingIDChanging(value);
+					this.SendPropertyChanging();
+					this._Fall_BuildingID = value;
+					this.SendPropertyChanged("Fall_BuildingID");
+					this.OnFall_BuildingIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_RoomNumber", DbType="NVarChar(MAX)")]
+		public string Fall_RoomNumber
+		{
+			get
+			{
+				return this._Fall_RoomNumber;
+			}
+			set
+			{
+				if ((this._Fall_RoomNumber != value))
+				{
+					this.OnFall_RoomNumberChanging(value);
+					this.SendPropertyChanging();
+					this._Fall_RoomNumber = value;
+					this.SendPropertyChanged("Fall_RoomNumber");
+					this.OnFall_RoomNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_BuildingID", DbType="Int")]
+		public System.Nullable<int> Winter_BuildingID
+		{
+			get
+			{
+				return this._Winter_BuildingID;
+			}
+			set
+			{
+				if ((this._Winter_BuildingID != value))
+				{
+					if (this._Building1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnWinter_BuildingIDChanging(value);
+					this.SendPropertyChanging();
+					this._Winter_BuildingID = value;
+					this.SendPropertyChanged("Winter_BuildingID");
+					this.OnWinter_BuildingIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_RoomNumber", DbType="NVarChar(MAX)")]
+		public string Winter_RoomNumber
+		{
+			get
+			{
+				return this._Winter_RoomNumber;
+			}
+			set
+			{
+				if ((this._Winter_RoomNumber != value))
+				{
+					this.OnWinter_RoomNumberChanging(value);
+					this.SendPropertyChanging();
+					this._Winter_RoomNumber = value;
+					this.SendPropertyChanged("Winter_RoomNumber");
+					this.OnWinter_RoomNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Float")]
+		public System.Nullable<double> StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Float")]
+		public System.Nullable<double> EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session", Storage="_Building", ThisKey="Fall_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
+		public Building Building
+		{
+			get
+			{
+				return this._Building.Entity;
+			}
+			set
+			{
+				Building previousValue = this._Building.Entity;
+				if (((previousValue != value) 
+							|| (this._Building.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Building.Entity = null;
+						previousValue.Sessions.Remove(this);
+					}
+					this._Building.Entity = value;
+					if ((value != null))
+					{
+						value.Sessions.Add(this);
+						this._Fall_BuildingID = value.BuildingID;
+					}
+					else
+					{
+						this._Fall_BuildingID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Building");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Section_Session", Storage="_Section", ThisKey="SectionID", OtherKey="SectionID", IsForeignKey=true)]
+		public Section Section
+		{
+			get
+			{
+				return this._Section.Entity;
+			}
+			set
+			{
+				Section previousValue = this._Section.Entity;
+				if (((previousValue != value) 
+							|| (this._Section.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Section.Entity = null;
+						previousValue.Sessions.Remove(this);
+					}
+					this._Section.Entity = value;
+					if ((value != null))
+					{
+						value.Sessions.Add(this);
+						this._SectionID = value.SectionID;
+					}
+					else
+					{
+						this._SectionID = default(int);
+					}
+					this.SendPropertyChanged("Section");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Building_Session1", Storage="_Building1", ThisKey="Winter_BuildingID", OtherKey="BuildingID", IsForeignKey=true)]
+		public Building Building1
+		{
+			get
+			{
+				return this._Building1.Entity;
+			}
+			set
+			{
+				Building previousValue = this._Building1.Entity;
+				if (((previousValue != value) 
+							|| (this._Building1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Building1.Entity = null;
+						previousValue.Sessions1.Remove(this);
+					}
+					this._Building1.Entity = value;
+					if ((value != null))
+					{
+						value.Sessions1.Add(this);
+						this._Winter_BuildingID = value.BuildingID;
+					}
+					else
+					{
+						this._Winter_BuildingID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Building1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

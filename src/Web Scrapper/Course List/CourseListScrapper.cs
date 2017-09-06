@@ -5,24 +5,47 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataModels;
+using OpenQA.Selenium;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
     internal class CourseListScrapper
     {
+        public List<Course> GetCoursesOnPage()
+        {
+            var parsedCourses = new List<Course>();
+            var rows = Browser.FindElements("xpath", "//*[@id='block-system-main']/div/div/div[2]/table/tbody/tr");
+            foreach (IWebElement row in rows)
+            {
+                var cells = row.FindElements(By.TagName("td"));
+                string courseCode = cells[0].Text.Trim();
+                string courseTitle = cells[1].Text.Trim();
+                string courseDescription = cells[2].Text.Trim();
+
+                var newCourse = new Course()
+                {
+                    Code = courseCode,
+                    Title = courseTitle,
+                    Description = courseDescription,
+                    Campus = "St. George"
+                };
+                parsedCourses.Add(newCourse);
+            }
+            return parsedCourses;
+        }
+
         public void GetCourseList()
         {
             // Start and navigate the browser to the webpage containing all the courses
             Browser.Initialize();
             Browser.WebInstance.Url = "https://fas.calendar.utoronto.ca/search-courses";
 
-            // Get a sorted list of courses
-            List<string> courses = new List<string>();
+            // Get a list of courses and save it
+            List<Course> courses = new List<Course>();
             bool isAtLastPage = false;
             do
             {
-                var coursesOnPage = CourseListPage.GetCoursesOnPage();
+                var coursesOnPage = GetCoursesOnPage();
                 courses.AddRange(coursesOnPage);
 
                 if (CourseListPage.IsAtLastPage())
@@ -31,11 +54,9 @@ namespace UoftTimetableGenerator.WebScrapper
                     CourseListPage.GotoNextPage();
             }
             while (!isAtLastPage);
-            courses.Sort();
 
-            CourseList courseNames = new CourseList() { CourseNames = courses };
-            string json = JsonConvert.SerializeObject(courseNames);
-            File.WriteAllText("Course List.json", json);
+            string json = JsonConvert.SerializeObject(courses);
+            File.WriteAllText("courses.json", json);
 
             Browser.Close();
         }

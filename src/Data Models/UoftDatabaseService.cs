@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DataContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UoftTimetableGenerator.DataContext;
 using UoftTimetableGenerator.DataModels;
 
 namespace UoftTimetableGenerator.DataModels
@@ -28,7 +28,7 @@ namespace UoftTimetableGenerator.DataModels
         /// <returns>Building information</returns>
         public static Building GetBuilding(string buildingCode)
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 var building = (from b in db.Buildings
                                 where b.BuildingCode == buildingCode
@@ -55,7 +55,7 @@ namespace UoftTimetableGenerator.DataModels
 
             if (type == CourseQueryType.CourseCode && query.Length >= 3)
             {
-                using (UoftDataContext db = new UoftDataContext())
+                using (UofTDataContext db = new UofTDataContext())
                 {
                     List<DataContext.Course> dbCourses = db.Courses.ToList();
                     foreach (DataContext.Course c in dbCourses)
@@ -83,7 +83,7 @@ namespace UoftTimetableGenerator.DataModels
         /// <returns>Course information</returns>
         public static Course GetCourseDetails(string courseCode)
         {
-            using (UoftDataContext db = new UoftDataContext())
+            using (UofTDataContext db = new UofTDataContext())
             {
                 List<DataContext.Course> oldCourses = (from c in db.Courses
                                                        where c.Code == courseCode
