@@ -39,7 +39,7 @@ In addition, users can specify restrictions and preferences to tailor their time
 </div>
 
 Users are able to view, print, and bookmark their favorite timetables by clicking on one of the generated timetable.
-<div>
+<div width="100%" text-align="center">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG" width="800px"/>
 </div>
 
