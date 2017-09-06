@@ -17,7 +17,7 @@ This project consists of several components, each responsible for performing a c
 ![Software architecture picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/System%20Architecture.PNG "System architecture picture")
 
 Users will be using the front-end web application to generate their timetables. In the homepage, they will first have to specify the courses they will be taking. 
-![Homepage picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Homepage.PNG "Homepage picture")
+![Homepage picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Hompage.PNG "Homepage picture")
 
 Typing the first three letters of the course code in the search bar will reveal the relevant, available courses.
 ![Course selection picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Selecting%20a%20course.png "Course selection picture")
@@ -29,7 +29,7 @@ In addition, users can specify restrictions and preferences to tailor their time
 ![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Restriction%20panel.PNG "Timetable viewer picture")
 
 Users are able to view, print, and bookmark their favorite timetables by clicking on one of the generated timetable.
-![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG "Timetable viewer picture")
+![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG =800px"Timetable viewer picture")
 
 
 ### Installation
