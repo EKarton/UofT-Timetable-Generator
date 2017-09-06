@@ -9,8 +9,15 @@ using OpenQA.Selenium;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
+    /// <summary>
+    /// Get the courses present in the UofT Course Calendar page
+    /// </summary>
     internal class CourseListScrapper
     {
+        /// <summary>
+        /// Get the courses present in the current page of the UofT course calendar
+        /// </summary>
+        /// <returns>The courses present</returns>
         public List<Course> GetCoursesOnPage()
         {
             var parsedCourses = new List<Course>();
@@ -34,6 +41,10 @@ namespace UoftTimetableGenerator.WebScrapper
             return parsedCourses;
         }
 
+        /// <summary>
+        /// Get all the courses in all of the pages present in the UofT Course Calendar, 
+        /// and save it in a .json format called "courselist.json"
+        /// </summary>
         public void GetCourseList()
         {
             // Start and navigate the browser to the webpage containing all the courses

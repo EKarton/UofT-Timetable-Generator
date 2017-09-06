@@ -10,16 +10,20 @@ using HtmlAgilityPack;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
+    /// <summary>
+    /// Populates the database with course data coming from the web
+    /// </summary>
     public class CourseSchedulePopulator
     {
         private UofTDataContext db = new UofTDataContext();
-        
-        private int sessionID = 0;
-        private int instructorID = 0;
-        private int sectionID = 0;
-        private int activityID = 0;
-        private int courseID = 0;
 
+        /// <summary>
+        /// Get the building id of a particular building stored in the database
+        /// It returns null if there is no building found with a particular building code or 
+        /// there is more than one building with that particular building code
+        /// </summary>
+        /// <param name="buildingCode">The building code</param>
+        /// <returns>The building id.</returns>
         private int? GetBuildingID(string buildingCode)
         {
             var buildingResults = from p in db.Buildings
@@ -32,6 +36,11 @@ namespace UoftTimetableGenerator.WebScrapper
                 return buildingResults.ToList()[0];
         }
 
+        /// <summary>
+        /// Get the index to a particular weekday
+        /// </summary>
+        /// <param name="weekday">The weekday</param>
+        /// <returns>The index to that weekday</returns>
         private int GetIndexFromWeekday(string weekday)
         {
             switch (weekday)
@@ -55,6 +64,12 @@ namespace UoftTimetableGenerator.WebScrapper
             }
         }
 
+        /// <summary>
+        /// Formats a time into a compressed time containing the weekday index and the 24-hr time in one double
+        /// </summary>
+        /// <param name="weekdayIndex">The index to a weekday</param>
+        /// <param name="clockTime">The clock time (hr:min) in 24 hr time</param>
+        /// <returns>The compressed time</returns>
         private double? FormatTime(int weekdayIndex, string clockTime)
         {
             try
@@ -68,38 +83,44 @@ namespace UoftTimetableGenerator.WebScrapper
             catch { return null; }
         }
 
-        private List<Session> GetYearlongSessions(IWebElement sessionsDiv, IWebElement locsDiv)
+        /// <summary>
+        /// Get a list of sessions associated to a particular section of a year-long course
+        /// </summary>
+        /// <param name="sessionsDiv">A container containing all the sessions</param>
+        /// <param name="locsDiv">A container containing all the locations to all the sessions</param>
+        /// <returns>A list of sessions</returns>
+        private List<Session> GetYearlongSessions(HtmlNode sessionsDiv, HtmlNode locsDiv)
         {
-            var sessionDivs = sessionsDiv.FindElements(By.ClassName("colDay")).ToList();
-            var termLocDivs = locsDiv.FindElements(By.XPath("div[@class='colSectionLocRooms']")).ToList();
-            var fallLocDivs = new List<IWebElement>();
+            var sessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']").ToList();
+            var termLocDivs = locsDiv.SelectNodes("div[@class='colSectionLocRooms']").ToList();
+            var fallLocDivs = new List<HtmlNode>();
             if (termLocDivs.Count > 0)
-                fallLocDivs = termLocDivs[0].FindElements(By.ClassName("colDay")).ToList();            
-            var winterLocDivs = new List<IWebElement>();
+                fallLocDivs = termLocDivs[0].SelectNodes(".//*[@class='colDay']").ToList();            
+            var winterLocDivs = new List<HtmlNode>();
             if (termLocDivs.Count > 1)
-                winterLocDivs = termLocDivs[1].FindElements(By.ClassName("colDay")).ToList();
+                winterLocDivs = termLocDivs[1].SelectNodes(".//*[@class='colDay']").ToList();
 
             List<Session> sessions = new List<Session>();
             for (int i = 0; i < sessionDivs.Count; i++)
             {
                 // If the times do not exist, then there is no session
-                if (sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[1]")) == null)
+                if (sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]") == null)
                     continue;
-                if (sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[2]")) == null)
+                if (sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]") == null)
                     continue;
-                if (sessionDivs[i].FindElement(By.ClassName("weekDay")) == null)
+                if (sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']") == null)
                     continue;
 
                 Session newSession = new Session();
 
                 // Parsing the times
-                string weekday = sessionDivs[i].FindElement(By.ClassName("weekDay")).Text.Trim();
+                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Trim();
                 int weekdayIndex = -1;
                 if (weekday.Length > 1)
                     weekdayIndex = GetIndexFromWeekday(weekday);
 
-                string startTime_raw = sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[1]")).Text;
-                string endTime_raw = sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[2]")).Text;
+                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText;
+                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText;
                 double? startTime = FormatTime(weekdayIndex, startTime_raw);
                 double? endTime = FormatTime(weekdayIndex, endTime_raw);
 
@@ -108,7 +129,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 newSession.EndTime = endTime;
 
                 // Parsing the fall location
-                string location_fall = fallLocDivs[i].Text;
+                string location_fall = fallLocDivs[i].InnerText;
                 int? buildingID_fall = null;
                 string roomNum_fall = null;
                 if (i < fallLocDivs.Count && location_fall.Length >= 2)
@@ -118,7 +139,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 }
 
                 // Parsing the winter location
-                string location_winter = winterLocDivs[i].Text;
+                string location_winter = winterLocDivs[i].InnerText;
                 int? buildingID_winter = null;
                 string roomNum_winter = null;
                 if (i < winterLocDivs.Count && location_winter.Length >= 2)
@@ -138,31 +159,38 @@ namespace UoftTimetableGenerator.WebScrapper
             return sessions;
         }
 
-        private List<Session> GetTermedSessions(IWebElement sessionsDiv, IWebElement locsDiv, string term)
+        /// <summary>
+        /// Get a list of sessions for a particular section of a termed course
+        /// </summary>
+        /// <param name="sessionsDiv">The container containing all the sessions</param>
+        /// <param name="locsDiv">The container containing all the locations to each session</param>
+        /// <param name="term">The term of the course</param>
+        /// <returns>A list of sessions</returns>
+        private List<Session> GetTermedSessions(HtmlNode sessionsDiv, HtmlNode locsDiv, string term)
         {
-            var sessionDivs = sessionsDiv.FindElements(By.ClassName("colDay"));
-            var locDivs = locsDiv.FindElements(By.ClassName("colDay"));
+            var sessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']");
+            var locDivs = locsDiv.SelectNodes(".//*[@class='colDay']");
             List<Session> sessions = new List<Session>();
             for (int i = 0; i < sessionDivs.Count; i++)
             {
                 // If the times do not exist, then there is no session
-                if (sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[1]")) == null)
+                if (sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]") == null)
                     continue;
-                if (sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[2]")) == null)
+                if (sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]") == null)
                     continue;
-                if (sessionDivs[i].FindElement(By.ClassName("weekDay")) == null)
+                if (sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']") == null)
                     continue;
 
                 Session newSession = new Session();
 
                 // Parsing the times
-                string weekday = sessionDivs[i].FindElement(By.ClassName("weekDay")).Text.Trim();
+                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Trim();
                 int weekdayIndex = -1;
                 if (weekday.Length > 1)
                     weekdayIndex = GetIndexFromWeekday(weekday);
 
-                string startTime_raw = sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[1]")).Text;
-                string endTime_raw = sessionDivs[i].FindElement(By.XPath("span[@class='dayInfo']/time[2]")).Text;
+                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText;
+                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText;
                 double? startTime = FormatTime(weekdayIndex, startTime_raw);
                 double? endTime = FormatTime(weekdayIndex, endTime_raw);
 
@@ -171,7 +199,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 newSession.EndTime = endTime;
 
                 // Parsing the location
-                string location = locDivs[i].Text;
+                string location = locDivs[i].InnerText;
                 int? buildingID = null;
                 string roomNum = null;
                 if (i < locDivs.Count && location.Length >= 2)
@@ -197,6 +225,11 @@ namespace UoftTimetableGenerator.WebScrapper
             return sessions;
         }
 
+        /// <summary>
+        /// Creates a new instructor object
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private Instructor GetInstructor(string name)
         {
             return new Instructor()
@@ -206,17 +239,23 @@ namespace UoftTimetableGenerator.WebScrapper
             };
         }
 
-        private Section GetSection(IWebElement sessionContainer, string term)
+        /// <summary>
+        /// Gets the sections of the course
+        /// </summary>
+        /// <param name="sessionContainer">The container containing the section data</param>
+        /// <param name="term">The term</param>
+        /// <returns>The section</returns>
+        private Section GetSection(HtmlNode sessionContainer, string term)
         {
             // Set the code
             Section section = new Section();
-            section.SectionCode = sessionContainer.FindElement(By.ClassName("colCode")).Text;
+            section.SectionCode = sessionContainer.SelectSingleNode(".//*[@class='colCode']").InnerText;
             
             // Add the instructors
-            var instructorElements = sessionContainer.FindElements(By.XPath("td[@class='colInst']/ul/li"));
+            var instructorElements = sessionContainer.SelectNodes("td[@class='colInst']/ul/li");
             foreach (var instructorElement in instructorElements)
             {
-                string instructorName = instructorElement.Text.Trim();
+                string instructorName = instructorElement.InnerText.Trim();
                 var instructorResults = from p in db.Instructors
                                         where p.Name == instructorName
                                         select p;
@@ -240,8 +279,8 @@ namespace UoftTimetableGenerator.WebScrapper
             }
 
             // Set up the times
-            var sessionsDiv = sessionContainer.FindElement(By.XPath("td[@class='colTime']"));
-            var locsDiv = sessionContainer.FindElement(By.XPath("td[@class='colLoc']"));
+            var sessionsDiv = sessionContainer.SelectSingleNode("td[@class='colTime']");
+            var locsDiv = sessionContainer.SelectSingleNode("td[@class='colLoc']");
             if (term == "Y")
                 section.Sessions.AddRange(GetYearlongSessions(sessionsDiv, locsDiv));
             else if (term == "F" || term == "S")
@@ -253,11 +292,19 @@ namespace UoftTimetableGenerator.WebScrapper
             return section;
         }
 
-        private Course GetCourses(IWebElement courseTable, string title, string desc, string campus)
+        /// <summary>
+        /// Parses the html and get the courses
+        /// </summary>
+        /// <param name="courseTable">The html table, containing the course</param>
+        /// <param name="title">The title of the course</param>
+        /// <param name="desc">The description of the course</param>
+        /// <param name="campus">The campus of the course</param>
+        /// <returns>The course object</returns>
+        private Course GetCourses(HtmlNode courseTable, string title, string desc, string campus)
         {
             // Create a new course
             Course course = new Course();
-            course.Code = courseTable.FindElement(By.XPath("tbody/tr[2]/td/span")).Text;
+            course.Code = courseTable.SelectSingleNode("tbody/tr[2]/td/span").InnerText;
             course.Term = course.Code[course.Code.Length - 1].ToString()[0];
             course.Description = desc;
             course.Title = title;
@@ -276,15 +323,15 @@ namespace UoftTimetableGenerator.WebScrapper
             List<Section> tutorials = new List<Section>();
             List<Section> practicals = new List<Section>();
 
-            var sectionElements = courseTable.FindElements(By.XPath("tbody/tr[@class='perMeeting']"));
+            var sectionElements = courseTable.SelectNodes("tbody/tr[@class='perMeeting']").ToList();
             foreach (var sessionDiv in sectionElements)
             {
                 // Get the container that contains all the data of the meeting
-                IWebElement sessionContainer = null;
-                var possibleSectionDatas = sessionDiv.FindElements(By.XPath("td/table/tbody/tr[@class='sectionData']"));
+                HtmlNode sessionContainer = null;
+                var possibleSectionDatas = sessionDiv.SelectNodes("td/table/tbody/tr[@class='sectionData']");
                 foreach (var sectionData in possibleSectionDatas)
                 {
-                    if (sectionData.FindElements(By.ClassName("colCode")).Count > 0)
+                    if (sectionData.SelectNodes(".//*[@class='colCode']").Count > 0)
                     {
                         sessionContainer = sectionData;
                         break;
@@ -342,6 +389,13 @@ namespace UoftTimetableGenerator.WebScrapper
             return course;
         }
 
+        /// <summary>
+        /// Parses the html and puts the new courses into the database
+        /// </summary>
+        /// <param name="courseCode">The course code</param>
+        /// <param name="title">The title of the course</param>
+        /// <param name="desc">The description of the course</param>
+        /// <param name="campus">The campus</param>
         private void CreateCourseSchedule(string courseCode, string title, string desc, string campus)
         {
             TimetablePage.ClearFilters();
@@ -361,7 +415,8 @@ namespace UoftTimetableGenerator.WebScrapper
                 var courseTables = Browser.FindElements("xpath", "//table[@class='perCourse']");
                 foreach (var courseTable in courseTables)
                 {
-                    Course newCourse = GetCourses(courseTable, title, desc, campus);
+                    //Course newCourse = GetCourses(courseTable, title, desc, campus);
+                    Course newCourse = null;
                     if (newCourse != null)
                         coursesInfo.Add(newCourse);
                 }
@@ -370,13 +425,15 @@ namespace UoftTimetableGenerator.WebScrapper
             db.SubmitChanges();
         }
 
+        /// <summary>
+        /// Parses the html and populate the courses that has not been placed in the database before
+        /// </summary>
         private void CreateCourseSchedule()
         {
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(Browser.WebInstance.PageSource);
             var courseTables = htmlDoc.DocumentNode.SelectNodes("//table[@class='perCourse']").ToList();
 
-            /*
             for (int i = 0; i < courseTables.Count; i++)
             {
                 var course = GetCourses(courseTables[i], null, null, "St. George");
@@ -386,9 +443,13 @@ namespace UoftTimetableGenerator.WebScrapper
                     db.SubmitChanges();
                 }
             }
-            */
         }
 
+        /// <summary>
+        /// Parses the HTML and populates the courses in the database
+        /// If {overrideAllSchedules} is true, it will delete all existing course data from the database
+        /// </summary>
+        /// <param name="overrideAllSchedules">Whether to delete existing course data or not</param>
         public void CreateCourseSchedules(bool overrideAllSchedules)
         {
             db.ObjectTrackingEnabled = true;
@@ -398,27 +459,6 @@ namespace UoftTimetableGenerator.WebScrapper
 
             Browser.Initialize();
             TimetablePage.GotoPage();
-
-            /*
-            var courses = JsonConvert.DeserializeObject<List<Course>>(File.ReadAllText("courses.json"));
-            for (int i = 0; i < courses.Count; i++)
-            {
-
-            }
-
-            foreach (Course c in courses)
-            {
-                var courseResults = from p in db.Courses
-                                    where p.Code == c.Code
-                                    select p;
-
-                if (courseResults != null && courseResults.ToList().Count > 0)
-                    continue;
-
-                CreateCourseSchedule(c.Code, c.Title, c.Description, c.Campus);
-            }
-            */
-
             TimetablePage.SelectTerm(new string[] { "F", "S", "Y" });
             TimetablePage.SearchForCourses();
             TimetablePage.WaitForContentToLoad();
@@ -430,6 +470,9 @@ namespace UoftTimetableGenerator.WebScrapper
             db.Dispose();
         }
 
+        /// <summary>
+        /// Deletes all existing course data from the database
+        /// </summary>
         private void RemoveAllCourseSchedules()
         {
             // Delete all entities

@@ -8,10 +8,16 @@ using UoftTimetableGenerator.WebScrapper;
 
 namespace UoftTimetableGenerator.WebScrapper
 {
+    /// <summary>
+    /// Populates the database with building information from the web
+    /// </summary>
     class BuildingListPopulator
     {
         private UofTDataContext db = new UofTDataContext();
 
+        /// <summary>
+        /// Deletes all building records in the database and repopulates it with new data
+        /// </summary>
         public void RedoBuildingList()
         {
             db.ExecuteCommand("DELETE FROM BuildingDistances");

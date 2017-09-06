@@ -70,7 +70,6 @@
     <Compile Include="Pages\TimetablePage.cs" />
     <Compile Include="Pages\CourseListPage.cs" />
     <Compile Include="Course List\CourseListScrapper.cs" />
-    <Compile Include="IWebScrapper.cs" />
     <Compile Include="UofT.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
