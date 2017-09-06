@@ -14,45 +14,35 @@ The Uoft Timetable Generator project is a full stack web development project. It
 
 ### Walkthrough of this project
 This project consists of several components, each responsible for performing a certain task to get the best timetables. The image below illustrates the system architecture of the project.
-<div width="100%" style="
-    text-align: center;
-">
+<div width="100%">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/System%20Architecture.PNG" width="600px"/>
 </div>
 
 Users will be using the front-end web application to generate their timetables. In the homepage, they will first have to specify the courses they will be taking. 
-<div width="100%" style="
-    text-align: center;
-">
+<div width="100%">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Hompage.PNG" width="600px"/>
 </div>
 
 Typing the first three letters of the course code in the search bar will reveal the relevant, available courses.
-<div width="100%" style="
-    text-align: center;
-">
+<div width="100%">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Selecting%20a%20course.png" width="600px"/>
 </div>
 
 After selecting the courses, click on the "Generate Timetables" button. It will then call the server to generate the timetables, and navigate to the Timetables page. The generated timetables will be displayed in icons like the image below.
-<div width="100%" style="
-    text-align: center;
-">
+<div width="100%">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetables%20page.PNG" width="600px"/>
 </div>
 
 In addition, users can specify restrictions and preferences to tailor their timetables to their needs. It is done by clicking on the Preferences or Restrictions button on the top of the page. The preferences/restrictions panel will appear, revealing the options the users have. Applying their new restrictions/preferences will regenerate their timetables.
-<div width="100%" style="
-    text-align: center;
-">
+<div width="100%">
 <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Restriction%20panel.PNG" width="600px"/>
 </div>
 
 Users are able to view, print, and bookmark their favorite timetables by clicking on one of the generated timetable.
-<div width="100%" style="
-    text-align: center;
-">
-<img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG" width="600px"/>
+<div width="100%">
+    <p align="center">
+        <img src="https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG" width="600px"/>
+    </p>
 </div>
 
 ### Installation
