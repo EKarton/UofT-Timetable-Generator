@@ -29,7 +29,7 @@ In addition, users can specify restrictions and preferences to tailor their time
 ![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Restriction%20panel.PNG "Timetable viewer picture")
 
 Users are able to view, print, and bookmark their favorite timetables by clicking on one of the generated timetable.
-![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG =800px"Timetable viewer picture")
+![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG "Timetable viewer picture")
 
 
 ### Installation
