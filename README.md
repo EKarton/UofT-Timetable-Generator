@@ -13,7 +13,23 @@ The Uoft Timetable Generator project is a full stack web development project. It
 - License
 
 ### Walkthrough of this project
+This project consists of several components, each responsible for performing a certain task to get the best timetables. The image below illustrates the system architecture of the project.
+![Software architecture picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/System%20Architecture.PNG "System architecture picture")
 
+Users will be using the front-end web application to generate their timetables. In the homepage, they will first have to specify the courses they will be taking. 
+![Homepage picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Homepage.PNG "Homepage picture")
+
+Typing the first three letters of the course code in the search bar will reveal the relevant, available courses.
+![Course selection picture](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Selecting%20a%20course.png "Course selection picture")
+
+After selecting the courses, click on the "Generate Timetables" button. It will then call the server to generate the timetables, and navigate to the Timetables page. The generated timetables will be displayed in icons like the image below.
+![Timetable page](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetables%20page.PNG "Timetable page picture")
+
+In addition, users can specify restrictions and preferences to tailor their timetables to their needs. It is done by clicking on the Preferences or Restrictions button on the top of the page. The preferences/restrictions panel will appear, revealing the options the users have. Applying their new restrictions/preferences will regenerate their timetables.
+![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Restriction%20panel.PNG "Timetable viewer picture")
+
+Users are able to view, print, and bookmark their favorite timetables by clicking on one of the generated timetable.
+![Timetable viewer](https://raw.githubusercontent.com/EKarton/UofT-Timetable-Generator/master/docs/images/Timetable%20viewer.PNG "Timetable viewer picture")
 
 
 ### Installation
