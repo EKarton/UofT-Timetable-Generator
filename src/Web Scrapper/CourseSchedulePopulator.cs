@@ -265,14 +265,14 @@ namespace UoftTimetableGenerator.WebScrapper
                 {
                     section.InstructorToSections.Add(new InstructorToSection()
                     {
-                        Instructor = GetInstructor(instructorName),
+                        InstructorID = GetInstructor(instructorName).,
                         Section = section
                     });
                 }
                 else
                 {
                     section.InstructorToSections.Add(new InstructorToSection() {
-                        Instructor = instructorResults.ToList()[0],
+                        InstructorID = instructorResults.ToList()[0].InstructorID,
                         Section = section
                     });
                 }

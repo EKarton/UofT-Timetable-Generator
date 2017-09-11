@@ -13,9 +13,12 @@ namespace UoftTimetableGenerator.Generator
     public class GreedyGenerator : ITimetableGenerator
     {
         private List<Section[]> requiredSections = new List<Section[]>();
+        private List<char> terms = new List<char>();
         private Preferences preferences;
         private Restrictions restrictions;
-        private int numTimetablesToGenerate = 16;
+        private int numTimetablesToGenerate = 1600;
+
+        private List<int[]> timetables = new List<int[]>();
 
         public GreedyGenerator(List<Course> courses, Preferences preferences, Restrictions restrictions)
         {
@@ -27,7 +30,10 @@ namespace UoftTimetableGenerator.Generator
             {
                 char term = course.Term[0];
                 foreach (Activity activity in course.Activities)
+                {
                     requiredSections.Add(activity.Sections.ToArray());
+                    terms.Add(term);
+                }
             }
         }
 
@@ -37,9 +43,108 @@ namespace UoftTimetableGenerator.Generator
             set { numTimetablesToGenerate = value; }
         }
 
+        private int[] MakeCopyOfTimetable(int[] validTable)
+        {
+            int[] copy = new int[validTable.Length];
+            for (int i = 0; i < validTable.Length; i++)
+                copy[i] = validTable[i];
+            return copy;
+        }
+
+        private bool IsTimetablesComplete(int[] validTable)
+        {
+            foreach (int i in validTable)
+                if (i == -1)
+                    return false;
+            return true;
+        }
+
+        private List<Tuple<int, int>> GetNextSessions(int[] curTable)
+        {
+            // Make the timetable equivalent
+            YearlyTimetable timetable = new YearlyTimetable();
+            for (int i = 0; i < curTable.Length; i++)
+            {
+                if (curTable[i] != -1)
+                {
+                    Section section = requiredSections[i][curTable[i]];
+                    char term = terms[i];
+                    timetable.AddSection(section, term);
+                }
+            }
+
+            // Each tuple represent a potential next session to be added to the table
+            // Tuple.item1 refers to the required activity to add
+            // Tuple.item2 refers to the specific session in the activity to add
+            List<Tuple<int, int>> nextSessions = new List<Tuple<int, int>>(); 
+
+            for (int i = 0; i < curTable.Length; i++)
+            {
+                if (curTable[i] == -1)
+                {
+                    Section[] potentialSections = requiredSections[i];
+                    for (int j = 0; j < potentialSections.Length; j++)
+                    {
+                        if (timetable.DoesSectionFit(potentialSections[j], terms[i]))
+                            nextSessions.Add(new Tuple<int, int>(i, j));
+                    }
+                }
+            }
+
+            return nextSessions;
+        }
+
+        private void GenerateTimetables(int[] curTable)
+        {
+            // Basecase: if there are enough timetables to generate
+            if (timetables.Count > numTimetablesToGenerate)
+                return;
+
+            // Basecase: if the current timetable is complete
+            if (IsTimetablesComplete(curTable))
+            {
+                timetables.Add(MakeCopyOfTimetable(curTable));
+                return;
+            }
+
+            // Recurse
+            List<Tuple<int, int>> nextSessions = GetNextSessions(curTable);
+            foreach (Tuple<int, int> nextSession in nextSessions)
+            {
+                int sessionsIndex = nextSession.Item1;
+                int sessionIndex = nextSession.Item2;
+                curTable[sessionsIndex] = sessionIndex;
+                GenerateTimetables(curTable);                
+                curTable[sessionsIndex] = -1;
+            }
+        }
+
         public List<YearlyTimetable> GetTimetables()
         {
-            throw new NotImplementedException();
+            // Create an empty timetable
+            int[] emptyTable = new int[requiredSections.Count];
+            for (int i = 0; i < emptyTable.Length; i++)
+                emptyTable[i] = -1;
+
+            // Generate timetables
+            GenerateTimetables(emptyTable);
+
+            // Getting timetables that has every single required activity
+            List<YearlyTimetable> formattedTimetables = new List<YearlyTimetable>();
+            for (int i = 0; i < timetables.Count; i++)
+            {
+                int[] table = timetables[i];
+                YearlyTimetable formattedTimetable = new YearlyTimetable();
+                for (int j = 0; j < table.Length; j++)
+                {
+                    Section section = requiredSections[j][table[j]];
+                    char term = terms[j];
+                    formattedTimetable.AddSection(section, term);
+                }
+                formattedTimetables.Add(formattedTimetable);
+            }
+
+            return formattedTimetables;
         }
     }
 }
