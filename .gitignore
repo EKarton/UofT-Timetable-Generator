@@ -1,8 +1,5 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/Source Code/Database/Uoft Database.dbmdl
-/Source Code/Database/Uoft Database.jfm
-/Source Code/Database/Uoft Database.jfm
-/Source Code/Database/Uoft Database.jfm
+﻿# Hide any database properties
+/src/Database/Uoft Database.dbmdl
+/src/Database/Uoft Database.jfm
+/src/Database/Uoft Database.jfm
+/src/Database/Uoft Database.jfm

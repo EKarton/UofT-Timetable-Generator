@@ -1,0 +1,25 @@
+﻿restrictions-panel {
+    text-align: left;
+    padding: 0px 20px 20px 20px;
+}
+
+restrictions-panel table{
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+restrictions-panel input {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    vertical-align: middle;
+}
+
+restrictions-panel .applyBttn{
+    float: right;
+}
+
+restrictions-panel .cancelBttn {
+    float: right;
+}

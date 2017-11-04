@@ -11,7 +11,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Uoft Database", "Database\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetic Algorithm Analyzer", "Genetic Algorithm Analyzer\Genetic Algorithm Analyzer.csproj", "{C9A58A4B-181C-469A-A185-A20ECCBD8316}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web App", "Web API\Web App.csproj", "{521AB626-3A1B-49F0-BF7E-A6155D1150AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web App", "Web App\Web App.csproj", "{521AB626-3A1B-49F0-BF7E-A6155D1150AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Scrapper", "Web Scrapper\Web Scrapper.csproj", "{1A1ABBA5-AC04-4835-AF29-0088D3B8AD7C}"
 EndProject

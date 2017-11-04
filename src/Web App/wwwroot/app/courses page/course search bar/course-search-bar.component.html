@@ -1,0 +1,12 @@
+﻿<div>
+    <input class="searchBox" type="text" placeholder="Enter a course code"
+           data-ng-model="query" ng-change="vm.updateCourseResults(query)" />
+    <div class="searchResults" ng-show="query.length >= 3">
+        <ul ng-show="vm.courseResults.length > 0">
+            <li ng-repeat="course in vm.courseResults | filter: query" ng-click="vm.selectCourse(course)">
+                <span class="description">{{course.code + " (" + course.term + ")"}}</span>
+                <span class="campus">{{course.campus}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

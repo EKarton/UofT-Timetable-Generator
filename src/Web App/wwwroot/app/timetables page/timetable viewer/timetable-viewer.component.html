@@ -1,0 +1,23 @@
+﻿<div>
+    <div class="header">
+        <h2 class="title">{{vm.yearlyTimetable.name}}</h2>
+        <span class="fallBttn" 
+                    ng-class="{'selected': vm.term === 'Fall', 'hoverable clickable': vm.term != 'Fall'}"
+                    ng-click="vm.changeTerm('Fall')">Fall</span>
+
+        <span class="winterBttn" 
+                    ng-class="{'selected': vm.term === 'Winter', 'hoverable clickable': vm.term != 'Winter'}" 
+                    ng-click="vm.changeTerm('Winter')">Winter</span>
+
+        <span class="bookmarkBttn hoverable clickable">
+            <img ng-if="vm.isBookmarked" ng-click="vm.removeBookmark()" src="../../images/bookmark-black-shape.png" height="18" />
+            <img ng-if="!vm.isBookmarked" ng-click="vm.addBookmark()" src="../../images/bookmark-white.png" height="18" />
+        </span>
+        <span class="printBttn hoverable clickable" ng-click="vm.printTimetable()">
+            <img src="../../images/print.png" height="18" />
+        </span>
+    </div>
+    <div class="body">
+        <timetable blocks="vm.termTimetable" colorScheme="vm.sectionColors"></timetable>
+    </div>
+</div>

@@ -1,0 +1,240 @@
+﻿body {
+    /* Flush it with the browser (no margins) */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hoverable:hover {
+    background-color: rgba(132, 132, 132, 0.21);
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom-width: 1px;
+    border-bottom-color: blue;
+    border-bottom-style: solid;
+}
+
+#miniTimetablesViewer {
+    /* Show the vertical scrollbar when it is too big */
+    overflow-y: auto;
+
+    /* Align the child elements in the middle*/
+    text-align: center;
+
+        /* Add animation each time the side panel  is toggled */
+    transition-property: margin-left;
+    transition-duration: 0.5s;
+    -webkit-transition-property: margin-left;  /* For safari */
+    -webkit-transition-duration: 0.5s; /* For safari */
+}
+
+#headerPanel {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+.headerSides {
+    float: left;
+    text-align: left;
+    margin-right: 5%;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#header {
+    width: 95%;
+    margin-right: calc(5% + 20px);
+    font-size: 1.5em;
+}
+
+#bodyPanel{
+    width: auto;
+}
+
+#midHeaderPanel{
+    width: 100%;
+    text-align: right;
+}
+
+.mid-header-panel-bttn {
+    padding: 5px 5px 5px 5px;
+    border-radius: 0px;
+    display: inline-block;
+}
+
+.midHeaderContent {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: table;
+}
+
+#restrictionsBttn{
+    margin-right: 50px;
+}
+
+.miniTimetablesGroup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.miniTimetables{
+    display: inline-block;
+}
+
+#regenerateTimetablesBttn{
+    width: 60%;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#sideMenuPanel {
+    /* Make it stay on the page relative to the browser */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+
+    /* Make it on top of all the other elements on the page */
+    z-index: 1;
+
+    /* Prevent any elements inside the side panel to escape */
+    overflow-x: hidden;
+
+    /* Make it initially hidden (set width to auto if you want it initially opened)*/
+    width: 0;
+
+    /* Add animation each time the width of the side panel changes */
+    transition-property: max-width;
+    transition-duration: 0.5s;
+    -webkit-transition-property: max-width;  /* For safari */
+    -webkit-transition-duration: 0.5s; /* For safari */
+
+    /* Set asthetics */
+    background-color: rgb(217, 217, 217);
+}
+
+.menuItem {
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.menuItem h3{
+    margin-bottom: 5px;
+}
+
+.section{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sectionColor {
+    /* Center it in the middle */
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Set the size */
+    width: 20px;
+    height: 20px;
+
+    /* Add asthetics*/
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.sectionLabel {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.bookmarkedTimetable {
+    display: block;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+#overlayPanel {
+    /* Set the initial width and height to be horizontal line */
+    width: 100%;
+    height: 0%;
+
+    /* Make it stay in place relative to the browser window */
+    position: fixed;
+    /* Make it stay on top of all the other elements */
+    z-index: 1;
+    /* Place it in the top left corner */
+    left: 0;
+    top: 0;
+
+    /* Remove any overflow (i.e, elements coming out of the panel because the panel is too small)*/
+    overflow-y: auto;
+
+    /* Set the background color */
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* If the width / height changes, make it change for 2 seconds */
+    -webkit-transition-property: width, height; /* For safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: width, height;
+    transition-duration: 0.5s;
+}
+
+#overlayPanel .contentsPanel {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    padding: 10px;
+    /*transition-duration: 0.3s;*/
+}
+
+#overlayPanel .closeButton {
+    /* Make it stay relative to the parent */
+    position: absolute;
+
+    /* Place it correctly */
+    right: 10px;
+
+    /* Make the font big */
+    font-size: 20px;
+
+    /* Add some padding */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 4px;
+}

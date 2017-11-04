@@ -1,0 +1,41 @@
+﻿selected-course-list table {
+    table-layout: fixed;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    text-align: center;
+}
+
+selected-course-list td {
+    vertical-align: top;
+}
+
+selected-course-list h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+selected-course-list .selectedCoursePanel {
+    margin-top: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+selected-course-list .selectedCoursePanel:hover {
+    background-color: gray;
+}
+
+selected-course-list .deleteCourseBttn {
+    vertical-align: middle;
+    margin-top: 10px;
+    display: inline-block;
+    margin: auto;
+}
+
+selected-course-list .selectedCourse {
+    text-align: left;
+    margin-top: 10px;
+    display: inline-block;
+    margin: auto;
+}
