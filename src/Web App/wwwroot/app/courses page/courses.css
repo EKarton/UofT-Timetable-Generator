@@ -1,7 +1,8 @@
 ﻿body {
 }
 
-#header h1, h2, h4{
+#header{
+    width: 100%;
     text-align: center;
 }
 

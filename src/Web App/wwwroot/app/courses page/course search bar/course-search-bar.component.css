@@ -9,7 +9,7 @@ course-search-bar .searchBox {
     width: 60%;
     border-radius: 5px;
     border: 1px solid black;
-    font-size: larger;
+    font-size: 150%;
 }
 
 course-search-bar .searchResults {
