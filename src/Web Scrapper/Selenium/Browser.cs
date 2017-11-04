@@ -58,6 +58,12 @@ namespace UoftTimetableGenerator.WebScrapper
         internal static IWebElement FindClickableElement(string locationMethod, string location)
         {
             By locator = GetElementLocation(locationMethod, location);
+
+            // Scroll to the viewport of the element
+            IWebElement element = webInstance.FindElement(locator);
+            IJavaScriptExecutor js = (IJavaScriptExecutor) webInstance;
+            js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
+
             return waitInstance.Until(ExpectedConditions.ElementToBeClickable(locator));
         }
 

@@ -26,5 +26,21 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=LAPTOP;Initial Catalog="UofT 2017";Integrated Security=True</Value>
     </Setting>
+    <Setting Name="Uoft_DatabaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=LAPTOP;Initial Catalog="Uoft Database";Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=LAPTOP;Initial Catalog="Uoft Database";Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="uoftDatabaseConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User ID=emiliokartono;Password=Molybdenum1122;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User ID=emiliokartono;Password=Molybdenum1122;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

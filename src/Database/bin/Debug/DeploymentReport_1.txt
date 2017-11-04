@@ -1,0 +1,32 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Activity] (Table)
+       [dbo].[Building] (Table)
+       [dbo].[BuildingDistances] (Table)
+       [dbo].[Course] (Table)
+       [dbo].[Instructor] (Table)
+       [dbo].[InstructorToSection] (Table)
+       [dbo].[Section] (Table)
+       [dbo].[Session] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Activity] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[BuildingDistances] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[BuildingDistances] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[InstructorToSection] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[InstructorToSection] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Section] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Session] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Session] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Session] (Foreign Key)
+       [dbo].[Activity].[ActivityType].[MS_Description] (Extended Property)
+
+** Supporting actions

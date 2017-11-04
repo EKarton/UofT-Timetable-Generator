@@ -91,14 +91,30 @@ namespace UoftTimetableGenerator.WebScrapper
         /// <returns>A list of sessions</returns>
         private List<Session> GetYearlongSessions(HtmlNode sessionsDiv, HtmlNode locsDiv)
         {
-            var sessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']").ToList();
-            var termLocDivs = locsDiv.SelectNodes("div[@class='colSectionLocRooms']").ToList();
+            var rawSessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']");
+            var sessionDivs = new List<HtmlNode>();
+            if (rawSessionDivs != null)
+                sessionDivs = rawSessionDivs.ToList();
+
+            var rawTermLocDivs = locsDiv.SelectNodes("div[@class='colSectionLocRooms']");
+            var termLocDivs = new List<HtmlNode>();
+            if (rawTermLocDivs != null)
+                termLocDivs = rawTermLocDivs.ToList();
+
             var fallLocDivs = new List<HtmlNode>();
             if (termLocDivs.Count > 0)
-                fallLocDivs = termLocDivs[0].SelectNodes(".//*[@class='colDay']").ToList();            
+            {
+                var rawFallLocDivs = termLocDivs[0].SelectNodes(".//*[@class='colDay']");
+                if (rawFallLocDivs != null)
+                    fallLocDivs = rawFallLocDivs.ToList();
+            }
             var winterLocDivs = new List<HtmlNode>();
             if (termLocDivs.Count > 1)
-                winterLocDivs = termLocDivs[1].SelectNodes(".//*[@class='colDay']").ToList();
+            {
+                var rawWinterLocDivs = termLocDivs[1].SelectNodes(".//*[@class='colDay']");
+                if (rawWinterLocDivs != null)
+                    winterLocDivs = rawWinterLocDivs.ToList();
+            }
 
             List<Session> sessions = new List<Session>();
             for (int i = 0; i < sessionDivs.Count; i++)
@@ -114,13 +130,13 @@ namespace UoftTimetableGenerator.WebScrapper
                 Session newSession = new Session();
 
                 // Parsing the times
-                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Trim();
+                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 int weekdayIndex = -1;
                 if (weekday.Length > 1)
                     weekdayIndex = GetIndexFromWeekday(weekday);
 
-                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText;
-                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText;
+                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText.Replace("\n", "").Replace("\r", "").Trim();
+                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 double? startTime = FormatTime(weekdayIndex, startTime_raw);
                 double? endTime = FormatTime(weekdayIndex, endTime_raw);
 
@@ -129,7 +145,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 newSession.EndTime = endTime;
 
                 // Parsing the fall location
-                string location_fall = fallLocDivs[i].InnerText;
+                string location_fall = fallLocDivs[i].InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 int? buildingID_fall = null;
                 string roomNum_fall = null;
                 if (i < fallLocDivs.Count && location_fall.Length >= 2)
@@ -139,7 +155,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 }
 
                 // Parsing the winter location
-                string location_winter = winterLocDivs[i].InnerText;
+                string location_winter = winterLocDivs[i].InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 int? buildingID_winter = null;
                 string roomNum_winter = null;
                 if (i < winterLocDivs.Count && location_winter.Length >= 2)
@@ -168,8 +184,16 @@ namespace UoftTimetableGenerator.WebScrapper
         /// <returns>A list of sessions</returns>
         private List<Session> GetTermedSessions(HtmlNode sessionsDiv, HtmlNode locsDiv, string term)
         {
-            var sessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']");
-            var locDivs = locsDiv.SelectNodes(".//*[@class='colDay']");
+            var rawSessionDivs = sessionsDiv.SelectNodes(".//*[@class='colDay']");
+            var sessionDivs = new List<HtmlNode>();
+            if (rawSessionDivs != null)
+                sessionDivs = rawSessionDivs.ToList();
+
+            var rawLocDivs = locsDiv.SelectNodes(".//*[@class='colDay']");
+            var locDivs = new List<HtmlNode>();
+            if (rawLocDivs != null)
+                locDivs = rawLocDivs.ToList();
+
             List<Session> sessions = new List<Session>();
             for (int i = 0; i < sessionDivs.Count; i++)
             {
@@ -184,13 +208,13 @@ namespace UoftTimetableGenerator.WebScrapper
                 Session newSession = new Session();
 
                 // Parsing the times
-                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Trim();
+                string weekday = sessionDivs[i].SelectSingleNode(".//*[@class='weekDay']").InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 int weekdayIndex = -1;
                 if (weekday.Length > 1)
                     weekdayIndex = GetIndexFromWeekday(weekday);
 
-                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText;
-                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText;
+                string startTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[1]").InnerText.Replace("\n", "").Replace("\r", "").Trim();
+                string endTime_raw = sessionDivs[i].SelectSingleNode("span[@class='dayInfo']/time[2]").InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 double? startTime = FormatTime(weekdayIndex, startTime_raw);
                 double? endTime = FormatTime(weekdayIndex, endTime_raw);
 
@@ -199,7 +223,7 @@ namespace UoftTimetableGenerator.WebScrapper
                 newSession.EndTime = endTime;
 
                 // Parsing the location
-                string location = locDivs[i].InnerText;
+                string location = locDivs[i].InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 int? buildingID = null;
                 string roomNum = null;
                 if (i < locDivs.Count && location.Length >= 2)
@@ -249,13 +273,17 @@ namespace UoftTimetableGenerator.WebScrapper
         {
             // Set the code
             Section section = new Section();
-            section.SectionCode = sessionContainer.SelectSingleNode(".//*[@class='colCode']").InnerText;
+            section.SectionCode = sessionContainer.SelectSingleNode(".//*[@class='colCode']").InnerText.Replace("\n", "").Replace("\r", "").Trim();
             
             // Add the instructors
-            var instructorElements = sessionContainer.SelectNodes("td[@class='colInst']/ul/li");
+            var rawInstructorElements = sessionContainer.SelectNodes("td[@class='colInst']/ul/li");
+            var instructorElements = new List<HtmlNode>();
+            if (rawInstructorElements != null)
+                instructorElements = rawInstructorElements.ToList();
+
             foreach (var instructorElement in instructorElements)
             {
-                string instructorName = instructorElement.InnerText.Trim();
+                string instructorName = instructorElement.InnerText.Replace("\n", "").Replace("\r", "").Trim();
                 var instructorResults = from p in db.Instructors
                                         where p.Name == instructorName
                                         select p;
@@ -265,13 +293,14 @@ namespace UoftTimetableGenerator.WebScrapper
                 {
                     section.InstructorToSections.Add(new InstructorToSection()
                     {
-                        InstructorID = GetInstructor(instructorName).,
+                        Instructor = GetInstructor(instructorName),
                         Section = section
                     });
                 }
                 else
                 {
-                    section.InstructorToSections.Add(new InstructorToSection() {
+                    section.InstructorToSections.Add(new InstructorToSection()
+                    {
                         InstructorID = instructorResults.ToList()[0].InstructorID,
                         Section = section
                     });
@@ -304,7 +333,7 @@ namespace UoftTimetableGenerator.WebScrapper
         {
             // Create a new course
             Course course = new Course();
-            course.Code = courseTable.SelectSingleNode("tbody/tr[2]/td/span").InnerText;
+            course.Code = courseTable.SelectSingleNode("tbody/tr[2]/td/span").InnerText.Replace("\n", "").Replace("\r", "").Trim();
             course.Term = course.Code[course.Code.Length - 1].ToString()[0];
             course.Description = desc;
             course.Title = title;
@@ -323,15 +352,24 @@ namespace UoftTimetableGenerator.WebScrapper
             List<Section> tutorials = new List<Section>();
             List<Section> practicals = new List<Section>();
 
-            var sectionElements = courseTable.SelectNodes("tbody/tr[@class='perMeeting']").ToList();
+            var rawSectionElements = courseTable.SelectNodes("tbody/tr[@class='perMeeting']");
+            var sectionElements = new List<HtmlNode>();
+            if (rawSectionElements != null)
+                sectionElements = rawSectionElements.ToList();
+
             foreach (var sessionDiv in sectionElements)
             {
                 // Get the container that contains all the data of the meeting
                 HtmlNode sessionContainer = null;
-                var possibleSectionDatas = sessionDiv.SelectNodes("td/table/tbody/tr[@class='sectionData']");
+                var rawPossibleSectionDatas = sessionDiv.SelectNodes("td/table/tbody/tr[@class='sectionData']");
+                var possibleSectionDatas = new List<HtmlNode>();
+                if (rawPossibleSectionDatas != null)
+                    possibleSectionDatas = rawPossibleSectionDatas.ToList();
+
                 foreach (var sectionData in possibleSectionDatas)
                 {
-                    if (sectionData.SelectNodes(".//*[@class='colCode']").Count > 0)
+                    var rawSessionData = sectionData.SelectNodes(".//*[@class='colCode']");
+                    if (rawSessionData != null && rawSessionData.ToList().Count > 0)
                     {
                         sessionContainer = sectionData;
                         break;

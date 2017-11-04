@@ -52,5 +52,27 @@ namespace UoftTimetableGenerator.DataModels.Properties {
                 return ((string)(this["UofT_2017ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP;Initial Catalog=\"Uoft Database\";Integrated Security=True")]
+        public string Uoft_DatabaseConnectionString {
+            get {
+                return ((string)(this["Uoft_DatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User " +
+            "ID=emiliokartono;Password=Molybdenum1122;Connect Timeout=30;Encrypt=True;TrustSe" +
+            "rverCertificate=False")]
+        public string uoftDatabaseConnectionString1 {
+            get {
+                return ((string)(this["uoftDatabaseConnectionString1"]));
+            }
+        }
     }
 }

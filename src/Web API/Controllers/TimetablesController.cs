@@ -49,8 +49,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
                 courseObjs.Add(courseObj);
             }
 
-            // Generate the timetables
-            /*
+            // Generate the timetables            
             GAGenerator generator = new GAGenerator(courseObjs, request.Preferences, request.Restrictions)
             {
                 NumGenerations = 100,
@@ -59,12 +58,10 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
                 CrossoverRate = 0.6,
                 CrossoverType = "Uniform Crossover"
             };
+            List<YearlyTimetable> timetables = generator.GetTimetables();            
 
-            List<YearlyTimetable> timetables = generator.GetTimetables();
-            */
-
-            GreedyGenerator greedyGenerator = new GreedyGenerator(courseObjs, request.Preferences, request.Restrictions);
-            List<YearlyTimetable> timetables = greedyGenerator.GetTimetables();
+            //GreedyGenerator greedyGenerator = new GreedyGenerator(courseObjs, request.Preferences, request.Restrictions);
+            //List<YearlyTimetable> timetables = greedyGenerator.GetTimetables();
 
             // Convert the timetables to mini timetables (which will be presented to the user)
             List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();

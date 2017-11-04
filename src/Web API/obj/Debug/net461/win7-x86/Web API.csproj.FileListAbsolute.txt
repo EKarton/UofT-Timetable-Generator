@@ -1,6 +1,4 @@
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net461\win7-x86\Web API.deps.json
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net461\win7-x86\Web API.runtimeconfig.json
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debug\net461\win7-x86\Web API.runtimeconfig.dev.json
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.csprojResolveAssemblyReference.cache
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.csproj.Web API.exe.config
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.AssemblyInfo.cs
@@ -156,3 +154,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\bin\Debu
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.exe
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web API\obj\Debug\net461\win7-x86\Web API.AssemblyInfoInputs.cache

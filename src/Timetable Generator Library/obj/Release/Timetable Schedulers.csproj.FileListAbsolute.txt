@@ -1,0 +1,12 @@
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Timetable Generator Library.dll.config
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Timetable Generator Library.dll
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Data Models.dll
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Data Models.pdb
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Data Models.dll.config
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Release\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Release\Timetable Schedulers.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Release\Timetable Schedulers.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Release\Timetable Generator Library.dll
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Release\Timetable Generator Library.pdb

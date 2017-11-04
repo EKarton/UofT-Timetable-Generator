@@ -32,7 +32,7 @@ namespace UoftTimetableGenerator.WebScrapper
             // Make the timeout longer
             TimeSpan prevTimeout = Browser.WaitInstance.Timeout;
             TimeSpan prevPollInterval = Browser.WaitInstance.PollingInterval;
-            Browser.WaitInstance.Timeout = TimeSpan.FromSeconds(120);
+            Browser.WaitInstance.Timeout = TimeSpan.FromSeconds(300);
             Browser.WaitInstance.PollingInterval = TimeSpan.FromMilliseconds(100);
 
             // Wait until the page finished loading
@@ -55,7 +55,7 @@ namespace UoftTimetableGenerator.WebScrapper
         /// </summary>
         public static void SearchForCourses()
         {
-            Browser.FindClickableElement("id", "searchButton").Click();
+            Browser.FindClickableElement("xpath", "//*[@id='searchButton']").Click();
         }
 
         /// <summary>

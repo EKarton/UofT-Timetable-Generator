@@ -22,7 +22,7 @@ namespace UoftTimetableGenerator.WebScrapper
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UofT 2017")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UoftDatabase")]
 	public partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -57,7 +57,7 @@ namespace UoftTimetableGenerator.WebScrapper
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.UofT_2017ConnectionString, mappingSource)
+				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.UoftDatabaseConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

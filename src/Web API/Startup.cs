@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace UoftTimetableGenerator.WebAPI
 {
@@ -34,9 +36,9 @@ namespace UoftTimetableGenerator.WebAPI
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://localhost:53688")
+                    builder => builder.WithOrigins("http://uofttimetablegenerator.azurewebsites.net")
                                                     .AllowAnyMethod()
-                                                    .AllowAnyHeader());
+                                                    .WithHeaders("accept", "content-type", "origin", "x-custom-header"));
             });
         }
 
@@ -55,8 +57,6 @@ namespace UoftTimetableGenerator.WebAPI
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
-
             // Use cors for a specific domain
             app.UseCors("AllowSpecificOrigin");
 
@@ -65,7 +65,13 @@ namespace UoftTimetableGenerator.WebAPI
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            });            
+
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(options);
+            app.UseStaticFiles();
         }
     }
 }

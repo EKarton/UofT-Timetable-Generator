@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UofT 2017" EntityNamespace="DataContext" ContextNamespace="DataContext" Class="UofTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP;Initial Catalog=&quot;UofT 2017&quot;;Integrated Security=True" SettingsObjectName="UoftTimetableGenerator.DataModels.Properties.Settings" SettingsPropertyName="UofT_2017ConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="uoftDatabase" EntityNamespace="DataContext" ContextNamespace="DataContext" Class="UofTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User ID=emiliokartono;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False" SettingsObjectName="UoftTimetableGenerator.DataModels.Properties.Settings" SettingsPropertyName="uoftDatabaseConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Activity" Member="Activities">
     <Type Name="Activity">
       <Column Name="ActivityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -7,21 +7,6 @@
       <Column Name="ActivityType" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Association Name="Activity_Section" Member="Sections" ThisKey="ActivityID" OtherKey="ActivityID" Type="Section" />
       <Association Name="Course_Activity" Member="Course" ThisKey="CourseID" OtherKey="CourseID" Type="Course" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Session" Member="Sessions">
-    <Type Name="Session">
-      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Fall_BuildingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Fall_RoomNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Winter_BuildingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Winter_RoomNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="StartTime" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="EndTime" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="Building_Session" Member="Building" ThisKey="Fall_BuildingID" OtherKey="BuildingID" Type="Building" IsForeignKey="true" />
-      <Association Name="Building_Session1" Member="Building1" ThisKey="Winter_BuildingID" OtherKey="BuildingID" Type="Building" IsForeignKey="true" />
-      <Association Name="Section_Session" Member="Section" ThisKey="SectionID" OtherKey="SectionID" Type="Section" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Building" Member="Buildings">
@@ -32,10 +17,10 @@
       <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="Building_Session" Member="Sessions" ThisKey="BuildingID" OtherKey="Fall_BuildingID" Type="Session" />
-      <Association Name="Building_Session1" Member="Sessions1" ThisKey="BuildingID" OtherKey="Winter_BuildingID" Type="Session" />
       <Association Name="Building_BuildingDistance" Member="BuildingDistances" ThisKey="BuildingID" OtherKey="BuildingID1" Type="BuildingDistance" />
       <Association Name="Building_BuildingDistance1" Member="BuildingDistances1" ThisKey="BuildingID" OtherKey="BuildingID2" Type="BuildingDistance" />
+      <Association Name="Building_Session" Member="Sessions" ThisKey="BuildingID" OtherKey="Fall_BuildingID" Type="Session" />
+      <Association Name="Building_Session1" Member="Sessions1" ThisKey="BuildingID" OtherKey="Winter_BuildingID" Type="Session" />
     </Type>
   </Table>
   <Table Name="dbo.BuildingDistances" Member="BuildingDistances">
@@ -88,9 +73,24 @@
       <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ActivityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SectionCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Association Name="Section_Session" Member="Sessions" ThisKey="SectionID" OtherKey="SectionID" Type="Session" />
       <Association Name="Section_InstructorToSection" Member="InstructorToSections" ThisKey="SectionID" OtherKey="SectionID" Type="InstructorToSection" />
+      <Association Name="Section_Session" Member="Sessions" ThisKey="SectionID" OtherKey="SectionID" Type="Session" />
       <Association Name="Activity_Section" Member="Activity" ThisKey="ActivityID" OtherKey="ActivityID" Type="Activity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Session" Member="Sessions">
+    <Type Name="Session">
+      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fall_BuildingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fall_RoomNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Winter_BuildingID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Winter_RoomNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Building_Session" Member="Building" ThisKey="Fall_BuildingID" OtherKey="BuildingID" Type="Building" IsForeignKey="true" />
+      <Association Name="Section_Session" Member="Section" ThisKey="SectionID" OtherKey="SectionID" Type="Section" IsForeignKey="true" />
+      <Association Name="Building_Session1" Member="Building1" ThisKey="Winter_BuildingID" OtherKey="BuildingID" Type="Building" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

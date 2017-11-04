@@ -5803,7 +5803,7 @@
       ]
     },
     "Microsoft.DotNet.PlatformAbstractions/1.1.2": {
-      "sha512": "z4CSzQKBFokkmcJgeEGC0n6RNpxHs6/kMpzFPwIh0U6zQN4/wZqK4r96IU9e7yRMTm3kFah9k4LEn3/Ecz6/5A==",
+      "sha512": "R1BV4p6dJQHjqPSiU3Kb8otyC0pVbk3HWVMx8yi4zQ/eZyQRQ6vli1Ron2GwXVK7+g0RELs2chy+v+v8gTAnmw==",
       "type": "package",
       "path": "microsoft.dotnet.platformabstractions/1.1.2",
       "files": [
@@ -6023,7 +6023,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyModel/1.1.2": {
-      "sha512": "k1dsqK0Xy3jqCr4+1rzKdA94ki3AmYDQm3kExtyJR2SgJyF1vcDPuDhsYw0S0OhffDTlA2RF2B6EaiFIuP6QaQ==",
+      "sha512": "v/Y38U1tsdr8s5SLpTzbiwsugSFV+JNtm2lGb0agKDt/IwmWFbAqOR/rLr/ER1u4X5cHRv/J2dU6acUzYA0MFQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencymodel/1.1.2",
       "files": [
@@ -9940,7 +9940,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emilio K\\.nuget\\packages\\": {}
+    "C:\\Users\\Emilio K\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -9948,12 +9949,15 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\Web API.csproj",
-      "projectName": "Web API",
-      "projectPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\Web API.csproj",
+      "projectUniqueName": "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Web API\\Web App.csproj",
+      "projectName": "Web App",
+      "projectPath": "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Web API\\Web App.csproj",
       "packagesPath": "C:\\Users\\Emilio K\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Web API\\obj\\",
+      "outputPath": "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Web API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Emilio K\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -9968,14 +9972,19 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj": {
-              "projectPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj"
+            "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj": {
+              "projectPath": "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj"
             },
-            "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj": {
-              "projectPath": "C:\\Users\\Emilio K\\Documents\\GitHub\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj"
+            "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj": {
+              "projectPath": "C:\\Users\\Emilio K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {

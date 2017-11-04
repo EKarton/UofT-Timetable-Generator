@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="timetableApp" ng-controller="appController">
+<head>
+    <meta charset="utf-8" />
+    <title>Uoft Timetable Generator</title>
+
+    <!-- Load the components' style sheets -->
+    <link rel="stylesheet" href="app/courses page/courses.css"/>
+    <link rel="stylesheet" href="app/courses page/course search bar/course-search-bar.component.css"/>
+    <link rel="stylesheet" href="app/courses page/selected course list/selected-course-list.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/timetable.css"/>
+    <link rel="stylesheet" href="app/timetables page/preferences/preferences-panel.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/restrictions/restrictions-panel.component.css"/>
+    <link rel="stylesheet" href="app/timetables page/timetable viewer/timetable-viewer.component.css"/>
+
+    <!-- Load the stylesheets that are used in per page -->
+    <link rel="stylesheet" ng-href="{{css}}">
+    <link rel="stylesheet" href="app/common/common.css"/>
+</head>
+<body>
+	<div ng-view></div>
+
+    <!-- Load Angular JS scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <!-- Load js scripts -->
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <!-- Load the controllers -->
+    <script type="text/javascript" src="app/courses page/courses.controller.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetables.controller.js"></script>
+
+    <!-- Load the directives -->
+    <script type="text/javascript" src="app/timetables page/timetable preview/timetable-preview.directive.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetable/timetable.directive.js"></script>
+
+    <!-- Load the components -->
+    <script type="text/javascript" src="app/courses page/course search bar/course-search-bar.component.js"></script>
+    <script type="text/javascript" src="app/courses page/selected course list/selected-course-list.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/preferences/preferences-panel.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/restrictions/restrictions-panel.component.js"></script>
+    <script type="text/javascript" src="app/timetables page/timetable viewer/timetable-viewer.component.js"></script>
+
+    <!-- Load the services -->
+    <script type="text/javascript" src="app/services/timetable-generator.service.js"> </script>
+    <script type="text/javascript" src="app/services/course-search.services.js"></script>
+</body>
+</html>

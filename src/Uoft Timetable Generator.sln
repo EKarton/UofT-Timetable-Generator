@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Models", "Data Models\Data Models.csproj", "{ACA62F68-737A-4BFB-A3B9-2E6C663CCC4B}"
 EndProject
@@ -11,29 +11,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Uoft Database", "Database\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetic Algorithm Analyzer", "Genetic Algorithm Analyzer\Genetic Algorithm Analyzer.csproj", "{C9A58A4B-181C-469A-A185-A20ECCBD8316}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Webpage", "Webpage\", "{E9619F01-B0EC-4972-B68E-996695E294EB}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_53688"
-		Debug.AspNetCompiler.PhysicalPath = "Webpage\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53688\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_53688"
-		Release.AspNetCompiler.PhysicalPath = "Webpage\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53688\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "53688"
-		SlnRelativePath = "Webpage\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web API", "Web API\Web API.csproj", "{521AB626-3A1B-49F0-BF7E-A6155D1150AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web App", "Web API\Web App.csproj", "{521AB626-3A1B-49F0-BF7E-A6155D1150AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web Scrapper", "Web Scrapper\Web Scrapper.csproj", "{1A1ABBA5-AC04-4835-AF29-0088D3B8AD7C}"
 EndProject
@@ -61,10 +39,6 @@ Global
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9A58A4B-181C-469A-A185-A20ECCBD8316}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9619F01-B0EC-4972-B68E-996695E294EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9619F01-B0EC-4972-B68E-996695E294EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9619F01-B0EC-4972-B68E-996695E294EB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9619F01-B0EC-4972-B68E-996695E294EB}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{521AB626-3A1B-49F0-BF7E-A6155D1150AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{521AB626-3A1B-49F0-BF7E-A6155D1150AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{521AB626-3A1B-49F0-BF7E-A6155D1150AE}.Release|Any CPU.ActiveCfg = Release|Any CPU

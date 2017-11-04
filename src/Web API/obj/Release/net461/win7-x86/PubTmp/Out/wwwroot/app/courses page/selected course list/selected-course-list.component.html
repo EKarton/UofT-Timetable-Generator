@@ -1,0 +1,35 @@
+﻿<table>
+    <thead>
+        <tr>
+            <td class="column"><h3>Fall</h3></td>
+            <td class="column"><h3>Winter</h3></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Fall courses -->
+            <td>
+                <div class="selectedCoursePanel" ng-repeat="course in vm.selectedCourses" ng-if="course.term === 'Fall' || course.term === 'Year'">
+                    <div>
+                        <span class="deleteCourseBttn">
+                            <img src="../../images/cancel.png" height="14" width="14" ng-click="vm.removeCourse(course)" />
+                        </span>
+                        <span class="selectedCourse">{{course.code}}</span>
+                    </div>
+                </div>
+            </td>
+
+            <!-- Winter/year courses-->
+            <td>
+                <div class="selectedCoursePanel" ng-repeat="course in vm.selectedCourses" ng-if="course.term === 'Winter' || course.term === 'Year'">
+                    <div>
+                        <span class="deleteCourseBttn" ng-click="vm.removeCourse(course)">
+                            <img src="../../images/cancel.png" height="14" width="14" />
+                        </span>
+                        <span class="selectedCourse">{{course.code}}</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
