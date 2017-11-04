@@ -36,7 +36,7 @@ namespace UoftTimetableGenerator.WebAPI
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://uofttimetablegenerator.azurewebsites.net")
+                    builder => builder.WithOrigins("http://uofttimetablegenerator.azurewebsites.net") // "http://localhost:53235") 
                                                     .AllowAnyMethod()
                                                     .WithHeaders("accept", "content-type", "origin", "x-custom-header"));
             });
