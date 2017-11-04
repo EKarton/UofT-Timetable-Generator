@@ -1,5 +1,23 @@
-﻿# Hide any database properties
+﻿########################################################################################
+# Hide any database files that contain the database connection strings
+########################################################################################
 /src/Database/Uoft Database.dbmdl
 /src/Database/Uoft Database.jfm
 /src/Database/Uoft Database.jfm
 /src/Database/Uoft Database.jfm
+/src/Database/Uoft Database_1.publish.xml
+/src/Database/Uoft Database_2.publish.xml
+/src/Database/Uoft Database.sqlproj.user
+/src/Data Models/Uoft.dbml
+/src/Web Scrapper/UofT.dbml
+
+########################################################################################
+# Hide all the bin files in each project
+######################################################################################## 
+/src/Data Models/bin
+/src/Database/bin
+/src/Genetic Algorithm Analyzer/bin
+/src/Timetable Generator Library/bin
+/src/Web App/bin
+/src/Web Scrapper/bin
+
