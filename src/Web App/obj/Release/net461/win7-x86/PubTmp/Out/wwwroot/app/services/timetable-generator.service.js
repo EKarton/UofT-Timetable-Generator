@@ -174,8 +174,8 @@
         * @param {string[]} courseCodes - A set of complete UofT course codes
         * @param {Preferences = undefined} preferences - The preferences for the timetable generator
         * @param {Restrictions = undefined} restrictions - The restrictions for the timetable generator
-        * @param {function()} onSuccess - A handler which will be called when the timetables are generated and returned from the server
-        * @param {function()} onFailure - A handler which will be called when the call to the server has failed.
+        * @param {method(generatedTimetables)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
+        * @param {method(promise)} onFailure - A handler which will be called when the call to the server has failed.
         */
         this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onFailure) {
 
@@ -191,7 +191,7 @@
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // "http://localhost:53235/api/timetables/getuofttimetables"; 
+            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; //"http://localhost:53235/api/timetables/getuofttimetables"; //
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;
@@ -213,10 +213,12 @@
                     obj.generatedTimetables.timetables = newTimetables;
                     obj.generatedTimetables.generateNewColorScheme();
 
-                    onSuccess();
+                    if (onSuccess != undefined)
+                        onSuccess();
                 },
                 function (response) {
-                    onFailure(response);
+                    if (onFailure != undefined)
+                        onFailure(response);
                 }
             );
         };

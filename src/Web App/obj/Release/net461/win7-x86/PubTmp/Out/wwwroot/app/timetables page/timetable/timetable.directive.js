@@ -214,20 +214,16 @@
 
                 // Compute the height
                 scope.svgHeight = scope.dataRowHeight * (scope.latestTime - scope.earliestTime) + scope.headerHeight;
-                //console.log("Theoethical", scope.svgWidth, scope.svgHeight, scope.headerHeight, scope.dataRowHeight);
 
                 // Set the width and height
                 svgElement.setAttribute("viewBox", "0, 0, " + scope.svgWidth + ", " + scope.svgHeight);
                 svgElement.setAttribute("preserveAspectRatio", "xMaxYMin slice");
-                //console.log("Actual", svgElement.getBoundingClientRect().width, svgElement.getBoundingClientRect().height, scope.headerHeight);
             };
 
             // Each time the data's value is changed, it updates the graph
             scope.$watchCollection("[blocks, colorscheme]", function (newValues, oldValues) {
                 var blocks = newValues[0];
                 var colorScheme = newValues[1];
-
-                console.log("Updating timetable", blocks, colorScheme);
 
                 if (blocks == null || colorScheme == null)
                     return;

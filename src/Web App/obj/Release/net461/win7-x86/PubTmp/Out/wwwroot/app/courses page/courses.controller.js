@@ -49,7 +49,6 @@
                 $scope.selectedCourses.push(course);
             else
                 alert("This course was selected already!");
-            console.log($scope.selectedCourses);
         };
 
         /**
