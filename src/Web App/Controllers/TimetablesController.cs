@@ -50,7 +50,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             }
 
             // Generate the timetables            
-            GAGenerator generator = new GAGenerator(courseObjs, request.Preferences, request.Restrictions)
+            GAGenerator<YearlyTimetable> generator = new GAGenerator<YearlyTimetable>(courseObjs, request.Preferences, request.Restrictions)
             {
                 NumGenerations = 100,
                 PopulationSize = 16,

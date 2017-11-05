@@ -106,6 +106,17 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
             for (int i = 0; i < numTrials; i++)
             {
                 // Make generator with params
+                
+                GAGenerator<YearlyTimetable> generator = new GAGenerator<YearlyTimetable>(courses, preferences, restrictions)
+                {
+                    MutationRate = mutationRate,
+                    CrossoverRate = crossoverRate,
+                    NumGenerations = numGenerations,
+                    PopulationSize = populationSize,
+                    CrossoverType = crossoverType
+                };
+                
+                /*
                 GAGenerator generator = new GAGenerator(courses, preferences, restrictions)
                 {
                     MutationRate = mutationRate,
@@ -114,6 +125,8 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
                     PopulationSize = populationSize,
                     CrossoverType = crossoverType
                 };
+                */
+                
 
                 // Run the generator and get stats
                 StatsPerGeneration[] curStats = generator.GenerateTimetablesWithStats();

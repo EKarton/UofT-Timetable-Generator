@@ -1,9 +1,11 @@
-﻿namespace UoftTimetableGenerator.DataModels
+﻿using System;
+
+namespace UoftTimetableGenerator.DataModels
 {
     /// <summary>
     /// A class used to represent a session
     /// </summary>
-    public class Session
+    public class Session : IComparable
     {
         /// <summary>
         /// Create an empty session
@@ -108,6 +110,30 @@
         public int GetEndTime_WeekdayIndex()
         {
             return ((int)EndTime) / 100;
+        }
+
+        /// <summary>
+        /// Returns -1 if this object is before <paramref name="obj"/>.
+        /// Returns 1 if this object comes after <paramref name="obj"/>
+        /// Returns 0 if this object intersects with <paramref name="obj"/>
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int CompareTo(object obj)
+        {
+            if (!(obj is Session))
+                return 0;
+
+            else
+            {
+                Session otherSession = (Session)obj;
+                if (EndTime <= otherSession.StartTime)
+                    return -1;
+                else if (otherSession.EndTime <= StartTime)
+                    return 1;
+                else
+                    return 0;
+            }
         }
     }
 }
