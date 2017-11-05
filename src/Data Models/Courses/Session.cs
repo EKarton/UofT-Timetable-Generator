@@ -135,5 +135,10 @@ namespace UoftTimetableGenerator.DataModels
                     return 0;
             }
         }
+
+        public override string ToString()
+        {
+            return StartTime + "-" + EndTime;
+        }
     }
 }

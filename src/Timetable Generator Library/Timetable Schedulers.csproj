@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Structures\IOrderedCollection.cs" />
     <Compile Include="Generators\GAGenerator.cs" />
     <Compile Include="Generators\GreedyGenerator.cs" />
     <Compile Include="Timetables\ITimetable.cs" />

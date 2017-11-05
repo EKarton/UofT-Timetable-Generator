@@ -55,13 +55,14 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
                 NumGenerations = 100,
                 PopulationSize = 16,
                 MutationRate = 0.1,
-                CrossoverRate = 0.6,
-                CrossoverType = "Uniform Crossover"
+                CrossoverRate = 0.6
             };
             List<YearlyTimetable> timetables = generator.GetTimetables();            
 
-            //GreedyGenerator greedyGenerator = new GreedyGenerator(courseObjs, request.Preferences, request.Restrictions);
-            //List<YearlyTimetable> timetables = greedyGenerator.GetTimetables();
+            /*
+            GreedyGenerator<YearlyTimetable> greedyGenerator = new GreedyGenerator<YearlyTimetable>(courseObjs, request.Preferences, request.Restrictions);
+            List<YearlyTimetable> timetables = greedyGenerator.GetTimetables();
+            */
 
             // Convert the timetables to mini timetables (which will be presented to the user)
             List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();

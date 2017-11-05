@@ -44,4 +44,4 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\obj
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.xml
-C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache

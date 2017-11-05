@@ -214,5 +214,11 @@ namespace UoftTimetableGenerator.Generator
             copy.winterTimetable = (SeasonalTimetable) winterTimetable.MakeCopy();
             return copy;
         }
+
+        public void Show()
+        {
+            fallTimetable.Show();
+            winterTimetable.Show();
+        }
     }
 }

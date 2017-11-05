@@ -12,14 +12,13 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class used to generate UofT timetables with a genetic algorithm
     /// </summary>
-    public class GAGenerator<T>: ITimetableGenerator<T> where T : ITimetable, new()
+    public class GAGenerator<T> : ITimetableGenerator<T> where T : ITimetable, new()
     {
         private static Random random = new Random();
         private double mutationRate = 0.1;
         private double crossoverRate = 0.9;
         private int populationSize = 16;
         private int numGenerations = 100;
-        private string crossoverType = "Old Crossover";
 
         // The preferences / restrictions (makes up the fitness model)
         private Preferences preferences;
@@ -30,8 +29,7 @@ namespace UoftTimetableGenerator.Generator
 
         private int maxSessions = 0;
 
-        // Represents the term that requiredSections[i] belong to
-        private List<char> terms = new List<char>();                                                       
+        // Represents the term that requiredSections[i] belong to                                                   
         private List<int[]> population = new List<int[]>();
         private double[] fitnessScores;
 
@@ -52,12 +50,8 @@ namespace UoftTimetableGenerator.Generator
             // Populating requiredSections[] and its associated terms[]
             foreach (Course course in courses)
             {
-                char term = course.Term[0];
                 foreach (Activity activity in course.Activities)
-                {
                     requiredSections.Add(activity.Sections.ToArray());
-                    terms.Add(term);
-                }
             }
 
             // Calculate the max number of sessions
@@ -105,15 +99,6 @@ namespace UoftTimetableGenerator.Generator
         }
 
         /// <summary>
-        /// Get / set the crossover type
-        /// </summary>
-        public string CrossoverType
-        {
-            get { return crossoverType; }
-            set { crossoverType = value; }
-        }
-
-        /// <summary>
         /// Serialize a table into a string
         /// This is done by having each digit in the table[] padded to the left with x amount of zeros,
         /// where 'x' is the max number of sections available in requiredSections[]
@@ -152,48 +137,18 @@ namespace UoftTimetableGenerator.Generator
                 int[] parent1 = population[parent1Index];
                 int[] parent2 = population[parent2Index];
 
-                if (crossoverType == "Old Crossover")
+                int[] child = PerformOldCrossover(parent1, parent2);
+                if (child != null)
                 {
-                    int[] child = PerformOldCrossover(parent1, parent2);
-                    if (child != null)
-                    {
-                        PerformMutation(child);
-                        newGeneration.Add(child);
-                    }
-                    else
-                    {
-                        if (fitnessScores[parent1Index] > fitnessScores[parent2Index])
-                            newGeneration.Add(parent1);
-                        else
-                            newGeneration.Add(parent2);
-                    }
+                    PerformMutation(child);
+                    newGeneration.Add(child);
                 }
                 else
                 {
-                    Tuple<int[], int[]> children = null;
-
-                    if (crossoverType == "Single Point Crossover")
-                        children = PerformSinglePointCrossover(parent1, parent2);
-                    else if (crossoverType == "Double Point Crossover")
-                        children = PerformDoublePointCrossover(parent1, parent2);
-                    else if (crossoverType == "Uniform Crossover")
-                        children = PerformDoublePointCrossover(parent1, parent2);
-                    else
-                        throw new Exception("Crossover type not handled before!");
-
-                    if (children == null)
-                    {
+                    if (fitnessScores[parent1Index] > fitnessScores[parent2Index])
                         newGeneration.Add(parent1);
-                        newGeneration.Add(parent2);
-                    }
                     else
-                    {
-
-                        PerformMutation(children.Item1);
-                        PerformMutation(children.Item2);
-                        newGeneration.Add(children.Item1);
-                        newGeneration.Add(children.Item2);
-                    }
+                        newGeneration.Add(parent2);
                 }
             }
 
@@ -204,115 +159,6 @@ namespace UoftTimetableGenerator.Generator
             // Compute the fitness scores for each table
             for (int i = 0; i < population.Count; i++)
                 fitnessScores[i] = GetFitnessScore(population[i]);
-        }
-
-        /// <summary>
-        /// Perform a single point crossover with two parents
-        /// </summary>
-        /// <param name="parent1">The gene to the first parent (table)</param>
-        /// <param name="parent2">The gene to the second parent (table)</param>
-        /// <returns>
-        /// Two valid children, each represented with a gene. 
-        /// If the parents cannot reproduce, then it will return null
-        /// </returns>
-        private Tuple<int[], int[]> PerformSinglePointCrossover(int[] parent1, int[] parent2)
-        {
-            if (random.NextDouble() > crossoverRate)
-                return null;
-
-            int[] child1 = new int[parent1.Length];
-            int[] child2 = new int[parent1.Length];
-            int mid = random.Next(0, parent1.Length);
-
-            for (int i = 0; i < mid; i++)
-            {
-                child1[i] = parent1[i];
-                child2[i] = parent2[i];
-            }
-
-            for (int i = mid; i < parent1.Length; i++)
-            {
-                child1[i] = parent2[i];
-                child2[i] = parent1[i];
-            }
-
-            return new Tuple<int[], int[]>(child1, child2);
-        }
-
-        /// <summary>
-        /// Perform a double point crossover with two parents
-        /// </summary>
-        /// <param name="parent1">The gene to the first parent (table)</param>
-        /// <param name="parent2">The gene to the second parent (table)</param>
-        /// <returns>
-        /// Two valid children, each represented with a gene. 
-        /// If the parents cannot reproduce, then it will return null
-        /// </returns>
-        private Tuple<int[], int[]> PerformDoublePointCrossover(int[] parent1, int[] parent2)
-        {
-            if (random.NextDouble() > crossoverRate)
-                return null;
-
-            int[] child1 = new int[parent1.Length];
-            int[] child2 = new int[parent1.Length];
-
-            int index1 = random.Next(0, parent1.Length);
-            int index2 = random.Next(0, parent1.Length);
-            int leftIndex = Math.Min(index1, index2);
-            int rightIndex = Math.Min(index1, index2);
-
-            for (int i = 0; i < leftIndex; i++)
-            {
-                child1[i] = parent1[i];
-                child2[i] = parent2[i];
-            }
-
-            for (int i = leftIndex; i < rightIndex; i++)
-            {
-                child1[i] = parent2[i];
-                child2[i] = parent1[i];
-            }
-
-            for (int i = rightIndex; i < parent1.Length; i++)
-            {
-                child1[i] = parent1[i];
-                child2[i] = parent2[i];
-            }
-
-            return new Tuple<int[], int[]>(child1, child2);
-        }
-
-        /// <summary>
-        /// Perform a uniform crossover with two parents
-        /// </summary>
-        /// <param name="parent1">The gene to the first parent (table)</param>
-        /// <param name="parent2">The gene to the second parent (table)</param>
-        /// <returns>
-        /// Two valid children, each represented with a gene. 
-        /// If the parents cannot reproduce, then it will return null
-        /// </returns>
-        private Tuple<int[], int[]> PerformUniformCrossover(int[] parent1, int[] parent2)
-        {
-            if (random.NextDouble() > crossoverRate)
-                return null;
-
-            int[] child1 = new int[parent1.Length];
-            int[] child2 = new int[parent2.Length];
-            for (int i = 0; i < parent1.Length; i++)
-            {
-                double coinToss = random.NextDouble();
-                if (coinToss < 0.5)
-                {
-                    child1[i] = parent2[i];
-                    child2[i] = parent1[i];
-                }
-                else
-                {
-                    child1[i] = parent2[i];
-                    child2[i] = parent1[i];
-                }
-            }
-            return new Tuple<int[], int[]>(child1, child2);
         }
 
         /// <summary>
@@ -382,7 +228,7 @@ namespace UoftTimetableGenerator.Generator
         {
             int bestTable = -1;
             double bestRank = -1;
-            for (int i = leftIndex; i < rightIndex ; i++)
+            for (int i = leftIndex; i < rightIndex; i++)
             {
                 double curRank = fitnessScores[i];
                 if (curRank > bestRank)
@@ -420,6 +266,7 @@ namespace UoftTimetableGenerator.Generator
             string serializedTable = SerializeTable(table);
             if (cachedTimetables.ContainsKey(serializedTable))
                 return cachedTimetables[serializedTable];
+
             else
             {
                 // Check if it can be added
@@ -427,7 +274,6 @@ namespace UoftTimetableGenerator.Generator
                 for (int i = 0; i < table.Length; i++)
                 {
                     Section section = requiredSections[i][table[i]];
-                    char term = terms[i];
                     bool success = newTable.AddSection(section);
                     if (success == false)
                         return default(T);
@@ -608,7 +454,6 @@ namespace UoftTimetableGenerator.Generator
                     for (int j = 0; j < table.Length; j++)
                     {
                         Section section = requiredSections[j][table[j]];
-                        char term = terms[j];
                         timetable.AddSection(section);
                     }
                     timetables.Add(timetable);

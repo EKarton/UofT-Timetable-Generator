@@ -112,8 +112,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,
                     NumGenerations = numGenerations,
-                    PopulationSize = populationSize,
-                    CrossoverType = crossoverType
+                    PopulationSize = populationSize
                 };
                 
                 /*

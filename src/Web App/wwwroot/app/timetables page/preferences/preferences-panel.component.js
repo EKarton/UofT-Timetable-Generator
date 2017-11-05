@@ -96,8 +96,6 @@
              * Called when the apply button is clicked
              */
             this.apply = function () {
-                console.log("Apply clicked");
-                console.log("New settings", this.classType, this.walkDistance, this.daysWithClass, this.timeBetweenClasses, this.lunchPeriod);
 
                 var newPreferences = {
                     classType: this.classType,

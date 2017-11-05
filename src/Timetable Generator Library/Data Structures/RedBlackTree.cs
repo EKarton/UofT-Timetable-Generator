@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UoftTimetableGenerator.Generator
 {
-    public class RedBlackTree<T> where T: IComparable
+    public class RedBlackTree<T> : IOrderedCollection<T> where T: IComparable
     {
-        private string color;
-        private T content;
+        private string color = "Black";
+        private T content = default(T);  // returns null if T is a class type
         private RedBlackTree<T> leftTree = null;
         private RedBlackTree<T> rightTree = null;
         private RedBlackTree<T> parent = null;
@@ -60,18 +60,16 @@ namespace UoftTimetableGenerator.Generator
         {
             get
             {
-                if (parent != null && parent.rightTree != null && parent.rightTree.content != null && !parent.rightTree.content.Equals(content))
+                if (parent != null && parent.rightTree.content != null && !parent.rightTree.content.Equals(content))
                     return parent.rightTree;
-                else if (parent != null && parent.leftTree != null && parent.leftTree.content != null && !parent.leftTree.content.Equals(content))
+                else if (parent != null && parent.leftTree.content != null && !parent.leftTree.content.Equals(content))
                     return parent.leftTree;
                 else
                     return null;
             }
         }
 
-        public RedBlackTree()
-        {
-        }
+        public RedBlackTree() {  }
 
         public RedBlackTree(T item)
         {
@@ -80,7 +78,34 @@ namespace UoftTimetableGenerator.Generator
             rightTree = new RedBlackTree<T>();
         }
 
-        public RedBlackTree<T> MakeCopy()
+        /// <summary>
+        /// Prints the tree onto the console. Uses the .ToString() for printing out object info
+        /// </summary>
+        /// <param name="tree">A node in the tree</param>
+        public void Show()
+        {
+            Show("");
+        }
+
+        /// <summary>
+        /// Prints the tree onto the console. Uses the .ToString() for printing out object info
+        /// </summary>
+        /// <param name="tree">A node in the tree</param>
+        /// <param name="tabs">The number of tabs to offset the println()</param>
+        private void Show(string tabs)
+        {
+            if (IsEmpty)
+            {
+                Console.WriteLine(tabs + " --NULL [" + color + "]");
+                return;
+            }
+
+            Console.WriteLine(tabs + " -" + Content.ToString() + " [" + color + "]");
+            leftTree.Show(tabs + "  ");
+            rightTree.Show(tabs + "  ");
+        }
+
+        public IOrderedCollection<T> MakeCopy()
         {
             if (IsEmpty)
                 return new RedBlackTree<T>();
@@ -88,8 +113,8 @@ namespace UoftTimetableGenerator.Generator
             RedBlackTree<T> newTree = new RedBlackTree<T>(content);
             newTree.color = color;
 
-            RedBlackTree<T> leftSubtree_Copy = leftTree.MakeCopy();
-            RedBlackTree<T> rightSubtree_Copy = rightTree.MakeCopy();
+            RedBlackTree<T> leftSubtree_Copy = (RedBlackTree<T>) leftTree.MakeCopy();
+            RedBlackTree<T> rightSubtree_Copy = (RedBlackTree<T>) rightTree.MakeCopy();
 
             newTree.leftTree = leftSubtree_Copy;
             leftSubtree_Copy.parent = newTree;
@@ -119,9 +144,9 @@ namespace UoftTimetableGenerator.Generator
             if (IsEmpty)
                 return true;
 
-            if (leftTree != null && content.CompareTo(newItem) > 0)
+            if (leftTree != null && newItem.CompareTo(content) < 0)
                 return leftTree.CanAdd(newItem);
-            else if (rightTree != null && content.CompareTo(newItem) < 0)
+            else if (rightTree != null && newItem.CompareTo(content) > 0)
                 return rightTree.CanAdd(newItem);
             else
                 return false;
@@ -299,6 +324,25 @@ namespace UoftTimetableGenerator.Generator
 
             else if (g.parent.color == "Red")
                 g.parent.RebalanceTree(g);
+        }
+
+        public bool Delete(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<T> GetContents()
+        {
+            if (IsEmpty)
+                return new List<T>();
+
+            List<T> contents = new List<T>();
+            if (!leftTree.IsEmpty)
+                contents.AddRange(leftTree.GetContents());
+            contents.Add(content);
+            if (!rightTree.IsEmpty)
+                contents.AddRange(rightTree.GetContents());
+            return contents;
         }
     }
 }

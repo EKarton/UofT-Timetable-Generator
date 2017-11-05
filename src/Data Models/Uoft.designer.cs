@@ -23,7 +23,7 @@ namespace DataContext
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="uoftDatabase")]
-	public partial class UofTDataContext : System.Data.Linq.DataContext
+	internal partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();

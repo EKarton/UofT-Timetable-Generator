@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="uoftDatabase" EntityNamespace="DataContext" ContextNamespace="DataContext" Class="UofTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="uoftDatabase" EntityNamespace="DataContext" ContextNamespace="DataContext" Class="UofTDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User ID=emiliokartono;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False" SettingsObjectName="UoftTimetableGenerator.DataModels.Properties.Settings" SettingsPropertyName="uoftDatabaseConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Activity" Member="Activities">
     <Type Name="Activity">

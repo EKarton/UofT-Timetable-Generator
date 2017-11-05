@@ -53,6 +53,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UofT.cs">
+      <DependentUpon>UofT.dbml</DependentUpon>
+    </Compile>
     <Compile Include="UofT.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
