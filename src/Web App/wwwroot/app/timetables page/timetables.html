@@ -34,6 +34,11 @@
                 </div>
             </div>
 
+            <!-- The loading icon, which is only displayed when it is waiting for a request -->
+            <div ng-show="data.areTimetablesBeingGenerated">
+                <img src="../../images/tenor.gif" alt="Waiting for timetables to be generated"/>
+            </div>
+
             <!-- The timetables; fall and winter timetables grouped together -->
             <div class="miniTimetablesGroup" ng-repeat="timetable in data.timetables">
                 <div>{{timetable.name}}</div>
@@ -51,8 +56,9 @@
                 </div>
             </div>
 
-        <div>
-            <button id="regenerateTimetablesBttn" ng-click="regenerateTimetables()">Regenerate more timetables</button>
+            <div>
+                <button id="regenerateTimetablesBttn" ng-click="regenerateTimetables()">Regenerate more timetables</button>
+            </div>
         </div>
 	</div>
 

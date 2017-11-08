@@ -17,11 +17,14 @@ namespace UoftTimetableGenerator.WebScrapper
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            CourseSchedulePopulator p = new CourseSchedulePopulator();
-            p.CreateCourseSchedules(true);
+            //CourseSchedulePopulator p = new CourseSchedulePopulator();
+            //p.CreateCourseSchedules(true);
 
             //BuildingListPopulator p = new BuildingListPopulator();
             //p.RedoBuildingList();
+
+            BuildingDistancePopulator p = new BuildingDistancePopulator();
+            p.InsertBuildingDistancesToDatabase(true);
 
             Console.ReadKey();
         }

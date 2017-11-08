@@ -312,3 +312,160 @@ C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debu
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.AssemblyInfo.cs
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.exe
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Web App.exe.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Web App.deps.json
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Web App.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Web App.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\libuv.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.ApplicationInsights.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AI.DependencyCollector.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Cors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Diagnostics.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Hosting.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Http.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.HttpOverrides.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Localization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Razor.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Routing.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.StaticFiles.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.CodeAnalysis.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Composition.AttributedModel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Composition.Convention.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Composition.Hosting.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Composition.Runtime.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Composition.TypedParts.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.CommandLineUtils.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Localization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Logging.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Options.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Net.Http.Headers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.BrowserLink.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\dotnet-aspnet-codegenerator-design.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.Win32.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\NuGet.Frameworks.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Remotion.Linq.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.AppContext.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Buffers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Collections.Immutable.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.ComponentModel.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.ComponentModel.TypeConverter.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Console.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Diagnostics.StackTrace.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Globalization.Calendars.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Interactive.Async.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.IO.Compression.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.IO.Compression.ZipFile.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.IO.FileSystem.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.IO.FileSystem.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Net.Http.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Net.Sockets.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Numerics.Vectors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Reflection.Metadata.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Security.Cryptography.Algorithms.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Security.Cryptography.Encoding.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Security.Cryptography.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Text.Encoding.CodePages.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Text.Encodings.Web.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Threading.Tasks.Extensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Threading.Thread.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Xml.ReaderWriter.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Xml.XmlDocument.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Xml.XPath.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\System.Xml.XPath.XDocument.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Data Models.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Timetable Generator Library.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Data Models.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Data Models.dll.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Timetable Generator Library.dll.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csproj.Web App.exe.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.AssemblyInfoInputs.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.AssemblyInfo.cs
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.pdb

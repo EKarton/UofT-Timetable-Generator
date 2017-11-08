@@ -13,7 +13,8 @@ namespace UoftTimetableGenerator.WebScrapper
     /// </summary>
     class BuildingDistancePopulator
     {
-        private const string GOOGLEAPI_KEY = "AIzaSyAna8lO72_VyFrLYjYMTvVgPcvmlU_fCrc"; //"AIzaSyCVCnQ3iBa6S4W8gZkTbwO88d7qhKaGIC8";
+        private string[] API_KEYS = { "AIzaSyAna8lO72_VyFrLYjYMTvVgPcvmlU_fCrc", "AIzaSyCVCnQ3iBa6S4W8gZkTbwO88d7qhKaGIC8" };
+        private int curAPIKeyIndex = 0;
 
         /// <summary>
         /// Parses the time from the google maps API to a C# Timespan object
@@ -78,6 +79,16 @@ namespace UoftTimetableGenerator.WebScrapper
             return kilometers + (meters / 1000) + (centimeters / 100000) + (millimeters / 1000000);
         }
 
+        private void switchAPIKey()
+        {
+            if (curAPIKeyIndex + 1 == API_KEYS.Length)
+                curAPIKeyIndex = 0;
+            else
+                curAPIKeyIndex++;
+
+            Console.WriteLine("New API key set, " + API_KEYS[curAPIKeyIndex]);
+        }
+
         /// <summary>
         /// Get the distance and time spent when traveling between two buildings
         /// Pre-condition: {mode} must be a supported mode of transportation from the google maps api.
@@ -89,17 +100,17 @@ namespace UoftTimetableGenerator.WebScrapper
         /// <returns>A dictionary, where dict["Distance"] is the distance in km, and dict["Duration"] is the time spent</returns>
         private Dictionary<string, double?> GetInfoBetweenBuildings(string mode, string address1, string address2)
         {
-            /*
             string url = string.Format(@"https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins={0}&destinations={1}&mode={2}",
                                                    address1.Replace(' ', '+').Replace(",", "").Replace("\'", ""),
                                                    address2.Replace(' ', '+').Replace(",", "").Replace("\'", ""),
-                                                   infoType);
-             */
+                                                   mode);
+             /*
             string url = string.Format(@"https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins={0}&destinations={1}&mode={2}&key={3}",
                                                    address1.Replace(' ', '+').Replace(",", "").Replace("\'", ""),
                                                    address2.Replace(' ', '+').Replace(",", "").Replace("\'", ""),
                                                    mode,
-                                                   GOOGLEAPI_KEY);
+                                                   API_KEYS[curAPIKeyIndex]);
+             */
             // Making and getting the GET response to get the data
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Timeout = 10000;
@@ -124,11 +135,28 @@ namespace UoftTimetableGenerator.WebScrapper
                 }
                 catch
                 {
-                    Console.WriteLine("ERROR!!!!!!");
-                    return new Dictionary<string, double?>() {
-                        {"Duration", ParseTimespan(Console.ReadLine()).TotalMinutes },
-                        {"Distance", ParseDistance(Console.ReadLine()) }
-                    };
+                    switchAPIKey();
+                    try
+                    {
+                        string value = reader.ReadToEnd();
+                        JObject json = JObject.Parse(value);
+                        string walkDuration = (string)json["rows"][0]["elements"][0]["duration"]["text"];
+                        string walkingDistance = (string)json["rows"][0]["elements"][0]["distance"]["text"];
+
+                        return new Dictionary<string, double?>()
+                        {
+                            {"Duration", ParseTimespan(walkDuration).TotalMinutes  },
+                            {"Distance", ParseDistance(walkingDistance) }
+                        };
+                    }
+                    catch
+                    {
+                        Console.WriteLine("ERROR!!!!!!");
+                        return new Dictionary<string, double?>() {
+                            {"Duration", ParseTimespan(Console.ReadLine()).TotalMinutes },
+                            {"Distance", ParseDistance(Console.ReadLine()) }
+                        };
+                    }
                 }
             }
         }
@@ -240,6 +268,7 @@ namespace UoftTimetableGenerator.WebScrapper
 
                         if (existingData != null && existingData.ToList().Count == 1 && !skipExistingData)
                         {
+                            Console.WriteLine("Updating building distances " + building1.BuildingCode + " -> " + building2.BuildingCode); 
                             foreach (BuildingDistance row in existingData.ToList())
                                 UpdateBuildingDistances(db, row);
                         }

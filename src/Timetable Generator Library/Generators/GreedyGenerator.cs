@@ -108,6 +108,7 @@ namespace UoftTimetableGenerator.Generator
             }
 
             // Recurse
+            // Note: In each (x, y) tuple, x points to a required activity, and y points to a section in that activity 
             List<Tuple<int, int>> nextSessions = GetNextSessions(curTable);
             foreach (Tuple<int, int> nextSession in nextSessions)
             {

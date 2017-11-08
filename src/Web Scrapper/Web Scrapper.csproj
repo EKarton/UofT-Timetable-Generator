@@ -61,6 +61,7 @@
     <Compile Include="BuildingDistancePopulator.cs" />
     <Compile Include="BuildingListPopulator.cs" />
     <Compile Include="CourseSchedulePopulator.cs" />
+    <Compile Include="IWebScrapper.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
