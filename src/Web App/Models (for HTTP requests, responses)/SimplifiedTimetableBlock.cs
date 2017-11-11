@@ -19,7 +19,6 @@ namespace UoftTimetableGenerator.WebAPI.Models
         public SimplifiedTimetableBlock(Session session, char term)
         {
             CourseCode = session.Section.Activity.Course.CourseCode;
-            ActivityType = session.Section.Activity.ActivityType;
 
             SectionCode = session.Section.SectionCode;
             Instructors = session.Section.Instructors.ToArray();
@@ -29,7 +28,24 @@ namespace UoftTimetableGenerator.WebAPI.Models
             StartDay = (int) session.StartTime / 100;
             EndDay = (int) session.EndTime / 100;
 
+            // Convert the abreviated activity type to its full type.
+            switch (session.Section.Activity.ActivityType)
+            {
+                case "L":
+                    ActivityType = "Lecture";
+                    break;
+                case "P":
+                    ActivityType = "Practical";
+                    break;
+                case "T":
+                    ActivityType = "Tutorial";
+                    break;
+                default:
+                    ActivityType = session.Section.Activity.ActivityType;
+                    break;
+            }
             
+            // Handle the locations
             switch(term)
             {
                 case 'F':

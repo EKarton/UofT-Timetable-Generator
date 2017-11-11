@@ -17,6 +17,7 @@
             this.term = term;
             this.description = description;
             this.campus = campus;
+            this.isSelected = false;
         };
 
         // Course results and the query for that course result, cached, from calling th getUoftCourses()
@@ -42,7 +43,7 @@
                 return;
 
             var obj = this;
-            var url = "http://localhost:53235/api/courses?query=" + query; //"http://uofttimetablegenerator.azurewebsites.net/api/courses?query=" + query;
+            var url = "http://localhost:53235/api/courses?query=" + query; // "http://uofttimetablegenerator.azurewebsites.net/api/courses?query=" + query;
 
             $http.get(url).then(
                 function (promise) {

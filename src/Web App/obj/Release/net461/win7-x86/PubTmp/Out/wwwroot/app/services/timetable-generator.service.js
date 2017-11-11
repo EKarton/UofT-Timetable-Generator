@@ -57,6 +57,7 @@
         var Data = function (courseCodes, timetables, restrictions, preferences) {
             this.courseCodes = courseCodes;
             this.timetables = timetables;
+            this.areTimetablesBeingGenerated = false;
             this.bookmarkedTimetables = [];
             this.sectionColors = {};
             this.restrictions = restrictions;
@@ -191,12 +192,13 @@
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; //"http://localhost:53235/api/timetables/getuofttimetables"; //
+            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // "http://localhost:53235/api/timetables/getuofttimetables"; 
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;
             obj.generatedTimetables.timetables = [];
             obj.generatedTimetables.bookmarkedTimetables = [];
+            obj.generatedTimetables.areTimetablesBeingGenerated = true;
 
             $http.put(url, request).then(
                 function (response) {
@@ -212,6 +214,7 @@
                     // Update the generated timetables singleton obj
                     obj.generatedTimetables.timetables = newTimetables;
                     obj.generatedTimetables.generateNewColorScheme();
+                    obj.generatedTimetables.areTimetablesBeingGenerated = false;
 
                     if (onSuccess != undefined)
                         onSuccess();
@@ -219,6 +222,7 @@
                 function (response) {
                     if (onFailure != undefined)
                         onFailure(response);
+                    obj.generatedTimetables.areTimetablesBeingGenerated = false;
                 }
             );
         };

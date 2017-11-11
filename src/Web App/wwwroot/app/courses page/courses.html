@@ -8,7 +8,7 @@
 	
 	<!-- The search box -->
 	<div id="searchArea">
-        <course-search-bar on-select-course="selectCourse(course)" selected-courses="selectedCourses">
+        <course-search-bar on-select-course="selectCourse(course)" on-deselect-course="removeSelectedCourse(course)" selected-courses="selectedCourses">
         </course-search-bar>
 	</div>
 

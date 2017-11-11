@@ -80,7 +80,17 @@
                 courseCodes.push($scope.selectedCourses[i].code);
 
             //Generator.courseCodes = courseCodes;
-            TimetableGenerator.generateTimetables(courseCodes);
+            console.log("Making request for generation");
+            console.log(courseCodes);
+            TimetableGenerator.generateTimetables(courseCodes, null, null,
+                function (data) {
+                    console.log(data);
+                },
+                function (promise) {
+                    alert("Unable to create timetables");
+                    console.log(promise);
+                }
+            );
 
 			$location.path("timetables");
         };

@@ -175,8 +175,8 @@
         * @param {string[]} courseCodes - A set of complete UofT course codes
         * @param {Preferences = undefined} preferences - The preferences for the timetable generator
         * @param {Restrictions = undefined} restrictions - The restrictions for the timetable generator
-        * @param {method(generatedTimetables)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
-        * @param {method(promise)} onFailure - A handler which will be called when the call to the server has failed.
+        * @param {method(data)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
+        * @param {method(promise)} onError - A handler which will be called when the timetables could not be generated.
         */
         this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onFailure) {
 
@@ -186,9 +186,9 @@
                 preferences: preferences,
                 restrictions: restrictions
             };
-            if (preferences === undefined)
+            if (preferences === null)
                 request.preferences = defaultPreferences;
-            if (restrictions === undefined)
+            if (restrictions === null)
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
@@ -217,11 +217,11 @@
                     obj.generatedTimetables.areTimetablesBeingGenerated = false;
 
                     if (onSuccess != undefined)
-                        onSuccess();
+                        onSuccess(obj.generatedTimetables);
                 },
                 function (response) {
                     if (onFailure != undefined)
-                        onFailure(response);
+                        onError(response);
                     obj.generatedTimetables.areTimetablesBeingGenerated = false;
                 }
             );

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="UoftTimetableGenerator" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Emilio\ K\\Documents\\Github\\UofT-Timetable-Generator\\src\\Web\ App\\obj\\Release\\net461\\win7-x86\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Emilio\ K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Web\ App\\obj\\Release\\net461\\win7-x86\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
