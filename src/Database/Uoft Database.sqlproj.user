@@ -3,8 +3,8 @@
   <PropertyGroup>
     <StartupScript>(Blank)</StartupScript>
     <StartAction>StartNone</StartAction>
-    <TargetConnectionString>Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;Persist Security Info=True;User ID=emiliokartono;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False</TargetConnectionString>
-    <TargetDatabase>uoftDatabase</TargetDatabase>
+    <TargetConnectionString>Data Source=LAPTOP;Initial Catalog="Uoft Database";Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <TargetDatabase>Uoft Database</TargetDatabase>
     <CreateNewDatabase>False</CreateNewDatabase>
     <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
   </PropertyGroup>

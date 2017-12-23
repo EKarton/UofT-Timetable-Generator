@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Uoft_Data.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\EMILIO K\DOCUMENTS\GITHUB\UOFT-TIMETABLE-GENERATOR\SRC\DATABASE\OBJ\DEBUG\UOFT_DATA.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\EMILIO K\DOCUMENTS\CODE\PROJECTS\UOFT-TIMETABLE-GENERATOR\SRC\DATABASE\OBJ\DEBUG\UOFT_DATA.DLL" />
 			<Metadata Name="AssemblyName" Value="Uoft_Data" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Database\obj\Debug\Uoft_Data.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\Uoft_Data.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -1187,6 +1187,404 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetActivitiesInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Activity] T WHERE T.CourseID = @courseID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Activity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Activity].[CourseID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetActivitiesInfo].[@courseID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetActivitiesInfo].[@courseID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="141" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetActivitiesInfo]&#xD;&#xA;&#x9;@courseID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetBuildingInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Building] T WHERE T.BuildingID = @buildingID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Building]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Building].[BuildingID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetBuildingInfo].[@buildingID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetBuildingInfo].[@buildingID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="145" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetBuildingInfo]&#xD;&#xA;&#x9;@buildingID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetCourseInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Course] c WHERE c.Code LIKE '%' + @courseCode + '%';
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Course].[Code]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetCourseInfo].[@courseCode]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetCourseInfo].[@courseCode]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="157" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetCourseInfo] @courseCode NVARCHAR(10)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetInstructorInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Instructor] T WHERE T.InstructorID = @instructorID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Instructor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Instructor].[InstructorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetInstructorInfo].[@instructorID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetInstructorInfo].[@instructorID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="155" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetInstructorInfo]&#xD;&#xA;&#x9;@instructorID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetSectionInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Section] T WHERE T.ActivityID = @activityID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Section]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Section].[ActivityID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetSectionInfo].[@activityID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetSectionInfo].[@activityID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="143" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetSectionInfo]&#xD;&#xA;&#x9;@activityID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetSectionInstructors]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[InstructorToSection] T WHERE T.SectionID = @sectionID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[InstructorToSection]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InstructorToSection].[SectionID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetSectionInstructors].[@sectionID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetSectionInstructors].[@sectionID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="159" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetSectionInstructors]&#xD;&#xA;&#x9;@sectionID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetSessionInfo]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[Session] T WHERE T.SectionID = @sectionID;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Session]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Session].[SectionID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetSessionInfo].[@sectionID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetSessionInfo].[@sectionID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="140" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetSessionInfo]&#xD;&#xA;&#x9;@sectionID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetTravelTimeBetweenBuildings]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [dbo].[BuildingDistances] T WHERE T.BuildingID1 = @buildingID1 AND T.BuildingID2 = @buildingID2;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[BuildingDistances]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BuildingDistances].[BuildingID1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetTravelTimeBetweenBuildings].[@buildingID1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BuildingDistances].[BuildingID2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetTravelTimeBetweenBuildings].[@buildingID2]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetTravelTimeBetweenBuildings].[@buildingID1]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetTravelTimeBetweenBuildings].[@buildingID2]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="224" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_GetTravelTimeBetweenBuildings]&#xD;&#xA;&#x9;@buildingID1 INT,&#xD;&#xA;&#x9;@buildingID2 INT&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
 		<Element Type="SqlExtendedProperty" Name="[SqlColumn].[dbo].[Activity].[ActivityType].[MS_Description]">
 			<Property Name="Value">

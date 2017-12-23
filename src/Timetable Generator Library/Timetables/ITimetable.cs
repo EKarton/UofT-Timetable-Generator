@@ -18,7 +18,7 @@ namespace UoftTimetableGenerator.Generator
         double TotalTimeBetweenClasses { get; }
         double TimeInClass { get; }
         int NumDaysInClass { get; }
-        List<string> DaysInClass { get; }
+        HashSet<int> DaysInClass { get; }
         List<double> TimeBetweenClasses { get; }
 
         bool AddSection(Section section);

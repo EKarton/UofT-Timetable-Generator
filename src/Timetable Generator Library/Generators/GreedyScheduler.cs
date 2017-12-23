@@ -16,7 +16,7 @@ namespace UoftTimetableGenerator.Generator
         private List<char> terms = new List<char>();
         private Preferences preferences;
         private Restrictions restrictions;
-        private int numTimetablesToGenerate = 1600;
+        private int numTimetablesToGenerate = 20;
 
         private List<int[]> timetables = new List<int[]>();
 
@@ -59,7 +59,7 @@ namespace UoftTimetableGenerator.Generator
             return true;
         }
 
-        private List<Tuple<int, int>> GetNextSessions(int[] curTable)
+        private List<Tuple<int, int>> GetAvailableSessions(int[] curTable)
         {
             // Make the timetable equivalent
             YearlyTimetable timetable = new YearlyTimetable();
@@ -83,15 +83,41 @@ namespace UoftTimetableGenerator.Generator
                 if (curTable[i] == -1)
                 {
                     Section[] potentialSections = requiredSections[i];
+
                     for (int j = 0; j < potentialSections.Length; j++)
                     {
-                        if (timetable.DoesSectionFit(potentialSections[j]))
+                        // Check if the section meet the restrictions
+                        bool areRestrictionsMet = true;
+                        for (int k = 0; k < potentialSections[j].Sessions.Count; k++) {
+                            if (DoesItSatisfyRestrictions(potentialSections[j].Sessions[k]) == false)
+                            {
+                                areRestrictionsMet = false;
+                                break;
+                            }
+                        }
+
+                        if (timetable.DoesSectionFit(potentialSections[j]) && areRestrictionsMet)
                             nextSessions.Add(new Tuple<int, int>(i, j));
                     }
                 }
             }
 
             return nextSessions;
+        }
+
+        private bool DoesItSatisfyRestrictions(Session session)
+        {
+            if (restrictions.EarliestClass != null)
+            {
+                if (restrictions.EarliestClass.GetValueOrDefault(0) > session.GetStartTime_Time())
+                    return false;
+            }
+            if (restrictions.LatestClass != null)
+            {
+                if (restrictions.LatestClass.GetValueOrDefault(0) < session.GetEndTime_Time())
+                    return false;
+            }
+            return true;
         }
 
         private void GenerateTimetables(int[] curTable)
@@ -109,7 +135,7 @@ namespace UoftTimetableGenerator.Generator
 
             // Recurse
             // Note: In each (x, y) tuple, x points to a required activity, and y points to a section in that activity 
-            List<Tuple<int, int>> nextSessions = GetNextSessions(curTable);
+            List<Tuple<int, int>> nextSessions = GetAvailableSessions(curTable);
             foreach (Tuple<int, int> nextSession in nextSessions)
             {
                 int sessionsIndex = nextSession.Item1;

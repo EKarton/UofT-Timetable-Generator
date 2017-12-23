@@ -88,14 +88,13 @@ namespace UoftTimetableGenerator.Generator
         /// <summary>
         /// Get a list of weekdays that have classes on that day
         /// </summary>
-        public List<string> DaysInClass
+        public HashSet<int> DaysInClass
         {
             get
             {
-                List<string> combinedTime = new List<string>();
-                combinedTime.AddRange(fallTimetable.DaysInClass);
-                combinedTime.AddRange(winterTimetable.DaysInClass);
-                return combinedTime;
+                HashSet<int> totalDays = fallTimetable.DaysInClass;
+                totalDays.UnionWith(winterTimetable.DaysInClass);
+                return totalDays;
             }
         }
 

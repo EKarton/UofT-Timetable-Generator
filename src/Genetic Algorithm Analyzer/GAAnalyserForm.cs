@@ -107,7 +107,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
             {
                 // Make generator with params
                 
-                GAGenerator<YearlyTimetable> generator = new GAGenerator<YearlyTimetable>(courses, preferences, restrictions)
+                GeneticScheduler<YearlyTimetable> generator = new GeneticScheduler<YearlyTimetable>(courses, preferences, restrictions)
                 {
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,

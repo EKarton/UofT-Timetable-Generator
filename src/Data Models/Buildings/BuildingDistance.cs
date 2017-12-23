@@ -11,20 +11,6 @@ namespace UoftTimetableGenerator.DataModels
     /// </summary>
     public class BuildingDistance
     {
-        internal BuildingDistance(DataContext.BuildingDistance buildingDistance, Building building1, Building building2)
-        {
-            this.Building1 = building1;
-            this.Building2 = building2;
-            this.WalkDuration = buildingDistance.WalkingDuration;
-            this.WalkingDistance = buildingDistance.WalkingDistance;
-            this.PublicTransitDistance = buildingDistance.TransitDistance;
-            this.PublicTransitDuration = buildingDistance.TransitDuration;
-            this.DrivingDistance = buildingDistance.DrivingDistance;
-            this.DrivingDuration = buildingDistance.DrivingDuration;
-            this.CyclingDistance = buildingDistance.CyclingDistance;
-            this.CyclingDuration = buildingDistance.CyclingDuration;
-        }
-
         /// <summary>
         /// Get / set the first building
         /// </summary>

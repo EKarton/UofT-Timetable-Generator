@@ -33,20 +33,26 @@ namespace UoftTimetableGenerator.Generator
                     {
                         Building building1 = session1.FallBuilding;
                         Building building2 = session2.FallBuilding;
-                        BuildingDistance distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
-                        if (distances.WalkingDistance != null)
+                        if (building1 != null && building2 != null)
                         {
-                            totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
-                            numberOfDistancesCalculated ++;
+                            BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                            if (distances != null && distances.WalkingDistance != null)
+                            {
+                                totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
+                                numberOfDistancesCalculated++;
+                            }
                         }
 
                         building1 = sessions[i].WinterBuilding;
                         building2 = sessions[i + 1].WinterBuilding;
-                        distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
-                        if (distances.WalkingDistance != null)
+                        if (building1 != null & building2 != null)
                         {
-                            totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
-                            numberOfDistancesCalculated++;
+                            BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                            if (distances != null && distances.WalkingDistance != null)
+                            {
+                                totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
+                                numberOfDistancesCalculated++;
+                            }
                         }
                     }
                 }
@@ -79,20 +85,26 @@ namespace UoftTimetableGenerator.Generator
                         {
                             Building building1 = sessions[i].FallBuilding;
                             Building building2 = sessions[i + 1].FallBuilding;
-                            BuildingDistance distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
-                            if (distances.WalkingDistance != null)
+                            if (building1 != null && building2 != null)
                             {
-                                double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
-                                walkDurations.Add(walkingDuration);
+                                BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                                if (distances != null && distances.WalkingDistance != null)
+                                {
+                                    double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
+                                    walkDurations.Add(walkingDuration);
+                                }
                             }
 
                             building1 = sessions[i].WinterBuilding;
                             building2 = sessions[i + 1].WinterBuilding;
-                            distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
-                            if (distances.WalkingDistance != null)
+                            if (building1 != null && building2 != null)
                             {
-                                double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
-                                walkDurations.Add(walkingDuration);
+                                BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                                if (distances != null && distances.WalkingDistance != null)
+                                {
+                                    double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
+                                    walkDurations.Add(walkingDuration);
+                                }
                             }
                         }
                     }
@@ -177,15 +189,27 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         public int NumDaysInClass
         {
-            get { return 0; }
+            get { return DaysInClass.Count; }
         }
 
         /// <summary>
-        /// Get the days in class
+        /// Get the days in class (all of the days are represented by indexes)
         /// </summary>
-        public List<string> DaysInClass
+        public HashSet<int> DaysInClass
         {
-            get { return new List<string>(); }
+            get
+            {
+                HashSet<int> daysInClass = new HashSet<int>();
+                List<Session> sessions = collection.GetContents();
+                foreach (Session session in sessions)
+                {
+                    if (!daysInClass.Contains(session.GetStartTime_WeekdayIndex()))
+                        daysInClass.Add(session.GetStartTime_WeekdayIndex());
+                    if (daysInClass.Contains(session.GetEndTime_WeekdayIndex()))
+                        daysInClass.Add(session.GetStartTime_WeekdayIndex());
+                }
+                return daysInClass;
+            }
         }
 
         /// <summary>

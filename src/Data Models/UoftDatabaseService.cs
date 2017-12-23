@@ -46,7 +46,7 @@ namespace UoftTimetableGenerator.DataModels
             }
         }
 
-        public BuildingDistance GetBuildingDistances(Building building1, Building building2)
+        public BuildingDistance GetDistancesBetweenBuildings(Building building1, Building building2)
         {
             using (UofTDataContext db = new UofTDataContext())
             {
@@ -55,7 +55,15 @@ namespace UoftTimetableGenerator.DataModels
                                  select b).ToList();
 
                 if (distances.Count == 1)
-                    return new BuildingDistance(distances[0], building1, building2);
+                {
+                    return new BuildingDistance()
+                    {
+                        Building1 = building1,
+                        Building2 = building2,
+                        WalkDuration = distances[0].WalkingDuration,
+                        WalkingDistance = distances[0].WalkingDistance
+                    };
+                }
                 return null;
             }
         }
@@ -79,6 +87,7 @@ namespace UoftTimetableGenerator.DataModels
                     List<DataContext.usp_GetCourseInfoResult> foundCourses = db.usp_GetCourseInfo(courseCodeQuery).ToList();
                     foreach (DataContext.usp_GetCourseInfoResult course in foundCourses)
                     {
+
                         courses.Add(new Course()
                         {
                             CourseCode = course.Code,

@@ -83,6 +83,17 @@ namespace UoftTimetableGenerator.Generator
                 default:
                     throw new Exception("Time between class is not handled before!");
             }
+            switch (preferences.NumDaysInClass)
+            {
+                case Preferences.Quantity.Undefined:
+                    break;
+                case Preferences.Quantity.Minimum:
+                    score -= timetable.NumDaysInClass * 100;
+                    break;
+                case Preferences.Quantity.Maximum:
+                    score += timetable.NumDaysInClass * 100;
+                    break;
+            }
             return score;
         }
 
