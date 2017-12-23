@@ -58,6 +58,7 @@
             this.courseCodes = courseCodes;
             this.timetables = timetables;
             this.areTimetablesBeingGenerated = false;
+            this.errorMessages = null;
             this.bookmarkedTimetables = [];
             this.sectionColors = {};
             this.restrictions = restrictions;
@@ -175,10 +176,10 @@
         * @param {string[]} courseCodes - A set of complete UofT course codes
         * @param {Preferences = undefined} preferences - The preferences for the timetable generator
         * @param {Restrictions = undefined} restrictions - The restrictions for the timetable generator
-        * @param {method(generatedTimetables)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
-        * @param {method(promise)} onFailure - A handler which will be called when the call to the server has failed.
+        * @param {method(data)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
+        * @param {method(promise)} onError - A handler which will be called when the timetables could not be generated.
         */
-        this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onFailure) {
+        this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onError) {
 
             // Create the timetable request
             var request = {
@@ -186,22 +187,26 @@
                 preferences: preferences,
                 restrictions: restrictions
             };
-            if (preferences === undefined)
+            if (preferences === null)
                 request.preferences = defaultPreferences;
-            if (restrictions === undefined)
+            if (restrictions === null)
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // "http://localhost:53235/api/timetables/getuofttimetables"; 
+            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // "http://localhost:53235/api/timetables/getuofttimetables"; // 
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;
             obj.generatedTimetables.timetables = [];
             obj.generatedTimetables.bookmarkedTimetables = [];
+            obj.generatedTimetables.errorMessages = null;
             obj.generatedTimetables.areTimetablesBeingGenerated = true;
 
             $http.put(url, request).then(
                 function (response) {
+
+                    console.log(onSuccess, onError);
+
                     // Parse the timetables
                     var newTimetables = [];
                     var rawTimetables = response.data;
@@ -217,11 +222,13 @@
                     obj.generatedTimetables.areTimetablesBeingGenerated = false;
 
                     if (onSuccess != undefined)
-                        onSuccess();
+                        onSuccess(obj.generatedTimetables);
                 },
                 function (response) {
-                    if (onFailure != undefined)
-                        onFailure(response);
+                    console.log(onError);
+                    if (onError != undefined)
+                        onError(response);
+                    obj.generatedTimetables.errorMessages = response.status + " " + response.statusText;
                     obj.generatedTimetables.areTimetablesBeingGenerated = false;
                 }
             );

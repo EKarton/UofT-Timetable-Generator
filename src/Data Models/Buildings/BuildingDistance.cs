@@ -11,6 +11,20 @@ namespace UoftTimetableGenerator.DataModels
     /// </summary>
     public class BuildingDistance
     {
+        internal BuildingDistance(DataContext.BuildingDistance buildingDistance, Building building1, Building building2)
+        {
+            this.Building1 = building1;
+            this.Building2 = building2;
+            this.WalkDuration = buildingDistance.WalkingDuration;
+            this.WalkingDistance = buildingDistance.WalkingDistance;
+            this.PublicTransitDistance = buildingDistance.TransitDistance;
+            this.PublicTransitDuration = buildingDistance.TransitDuration;
+            this.DrivingDistance = buildingDistance.DrivingDistance;
+            this.DrivingDuration = buildingDistance.DrivingDuration;
+            this.CyclingDistance = buildingDistance.CyclingDistance;
+            this.CyclingDuration = buildingDistance.CyclingDuration;
+        }
+
         /// <summary>
         /// Get / set the first building
         /// </summary>
@@ -24,42 +38,42 @@ namespace UoftTimetableGenerator.DataModels
         /// <summary>
         /// Get / set the walking duration in between the two buildings (in minutes)
         /// </summary>
-        public double WalkDuration { get; set; }
+        public double? WalkDuration { get; set; }
 
         /// <summary>
         /// Get / set the walking distance in between the two buildings (in km)
         /// </summary>
-        public double WalkingDistance { get; set; }
+        public double? WalkingDistance { get; set; }
 
         /// <summary>
         /// Get / set the cycling duration in between the two buildings (in minutes)
         /// </summary>
-        public double CyclingDuration { get; set; }
+        public double? CyclingDuration { get; set; }
 
         /// <summary>
         /// Get / set the cycling distance in between the two buildings (in km)
         /// </summary>
-        public double CyclingDistance { get; set; } 
+        public double? CyclingDistance { get; set; } 
 
         /// <summary>
         /// Get / set the traveling time it takes to get from the first building 
         /// to the second using public transit (in minutes)
         /// </summary>
-        public double PublicTransitDuration { get; set; } 
+        public double? PublicTransitDuration { get; set; } 
 
         /// <summary>
         /// Get / set the distance travelled by public transit in between two buildings (in km)
         /// </summary>
-        public double PublicTransitDistance { get; set; } 
+        public double? PublicTransitDistance { get; set; } 
 
         /// <summary>
         /// Get / set the driving duration in between the two buildings (in min)
         /// </summary>
-        public double DrivingDuration { get; set; }
+        public double? DrivingDuration { get; set; }
 
         /// <summary>
         /// Get / set the driving distance in between two buildings (in km)
         /// </summary>
-        public double DrivingDistance { get; set; }
+        public double? DrivingDistance { get; set; }
     }
 }

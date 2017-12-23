@@ -6,7 +6,8 @@
         templateUrl: "app/courses page/course search bar/course-search-bar.component.html",
         bindings: {
             selectedCourses: "<",
-            onSelectCourse: "&"
+            onSelectCourse: "&",
+            onDeselectCourse: "&"
         },
         controllerAs: "vm",
         controller: function (CourseSearch) {
@@ -31,25 +32,35 @@
             this.updateCourseResults = function (newQuery) {
                 var obj = this;
                 CourseSearch.getUoftCourses(newQuery,
-                    function (courseResults) {                        
+                    function (courseResults) {     
 
-                        // Make sure that the new course results are not selected
+                        console.log(obj.selectedCourses);
+
                         obj.courseResults = [];
-                        for (var i = 0; i < courseResults.length; i++) {
 
-                            // Check if it is a selected course
-                            var isSelectedCourse = false;
-                            for (var j = 0; j < obj.selectedCourses.length; j++) {
-                                if (courseResults[i].code === obj.selectedCourses[j].code) {
-                                    isSelectedCourse = true;
-                                    break;
+                        // Add the courses from the server that were not selected yet
+                        if (obj.selectedCourses.length > 0) {
+                            for (var i = 0; i < courseResults.length; i++) {
+
+                                var isAlreadySelected = false;
+
+                                for (var j = 0; j < obj.selectedCourses.length; j++) {
+                                    if (obj.selectedCourses[j].code === courseResults[i].code) {
+                                        if (obj.selectedCourses[j].campus === courseResults[i].campus) {
+                                            obj.courseResults.push(obj.selectedCourses[j]);
+                                            isAlreadySelected = true;
+                                            break;
+                                        }
+                                    }
                                 }
-                            }
 
-                            // If it is not a selected course, add it
-                            if (!isSelectedCourse)
-                                obj.courseResults.push(courseResults[i]);
+                                if (!isAlreadySelected)
+                                    obj.courseResults.push(courseResults[i]);
+                            }
                         }
+                        else
+                            obj.courseResults = courseResults;
+                        console.log(obj.courseResults);
                     },
                     function (promise) {
                         alert("Unable to get course data from the server");
@@ -58,23 +69,23 @@
             };
 
             /**
-             * Selects a course
-             * @param {Course} selectedCourse - A course selected from the dropdown menu
+             * Handles whether a course was clicked.
+             * It will deselect the course when the course was selected.
+             * It will select the courses to add to the timetable when the course was not selected yet.
+             * @param {Course} course - A course clicked from the search results
              */
-            this.selectCourse = function (selectedCourse) {
-                this.s = selectedCourse;
-                this.onSelectCourse({ course: this.s });
-
-                // Remove any course results that has been selected already
-                for (var i = 0; i < this.courseResults.length; i++) {
-                    for (var j = 0; j < this.selectedCourses.length; j++) {
-                        if (this.courseResults[i].code === this.selectedCourses[j].code) {
-                            this.courseResults.splice(i, 1);
-                            i -= 1;
-                        }
-                    }
+            this.onCourseClicked = function (course) {
+                if (!course.isSelected) {
+                    this.s = course;
+                    course.isSelected = true;
+                    this.onSelectCourse({ course: this.s });
                 }
-            };
+                else {
+                    this.s = course;
+                    course.isSelected = false;
+                    this.onDeselectCourse({ course: this.s });
+                }
+            }
         }
     });
 }());

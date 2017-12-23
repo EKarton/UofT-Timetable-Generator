@@ -11,14 +11,19 @@ namespace UoftTimetableGenerator.DataModels
     /// <summary>
     /// A class used to retrieve data from the database
     /// </summary>
-    public static class UoftDatabaseService
+    public class UoftDatabaseService
     {
-        /// <summary>
-        /// The ways to retrieve course data from the database
-        /// </summary>
-        public enum CourseQueryType
+        private static UoftDatabaseService service = null;
+
+        private UoftDatabaseService()
         {
-            CourseCode
+        }
+
+        public static UoftDatabaseService getService()
+        {
+            if (service == null)
+                service = new UoftDatabaseService();
+            return service;
         }
 
         /// <summary>
@@ -26,7 +31,7 @@ namespace UoftTimetableGenerator.DataModels
         /// </summary>
         /// <param name="buildingCode">The building code</param>
         /// <returns>Building information</returns>
-        public static Building GetBuilding(string buildingCode)
+        public Building GetBuilding(string buildingCode)
         {
             using (UofTDataContext db = new UofTDataContext())
             {
@@ -41,6 +46,20 @@ namespace UoftTimetableGenerator.DataModels
             }
         }
 
+        public BuildingDistance GetBuildingDistances(Building building1, Building building2)
+        {
+            using (UofTDataContext db = new UofTDataContext())
+            {
+                var distances = (from b in db.BuildingDistances
+                                 where b.Building.BuildingCode == building1.BuildingCode && b.Building1.BuildingCode == building2.BuildingCode
+                                 select b).ToList();
+
+                if (distances.Count == 1)
+                    return new BuildingDistance(distances[0], building1, building2);
+                return null;
+            }
+        }
+
         /// <summary>
         /// Get course information given a complete / incomplete UofT course code
         /// Note that the Activities property will be set to null
@@ -48,28 +67,27 @@ namespace UoftTimetableGenerator.DataModels
         /// <param name="query">A complete / incomplete UofT course code</param>
         /// <param name="type">How the data is being retrieved</param>
         /// <returns>Course information</returns>
-        public static List<Course> GetCourses(string query, CourseQueryType type)
+        public List<Course> GetCourses(string courseCodeQuery)
         {
-            query = query.ToLower();
+            courseCodeQuery = courseCodeQuery.ToLower();
             List<Course> courses = new List<Course>();
 
-            if (type == CourseQueryType.CourseCode && query.Length >= 3)
+            if (courseCodeQuery.Length >= 3)
             {
                 using (UofTDataContext db = new UofTDataContext())
                 {
-                    List<DataContext.Course> dbCourses = db.Courses.ToList();
-                    foreach (DataContext.Course c in dbCourses)
-                        if (c.Code.ToLower().Contains(query))
+                    List<DataContext.usp_GetCourseInfoResult> foundCourses = db.usp_GetCourseInfo(courseCodeQuery).ToList();
+                    foreach (DataContext.usp_GetCourseInfoResult course in foundCourses)
+                    {
+                        courses.Add(new Course()
                         {
-                            Course newCourse = new Course()
-                            {
-                                CourseCode = c.Code,
-                                Activities = null,
-                                Term = c.Term.ToString(),
-                                Title = ""
-                            };
-                            courses.Add(newCourse);
-                        }
+                            CourseCode = course.Code,
+                            Title = course.Title,
+                            Term = course.Term.ToString(),
+                            Description = course.Description,
+                            Campus = course.Campus
+                        });
+                    }
                 }
             }
             return courses;
@@ -81,7 +99,7 @@ namespace UoftTimetableGenerator.DataModels
         /// </summary>
         /// <param name="courseCode">A complete UofT course code</param>
         /// <returns>Course information</returns>
-        public static Course GetCourseDetails(string courseCode)
+        public Course GetCourseDetails(string courseCode)
         {
             using (UofTDataContext db = new UofTDataContext())
             {
@@ -103,7 +121,7 @@ namespace UoftTimetableGenerator.DataModels
         /// </summary>
         /// <param name="courseCodes">A list of complete UofT course codes</param>
         /// <returns>Complete course information for each course</returns>
-        public static List<Course> GetCourseDetails(string[] courseCodes)
+        public List<Course> GetCourseDetails(string[] courseCodes)
         {
             List<Course> courses = new List<Course>();
             for (int i = 0; i < courseCodes.Length; i++)

@@ -18,23 +18,11 @@ namespace UoftTimetableGenerator.DataModels
             Sessions = new List<Session>();
         }
 
-        /*
         /// <summary>
         /// Creates a section based on raw data from the database
         /// </summary>
-        /// <param name="oldActivity">The activity data from the database</param>
-        /// <param name="activityAttachedTo">The new activity which this section is associated with</param>
-        public Section(DataContext.Activity oldActivity, Activity activityAttachedTo)
-        {
-            Activity = activityAttachedTo;
-            SectionCode = oldActivity.ActivityCode;
-            Instructors = new List<string>();
-            Sessions = new List<Session>();
-            foreach (DataContext.Session oldSession in oldActivity.Sessions)
-                Sessions.Add(new Session(oldSession, this));
-        }
-        */
-
+        /// <param name="oldSection">The section data from the database</param>
+        /// <param name="activity">The activity this section is associated with</param>
         public Section(DataContext.Section oldSection, Activity activity)
         {
             Activity = activity;

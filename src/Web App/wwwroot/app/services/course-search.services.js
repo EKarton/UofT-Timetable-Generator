@@ -43,7 +43,7 @@
                 return;
 
             var obj = this;
-            var url = "http://localhost:53235/api/courses?query=" + query; // "http://uofttimetablegenerator.azurewebsites.net/api/courses?query=" + query;
+            var url = "http://localhost:53235/api/courses?query=" + query; // "http://uofttimetablegenerator.azurewebsites.net/api/courses?query=" + query; // 
 
             $http.get(url).then(
                 function (promise) {

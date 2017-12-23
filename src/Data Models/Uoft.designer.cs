@@ -22,7 +22,7 @@ namespace DataContext
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="uoftDatabase")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Uoft Database")]
 	internal partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -57,7 +57,7 @@ namespace DataContext
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.uoftDatabaseConnectionString1, mappingSource)
+				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.LocalDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -148,6 +148,62 @@ namespace DataContext
 			{
 				return this.GetTable<Session>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetActivitiesInfo")]
+		public ISingleResult<usp_GetActivitiesInfoResult> usp_GetActivitiesInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> courseID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), courseID);
+			return ((ISingleResult<usp_GetActivitiesInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetBuildingInfo")]
+		public ISingleResult<usp_GetBuildingInfoResult> usp_GetBuildingInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> buildingID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), buildingID);
+			return ((ISingleResult<usp_GetBuildingInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetCourseInfo")]
+		public ISingleResult<usp_GetCourseInfoResult> usp_GetCourseInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(10)")] string courseCode)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), courseCode);
+			return ((ISingleResult<usp_GetCourseInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetInstructorInfo")]
+		public ISingleResult<usp_GetInstructorInfoResult> usp_GetInstructorInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> instructorID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), instructorID);
+			return ((ISingleResult<usp_GetInstructorInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetSectionInfo")]
+		public ISingleResult<usp_GetSectionInfoResult> usp_GetSectionInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> activityID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), activityID);
+			return ((ISingleResult<usp_GetSectionInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetSectionInstructors")]
+		public ISingleResult<usp_GetSectionInstructorsResult> usp_GetSectionInstructors([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sectionID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sectionID);
+			return ((ISingleResult<usp_GetSectionInstructorsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetSessionInfo")]
+		public ISingleResult<usp_GetSessionInfoResult> usp_GetSessionInfo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sectionID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sectionID);
+			return ((ISingleResult<usp_GetSessionInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_GetTravelTimeBetweenBuildings")]
+		public ISingleResult<usp_GetTravelTimeBetweenBuildingsResult> usp_GetTravelTimeBetweenBuildings([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> buildingID1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> buildingID2)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), buildingID1, buildingID2);
+			return ((ISingleResult<usp_GetTravelTimeBetweenBuildingsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -2104,6 +2160,844 @@ namespace DataContext
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class usp_GetActivitiesInfoResult
+	{
+		
+		private int _ActivityID;
+		
+		private int _CourseID;
+		
+		private System.Nullable<char> _ActivityType;
+		
+		public usp_GetActivitiesInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityID", DbType="Int NOT NULL")]
+		public int ActivityID
+		{
+			get
+			{
+				return this._ActivityID;
+			}
+			set
+			{
+				if ((this._ActivityID != value))
+				{
+					this._ActivityID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseID", DbType="Int NOT NULL")]
+		public int CourseID
+		{
+			get
+			{
+				return this._CourseID;
+			}
+			set
+			{
+				if ((this._CourseID != value))
+				{
+					this._CourseID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityType", DbType="Char(1)")]
+		public System.Nullable<char> ActivityType
+		{
+			get
+			{
+				return this._ActivityType;
+			}
+			set
+			{
+				if ((this._ActivityType != value))
+				{
+					this._ActivityType = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetBuildingInfoResult
+	{
+		
+		private int _BuildingID;
+		
+		private string _BuildingName;
+		
+		private string _BuildingCode;
+		
+		private string _Address;
+		
+		private System.Nullable<double> _Latitude;
+		
+		private System.Nullable<double> _Longitude;
+		
+		public usp_GetBuildingInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingID", DbType="Int NOT NULL")]
+		public int BuildingID
+		{
+			get
+			{
+				return this._BuildingID;
+			}
+			set
+			{
+				if ((this._BuildingID != value))
+				{
+					this._BuildingID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingName", DbType="NVarChar(MAX)")]
+		public string BuildingName
+		{
+			get
+			{
+				return this._BuildingName;
+			}
+			set
+			{
+				if ((this._BuildingName != value))
+				{
+					this._BuildingName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingCode", DbType="NVarChar(2)")]
+		public string BuildingCode
+		{
+			get
+			{
+				return this._BuildingCode;
+			}
+			set
+			{
+				if ((this._BuildingCode != value))
+				{
+					this._BuildingCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(MAX)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this._Address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Latitude", DbType="Float")]
+		public System.Nullable<double> Latitude
+		{
+			get
+			{
+				return this._Latitude;
+			}
+			set
+			{
+				if ((this._Latitude != value))
+				{
+					this._Latitude = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Longitude", DbType="Float")]
+		public System.Nullable<double> Longitude
+		{
+			get
+			{
+				return this._Longitude;
+			}
+			set
+			{
+				if ((this._Longitude != value))
+				{
+					this._Longitude = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetCourseInfoResult
+	{
+		
+		private int _CourseID;
+		
+		private string _Code;
+		
+		private string _Campus;
+		
+		private System.Nullable<char> _Term;
+		
+		private string _Title;
+		
+		private string _Description;
+		
+		public usp_GetCourseInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CourseID", DbType="Int NOT NULL")]
+		public int CourseID
+		{
+			get
+			{
+				return this._CourseID;
+			}
+			set
+			{
+				if ((this._CourseID != value))
+				{
+					this._CourseID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(10)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Campus", DbType="NVarChar(MAX)")]
+		public string Campus
+		{
+			get
+			{
+				return this._Campus;
+			}
+			set
+			{
+				if ((this._Campus != value))
+				{
+					this._Campus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Term", DbType="Char(1)")]
+		public System.Nullable<char> Term
+		{
+			get
+			{
+				return this._Term;
+			}
+			set
+			{
+				if ((this._Term != value))
+				{
+					this._Term = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this._Description = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetInstructorInfoResult
+	{
+		
+		private int _InstructorID;
+		
+		private string _Name;
+		
+		private System.Nullable<double> _Rating;
+		
+		public usp_GetInstructorInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InstructorID", DbType="Int NOT NULL")]
+		public int InstructorID
+		{
+			get
+			{
+				return this._InstructorID;
+			}
+			set
+			{
+				if ((this._InstructorID != value))
+				{
+					this._InstructorID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(MAX)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Float")]
+		public System.Nullable<double> Rating
+		{
+			get
+			{
+				return this._Rating;
+			}
+			set
+			{
+				if ((this._Rating != value))
+				{
+					this._Rating = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetSectionInfoResult
+	{
+		
+		private int _SectionID;
+		
+		private int _ActivityID;
+		
+		private string _SectionCode;
+		
+		public usp_GetSectionInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					this._SectionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivityID", DbType="Int NOT NULL")]
+		public int ActivityID
+		{
+			get
+			{
+				return this._ActivityID;
+			}
+			set
+			{
+				if ((this._ActivityID != value))
+				{
+					this._ActivityID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionCode", DbType="NVarChar(MAX)")]
+		public string SectionCode
+		{
+			get
+			{
+				return this._SectionCode;
+			}
+			set
+			{
+				if ((this._SectionCode != value))
+				{
+					this._SectionCode = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetSectionInstructorsResult
+	{
+		
+		private int _Id;
+		
+		private int _InstructorID;
+		
+		private int _SectionID;
+		
+		public usp_GetSectionInstructorsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InstructorID", DbType="Int NOT NULL")]
+		public int InstructorID
+		{
+			get
+			{
+				return this._InstructorID;
+			}
+			set
+			{
+				if ((this._InstructorID != value))
+				{
+					this._InstructorID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					this._SectionID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetSessionInfoResult
+	{
+		
+		private int _SessionID;
+		
+		private int _SectionID;
+		
+		private System.Nullable<int> _Fall_BuildingID;
+		
+		private string _Fall_RoomNumber;
+		
+		private System.Nullable<int> _Winter_BuildingID;
+		
+		private string _Winter_RoomNumber;
+		
+		private System.Nullable<double> _StartTime;
+		
+		private System.Nullable<double> _EndTime;
+		
+		public usp_GetSessionInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SessionID", DbType="Int NOT NULL")]
+		public int SessionID
+		{
+			get
+			{
+				return this._SessionID;
+			}
+			set
+			{
+				if ((this._SessionID != value))
+				{
+					this._SessionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SectionID", DbType="Int NOT NULL")]
+		public int SectionID
+		{
+			get
+			{
+				return this._SectionID;
+			}
+			set
+			{
+				if ((this._SectionID != value))
+				{
+					this._SectionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_BuildingID", DbType="Int")]
+		public System.Nullable<int> Fall_BuildingID
+		{
+			get
+			{
+				return this._Fall_BuildingID;
+			}
+			set
+			{
+				if ((this._Fall_BuildingID != value))
+				{
+					this._Fall_BuildingID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fall_RoomNumber", DbType="NVarChar(MAX)")]
+		public string Fall_RoomNumber
+		{
+			get
+			{
+				return this._Fall_RoomNumber;
+			}
+			set
+			{
+				if ((this._Fall_RoomNumber != value))
+				{
+					this._Fall_RoomNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_BuildingID", DbType="Int")]
+		public System.Nullable<int> Winter_BuildingID
+		{
+			get
+			{
+				return this._Winter_BuildingID;
+			}
+			set
+			{
+				if ((this._Winter_BuildingID != value))
+				{
+					this._Winter_BuildingID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Winter_RoomNumber", DbType="NVarChar(MAX)")]
+		public string Winter_RoomNumber
+		{
+			get
+			{
+				return this._Winter_RoomNumber;
+			}
+			set
+			{
+				if ((this._Winter_RoomNumber != value))
+				{
+					this._Winter_RoomNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Float")]
+		public System.Nullable<double> StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this._StartTime = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="Float")]
+		public System.Nullable<double> EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this._EndTime = value;
+				}
+			}
+		}
+	}
+	
+	public partial class usp_GetTravelTimeBetweenBuildingsResult
+	{
+		
+		private int _BuildingDistanceID;
+		
+		private int _BuildingID1;
+		
+		private int _BuildingID2;
+		
+		private System.Nullable<double> _WalkingDuration;
+		
+		private System.Nullable<double> _WalkingDistance;
+		
+		private System.Nullable<double> _TransitDuration;
+		
+		private System.Nullable<double> _TransitDistance;
+		
+		private System.Nullable<double> _CyclingDuration;
+		
+		private System.Nullable<double> _CyclingDistance;
+		
+		private System.Nullable<double> _DrivingDuration;
+		
+		private System.Nullable<double> _DrivingDistance;
+		
+		public usp_GetTravelTimeBetweenBuildingsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingDistanceID", DbType="Int NOT NULL")]
+		public int BuildingDistanceID
+		{
+			get
+			{
+				return this._BuildingDistanceID;
+			}
+			set
+			{
+				if ((this._BuildingDistanceID != value))
+				{
+					this._BuildingDistanceID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingID1", DbType="Int NOT NULL")]
+		public int BuildingID1
+		{
+			get
+			{
+				return this._BuildingID1;
+			}
+			set
+			{
+				if ((this._BuildingID1 != value))
+				{
+					this._BuildingID1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildingID2", DbType="Int NOT NULL")]
+		public int BuildingID2
+		{
+			get
+			{
+				return this._BuildingID2;
+			}
+			set
+			{
+				if ((this._BuildingID2 != value))
+				{
+					this._BuildingID2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WalkingDuration", DbType="Float")]
+		public System.Nullable<double> WalkingDuration
+		{
+			get
+			{
+				return this._WalkingDuration;
+			}
+			set
+			{
+				if ((this._WalkingDuration != value))
+				{
+					this._WalkingDuration = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WalkingDistance", DbType="Float")]
+		public System.Nullable<double> WalkingDistance
+		{
+			get
+			{
+				return this._WalkingDistance;
+			}
+			set
+			{
+				if ((this._WalkingDistance != value))
+				{
+					this._WalkingDistance = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransitDuration", DbType="Float")]
+		public System.Nullable<double> TransitDuration
+		{
+			get
+			{
+				return this._TransitDuration;
+			}
+			set
+			{
+				if ((this._TransitDuration != value))
+				{
+					this._TransitDuration = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransitDistance", DbType="Float")]
+		public System.Nullable<double> TransitDistance
+		{
+			get
+			{
+				return this._TransitDistance;
+			}
+			set
+			{
+				if ((this._TransitDistance != value))
+				{
+					this._TransitDistance = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CyclingDuration", DbType="Float")]
+		public System.Nullable<double> CyclingDuration
+		{
+			get
+			{
+				return this._CyclingDuration;
+			}
+			set
+			{
+				if ((this._CyclingDuration != value))
+				{
+					this._CyclingDuration = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CyclingDistance", DbType="Float")]
+		public System.Nullable<double> CyclingDistance
+		{
+			get
+			{
+				return this._CyclingDistance;
+			}
+			set
+			{
+				if ((this._CyclingDistance != value))
+				{
+					this._CyclingDistance = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrivingDuration", DbType="Float")]
+		public System.Nullable<double> DrivingDuration
+		{
+			get
+			{
+				return this._DrivingDuration;
+			}
+			set
+			{
+				if ((this._DrivingDuration != value))
+				{
+					this._DrivingDuration = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrivingDistance", DbType="Float")]
+		public System.Nullable<double> DrivingDistance
+		{
+			get
+			{
+				return this._DrivingDistance;
+			}
+			set
+			{
+				if ((this._DrivingDistance != value))
+				{
+					this._DrivingDistance = value;
+				}
 			}
 		}
 	}

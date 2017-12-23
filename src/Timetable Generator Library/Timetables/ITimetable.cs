@@ -9,7 +9,7 @@ namespace UoftTimetableGenerator.Generator
 {
     public interface ITimetable
     {
-        int AverageWalkingDistance { get; }
+        double AverageWalkingDistance { get; }
         double TotalWalkDuration { get; }
         List<double> WalkDurationInBackToBackClasses { get; }
 

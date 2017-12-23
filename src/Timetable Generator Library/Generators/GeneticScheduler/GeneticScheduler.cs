@@ -12,7 +12,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class used to generate UofT timetables with a genetic algorithm
     /// </summary>
-    public class GAGenerator<T> : ITimetableGenerator<T> where T : ITimetable, new()
+    public class GeneticScheduler<T> : IScheduler<T> where T : ITimetable, new()
     {
         private static Random random = new Random();
         private double mutationRate = 0.1;
@@ -23,6 +23,7 @@ namespace UoftTimetableGenerator.Generator
         // The preferences / restrictions (makes up the fitness model)
         private Preferences preferences;
         private Restrictions restrictions;
+        private TimetableScorer scorer;
 
         // Represents the number of sections that needs to be in the timetable
         private List<Section[]> requiredSections = new List<Section[]>();
@@ -42,10 +43,11 @@ namespace UoftTimetableGenerator.Generator
         /// <param name="courses">A list of courses</param>
         /// <param name="preferences">The preferences</param>
         /// <param name="restrictions">The restrictions</param>
-        public GAGenerator(List<Course> courses, Preferences preferences, Restrictions restrictions)
+        public GeneticScheduler(List<Course> courses, Preferences preferences, Restrictions restrictions)
         {
             this.preferences = preferences;
             this.restrictions = restrictions;
+            this.scorer = new TimetableScorer(restrictions, preferences);
 
             // Populating requiredSections[] and its associated terms[]
             foreach (Course course in courses)
@@ -290,63 +292,7 @@ namespace UoftTimetableGenerator.Generator
         public double GetFitnessScore(int[] table)
         { 
             T timetable = GetTimetable(table);
-
-            // If the table is an invalid table, then its score is 0
-            if (timetable == null)
-                return 0;
-
-            // Check if it meets the restrictions
-            if (restrictions.EarliestClass != null && timetable.EarliestClassTime < restrictions.EarliestClass)
-                return 0;
-            if (restrictions.LatestClass != null && timetable.LatestClassTime > restrictions.LatestClass)
-                return 0;
-            if (restrictions.WalkDurationInBackToBackClasses != null)
-            {
-                foreach (double dur in timetable.WalkDurationInBackToBackClasses)
-                    if (dur > restrictions.WalkDurationInBackToBackClasses)
-                        return 0;
-            }
-
-            double score = 1000;
-
-            // Get scores associated by their preferences
-            switch(preferences.ClassType)
-            {
-                case Preferences.Day.Undefined:
-                    break;
-                case Preferences.Day.Morning: // (12am - 12pm)
-                    if (0 < timetable.EarliestClassTime && timetable.LatestClassTime < 12)
-                        score += 100;
-                    break;
-                case Preferences.Day.Afternoon: // (12pm - 5pm)
-                    if (12 <= timetable.EarliestClassTime && timetable.LatestClassTime < 17)
-                        score += 100;
-                    break;
-                case Preferences.Day.Evening: // (5pm - 8pm)
-                    if (17 <= timetable.EarliestClassTime && timetable.LatestClassTime < 20)
-                        score += 100;
-                    break;
-                case Preferences.Day.Night: // (9pm - 12pm)
-                    if (20 <= timetable.EarliestClassTime && timetable.LatestClassTime <= 24)
-                        score += 100;
-                    break;
-                default:
-                    throw new Exception("Class type not handled before!");
-            }
-            switch(preferences.TimeBetweenClasses)
-            {
-                case Preferences.Quantity.Undefined:
-                    break;
-                case Preferences.Quantity.Minimum:
-                    score -= timetable.TotalTimeBetweenClasses;
-                    break;
-                case Preferences.Quantity.Maximum:
-                    score += timetable.TotalTimeBetweenClasses;
-                    break;
-                default:
-                    throw new Exception("Time between class is not handled before!");
-            }
-            return score;
+            return scorer.GetFitnessScore(timetable);
         }
 
         /// <summary>

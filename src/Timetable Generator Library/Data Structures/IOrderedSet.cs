@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UoftTimetableGenerator.Generator
 {
-    public interface IOrderedCollection<T> where T: IComparable
+    public interface IOrderedSet<T> where T: IComparable
     {
         void Show();
-        IOrderedCollection<T> MakeCopy();
+        IOrderedSet<T> MakeCopy();
 
         bool Contains(T item);
         bool CanAdd(T newItem);

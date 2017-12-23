@@ -58,6 +58,7 @@
             this.courseCodes = courseCodes;
             this.timetables = timetables;
             this.areTimetablesBeingGenerated = false;
+            this.errorMessages = null;
             this.bookmarkedTimetables = [];
             this.sectionColors = {};
             this.restrictions = restrictions;
@@ -178,7 +179,7 @@
         * @param {method(data)} onSuccess - A handler which will be called when the timetables are generated and returned from the server
         * @param {method(promise)} onError - A handler which will be called when the timetables could not be generated.
         */
-        this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onFailure) {
+        this.generateTimetables = function (courseCodes, preferences, restrictions, onSuccess, onError) {
 
             // Create the timetable request
             var request = {
@@ -192,16 +193,20 @@
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://localhost:53235/api/timetables/getuofttimetables"; // "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; 
+            var url = "http://localhost:53235/api/timetables/getuofttimetables"; //  "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // 
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;
             obj.generatedTimetables.timetables = [];
             obj.generatedTimetables.bookmarkedTimetables = [];
+            obj.generatedTimetables.errorMessages = null;
             obj.generatedTimetables.areTimetablesBeingGenerated = true;
 
             $http.put(url, request).then(
                 function (response) {
+
+                    console.log(onSuccess, onError);
+
                     // Parse the timetables
                     var newTimetables = [];
                     var rawTimetables = response.data;
@@ -220,8 +225,10 @@
                         onSuccess(obj.generatedTimetables);
                 },
                 function (response) {
-                    if (onFailure != undefined)
+                    console.log(onError);
+                    if (onError != undefined)
                         onError(response);
+                    obj.generatedTimetables.errorMessages = response.status + " " + response.statusText;
                     obj.generatedTimetables.areTimetablesBeingGenerated = false;
                 }
             );

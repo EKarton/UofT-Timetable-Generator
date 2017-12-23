@@ -51,11 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data Structures\IOrderedCollection.cs" />
-    <Compile Include="Generators\GAGenerator.cs" />
-    <Compile Include="Generators\GreedyGenerator.cs" />
+    <Compile Include="Data Structures\IOrderedSet.cs" />
+    <Compile Include="Generators\GeneticScheduler\GeneticScheduler.cs" />
+    <Compile Include="Generators\GeneticScheduler\TimetableScorer.cs" />
+    <Compile Include="Generators\GreedyScheduler.cs" />
     <Compile Include="Timetables\ITimetable.cs" />
-    <Compile Include="Generators\ITimetableGenerator.cs" />
+    <Compile Include="Generators\IScheduler.cs" />
     <Compile Include="Generators\Preferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -66,7 +67,7 @@
     <Compile Include="Data Structures\RedBlackTree.cs" />
     <Compile Include="Generators\Restrictions.cs" />
     <Compile Include="Timetables\SeasonalTimetable.cs" />
-    <Compile Include="Generators\StatsPerGeneration.cs" />
+    <Compile Include="Generators\GeneticScheduler\StatsPerGeneration.cs" />
     <Compile Include="Timetables\YearlyTimetable.cs" />
   </ItemGroup>
   <ItemGroup>

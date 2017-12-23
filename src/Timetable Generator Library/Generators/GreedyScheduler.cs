@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class that generates timetables using the Greedy algorithm
     /// </summary>
-    public class GreedyGenerator<T> : ITimetableGenerator<T> where T: ITimetable, new()
+    public class GreedyScheduler<T> : IScheduler<T> where T: ITimetable, new()
     {
         private List<Section[]> requiredSections = new List<Section[]>();
         private List<char> terms = new List<char>();
@@ -20,7 +20,7 @@ namespace UoftTimetableGenerator.Generator
 
         private List<int[]> timetables = new List<int[]>();
 
-        public GreedyGenerator(List<Course> courses, Preferences preferences, Restrictions restrictions)
+        public GreedyScheduler(List<Course> courses, Preferences preferences, Restrictions restrictions)
         {
             this.preferences = preferences;
             this.restrictions = restrictions;

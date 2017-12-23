@@ -21,37 +21,46 @@
                           ng-class="{'selected hoverable clickable': isRestrictionsPanelOpened, 'hoverable clickable': !isRestrictionsPanelOpened}" 
                           ng-click="toggleRestrictionsPanel()">Restrictions</span>
                 </div>
+                <div>
                     <div class="midHeaderContent" ng-show="isRestrictionsPanelOpened" >
                         <restrictions-panel initial-restrictions="data.restrictions"
                                             on-update="updateRestrictions(restrictions)"
-                                            on-cancel="toggleRestrictionsPanel()"></restrictions-panel>
+                                            on-cancel="toggleRestrictionsPanel()">
+                        </restrictions-panel>
                     </div>
                     <div class="midHeaderContent" ng-show="isPreferencesPanelOpened">
                         <preferences-panel initial-preferences="data.preferences"
                                            on-update="updatePreferences(preferences)"
-                                           on-cancel="togglePreferencesPanel()"></preferences-panel>
+                                           on-cancel="togglePreferencesPanel()">
+                        </preferences-panel>
                     </div>
                 </div>
             </div>
 
             <!-- The loading icon, which is only displayed when it is waiting for a request -->
-            <div ng-show="data.areTimetablesBeingGenerated">
+            <div ng-show="data.areTimetablesBeingGenerated && data.errorMessages === null">
                 <img src="../../images/tenor.gif" alt="Waiting for timetables to be generated"/>
             </div>
+
+            <!-- The section to display any error messages, if there are any -->
+            <div ng-show="!data.areTimetablesBeingGenerated && data.errorMessages != null">
+                {{data.errorMessages}}
+            </div>
+
 
             <!-- The timetables; fall and winter timetables grouped together -->
             <div class="miniTimetablesGroup" ng-repeat="timetable in data.timetables">
                 <div>{{timetable.name}}</div>
                 <div class="miniTimetables">
                     <timetable-preview blocks="timetable.fallTimetableBlocks" 
-                                       colorScheme="data.sectionColors" 
-                                       chartTitle="Fall" 
-                                       ng-click="openTimetableViewer(timetable, 'Fall')">
+                                        colorScheme="data.sectionColors" 
+                                        chartTitle="Fall" 
+                                        ng-click="openTimetableViewer(timetable, 'Fall')">
                     </timetable-preview>
                     <timetable-preview blocks="timetable.winterTimetableBlocks" 
-                                       colorScheme="data.sectionColors" 
-                                       chartTitle="Winter" 
-                                       ng-click="openTimetableViewer(timetable, 'Winter')">
+                                        colorScheme="data.sectionColors" 
+                                        chartTitle="Winter" 
+                                        ng-click="openTimetableViewer(timetable, 'Winter')">
                     </timetable-preview>
                 </div>
             </div>
@@ -60,7 +69,7 @@
                 <button id="regenerateTimetablesBttn" ng-click="regenerateTimetables()">Regenerate more timetables</button>
             </div>
         </div>
-	</div>
+    </div>
 
     <!-- The side menu panel -->
     <div id="sideMenuPanel">

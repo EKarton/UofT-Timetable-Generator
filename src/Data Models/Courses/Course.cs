@@ -33,38 +33,6 @@ namespace UoftTimetableGenerator.DataModels
             Activities = new List<Activity>();
             foreach (DataContext.Activity oldActivity in oldCourse.Activities)
                 Activities.Add(new Activity(oldActivity, this));
-            
-
-            /*
-            // Sort the activities based on their type
-            List<DataContext.Activity> oldLectures = new List<DataContext.Activity>();
-            List<DataContext.Activity> oldTutorials = new List<DataContext.Activity>();
-            List<DataContext.Activity> oldPracticals = new List<DataContext.Activity>();
-            foreach (DataContext.Activity oldActivity in oldCourse.Activities)
-            {
-                switch(oldActivity.ActivityType)
-                {
-                    case 'L':
-                        oldLectures.Add(oldActivity);
-                        break;
-                    case 'T':
-                        oldTutorials.Add(oldActivity);
-                        break;
-                    case 'P':
-                        oldPracticals.Add(oldActivity);
-                        break;
-                }
-            }
-
-            // Add these activities based on their type (if its empty remove it)
-            Activities = new List<Activity>();
-            if (oldLectures.Count > 0)
-                Activities.Add(new Activity(oldLectures, "Lecture", this));
-            if (oldTutorials.Count > 0)
-                Activities.Add(new Activity(oldTutorials, "Tutorials", this));
-            if (oldPracticals.Count > 0)
-                Activities.Add(new Activity(oldPracticals, "Practicals", this));
-                */
         }
 
         /// <summary>

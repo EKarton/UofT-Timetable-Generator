@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.Generator
     public class SeasonalTimetable : ITimetable
     {
         // A sorted tree used to hold the timetable (in order)
-        private IOrderedCollection<Session> collection = new RedBlackTree<Session>();
+        private IOrderedSet<Session> collection = new RedBlackTree<Session>();
 
         // A list of all sections in this object 
         private List<Section> sections = new List<Section>();
@@ -18,9 +18,40 @@ namespace UoftTimetableGenerator.Generator
         /// <summary>
         /// Get the average walk distance in between classes
         /// </summary>
-        public int AverageWalkingDistance
+        public double AverageWalkingDistance
         {
-            get { return 0; }
+            get
+            {
+                double totalWalkingDistance = 0;
+                double numberOfDistancesCalculated = 0;
+                List<Session> sessions = collection.GetContents();
+                for (int i = 0; i < sessions.Count - 1; i++)
+                {
+                    Session session1 = sessions[i];
+                    Session session2 = sessions[2];
+                    if (session1.GetEndTime_WeekdayIndex() == session2.GetStartTime_WeekdayIndex())
+                    {
+                        Building building1 = session1.FallBuilding;
+                        Building building2 = session2.FallBuilding;
+                        BuildingDistance distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
+                        if (distances.WalkingDistance != null)
+                        {
+                            totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
+                            numberOfDistancesCalculated ++;
+                        }
+
+                        building1 = sessions[i].WinterBuilding;
+                        building2 = sessions[i + 1].WinterBuilding;
+                        distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
+                        if (distances.WalkingDistance != null)
+                        {
+                            totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
+                            numberOfDistancesCalculated++;
+                        }
+                    }
+                }
+                return totalWalkingDistance / numberOfDistancesCalculated;
+            }
         }
 
         /// <summary>
@@ -36,7 +67,38 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         public List<double> WalkDurationInBackToBackClasses
         {
-            get { return new List<double>(); }
+            get
+            {
+                List<double> walkDurations = new List<double>();
+                List<Session> sessions = collection.GetContents();
+                for (int i = 0; i < sessions.Count - 1; i++)
+                {
+                    if (sessions[i].GetEndTime_WeekdayIndex() == sessions[i + 1].GetStartTime_WeekdayIndex())
+                    {
+                        if (sessions[i].GetEndTime_Time() == sessions[i + 1].GetStartTime_Time())
+                        {
+                            Building building1 = sessions[i].FallBuilding;
+                            Building building2 = sessions[i + 1].FallBuilding;
+                            BuildingDistance distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
+                            if (distances.WalkingDistance != null)
+                            {
+                                double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
+                                walkDurations.Add(walkingDuration);
+                            }
+
+                            building1 = sessions[i].WinterBuilding;
+                            building2 = sessions[i + 1].WinterBuilding;
+                            distances = UoftDatabaseService.getService().GetBuildingDistances(building1, building2);
+                            if (distances.WalkingDistance != null)
+                            {
+                                double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
+                                walkDurations.Add(walkingDuration);
+                            }
+                        }
+                    }
+                }
+                return walkDurations;
+            }
         }
 
         /// <summary>

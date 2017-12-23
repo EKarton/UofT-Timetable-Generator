@@ -43,14 +43,14 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             List<Course> courseObjs = new List<Course>();
             foreach (string code in request.CourseCodes)
             {
-                Course courseObj = UoftDatabaseService.GetCourseDetails(code);
+                Course courseObj = UoftDatabaseService.getService().GetCourseDetails(code);
                 if (courseObj == null)
                     return NotFound();
                 courseObjs.Add(courseObj);
             }
 
             // Generate the timetables            
-            GAGenerator<YearlyTimetable> generator = new GAGenerator<YearlyTimetable>(courseObjs, request.Preferences, request.Restrictions)
+            GeneticScheduler<YearlyTimetable> generator = new GeneticScheduler<YearlyTimetable>(courseObjs, request.Preferences, request.Restrictions)
             {
                 NumGenerations = 100,
                 PopulationSize = 16,

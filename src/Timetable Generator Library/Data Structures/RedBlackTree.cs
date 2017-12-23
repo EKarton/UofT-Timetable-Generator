@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UoftTimetableGenerator.Generator
 {
-    public class RedBlackTree<T> : IOrderedCollection<T> where T: IComparable
+    public class RedBlackTree<T> : IOrderedSet<T> where T: IComparable
     {
         private string color = "Black";
         private T content = default(T);  // returns null if T is a class type
@@ -105,7 +105,7 @@ namespace UoftTimetableGenerator.Generator
             rightTree.Show(tabs + "  ");
         }
 
-        public IOrderedCollection<T> MakeCopy()
+        public IOrderedSet<T> MakeCopy()
         {
             if (IsEmpty)
                 return new RedBlackTree<T>();

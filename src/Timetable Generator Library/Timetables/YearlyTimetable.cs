@@ -18,7 +18,7 @@ namespace UoftTimetableGenerator.Generator
         /// <summary>
         /// Get the average walking distance
         /// </summary>
-        public int AverageWalkingDistance
+        public double AverageWalkingDistance
         {
             get { throw new NotImplementedException(); }
         }
