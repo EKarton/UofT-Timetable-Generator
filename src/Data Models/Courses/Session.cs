@@ -35,8 +35,8 @@ namespace UoftTimetableGenerator.DataModels
 
             FallRoomNumber = oldSession.Fall_RoomNumber;
             WinterRoomNumber = oldSession.Winter_RoomNumber;
-            StartTime = oldSession.StartTime.GetValueOrDefault(0);
-            EndTime = oldSession.EndTime.GetValueOrDefault(0);
+            StartTimeWithWeekday = oldSession.StartTime.GetValueOrDefault(0);
+            EndTimeWithWeekday = oldSession.EndTime.GetValueOrDefault(0);
         }
 
         /// <summary>
@@ -68,48 +68,48 @@ namespace UoftTimetableGenerator.DataModels
         /// Get the compressed start time of this session 
         /// (this includes the weekday and 24-hr start time)
         /// </summary>
-        public double StartTime { get; set; }
+        public double StartTimeWithWeekday { get; set; }
 
         /// <summary>
         /// Get the compressed end time of this session 
         /// (this includes the weekday and 24-hr end time)
         /// </summary>
-        public double EndTime { get; set; }
+        public double EndTimeWithWeekday { get; set; }
 
         /// <summary>
         /// Get the 24-hr start time of this session
         /// </summary>
         /// <returns></returns>
-        public double GetStartTime_Time()
+        public double StartTime
         {
-            return StartTime % 100;
+            get { return StartTimeWithWeekday % 100; }
         }
 
         /// <summary>
         /// Get the 24-hr end time of this session
         /// </summary>
         /// <returns></returns>
-        public double GetEndTime_Time()
+        public double EndTime
         {
-            return EndTime % 100;
+            get { return EndTimeWithWeekday % 100; }
         }
 
         /// <summary>
         /// Get the weekday which this session starts on
         /// </summary>
         /// <returns></returns>
-        public int GetStartTime_WeekdayIndex()
+        public int StartDay
         {
-            return ((int) StartTime) / 100;
+            get { return ((int)StartTimeWithWeekday) / 100; }
         }
 
         /// <summary>
         /// Get the weekday which this session ends on
         /// </summary>
         /// <returns></returns>
-        public int GetEndTime_WeekdayIndex()
+        public int EndDay
         {
-            return ((int)EndTime) / 100;
+            get { return ((int)EndTimeWithWeekday) / 100; }
         }
 
         /// <summary>
@@ -127,9 +127,9 @@ namespace UoftTimetableGenerator.DataModels
             else
             {
                 Session otherSession = (Session)obj;
-                if (EndTime <= otherSession.StartTime)
+                if (EndTimeWithWeekday <= otherSession.StartTimeWithWeekday)
                     return -1;
-                else if (otherSession.EndTime <= StartTime)
+                else if (otherSession.EndTimeWithWeekday <= StartTimeWithWeekday)
                     return 1;
                 else
                     return 0;
@@ -138,7 +138,7 @@ namespace UoftTimetableGenerator.DataModels
 
         public override string ToString()
         {
-            return StartTime + "-" + EndTime;
+            return StartTimeWithWeekday + "-" + EndTimeWithWeekday;
         }
     }
 }

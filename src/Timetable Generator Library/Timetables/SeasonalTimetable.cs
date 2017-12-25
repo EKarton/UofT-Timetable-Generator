@@ -29,7 +29,7 @@ namespace UoftTimetableGenerator.Generator
                 {
                     Session session1 = sessions[i];
                     Session session2 = sessions[2];
-                    if (session1.GetEndTime_WeekdayIndex() == session2.GetStartTime_WeekdayIndex())
+                    if (session1.EndDay== session2.StartDay)
                     {
                         Building building1 = session1.FallBuilding;
                         Building building2 = session2.FallBuilding;
@@ -79,9 +79,9 @@ namespace UoftTimetableGenerator.Generator
                 List<Session> sessions = collection.GetContents();
                 for (int i = 0; i < sessions.Count - 1; i++)
                 {
-                    if (sessions[i].GetEndTime_WeekdayIndex() == sessions[i + 1].GetStartTime_WeekdayIndex())
+                    if (sessions[i].EndDay== sessions[i + 1].StartDay)
                     {
-                        if (sessions[i].GetEndTime_Time() == sessions[i + 1].GetStartTime_Time())
+                        if (sessions[i].EndTime== sessions[i + 1].StartTime)
                         {
                             Building building1 = sessions[i].FallBuilding;
                             Building building2 = sessions[i + 1].FallBuilding;
@@ -124,7 +124,7 @@ namespace UoftTimetableGenerator.Generator
                 double maxClassTime = 0;
                 foreach (Session session in items)
                 {
-                    double endTime = session.GetEndTime_Time();
+                    double endTime = session.EndTime;
                     if (endTime > maxClassTime)
                         maxClassTime = endTime;
                 }
@@ -143,7 +143,7 @@ namespace UoftTimetableGenerator.Generator
                 double minClassTime = 12;
                 foreach (Session session in items)
                 {
-                    double startTime = session.GetStartTime_Time();
+                    double startTime = session.StartTime;
                     if (startTime < minClassTime)
                         minClassTime = startTime;
                 }
@@ -162,7 +162,7 @@ namespace UoftTimetableGenerator.Generator
                 List<Session> items = collection.GetContents();
                 for (int i = 0; i < items.Count - 1; i++)
                 {
-                    double timeBetweenClass = items[i + 1].EndTime - items[i].StartTime;
+                    double timeBetweenClass = items[i + 1].EndTimeWithWeekday - items[i].StartTimeWithWeekday;
                     totalTimeBetweenClasses += timeBetweenClass;
                 }
                 return totalTimeBetweenClasses;
@@ -179,7 +179,7 @@ namespace UoftTimetableGenerator.Generator
                 double timeInClass = 0;
                 List<Session> items = collection.GetContents();
                 foreach (Session s in items)
-                    timeInClass += s.EndTime - s.StartTime;
+                    timeInClass += s.EndTimeWithWeekday - s.StartTimeWithWeekday;
                 return timeInClass;
             }
         }
@@ -203,10 +203,10 @@ namespace UoftTimetableGenerator.Generator
                 List<Session> sessions = collection.GetContents();
                 foreach (Session session in sessions)
                 {
-                    if (!daysInClass.Contains(session.GetStartTime_WeekdayIndex()))
-                        daysInClass.Add(session.GetStartTime_WeekdayIndex());
-                    if (daysInClass.Contains(session.GetEndTime_WeekdayIndex()))
-                        daysInClass.Add(session.GetStartTime_WeekdayIndex());
+                    if (!daysInClass.Contains(session.StartDay))
+                        daysInClass.Add(session.StartDay);
+                    if (daysInClass.Contains(session.EndDay))
+                        daysInClass.Add(session.StartDay);
                 }
                 return daysInClass;
             }

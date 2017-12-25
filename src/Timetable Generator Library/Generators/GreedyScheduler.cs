@@ -12,11 +12,11 @@ namespace UoftTimetableGenerator.Generator
     /// </summary>
     public class GreedyScheduler<T> : IScheduler<T> where T: ITimetable, new()
     {
+        // Note that the first dimension are the activities; and the second dimension are the sections of an activity.
         private List<Section[]> requiredSections = new List<Section[]>();
-        private List<char> terms = new List<char>();
         private Preferences preferences;
         private Restrictions restrictions;
-        private int numTimetablesToGenerate = 20;
+        private int numTimetablesToGenerate = 200;
 
         private List<int[]> timetables = new List<int[]>();
 
@@ -26,21 +26,43 @@ namespace UoftTimetableGenerator.Generator
             this.restrictions = restrictions;
 
             // Populating requiredSections[] and its associated terms[]
+            // It only adds distinct sections that are within the start/end time restrictions 
             foreach (Course course in courses)
             {
-                char term = course.Term[0];
                 foreach (Activity activity in course.Activities)
                 {
-                    requiredSections.Add(activity.Sections.ToArray());
-                    terms.Add(term);
+                    List<Section> allowedSections = new List<Section>();
+                    foreach (Section section in activity.Sections)
+                    {
+                        if (IsSectionWithinStartEndTimes(section))
+                            allowedSections.Add(section);
+                    }
+
+                    List<Section> distinctSections = GetDistinctSections(allowedSections.ToArray());
+                    requiredSections.Add(distinctSections.ToArray());
                 }
             }
+
+            // Sort the activities in requiredSections[] in ascending order based on its number of sections
+            requiredSections.Sort((a, b) => (a.Length.CompareTo(b.Length)));
         }
 
         public int NumTimetablesToGenerate
         {
             get { return numTimetablesToGenerate; }
             set { numTimetablesToGenerate = value; }
+        }
+
+        private bool IsSectionWithinStartEndTimes(Section section)
+        {
+            foreach (Session session in section.Sessions)
+            {
+                if (session.StartTime< restrictions.EarliestClass)
+                    return false;
+                else if (session.EndTime> restrictions.LatestClass)
+                    return false;
+            }
+            return true;
         }
 
         private int[] MakeCopyOfTimetable(int[] validTable)
@@ -68,7 +90,6 @@ namespace UoftTimetableGenerator.Generator
                 if (curTable[i] != -1)
                 {
                     Section section = requiredSections[i][curTable[i]];
-                    char term = terms[i];
                     timetable.AddSection(section);
                 }
             }
@@ -84,19 +105,11 @@ namespace UoftTimetableGenerator.Generator
                 {
                     Section[] potentialSections = requiredSections[i];
 
+                    List<Section> distinctSections = GetDistinctSections(potentialSections);
+
                     for (int j = 0; j < potentialSections.Length; j++)
                     {
-                        // Check if the section meet the restrictions
-                        bool areRestrictionsMet = true;
-                        for (int k = 0; k < potentialSections[j].Sessions.Count; k++) {
-                            if (DoesItSatisfyRestrictions(potentialSections[j].Sessions[k]) == false)
-                            {
-                                areRestrictionsMet = false;
-                                break;
-                            }
-                        }
-
-                        if (timetable.DoesSectionFit(potentialSections[j]) && areRestrictionsMet)
+                        if (timetable.DoesSectionFit(potentialSections[j]))
                             nextSessions.Add(new Tuple<int, int>(i, j));
                     }
                 }
@@ -105,19 +118,24 @@ namespace UoftTimetableGenerator.Generator
             return nextSessions;
         }
 
-        private bool DoesItSatisfyRestrictions(Session session)
+        private List<Section> GetDistinctSections(Section[] potentialSections)
         {
-            if (restrictions.EarliestClass != null)
+            List<Section> distinctSections = new List<Section>();
+            HashSet<String> foundSections = new HashSet<string>();
+
+            foreach (Section section in potentialSections)
             {
-                if (restrictions.EarliestClass.GetValueOrDefault(0) > session.GetStartTime_Time())
-                    return false;
+                string hashcode = "";
+                foreach (Session session in section.Sessions)
+                    hashcode += session.StartTimeWithWeekday + "-" + session.EndTimeWithWeekday + ",";
+
+                if (!foundSections.Contains(hashcode))
+                {
+                    distinctSections.Add(section);
+                    foundSections.Add(hashcode);
+                }
             }
-            if (restrictions.LatestClass != null)
-            {
-                if (restrictions.LatestClass.GetValueOrDefault(0) < session.GetEndTime_Time())
-                    return false;
-            }
-            return true;
+            return distinctSections;
         }
 
         private void GenerateTimetables(int[] curTable)
@@ -165,7 +183,6 @@ namespace UoftTimetableGenerator.Generator
                 for (int j = 0; j < table.Length; j++)
                 {
                     Section section = requiredSections[j][table[j]];
-                    char term = terms[j];
                     formattedTimetable.AddSection(section);
                 }
                 formattedTimetables.Add(formattedTimetable);

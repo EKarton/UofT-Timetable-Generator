@@ -12,27 +12,42 @@ namespace UoftTimetableGenerator.Generator
     /// Timetables with a high score are typically the better solutions while timetables
     /// with a low score have worser solutions.
     /// </summary>
-    class TimetableScorer
+    public class TimetableScorer
     {
         private Restrictions restrictions;
         private Preferences preferences;
 
+        /// <summary>
+        /// Initializes the timetable scorer
+        /// </summary>
+        /// <param name="restrictions">The restrictions for a timetable</param>
+        /// <param name="preferences">The prefernces for a timetable</param>
         public TimetableScorer(Restrictions restrictions, Preferences preferences)
         {
             this.restrictions = restrictions;
             this.preferences = preferences;
         }
 
+        /// <summary>
+        /// Get / set the restrictions.
+        /// </summary>
         public Restrictions Restrictions { get => restrictions; set => restrictions = value; }
+
+        /// <summary>
+        /// Get / set the preferences
+        /// </summary>
         public Preferences Preferences { get => preferences; set => preferences = value; }
 
+        /// <summary>
+        /// Computes the score of the timetable based on it satisfying the restrictions.
+        /// Returns 0 if the timetable is outside of the restrictions; else returns a number > 0.
+        /// </summary>
+        /// <param name="timetable">A timetable to score</param>
+        /// <returns>The score of the timetable</returns>
         private double GetRestrictionsScore(ITimetable timetable)
         {
             // Check if it meets the restrictions
-            if (restrictions.EarliestClass != null && timetable.EarliestClassTime < restrictions.EarliestClass)
-                return 0;
-            if (restrictions.LatestClass != null && timetable.LatestClassTime > restrictions.LatestClass)
-                return 0;
+            // Note that each session in the timetable must be within the start/end time restrictions
             if (restrictions.WalkDurationInBackToBackClasses != null)
             {
                 foreach (double dur in timetable.WalkDurationInBackToBackClasses)
@@ -42,9 +57,14 @@ namespace UoftTimetableGenerator.Generator
             return 1000;
         }
 
+        /// <summary>
+        /// Computes the score of the timetable based on it satisfying the preferences
+        /// </summary>
+        /// <param name="timetable">A timetable to score</param>
+        /// <returns>The score of the timetable</returns>
         private double GetPreferencesScore(ITimetable timetable)
         {
-            double score = 1000;
+            double score = 2000;
 
             // Get scores associated by their preferences
             switch (preferences.ClassType)
@@ -97,7 +117,11 @@ namespace UoftTimetableGenerator.Generator
             return score;
         }
 
-
+        /// <summary>
+        /// Return the overall score of the timetable.
+        /// </summary>
+        /// <param name="timetable">A timetable to score</param>
+        /// <returns>The score of the timetable.</returns>
         public double GetFitnessScore(ITimetable timetable)
         {
             // If the table is an invalid table, then its score is 0

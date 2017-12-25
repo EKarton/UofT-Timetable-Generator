@@ -25,7 +25,8 @@ namespace UoftTimetableGenerator.Generator
         private Restrictions restrictions;
         private TimetableScorer scorer;
 
-        // Represents the number of sections that needs to be in the timetable
+        // Represents the number of sections that needs to be in the timetable.
+        // The first dimension are the activities; the second are the available sections.
         private List<Section[]> requiredSections = new List<Section[]>();
 
         private int maxSessions = 0;
@@ -40,21 +41,30 @@ namespace UoftTimetableGenerator.Generator
         /// <summary>
         /// Constructs the GAGenerator object
         /// </summary>
-        /// <param name="courses">A list of courses</param>
+        /// <param name="activities">A list of activities</param>
         /// <param name="preferences">The preferences</param>
         /// <param name="restrictions">The restrictions</param>
-        public GeneticScheduler(List<Course> courses, Preferences preferences, Restrictions restrictions)
+        public GeneticScheduler(List<Activity> activities, TimetableScorer scorer, Preferences preferences, Restrictions restrictions)
         {
             this.preferences = preferences;
             this.restrictions = restrictions;
-            this.scorer = new TimetableScorer(restrictions, preferences);
+            this.scorer = scorer;
 
             // Populating requiredSections[] and its associated terms[]
-            foreach (Course course in courses)
+            // It only adds the sections to requiredSections[] if they are within the time restrictions.
+            foreach (Activity activity in activities)
             {
-                foreach (Activity activity in course.Activities)
-                    requiredSections.Add(activity.Sections.ToArray());
-            }
+                List<Section> allowedSections = new List<Section>();
+                foreach (Section section in activity.Sections)
+                {
+                    if (restrictions != null && section.MaxStartTime < restrictions.EarliestClass)
+                        continue;
+                    if (restrictions != null && section.MaxEndTime > restrictions.LatestClass)
+                        continue;
+                    allowedSections.Add(section);                            
+                }
+                requiredSections.Add(allowedSections.ToArray());
+            }                   
 
             // Calculate the max number of sessions
             foreach (Section[] sessions in requiredSections)

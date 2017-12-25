@@ -65,7 +65,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
         /// </summary>
         private void LoadData()
         {
-            courses = UoftDatabaseService.GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
+            courses = UoftDatabaseService.getService().GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
         }
 
         /// <summary>
@@ -113,19 +113,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
                     CrossoverRate = crossoverRate,
                     NumGenerations = numGenerations,
                     PopulationSize = populationSize
-                };
-                
-                /*
-                GAGenerator generator = new GAGenerator(courses, preferences, restrictions)
-                {
-                    MutationRate = mutationRate,
-                    CrossoverRate = crossoverRate,
-                    NumGenerations = numGenerations,
-                    PopulationSize = populationSize,
-                    CrossoverType = crossoverType
-                };
-                */
-                
+                };                
 
                 // Run the generator and get stats
                 StatsPerGeneration[] curStats = generator.GenerateTimetablesWithStats();

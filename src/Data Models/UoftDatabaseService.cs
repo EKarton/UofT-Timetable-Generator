@@ -80,7 +80,7 @@ namespace UoftTimetableGenerator.DataModels
             courseCodeQuery = courseCodeQuery.ToLower();
             List<Course> courses = new List<Course>();
 
-            if (courseCodeQuery.Length >= 3)
+            if (courseCodeQuery.Length == 3)
             {
                 using (UofTDataContext db = new UofTDataContext())
                 {

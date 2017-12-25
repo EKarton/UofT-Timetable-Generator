@@ -23,10 +23,10 @@ namespace UoftTimetableGenerator.WebAPI.Models
             SectionCode = session.Section.SectionCode;
             Instructors = session.Section.Instructors.ToArray();
 
-            StartTime = session.StartTime % 100;
-            EndTime = session.EndTime % 100;
-            StartDay = (int) session.StartTime / 100;
-            EndDay = (int) session.EndTime / 100;
+            StartTime = session.StartTimeWithWeekday % 100;
+            EndTime = session.EndTimeWithWeekday % 100;
+            StartDay = (int) session.StartTimeWithWeekday / 100;
+            EndDay = (int) session.EndTimeWithWeekday / 100;
 
             // Convert the abreviated activity type to its full type.
             switch (session.Section.Activity.ActivityType)
