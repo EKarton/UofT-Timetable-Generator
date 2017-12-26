@@ -1,0 +1,137 @@
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Selenium\Web drivers\chromedriver.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Tests.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Tests.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Genetic Algorithm Analyzer.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Timetable Generator Library.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Uoft_Data.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web App.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web Scrapper.exe
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Cors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.StaticFiles.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Routing.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Hosting.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Server.IISIntegration.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Diagnostics.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\WebDriver.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\WebDriver.Support.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\netstandard.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Buffers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Http.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.HttpOverrides.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.ApplicationInsights.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AI.DependencyCollector.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.RazorPages.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Cors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Localization.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Razor.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Data Models.dll.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Uoft_Data.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Genetic Algorithm Analyzer.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Genetic Algorithm Analyzer.exe.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Timetable Generator Library.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Timetable Generator Library.dll.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web App.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web App.exe.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Web Scrapper.exe.config
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\WebDriver.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\WebDriver.Support.xml
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.pdb

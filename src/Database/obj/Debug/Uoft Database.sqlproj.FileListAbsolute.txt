@@ -40,7 +40,3 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\bin\Debug\Uoft_Data.pdb
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\Uoft_Data.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\Uoft_Data.pdb
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\Model.xml
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\refactor.xml
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\postdeploy.sql
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Database\obj\Debug\predeploy.sql

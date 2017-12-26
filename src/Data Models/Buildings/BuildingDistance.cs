@@ -12,16 +12,6 @@ namespace UoftTimetableGenerator.DataModels
     public class BuildingDistance
     {
         /// <summary>
-        /// Get / set the first building
-        /// </summary>
-        public Building Building1 { get; set; }
-
-        /// <summary>
-        /// Get / set the second building
-        /// </summary>
-        public Building Building2 { get; set; }
-
-        /// <summary>
         /// Get / set the walking duration in between the two buildings (in minutes)
         /// </summary>
         public double? WalkDuration { get; set; }

@@ -43,7 +43,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             List<Activity> activities = new List<Activity>();
             foreach (string code in request.CourseCodes)
             {
-                Course courseObj = UoftDatabaseService.getService().GetCourseDetails(code);
+                Course courseObj = UoftServices.GetService().GetCourseDetails(code);
                 if (courseObj == null)
                     return NotFound();
                 activities.AddRange(courseObj.Activities);
@@ -53,7 +53,7 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             TimetableScorer scorer = new TimetableScorer(request.Restrictions, request.Preferences);
             GeneticScheduler<YearlyTimetable> generator = new GeneticScheduler<YearlyTimetable>(activities, scorer, request.Preferences, request.Restrictions)
             {
-                NumGenerations = 50,
+                NumGenerations = 100,
                 PopulationSize = 16,
                 MutationRate = 0.1,
                 CrossoverRate = 0.6
@@ -61,10 +61,9 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
             List<YearlyTimetable> timetables = generator.GetTimetables();     
 
             /*
-            GreedyScheduler<YearlyTimetable> greedyGenerator = new GreedyScheduler<YearlyTimetable>(courseObjs, request.Preferences, request.Restrictions);
+            GreedyScheduler<YearlyTimetable> greedyGenerator = new GreedyScheduler<YearlyTimetable>(activities, request.Preferences, request.Restrictions);
             List<YearlyTimetable> timetables = greedyGenerator.GetTimetables();
-            */
-            
+            */            
 
             // Convert the timetables to mini timetables (which will be presented to the user)
             List<SimplifiedYearlyTimetable> miniTimetables = new List<SimplifiedYearlyTimetable>();

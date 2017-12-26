@@ -27,7 +27,7 @@ namespace UoftTimetableGenerator.Generator
 
         // Represents the number of sections that needs to be in the timetable.
         // The first dimension are the activities; the second are the available sections.
-        private List<Section[]> requiredSections = new List<Section[]>();
+        private List<Section[]> requiredActivities = new List<Section[]>();
 
         private int maxSessions = 0;
 
@@ -63,11 +63,11 @@ namespace UoftTimetableGenerator.Generator
                         continue;
                     allowedSections.Add(section);                            
                 }
-                requiredSections.Add(allowedSections.ToArray());
+                requiredActivities.Add(allowedSections.ToArray());
             }                   
 
             // Calculate the max number of sessions
-            foreach (Section[] sessions in requiredSections)
+            foreach (Section[] sessions in requiredActivities)
             {
                 if (sessions.Length > maxSessions)
                     maxSessions = sessions.Length;
@@ -187,13 +187,13 @@ namespace UoftTimetableGenerator.Generator
             if (random.NextDouble() > crossoverRate)
                 return null;
 
-            int[] child = new int[requiredSections.Count];
+            int[] child = new int[requiredActivities.Count];
 
-            int randIndex = random.Next(0, requiredSections.Count);
+            int randIndex = random.Next(0, requiredActivities.Count);
             for (int i = 0; i < randIndex; i++)
                 child[i] = parent1[i];
 
-            for (int i = randIndex; i < requiredSections.Count; i++)
+            for (int i = randIndex; i < requiredActivities.Count; i++)
                 child[i] = parent2[i];
 
             return child;
@@ -205,11 +205,11 @@ namespace UoftTimetableGenerator.Generator
         /// <param name="table">The gene to a table</param>
         private void PerformMutation(int[] table)
         {
-            for (int i = 0; i < requiredSections.Count; i++)
+            for (int i = 0; i < requiredActivities.Count; i++)
             {
                 if (random.NextDouble() <= mutationRate)
                 {
-                    int randSession = random.Next(0, requiredSections[i].Length);
+                    int randSession = random.Next(0, requiredActivities[i].Length);
                     table[i] = randSession;
                 }
             }
@@ -258,10 +258,10 @@ namespace UoftTimetableGenerator.Generator
         /// <returns>A random table</returns>
         private int[] GenerateRandomTable()
         {
-            int[] table = new int[requiredSections.Count];
+            int[] table = new int[requiredActivities.Count];
             for (int i = 0; i < table.Length; i++)
             {
-                int randSession = random.Next(0, requiredSections[i].Length);
+                int randSession = random.Next(0, requiredActivities[i].Length);
                 table[i] = randSession;
             }
             return table;
@@ -285,11 +285,19 @@ namespace UoftTimetableGenerator.Generator
                 T newTable = new T();
                 for (int i = 0; i < table.Length; i++)
                 {
-                    Section section = requiredSections[i][table[i]];
+                    // If there is no section available, then the timetable cannot be complete.
+                    if (table[i] >= requiredActivities[i].Length)
+                        return default(T);
+
+                    Section section = requiredActivities[i][table[i]];
                     bool success = newTable.AddSection(section);
                     if (success == false)
                         return default(T);
                 }
+
+                // Cache the timetable
+                cachedTimetables.Add(serializedTable, newTable);
+
                 return newTable;
             }
         }
@@ -409,13 +417,12 @@ namespace UoftTimetableGenerator.Generator
                     T timetable = new T();
                     for (int j = 0; j < table.Length; j++)
                     {
-                        Section section = requiredSections[j][table[j]];
+                        Section section = requiredActivities[j][table[j]];
                         timetable.AddSection(section);
                     }
                     timetables.Add(timetable);
                 }
             }
-
             return timetables;
         }
     }

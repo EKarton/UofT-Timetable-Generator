@@ -35,7 +35,7 @@ namespace UoftTimetableGenerator.Generator
                         Building building2 = session2.FallBuilding;
                         if (building1 != null && building2 != null)
                         {
-                            BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                            BuildingDistance distances = UoftServices.GetService().GetDistancesBetweenBuildings(building1, building2);
                             if (distances != null && distances.WalkingDistance != null)
                             {
                                 totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
@@ -47,7 +47,7 @@ namespace UoftTimetableGenerator.Generator
                         building2 = sessions[i + 1].WinterBuilding;
                         if (building1 != null & building2 != null)
                         {
-                            BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                            BuildingDistance distances = UoftServices.GetService().GetDistancesBetweenBuildings(building1, building2);
                             if (distances != null && distances.WalkingDistance != null)
                             {
                                 totalWalkingDistance += distances.WalkingDistance.GetValueOrDefault(0);
@@ -87,7 +87,7 @@ namespace UoftTimetableGenerator.Generator
                             Building building2 = sessions[i + 1].FallBuilding;
                             if (building1 != null && building2 != null)
                             {
-                                BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                                BuildingDistance distances = UoftServices.GetService().GetDistancesBetweenBuildings(building1, building2);
                                 if (distances != null && distances.WalkingDistance != null)
                                 {
                                     double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);
@@ -99,7 +99,7 @@ namespace UoftTimetableGenerator.Generator
                             building2 = sessions[i + 1].WinterBuilding;
                             if (building1 != null && building2 != null)
                             {
-                                BuildingDistance distances = UoftDatabaseService.getService().GetDistancesBetweenBuildings(building1, building2);
+                                BuildingDistance distances = UoftServices.GetService().GetDistancesBetweenBuildings(building1, building2);
                                 if (distances != null && distances.WalkingDistance != null)
                                 {
                                     double walkingDuration = distances.WalkingDistance.GetValueOrDefault(0);

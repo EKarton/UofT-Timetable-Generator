@@ -13,38 +13,35 @@ namespace UoftTimetableGenerator.Generator
     public class GreedyScheduler<T> : IScheduler<T> where T: ITimetable, new()
     {
         // Note that the first dimension are the activities; and the second dimension are the sections of an activity.
-        private List<Section[]> requiredSections = new List<Section[]>();
+        private List<Section[]> requiredActivities = new List<Section[]>();
         private Preferences preferences;
         private Restrictions restrictions;
         private int numTimetablesToGenerate = 200;
 
         private List<int[]> timetables = new List<int[]>();
 
-        public GreedyScheduler(List<Course> courses, Preferences preferences, Restrictions restrictions)
+        public GreedyScheduler(List<Activity> activities, Preferences preferences, Restrictions restrictions)
         {
             this.preferences = preferences;
             this.restrictions = restrictions;
 
             // Populating requiredSections[] and its associated terms[]
             // It only adds distinct sections that are within the start/end time restrictions 
-            foreach (Course course in courses)
+            foreach (Activity activity in activities)
             {
-                foreach (Activity activity in course.Activities)
+                List<Section> allowedSections = new List<Section>();
+                foreach (Section section in activity.Sections)
                 {
-                    List<Section> allowedSections = new List<Section>();
-                    foreach (Section section in activity.Sections)
-                    {
-                        if (IsSectionWithinStartEndTimes(section))
-                            allowedSections.Add(section);
-                    }
-
-                    List<Section> distinctSections = GetDistinctSections(allowedSections.ToArray());
-                    requiredSections.Add(distinctSections.ToArray());
+                    if (IsSectionWithinStartEndTimes(section))
+                        allowedSections.Add(section);
                 }
+
+                List<Section> distinctSections = GetDistinctSections(allowedSections.ToArray());
+                requiredActivities.Add(distinctSections.ToArray());
             }
 
             // Sort the activities in requiredSections[] in ascending order based on its number of sections
-            requiredSections.Sort((a, b) => (a.Length.CompareTo(b.Length)));
+            requiredActivities.Sort((a, b) => (a.Length.CompareTo(b.Length)));
         }
 
         public int NumTimetablesToGenerate
@@ -89,7 +86,7 @@ namespace UoftTimetableGenerator.Generator
             {
                 if (curTable[i] != -1)
                 {
-                    Section section = requiredSections[i][curTable[i]];
+                    Section section = requiredActivities[i][curTable[i]];
                     timetable.AddSection(section);
                 }
             }
@@ -103,7 +100,7 @@ namespace UoftTimetableGenerator.Generator
             {
                 if (curTable[i] == -1)
                 {
-                    Section[] potentialSections = requiredSections[i];
+                    Section[] potentialSections = requiredActivities[i];
 
                     List<Section> distinctSections = GetDistinctSections(potentialSections);
 
@@ -167,7 +164,7 @@ namespace UoftTimetableGenerator.Generator
         public List<T> GetTimetables()
         {
             // Create an empty timetable
-            int[] emptyTable = new int[requiredSections.Count];
+            int[] emptyTable = new int[requiredActivities.Count];
             for (int i = 0; i < emptyTable.Length; i++)
                 emptyTable[i] = -1;
 
@@ -182,7 +179,7 @@ namespace UoftTimetableGenerator.Generator
                 T formattedTimetable = new T();
                 for (int j = 0; j < table.Length; j++)
                 {
-                    Section section = requiredSections[j][table[j]];
+                    Section section = requiredActivities[j][table[j]];
                     formattedTimetable.AddSection(section);
                 }
                 formattedTimetables.Add(formattedTimetable);

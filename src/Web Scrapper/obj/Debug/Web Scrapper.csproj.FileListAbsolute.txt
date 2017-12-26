@@ -62,3 +62,6 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrap
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.exe
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Data Models.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Data Models.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Data Models.dll.config

@@ -65,7 +65,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
         /// </summary>
         private void LoadData()
         {
-            courses = UoftDatabaseService.getService().GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
+            courses = UoftServices.GetService().GetCourseDetails(new string[] { "MAT137Y1-Y", "COG250Y1-Y", "CSC148H1-F", "CSC165H1-F", "ENV100H1-F" });
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace UoftTimetableGenerator.DataModels.GeneratorAnalyzer
             {
                 // Make generator with params
                 
-                GeneticScheduler<YearlyTimetable> generator = new GeneticScheduler<YearlyTimetable>(courses, preferences, restrictions)
+                GeneticScheduler<YearlyTimetable> generator = new GeneticScheduler<YearlyTimetable>(null, null, preferences, restrictions)
                 {
                     MutationRate = mutationRate,
                     CrossoverRate = crossoverRate,

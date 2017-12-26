@@ -31,7 +31,7 @@ namespace UoftTimetableGenerator.WebAPI
             if (query == null)
                 return BadRequest();
 
-            List<Course> courses = UoftDatabaseService.getService().GetCourses(query);
+            List<Course> courses = UoftServices.GetService().GetCourses(query);
             return Ok(courses);
         }
     }
