@@ -193,7 +193,7 @@
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://localhost:53235/api/timetables/getuofttimetables"; //  "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; // 
+            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; //  "http://localhost:53235/api/timetables/getuofttimetables"; //  
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;

@@ -17,3 +17,5 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Mode
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.dll
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.xml

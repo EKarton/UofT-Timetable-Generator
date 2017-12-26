@@ -56,5 +56,17 @@ namespace UoftTimetableGenerator.DataModels.Properties {
                 return ((string)(this["LocalDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=emiliokartono.database.windows.net;Initial Catalog=uoftDatabase;User " +
+            "ID=emiliokartono;Password=Molybdenum1122;Connect Timeout=60;Encrypt=True;TrustSe" +
+            "rverCertificate=False")]
+        public string uoftDatabaseConnectionString1 {
+            get {
+                return ((string)(this["uoftDatabaseConnectionString1"]));
+            }
+        }
     }
 }

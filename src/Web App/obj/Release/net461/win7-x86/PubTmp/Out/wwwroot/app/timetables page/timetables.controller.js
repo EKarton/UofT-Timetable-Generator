@@ -109,8 +109,10 @@
          */
         $scope.updatePreferences = function (preferences) {
             // If it is different, update
-            if ($scope.data.preferences != preferences)
+            if ($scope.data.preferences != preferences) {
+                $scope.data.preferences = preferences;
                 TimetableGenerator.generateTimetables($scope.data.courseCodes, preferences, $scope.data.restrictions);
+            }
 
             $scope.togglePreferencesPanel();
         };
@@ -122,8 +124,10 @@
          */
         $scope.updateRestrictions = function (restrictions) {
             // If it is different, update
-            if ($scope.data.restrictions != restrictions)
+            if ($scope.data.restrictions != restrictions) {
+                $scope.data.restrictions = restrictions;
                 TimetableGenerator.generateTimetables($scope.data.courseCodes, $scope.data.preferences, restrictions);
+            }
 
             $scope.toggleRestrictionsPanel();
         };

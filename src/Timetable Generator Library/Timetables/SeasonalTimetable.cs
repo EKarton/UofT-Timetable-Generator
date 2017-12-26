@@ -140,7 +140,7 @@ namespace UoftTimetableGenerator.Generator
             get
             {
                 List<Session> items = collection.GetContents();
-                double minClassTime = 12;
+                double minClassTime = 1200;
                 foreach (Session session in items)
                 {
                     double startTime = session.StartTime;

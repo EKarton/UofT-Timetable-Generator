@@ -38,6 +38,42 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         public Preferences Preferences { get => preferences; set => preferences = value; }
 
+        private double[] GetDistributionOfSessionsPerDay(ITimetable timetable)
+        {
+            double[] distribution = new double[3];
+            List<Section> sections = timetable.GetSections();
+            foreach (Section section in sections)
+            {
+                foreach (Session session in section.Sessions)
+                {
+                    // Morning; // (12am - 12pm)
+                    if (session.StartTime >= 7 && session.EndTime <= 12)
+                    {
+                        distribution[0] += session.EndTime - session.StartTime;
+                    }
+                    // Afternoon: // (12pm - 5pm)
+                    if (session.EndTime <= 17)
+                    {
+                        if (session.StartTime <= 12)
+                        {
+                            distribution[1] += session.EndTime - 12;
+                        }
+                        else
+                        {
+                            distribution[1] += session.EndTime - session.StartTime;
+                        }
+                    }
+                    // Evening: // (5pm - 8pm)
+                    if (session.EndTime <= 8)
+                    {
+                        if (session.StartTime <= 12)
+                            distribution[2] += 10;
+                    }
+                    // Night: // (9pm - 12pm)
+                }
+            }
+        }
+
         /// <summary>
         /// Computes the score of the timetable based on it satisfying the restrictions.
         /// Returns 0 if the timetable is outside of the restrictions; else returns a number > 0.
@@ -71,21 +107,21 @@ namespace UoftTimetableGenerator.Generator
             {
                 case Preferences.Day.Undefined:
                     break;
-                case Preferences.Day.Morning: // (12am - 12pm)
+                case Preferences.Day.Morning: // (7am - 12pm)
                     if (0 < timetable.EarliestClassTime && timetable.LatestClassTime < 12)
-                        score += 100;
+                        score += 1000;
                     break;
                 case Preferences.Day.Afternoon: // (12pm - 5pm)
                     if (12 <= timetable.EarliestClassTime && timetable.LatestClassTime < 17)
-                        score += 100;
+                        score += 1000;
                     break;
                 case Preferences.Day.Evening: // (5pm - 8pm)
                     if (17 <= timetable.EarliestClassTime && timetable.LatestClassTime < 20)
-                        score += 100;
+                        score += 1000;
                     break;
                 case Preferences.Day.Night: // (9pm - 12pm)
                     if (20 <= timetable.EarliestClassTime && timetable.LatestClassTime <= 24)
-                        score += 100;
+                        score += 1000;
                     break;
                 default:
                     throw new Exception("Class type not handled before!");

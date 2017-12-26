@@ -38,7 +38,6 @@
             if (this.oldQuery === query)
                 return cachedCourseResults;
 
-            // Check if the new department code is >= 3 chars long
             if (query.length != 3)
                 return;
 

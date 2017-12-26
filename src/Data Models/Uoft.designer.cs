@@ -22,7 +22,7 @@ namespace DataContext
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Uoft Database")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="uoftDatabase")]
 	internal partial class UofTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -57,7 +57,7 @@ namespace DataContext
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.LocalDBConnectionString, mappingSource)
+				base(global::UoftTimetableGenerator.DataModels.Properties.Settings.Default.uoftDatabaseConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

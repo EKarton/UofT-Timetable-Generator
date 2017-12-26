@@ -14,8 +14,8 @@ namespace UoftTimetableGenerator.WebAPI.Controllers
     /// A class that generates timetables through HTTP requests
     /// </summary>
     [Route("api/[controller]")]
-    [EnableCors("AllowSpecificOrigin")]
     [Produces("application/json")]
+    [EnableCors("AllowSpecificOrigin")]
     public class TimetablesController : Controller
     {
         /// <summary>
