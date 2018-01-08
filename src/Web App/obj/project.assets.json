@@ -9792,11 +9792,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Web App\\Web App.csproj",
+      "projectUniqueName": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Web App\\Web App.csproj",
       "projectName": "Web App",
-      "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Web App\\Web App.csproj",
+      "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Web App\\Web App.csproj",
       "packagesPath": "C:\\Users\\Emilio K\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Web App\\obj\\",
+      "outputPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Web App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -9817,11 +9817,11 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj": {
-              "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Data Models\\Data Models.csproj"
+            "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Data Models\\Data Models.csproj": {
+              "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Data Models\\Data Models.csproj"
             },
-            "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj": {
-              "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\UofT-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj"
+            "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj": {
+              "projectPath": "C:\\Users\\Emilio K\\Documents\\Code\\Projects\\Uoft-Timetable-Generator\\src\\Timetable Generator Library\\Timetable Schedulers.csproj"
             }
           }
         }
