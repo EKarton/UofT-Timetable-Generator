@@ -7,7 +7,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class used to hold the sections present in one term
     /// </summary>
-    public class SeasonalTimetable : ITimetable
+    public class SeasonalTimetable : WeeklyTimetable, IUniversityTimetable
     {
         // A sorted tree used to hold the timetable (in order)
         private IOrderedSet<Session> collection = new RedBlackTree<Session>();
@@ -218,88 +218,6 @@ namespace UoftTimetableGenerator.Generator
         public List<double> TimeBetweenClasses
         {
             get { return new List<double>(); }
-        }
-
-        /// <summary>
-        /// Add a section in this timetable if it fits
-        /// </summary>
-        /// <param name="section">A section</param>
-        /// <returns>True if the section fits and has been added to the timetable; else false</returns>
-        public bool AddSection(Section section)
-        {
-            // Check if it can fit
-            if (!DoesSectionFit(section))
-                return false;
-
-            foreach (Session session in section.Sessions)
-                collection.Add(session);
-
-            sections.Add(section);
-            return true;
-        }
-
-        /// <summary>
-        /// Display the timetable in the console
-        /// </summary>
-        public void Show()
-        {
-            collection.Show();
-        }
-
-        /// <summary>
-        /// Determines if a section is in this seasonal timetable
-        /// </summary>
-        /// <param name="section">A section</param>
-        /// <returns>True if the section is in this seasonal timetable; else false</returns>
-        public bool Contains(Section section)
-        {
-            return sections.Contains(section);
-        }
-
-        /// <summary>
-        /// Finds and deletes the desired section from this timetable
-        /// </summary>
-        /// <param name="section">The section to delete</param>
-        /// <returns>Returns true if the section was found and deleted; else false</returns>
-        public bool DeleteSection(Section section)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Determines if a section fits in this timetable
-        /// </summary>
-        /// <param name="section">A section</param>
-        /// <returns>True if it fits; else false</returns>
-        public bool DoesSectionFit(Section section)
-        {
-            foreach (Session session in section.Sessions)
-            {
-                if (!collection.CanAdd(session))
-                    return false;
-            }
-            return true;
-        }
-
-        /// <summary>
-        /// Returns the sections that exist in this timetable
-        /// </summary>
-        /// <returns>The sections in this timetable</returns>
-        public List<Section> GetSections()
-        {
-            return sections;
-        }
-
-        /// <summary>
-        /// Make a deep-copy of this timetable
-        /// </summary>
-        /// <returns></returns>
-        public ITimetable MakeCopy()
-        {
-            SeasonalTimetable copy = new SeasonalTimetable();
-            foreach (Section section in sections)
-                copy.AddSection(section);
-            return copy;
         }
     }
 }

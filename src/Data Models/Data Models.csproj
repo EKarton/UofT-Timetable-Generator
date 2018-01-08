@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Buildings\Building.cs" />
     <Compile Include="Buildings\BuildingDistance.cs" />
+    <Compile Include="CourseFactory.cs" />
     <Compile Include="Courses\Activity.cs" />
     <Compile Include="Courses\Course.cs" />
     <Compile Include="Courses\Section.cs" />

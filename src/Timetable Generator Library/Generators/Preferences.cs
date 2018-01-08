@@ -56,5 +56,7 @@ namespace UoftTimetableGenerator.Generator
         /// Get / set the amount of time spent for lunch (in minutes)
         /// </summary>
         public double? LunchPeriod { get; set; }
+
+        public bool AvoidLongSessions { get; set; }
     }
 }

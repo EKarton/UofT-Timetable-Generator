@@ -12,7 +12,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class used to generate UofT timetables with a genetic algorithm
     /// </summary>
-    public class GeneticScheduler<T> : IScheduler<T> where T : ITimetable, new()
+    public class GeneticScheduler<T> : IScheduler<T> where T : IUniversityTimetable, new()
     {
         private static Random random = new Random();
         private double mutationRate = 0.1;

@@ -7,23 +7,8 @@ namespace UoftTimetableGenerator.DataModels
     /// </summary>
     public class Activity
     {
-        /// <summary>
-        /// A constructor used to convert the DataContext.Activity to Datamodels.Activity
-        /// </summary>
-        /// <param name="oldActivity">The raw activity data from the database</param>
-        /// <param name="course">The course the activity belongs to</param>
-        internal Activity(DataContext.Activity oldActivity, Course course)
+        public Activity()
         {
-            Course = course;
-
-            if (oldActivity.ActivityType == null)
-                ActivityType = "";
-            else
-                ActivityType = oldActivity.ActivityType.ToString();
-
-            Sections = new List<Section>();
-            foreach (DataContext.Section oldSection in oldActivity.Sections)
-                Sections.Add(new Section(oldSection, this));
         }
 
         /// <summary>

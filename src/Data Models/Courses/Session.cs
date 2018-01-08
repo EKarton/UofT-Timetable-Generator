@@ -15,31 +15,6 @@ namespace UoftTimetableGenerator.DataModels
         }
 
         /// <summary>
-        /// Constructor used to convert datacontext.session to datamodels.session
-        /// </summary>
-        /// <param name="oldSession">The raw session data from the database</param>
-        /// <param name="sectionAttachedTo">The section that this session belongs to</param>
-        internal Session(DataContext.Session oldSession, Section sectionAttachedTo)
-        {
-            Section = sectionAttachedTo;
-
-            if (oldSession.Building == null)
-                FallBuilding = null;
-            else
-                FallBuilding = new Building(oldSession.Building);
-
-            if (oldSession.Building1 == null)
-                WinterBuilding = null;
-            else
-                WinterBuilding = new Building(oldSession.Building1);
-
-            FallRoomNumber = oldSession.Fall_RoomNumber;
-            WinterRoomNumber = oldSession.Winter_RoomNumber;
-            StartTimeWithWeekday = oldSession.StartTime.GetValueOrDefault(0);
-            EndTimeWithWeekday = oldSession.EndTime.GetValueOrDefault(0);
-        }
-
-        /// <summary>
         /// Get / set the section that this session belongs to
         /// </summary>
         public Section Section { get; set; }

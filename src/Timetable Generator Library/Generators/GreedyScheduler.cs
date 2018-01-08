@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class that generates timetables using the Greedy algorithm
     /// </summary>
-    public class GreedyScheduler<T> : IScheduler<T> where T: ITimetable, new()
+    public class GreedyScheduler<T> : IScheduler<T> where T: IUniversityTimetable, new()
     {
         // Note that the first dimension are the activities; and the second dimension are the sections of an activity.
         private List<Section[]> requiredActivities = new List<Section[]>();

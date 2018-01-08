@@ -1,3 +1,5 @@
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Selenium\Web drivers\chromedriver.exe
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
@@ -131,7 +133,5 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\b
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\bin\Debug\WebDriver.Support.xml
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\tests\Tests\obj\Debug\Tests.pdb

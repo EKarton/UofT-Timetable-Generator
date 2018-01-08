@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Models Tests\UnitTest1.cs" />
+    <Compile Include="Schedulers\Genetic Algorithm\UnitTest1.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

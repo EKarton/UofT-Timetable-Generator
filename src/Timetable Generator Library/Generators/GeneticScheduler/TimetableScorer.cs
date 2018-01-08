@@ -38,39 +38,75 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         public Preferences Preferences { get => preferences; set => preferences = value; }
 
-        private double[] GetDistributionOfSessionsPerDay(ITimetable timetable)
+        /// <summary>
+        /// Get the amount of hours of a session spent in a certain time interval.
+        /// For instance, if we have a session that spanned from [12:00-13:00],
+        /// then GetHoursInTimeSpan(session, 12, 17) will return 1 because 1 hour 
+        /// of that session is spent between 12:00-17:00.
+        /// </summary>
+        /// <param name="session">The session</param>
+        /// <param name="startTime">The start time of the time span</param>
+        /// <param name="endTime">The end time of the time span</param>
+        /// <returns>The amount of hours spent in the session between the time span.</returns>
+        private double GetHoursInTimespan(Session session, double startTime, double endTime)
         {
-            double[] distribution = new double[3];
+            // For instance, if trying to get the amount of hrs in the afternoon [from 12pm-17:00]
+            // If it is between [12:00-17:00]
+            if (session.StartTime >= startTime && session.EndTime <= endTime)
+                return session.EndTime - session.StartTime;
+
+            // If start time is less than 12 but end time between [12:00-17:00]
+            else if (session.StartTime <= startTime && startTime <= session.EndTime && session.EndTime <= endTime)
+                return session.EndTime - startTime;
+
+            // If the start time is between [12:00-17:00] but end time is > 17
+            else if (startTime <= session.StartTime && session.StartTime <= endTime && session.EndTime >= endTime)
+                return endTime - session.StartTime;
+
+            // If the session takes up more than the afternoon
+            else if (session.StartTime <= startTime && session.EndTime >= endTime)
+                return endTime - startTime;
+            else
+                return 0;
+        }
+
+        /// <summary>
+        /// Returns the average distribution of the day spent in sessions in a timetable
+        /// It returns an array of length of 4, where:
+        /// - distribution[0] returns the distribution of the sessions in the morning [7:00-12:00]
+        /// - distribution[1] returns the distribution of the sessions in the afternoon [12:00-17:00]
+        /// - distribution[2] returns the distribution of the sessions in the evening [17:00-21:00]
+        /// - distribution[3] returns the distribution of the sessions in the night [21:00-24:00]
+        /// </summary>
+        /// <param name="timetable">A timetable</param>
+        /// <returns>The distribution of the day spent in sessions</returns>
+        private double[] GetDayDistributions(IUniversityTimetable timetable)
+        {
+            double[] distribution = new double[4];
             List<Section> sections = timetable.GetSections();
+
             foreach (Section section in sections)
             {
                 foreach (Session session in section.Sessions)
                 {
-                    // Morning; // (12am - 12pm)
-                    if (session.StartTime >= 7 && session.EndTime <= 12)
-                    {
-                        distribution[0] += session.EndTime - session.StartTime;
-                    }
-                    // Afternoon: // (12pm - 5pm)
-                    if (session.EndTime <= 17)
-                    {
-                        if (session.StartTime <= 12)
-                        {
-                            distribution[1] += session.EndTime - 12;
-                        }
-                        else
-                        {
-                            distribution[1] += session.EndTime - session.StartTime;
-                        }
-                    }
-                    // Evening: // (5pm - 8pm)
-                    if (session.EndTime <= 8)
-                    {
-                        if (session.StartTime <= 12)
-                            distribution[2] += 10;
-                    }
-                    // Night: // (9pm - 12pm)
+                    distribution[0] += GetHoursInTimespan(session, 7, 12);
+                    distribution[1] += GetHoursInTimespan(session, 12, 17);
+                    distribution[2] += GetHoursInTimespan(session, 17, 21);
+                    distribution[3] += GetHoursInTimespan(session, 21, 24);
                 }
+            }
+
+            // Compute the average
+            double numHrs = distribution[0] + distribution[1] + distribution[2] + distribution[3];
+            if (numHrs == 0)
+                return new double[4];
+            else
+            {
+                distribution[0] /= numHrs;
+                distribution[1] /= numHrs;
+                distribution[2] /= numHrs;
+                distribution[3] /= numHrs;
+                return distribution;
             }
         }
 
@@ -80,7 +116,7 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         /// <param name="timetable">A timetable to score</param>
         /// <returns>The score of the timetable</returns>
-        private double GetRestrictionsScore(ITimetable timetable)
+        private double GetRestrictionsScore(IUniversityTimetable timetable)
         {
             // Check if it meets the restrictions
             // Note that each session in the timetable must be within the start/end time restrictions
@@ -98,34 +134,44 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         /// <param name="timetable">A timetable to score</param>
         /// <returns>The score of the timetable</returns>
-        private double GetPreferencesScore(ITimetable timetable)
+        private double GetPreferencesScore(IUniversityTimetable timetable)
         {
             double score = 2000;
 
-            // Get scores associated by their preferences
-            switch (preferences.ClassType)
+            // Get scores by how well the sessions are distributed throughout the day
+            double[] timeDistributions = GetDayDistributions(timetable);
+            switch (Preferences.ClassType)
             {
                 case Preferences.Day.Undefined:
                     break;
-                case Preferences.Day.Morning: // (7am - 12pm)
-                    if (0 < timetable.EarliestClassTime && timetable.LatestClassTime < 12)
+                case Preferences.Day.Morning:
+                    if (timeDistributions[0] > 0.5)
                         score += 1000;
+                    else
+                        score -= 1000;
                     break;
-                case Preferences.Day.Afternoon: // (12pm - 5pm)
-                    if (12 <= timetable.EarliestClassTime && timetable.LatestClassTime < 17)
+                case Preferences.Day.Afternoon:
+                    if (timeDistributions[1] > 0.5)
                         score += 1000;
+                    else
+                        score -= 1000;
                     break;
-                case Preferences.Day.Evening: // (5pm - 8pm)
-                    if (17 <= timetable.EarliestClassTime && timetable.LatestClassTime < 20)
+                case Preferences.Day.Evening:
+                    if (timeDistributions[2] > 0.5)
                         score += 1000;
+                    else
+                        score -= 1000;
                     break;
-                case Preferences.Day.Night: // (9pm - 12pm)
-                    if (20 <= timetable.EarliestClassTime && timetable.LatestClassTime <= 24)
+                case Preferences.Day.Night:
+                    if (timeDistributions[3] > 0.5)
                         score += 1000;
+                    else
+                        score -= 1000;
                     break;
                 default:
-                    throw new Exception("Class type not handled before!");
+                    throw new Exception("No class type is handled before!");
             }
+
             switch (preferences.TimeBetweenClasses)
             {
                 case Preferences.Quantity.Undefined:
@@ -158,7 +204,7 @@ namespace UoftTimetableGenerator.Generator
         /// </summary>
         /// <param name="timetable">A timetable to score</param>
         /// <returns>The score of the timetable.</returns>
-        public double GetFitnessScore(ITimetable timetable)
+        public double GetFitnessScore(IUniversityTimetable timetable)
         {
             // If the table is an invalid table, then its score is 0
             if (timetable == null)

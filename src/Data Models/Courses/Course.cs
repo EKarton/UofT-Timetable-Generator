@@ -19,23 +19,6 @@ namespace UoftTimetableGenerator.DataModels
         }
 
         /// <summary>
-        /// A constructor used to convert DataContext.Course to DataModels.Course
-        /// </summary>
-        /// <param name="oldCourse">Raw data about a course from the database</param>
-        internal Course(DataContext.Course oldCourse)
-        {
-            CourseCode = oldCourse.Code;
-            Title = oldCourse.Title;
-            Term = oldCourse.Term.ToString();
-            Description = oldCourse.Description;
-            Campus = oldCourse.Campus;
-
-            Activities = new List<Activity>();
-            foreach (DataContext.Activity oldActivity in oldCourse.Activities)
-                Activities.Add(new Activity(oldActivity, this));
-        }
-
-        /// <summary>
         /// Get / set the course code of this course
         /// </summary>
         public string CourseCode { get; set; }

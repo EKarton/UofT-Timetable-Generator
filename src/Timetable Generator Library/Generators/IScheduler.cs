@@ -9,7 +9,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// An interface to be implemented in all timetable generator algorithms
     /// </summary>
-    public interface IScheduler<T> where T : ITimetable
+    public interface IScheduler<T> where T : IUniversityTimetable
     {
         /// <summary>
         /// Generates the timetables

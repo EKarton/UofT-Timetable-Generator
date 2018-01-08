@@ -104,8 +104,8 @@ namespace UoftTimetableGenerator.DataModels
                         courses.Add(new Course()
                         {
                             CourseCode = course.Code,
-                            Title = course.Title,
                             Term = course.Term.ToString(),
+                            Title = course.Title,
                             Description = course.Description,
                             Campus = course.Campus
                         });
@@ -133,7 +133,7 @@ namespace UoftTimetableGenerator.DataModels
                     throw new Exception("There is more than one or no course with course code " + courseCode);
 
                 DataContext.Course oldCourse = oldCourses[0];
-                return new Course(oldCourse);
+                return CourseFactory.GetCourse(oldCourse);
             }
         }
 
