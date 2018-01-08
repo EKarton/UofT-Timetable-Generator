@@ -10,7 +10,7 @@ namespace UoftTimetableGenerator.Generator
     /// <summary>
     /// A class containing two timetables for one year
     /// </summary>
-    public class YearlyTimetable : ITimetable
+    public class YearlyTimetable : IUniversityTimetable
     {
         private SeasonalTimetable fallTimetable = new SeasonalTimetable();
         private SeasonalTimetable winterTimetable = new SeasonalTimetable();
@@ -119,7 +119,12 @@ namespace UoftTimetableGenerator.Generator
         /// <returns>True if the section is added; else false</returns>
         public bool AddSection(Section section)
         {
-            switch (section.Activity.Course.Term)
+            return AddSection(section, section.Activity.Course.Term.ToString());
+        }
+
+        public bool AddSection(Section section, string term)
+        {
+            switch (term)
             {
                 case "F":
                     return fallTimetable.AddSection(section);

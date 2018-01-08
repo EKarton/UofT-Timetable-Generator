@@ -21,6 +21,7 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Timetable Genera
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Generator Library.dll
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Generator Library.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Schedulers.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Schedulers.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Debug\Timetable Generator Library.dll.config
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Debug\Timetable Generator Library.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Debug\Timetable Generator Library.pdb
@@ -30,6 +31,5 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Debug\Data Models.dll.config
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Schedulers.csprojResolveAssemblyReference.cache
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Schedulers.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Generator Library.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Timetable Generator Library\obj\Debug\Timetable Generator Library.pdb

@@ -68,5 +68,16 @@ namespace UoftTimetableGenerator.DataModels.Properties {
                 return ((string)(this["uoftDatabaseConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP;Initial Catalog=\"Uoft Database\";Integrated Security=True;Conne" +
+            "ct Timeout=60;Encrypt=False;TrustServerCertificate=True")]
+        public string Uoft_DatabaseConnectionString {
+            get {
+                return ((string)(this["Uoft_DatabaseConnectionString"]));
+            }
+        }
     }
 }

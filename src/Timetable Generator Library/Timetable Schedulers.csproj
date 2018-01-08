@@ -56,6 +56,7 @@
     <Compile Include="Generators\GeneticScheduler\TimetableScorer.cs" />
     <Compile Include="Generators\GreedyScheduler.cs" />
     <Compile Include="Timetables\ITimetable.cs" />
+    <Compile Include="Timetables\IUniversityTimetable.cs" />
     <Compile Include="Generators\IScheduler.cs" />
     <Compile Include="Generators\Preferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Generators\Restrictions.cs" />
     <Compile Include="Timetables\SeasonalTimetable.cs" />
     <Compile Include="Generators\GeneticScheduler\StatsPerGeneration.cs" />
+    <Compile Include="Timetables\WeeklyTimetable.cs" />
     <Compile Include="Timetables\YearlyTimetable.cs" />
   </ItemGroup>
   <ItemGroup>
