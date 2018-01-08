@@ -205,8 +205,6 @@
             $http.put(url, request).then(
                 function (response) {
 
-                    console.log(onSuccess, onError);
-
                     // Parse the timetables
                     var newTimetables = [];
                     var rawTimetables = response.data;
