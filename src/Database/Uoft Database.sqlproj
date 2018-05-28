@@ -73,6 +73,12 @@
     <Build Include="Stored Procedures\usp_GetInstructorInfo.sql" />
     <Build Include="Stored Procedures\usp_GetBuildingInfo.sql" />
     <Build Include="Stored Procedures\usp_GetTravelTimeBetweenBuildings.sql" />
+    <Build Include="Stored Procedures\usp_AddCourse.sql" />
+    <Build Include="Stored Procedures\usp_AddActivity.sql" />
+    <Build Include="Stored Procedures\usp_AddSection.sql" />
+    <Build Include="Stored Procedures\usp_AddSession.sql" />
+    <Build Include="Stored Procedures\usp_AddInstructor.sql" />
+    <Build Include="Stored Procedures\usp_AddInstructorToSection.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Uoft Database.refactorlog" />

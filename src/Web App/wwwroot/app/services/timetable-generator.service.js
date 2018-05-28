@@ -137,7 +137,7 @@
                 var fallBlocks = this.timetables[0].fallTimetableBlocks;
                 for (var i = 0; i < fallBlocks.length; i++) {
                     var key = fallBlocks[i].courseCode + "|" + fallBlocks[i].activityType;
-                    if (this.sectionColors[key] == undefined)
+                    if (this.sectionColors[key] === undefined)
                         this.sectionColors[key] = this.generateRandomColor();
                 }
             }
@@ -193,7 +193,7 @@
                 request.restrictions = defaultRestrictions;
 
             var obj = this;
-            var url = "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; //  "http://localhost:53235/api/timetables/getuofttimetables"; //  
+            var url = "http://localhost:53235/api/timetables/getuofttimetables"; //  "http://uofttimetablegenerator.azurewebsites.net/api/timetables/getuofttimetables"; //  
 
             // Clear the timetables displayed on the webpage
             obj.generatedTimetables.courseCodes = courseCodes;

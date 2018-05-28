@@ -57,7 +57,7 @@ namespace UoftTimetableGenerator.WebScrapper
     #endregion
 		
 		public UofTDataContext() : 
-				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.UoftDatabaseConnectionString1, mappingSource)
+				base(global::UoftTimetableGenerator.WebScrapper.Properties.Settings.Default.LocalDB, mappingSource)
 		{
 			OnCreated();
 		}

@@ -31,3 +31,5 @@
 /src/Timetable Generator Library/obj
 /src/Web App/obj
 /src/Web Scrapper/obj
+
+/src/vs/*

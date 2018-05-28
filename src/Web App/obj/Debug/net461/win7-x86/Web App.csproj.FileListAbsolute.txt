@@ -312,7 +312,6 @@ C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debu
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.AssemblyInfo.cs
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.exe
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.pdb
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csprojResolveAssemblyReference.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.exe.config
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.AssemblyInfoInputs.cache
@@ -659,3 +658,6 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\b
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Timetable Generator Library.dll.config
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.exe
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csprojAssemblyReference.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\obj\Debug\net461\win7-x86\Web App.csproj.CopyComplete
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web App\bin\Debug\net461\win7-x86\Microsoft.AI.WindowsServer.dll

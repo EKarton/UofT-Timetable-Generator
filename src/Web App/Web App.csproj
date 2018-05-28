@@ -9,17 +9,18 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.5" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data Models\Data Models.csproj" />

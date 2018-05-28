@@ -45,7 +45,6 @@ C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Emilio K\Documents\GitHub\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Emilio K\Documents\Github\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csprojResolveAssemblyReference.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Selenium\Web drivers\chromedriver.exe
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\Web Scrapper.exe.config
@@ -65,3 +64,5 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrap
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\bin\Debug\WebDriver.Support.xml
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.exe
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.pdb
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csprojAssemblyReference.cache
+C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Web Scrapper\obj\Debug\Web Scrapper.csproj.CopyComplete

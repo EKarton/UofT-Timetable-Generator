@@ -20,7 +20,7 @@
              * @param {changeObj} changeObj - A change object (refer to the Angular JS 1.5 documentation)
              */
             this.$onChanges = function (changeObj) {
-                if (changeObj.selectedCourses != undefined)
+                if (changeObj.selectedCourses !== undefined)
                     this.selectedCourses = changeObj.selectedCourses.currentValue;
             };
 

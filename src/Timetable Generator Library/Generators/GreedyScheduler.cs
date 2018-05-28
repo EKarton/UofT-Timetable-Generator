@@ -102,7 +102,7 @@ namespace UoftTimetableGenerator.Generator
                 {
                     Section[] potentialSections = requiredActivities[i];
 
-                    List<Section> distinctSections = GetDistinctSections(potentialSections);
+                    List<Section> distinctSections = potentialSections.ToList(); //GetDistinctSections(potentialSections);
 
                     for (int j = 0; j < potentialSections.Length; j++)
                     {

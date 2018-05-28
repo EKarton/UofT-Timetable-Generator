@@ -1,9 +1,12 @@
 ﻿body {
-    /* Flush it with the browser (no margins) */
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    width: auto;
+    height: auto;
+    background-color: white;
+    background-image: none;
 }
 
 .hoverable:hover {
