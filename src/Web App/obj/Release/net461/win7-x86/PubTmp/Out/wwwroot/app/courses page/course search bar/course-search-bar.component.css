@@ -5,53 +5,76 @@
     text-align: center;
 }
 
-course-search-bar .searchBox {
-    width: 60%;
-    border-radius: 5px;
-    border: 1px solid black;
-    font-size: 150%;
+    course-search-bar .searchBox {
+        width: calc(60% - 20px);
+        border: 1px solid #b3b3b3;
+        font-size: 150%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+course-search-bar .searchBox:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
 
-course-search-bar .searchResults {
-    position: fixed;
-    overflow-y: auto;
-    max-height: 50vh; /* Make the max height 50% of the viewport */
-    width: 60%;
-
-    background-color: white;
-
-    /* We add these margins because the <ul> element will be placed to the very left of this element */
-    margin-left: 20%;
-    margin-right: 20%;
-
-    /* Add the borders */
-    border-style: solid;
-    border-radius: 5px;
-    border-color: black;
-    border-width: 2px;
+course-search-bar .searchBox-no-results {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
+    course-search-bar .searchBox-with-results {        
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    course-search-bar .searchResults {
+        position: relative;
+        overflow-y: auto;
+        max-height: 50vh;
+        width: 60%;
+        background-color: white;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 
 course-search-bar .searchResults table{
     width: 100%;
 }
 
-course-search-bar .searchResults .description {
-    position: relative;
-    float: left;
-    text-align: left;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
+course-search-bar .course-result{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
+    course-search-bar .course-results-counter {
+        padding: 5px;
+        display: inline-block;
+    }
+
+    course-search-bar .searchResults .description {
+        position: relative;
+        float: left;
+        text-align: left;
+        padding-left: 10px;
+    }
 
 course-search-bar .searchResults .campus {
     position: relative;
     float: right;
     text-align: right;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
     padding-right: 10px;
 }
 
@@ -61,4 +84,76 @@ course-search-bar .searchResults .selectedCourse{
 
 course-search-bar .searchResults .newCourse{
     background-color: none;
+}
+
+    course-search-bar .control {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+        course-search-bar .control input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+    course-search-bar .control__indicator {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #e6e6e6;
+    }
+
+    course-search-bar.control--radio .control__indicator {
+        border-radius: 50%;
+    }
+
+    course-search-bar .control:hover input ~ .control__indicator, .control input:focus ~ .control__indicator {
+        background: #ccc;
+    }
+
+    course-search-bar .control input:checked ~ .control__indicator {
+        background: #2aa1c0;
+    }
+
+.course-search-bar control:hover input:not([disabled]):checked ~ .control__indicator, .control input:checked:focus ~ .control__indicator {
+    background: #0e647d;
+}
+
+course-search-bar .control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+course-search-bar .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+course-search-bar .control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+course-search-bar .control--checkbox .control__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+course-search-bar .control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
 }

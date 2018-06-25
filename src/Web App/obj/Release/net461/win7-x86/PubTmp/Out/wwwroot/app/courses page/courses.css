@@ -1,4 +1,21 @@
 ﻿body {
+    /* Flush it with the browser (no margins) */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: url("../../images/course-selection-background.jpg");
+}
+
+.search-panel {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    min-height: 80vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #header{
@@ -6,27 +23,49 @@
     text-align: center;
 }
 
-#header h2{
-    margin-bottom: 10px;
-}
+    #header h2 {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        margin-bottom: 10px;
+        font-weight: 100;
+        font-size: 36px;
+        color: #333;
+    }
 
-#header h1{
-    margin-top: 0px;
-}
+    #header h1 {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        margin-top: 0px;
+        font-weight: 100;
+        font-size: 40px;
+        color: #333;
+    }
+
+    #header h4 {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        margin-top: 0px;
+        font-weight: 100;
+        font-size: 20px;
+        color: #333;
+    }
 
 #makeTimetablesBttn {
-    /* Move the button to the right */
-    float: right;
-
-    /* Make the button centerish with the search box*/
-    margin-top: 10%;
+    background: rgb(40, 40, 42);
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    /* margin: 5px 0; */
+    outline: medium none;
+    overflow: hidden;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all 0.15s ease-in-out 0s;
+    width: 60%;
+    box-shadow: 0 1px 2px 0px rgba(0,0,0,0.16), 0 1px 2px 0px rgba(0,0,0,0.23);
     margin-left: 20%;
     margin-right: 20%;
-
-    /* Make the button bigger */
-    width: 30%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 10px;
-    border: 1px, solid, black;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }

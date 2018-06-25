@@ -17,5 +17,13 @@ C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Mode
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.csproj.CoreCompileInputs.cache
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.dll
 C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.pdb
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.dll
-C:\Users\Emilio K\Documents\Code\Projects\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.xml
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\bin\Release\Data Models.dll.config
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\bin\Release\Data Models.dll
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\bin\Release\Data Models.pdb
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.dll
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\bin\Release\Newtonsoft.Json.xml
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.csprojAssemblyReference.cache
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.csproj.CoreCompileInputs.cache
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.csproj.CopyComplete
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.dll
+C:\Users\Emilio K\Code\UofT-Timetable-Generator\src\Data Models\obj\Release\Data Models.pdb

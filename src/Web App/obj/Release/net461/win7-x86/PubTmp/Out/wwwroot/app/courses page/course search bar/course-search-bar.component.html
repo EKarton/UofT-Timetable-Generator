@@ -1,19 +1,25 @@
 ﻿<div>
-    <input class="searchBox" type="text" placeholder="Enter a course code"
+    <input ng-class="{true: 'searchBox searchBox-with-results', false: 'searchBox searchBox-no-results'}[query.length >= 3]" 
+           type="text" placeholder="Enter a course code (ex: csc148)"
            data-ng-model="query" ng-change="vm.updateCourseResults(query)" />
     <div class="searchResults" ng-show="query.length >= 3">
+        <span class="course-results-counter" ng-show="vm.courseResults.length == 0" ng-hide="vm.courseResults.length != 0">
+            No results. Please try enter a different course code.
+        </span>
         <table>
             <tbody>
-                <tr ng-repeat="course in vm.courseResults | filter: query" ng-click="vm.onCourseClicked(course)">
+                <tr ng-repeat="course in vm.courseResults | filter: query">
                     <td>
-                        <span ng-class="{'description selectedCourse': course.isSelected, 'description newCourse': !course.isSelected}">
-                            {{course.code + " (" + course.term + ")"}}
-                        </span>
-                    </td>
-                    <td>
-                        <span ng-class="{'campus selectedCourse': course.isSelected, 'campus newCourse': !course.isSelected}">
-                            {{course.campus}}
-                        </span>
+                        <label class="course-result control control--checkbox">
+                            <span class="description newCourse">
+                                {{course.code + " (" + course.term + ")"}}
+                            </span>
+                            <span class="campus newCourse">
+                                {{course.campus}}
+                            </span>
+                            <input type="checkbox" ng-click="vm.onCourseClicked(course)">
+                            <span class="control__indicator"></span>
+                        </label>
                     </td>
                 </tr>
             </tbody>

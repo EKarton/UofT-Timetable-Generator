@@ -1,7 +1,13 @@
 1. Set up the Uoft Database project so that the targeted connection string is to the Azure database.
+
 2. Set up the Uoft.dbml in the Data Models project so that the targeted connection string (can be seen by right-clicking on the diagram and selecting Properties) is to the Azure database.
+
 3. Set up the CORs in Startup.cs of the Web App project so that it will only allow URLs from the Azure domain.
+
 4. Set up the URL in course-search-services.js in the front-end application (located in the Web App/wwwroot folder of the project) so that it is targetting the Azure web app.
+
 5. Set up the URL in the timetable-generator-service.js in the front-end application (located in the Web App/wwwroot folder of the project) so that it is targetting the Azure web app.
+
 6. Right click on the Uoft Database project, and select Publish.
+
 7. Right click on the Web App project, and select Publish.

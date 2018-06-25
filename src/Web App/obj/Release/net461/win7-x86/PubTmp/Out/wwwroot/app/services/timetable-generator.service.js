@@ -137,7 +137,7 @@
                 var fallBlocks = this.timetables[0].fallTimetableBlocks;
                 for (var i = 0; i < fallBlocks.length; i++) {
                     var key = fallBlocks[i].courseCode + "|" + fallBlocks[i].activityType;
-                    if (this.sectionColors[key] == undefined)
+                    if (this.sectionColors[key] === undefined)
                         this.sectionColors[key] = this.generateRandomColor();
                 }
             }
@@ -204,8 +204,6 @@
 
             $http.put(url, request).then(
                 function (response) {
-
-                    console.log(onSuccess, onError);
 
                     // Parse the timetables
                     var newTimetables = [];
