@@ -14,23 +14,12 @@
 ########################################################################################
 # Hide all the bin files in each project
 ######################################################################################## 
-/src/Data Models/bin/*
-/src/Database/bin/*
-/src/Genetic Algorithm Analyzer/bin/*
-/src/Timetable Generator Library/bin/*
-/src/Web App/bin/*
-/src/Web Scrapper/bin/*
-/src/.vs
+/src/*/bin/**/*
 
 ########################################################################################
 # Hide all the obj files in each project
 ######################################################################################## 
-/src/Data Models/obj/*
-/src/Database/obj/*
-/src/Genetic Algorithm Analyzer/obj/*
-/src/Timetable Generator Library/obj/*
-/src/Web App/obj/*
-/src/Web Scrapper/obj/*
+/src/*/obj/**/*
 
 /src/vs/*
 
